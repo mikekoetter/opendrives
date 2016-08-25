@@ -1,0 +1,237 @@
+<section class="full-height" id="home-section-1">
+	<div class="sky">
+    <div class="clouds_one"></div>
+    <div class="clouds_two"></div>
+    <div class="clouds_three"></div>
+  </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h1 class="catchphrase left">OPEN DRIVES MAKES FASTER,<br> MORE EFFICIENT DATA STORAGE<br><span>FOR HALF THE COST</span></h1>
+			</div>
+			<%= link_to((fa_icon 'angle-down 4x'), '#home-section-2', class: 'smooth-scroll') %>
+		</div>
+	</div>
+</section>
+
+<section class="full-height" id="home-section-2">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 text-right">
+				<%= image_tag 'harddrive.png', class: 'from-left' %>
+			</div>
+			<div class="col-md-6 text-left from-right">
+				<h3>POWERED BY <br><span>IMAGINATION</span></h3>
+				<p class="lead">OpenDrives is changing the way data is stored. By giving you more control over your content, our hardware solutions provide large data storage with superior performance, security, efficiency and reliability. Unmatched speed enables new workflows and increases the number or iterations. And at half the cost of traditional storage, OpenDrives is the pinnacle of data storage solutions.</p>
+				<p class="lead">If you haven’t experienced OpenDrives, you don’t know what you’re missing. Forget what you’ve heard. See the difference for yourself</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section id="home-section-3">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<%= image_tag 'servers.png' %>
+			</div>
+			<ul class="nav nav-tabs nav-justified">
+			  <li class="active"><a data-toggle="tab" href="#tab-avalanche">AVALANCHE</a></li>
+			  <li><a data-toggle="tab" href="#tab-spectre">SPECTRE</a></li>
+			  <li><a data-toggle="tab" href="#tab-ridgeview">RIDGEVIEW</a></li>
+			</ul>
+		</div>
+		<div class="tab-content">
+			<%= render 'tab', 
+				id: 'avalanche', 
+				title: "THE EXTREME PERFORMANCE OF AVALANCHE",
+				body: "With incredible speed and power in an all-flash array, Avalanche is perfect for content creation rendering and other applications that need instantaneous access to large files for multiple users. When you need performance requirements far beyond the norm, Avalanche delivers.", 
+				capacity: "288 / 432 / 576 TB",
+				hd_size: "2TB – 6TB",
+				link: '' %>
+
+				<%= render 'tab', 
+				id: 'spectre', 
+				title: "SPECTRE - THE HIGH PERFORMANCE SOLUTION",
+				body: "A hybrid (SSD/HDD) solution, Spectre allows you to work on any format in any resolution using any codec easily. With industry-leading performance it provides versatile storage in a simple, efficient platform.", 
+				capacity: "72 / 144 / 216 / 288 TB",
+				hd_size: "2TB – 6TB",
+				link: '' %>
+
+				<%= render 'tab', 
+				id: 'ridgeview', 
+				title: "THE POWER AND EFFICIENCY OF RIDGEVIEW",
+				body: "A powerful cost-effective active archive solution, Ridgeview is ideal for storing multi-petabyte archives in a single, easy-to-manage volume. With forever-level integrity and single-volume simplicity, you no longer have to choose between performance and cost.", 
+				capacity: "18 / 36 / 72 TB",
+				hd_size: "500GB – 1TB",
+				link: '' %>
+		</div>
+	</div>
+</section>
+
+	
+<section class="full-height-twice" id="home-section-4-5">
+	<div class="container text-center">
+		<div class="row marginTop100">
+			<div class="col-md-12">
+				<h3>CLIENTS CHOOSE OPENDRIVES BECAUSE WE OFFER</h3>
+			</div>
+		</div>
+		<div class="row marginTop100">
+			<div class="col-sm-15">
+				<%= image_tag 'speed.png', class: 'home-reason-logo' %>
+				<p>HIGH PERFORMANCE AND SPEED</p>
+			</div>
+			<div class="col-sm-15">
+				<%= image_tag 'cost-effective.png', class: 'home-reason-logo' %>
+				<p>COST EFFECTIVE DATA STORAGE</p>
+			</div>
+			<div class="col-sm-15">
+				<%= image_tag 'protection.png', class: 'home-reason-logo' %>
+				<p>DATA INTEGRITY AND PROTECTION</p>
+			</div>
+			<div class="col-sm-15">
+				<%= image_tag 'zero-downtime.png', class: 'home-reason-logo' %>
+				<p>ZERO DOWNTIME SOTRAGE EXPANSION</p>
+			</div>
+			<div class="col-sm-15">
+				<%= image_tag 'just-in-time.png', class: 'home-reason-logo' %>
+				<p>JUST-IN-TIME PRODUCTION</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 marginTop50">
+				<h4>AND THAT'S JUST THE BEGNNING</h4>
+				<br>
+				<%= link_to((fa_icon "plus-circle", text: "LEARN MORE", right: true), '', class: 'link-no-border') %>
+			</div>
+		</div>
+	</div>
+	<div class="container container-section-5">
+		<div class="row">
+			<div class="col-md-6">
+				<h2>CLIENT <span>SPOTLIGHT</span></h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 marginTop50">
+				<h3>GONE GIRL</h3>
+				<p class="lead">CRITICALLY ACCLAIMED: OPENDRIVES' AVALANCHE GIVES FOX AND DAVID FINCHER UNPRECEDENTED 6K POST-PRODUCTION WORKFLOW.</p>
+				<br><br>
+				<%= link_to((fa_icon "plus-circle", text: "LEARN MORE", right: true), case_interior_gone_girl_path, class: 'link-no-border') %>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="home-section-6">
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-md-12">
+				<h2>OUR <span>CLIENTS<span></h2>
+			</div>
+			<hr>
+		</div>
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1 marginTop50 carousel-anchor">
+				<%= image_tag 'carousel-left-arrow.png', class: "carousel-arrow carousel-left-arrow" %>
+				<div class="clients-carousel">
+					<div><%= image_tag 'clients-21st Century Fox.png' %></div>
+					<div><%= image_tag 'clients-avlogo.png' %></div>
+					<div><%= image_tag 'clients-bad_robot_logo.jpg' %></div>
+					<div><%= image_tag 'clients-corgan.png' %></div>
+					<div><%= image_tag 'clients-direcTV.png' %></div>
+					<div><%= image_tag 'clients-disney-abc.jpg' %></div>
+					<div><%= image_tag 'clients-hbo.jpg' %></div>
+					<div><%= image_tag 'clients-Legendary_Pictures_logo.png' %></div>
+					<div><%= image_tag 'clients-nbcU.png' %></div>
+					<div><%= image_tag 'clients-PCT.png' %></div>
+					<div><%= image_tag 'clients-pop.jpg' %></div>
+					<div><%= image_tag 'clients-riot games.png' %></div>
+					<div><%= image_tag 'clients-siren.jpg' %></div>
+					<div><%= image_tag 'clients-walt disney.png' %></div>
+					<div><%= image_tag 'clients-WB.png' %></div>
+					<div><%= image_tag 'clients-youtube nation.jpg' %></div>
+					<div><%= image_tag 'clients-gone girl.png' %></div>
+					<div><%= image_tag 'clients-therevenant.jpg' %></div>
+					<div><%= image_tag 'clients-birdman.jpg' %></div>
+				</div>
+				<%= image_tag 'carousel-right-arrow.png', class: "carousel-arrow carousel-right-arrow" %>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section id="home-section-7">
+	<div class="container">
+		<div class="row text-center marginTop100">
+			<div class="col-md-4">
+				<h3>FAQS</h3>
+				<hr class="hr1">
+				<br>
+				<p class="lead"><strong>HAVE QUESTIONS?</strong> FIND ANSWERS IN OUR FREQUENTLY ASK QUESTIONS.</p>
+				<br><br>
+				<%= link_to((fa_icon "plus", text: "READ MORE", right: true), '', class: 'link-with-border') %>
+			</div>
+			<div class="col-md-4">
+				<h3>SUPPORT DOCS</h3>
+				<hr class="hr2">
+				<br>
+				<p class="lead">WE DON'T JUST SAY WE'RE THE BEST.<strong> WE HAVE THE FACTS</strong> TO BACK IT UP.</p>
+				<br><br>
+				<%= link_to((fa_icon "plus", text: "SEE WHAT WE MEAN", right: true), '', class: 'link-with-border') %>
+			</div>
+			<div class="col-md-4">
+				<h3>VIDEOS</h3>
+				<hr class="hr3">
+				<br>
+				<p class="lead">JUST GETTING STARTED WITH OPENDRIVES?<strong>  SEE US IN ACTION</strong>.</p>
+				<br><br><br>
+				<%= link_to((fa_icon "plus", text: "WATCH NOW", right: true), '', class: 'link-with-border') %>
+			</div>
+		</div>
+	</div>
+</section>
+
+<scetion id="home-section-8">
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-md-12">
+				<h3><strong>PARTNERS</strong></h3>
+				<hr>
+			</div>
+		</div>
+		<div class="row text-center marginTop50">
+			<div class="col-sm-3">
+				<%= image_tag 'partners-micron.png' %>
+			</div>
+			<div class="col-sm-3">
+				<%= image_tag 'partners-nvidia.png' %>
+			</div>
+			<div class="col-sm-3">
+				<%= image_tag 'partners-HGST.png' %>
+			</div>
+			<div class="col-sm-3">
+				<%= image_tag 'partners-adobe.png' %>
+			</div>
+			<div class="col-sm-3">
+				<%= image_tag 'partners-mellanox.png' %>
+			</div>
+			<div class="col-sm-3">
+				<%= image_tag 'partners-hp.png' %>
+			</div>
+			<div class="col-sm-3">
+				<%= image_tag 'partners-intel.png' %>
+			</div>
+			<div class="col-sm-3">
+				<%= image_tag 'partners-solarflare.png' %>
+			</div>
+		</div>
+	</div>
+</section>

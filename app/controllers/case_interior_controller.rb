@@ -1,0 +1,7 @@
+class CaseInteriorController < ApplicationController
+  def gone_girl
+  end
+
+  def joke
+  end
+end

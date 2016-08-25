@@ -1,0 +1,2 @@
+module CaseInteriorHelper
+end
