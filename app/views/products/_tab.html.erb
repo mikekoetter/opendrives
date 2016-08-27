@@ -1,0 +1,47 @@
+<div id="tab-<%= id %>" class="tab-pane fade <%= 'in active' if id == 'avalanche' %>">
+	<div class="row">
+    <div class="col-md-8">
+    	<h3><span class="light"><%= h3_title.html_safe %></h3>
+    	<hr>
+    	<br><br>
+    	<p class="lead"><%= body.html_safe %></p>
+    </div>
+    <div class="col-md-4 marginTop50">
+    	<%= image_tag 'bigdrive2.png' %>
+    </div>
+  </div>
+  <div class="row marginTop50">
+    <div class="col-md-4 pull-left">
+    	<h2><%= h2_title.html_safe %></h2>
+    </div>
+  </div>
+  <div class="row marginTop50">
+  	<div class="col-md-6">
+  		<% features1.each do |feature| %>
+	  		<div class="col-md-1">
+	  			<%= image_tag 'check.png', class: 'check-image' %>
+	  		</div>
+	  		<div class="col-md-11">
+	  			<%= feature %>
+	  		</div>
+	  		<br><br>
+  		<% end %>
+  	</div>
+  	<div class="col-md-6">
+  		<% features2.each do |feature| %>
+  			<div class="col-md-1">
+	  			<%= image_tag 'check.png', class: 'check-image' %>
+	  		</div>
+	  		<div class="col-md-11">
+	  			<%= feature %>
+	  		</div>
+	  		<br><br><%= "<br>".html_safe if feature.include?('The ability') %>
+	  	<% end %>
+  	</div>
+  </div>
+  <div class="row">
+  	<div class="col-md-12 marginTop100 text-center">
+  		<%= link_to 'SCHEDULE A DEMO', link, class: "link-with-border" %>
+  	</div>
+  </div>
+</div>

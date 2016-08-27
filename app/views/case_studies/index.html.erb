@@ -1,0 +1,52 @@
+<% @page_title = 'Case Studies' %>
+<section id="case-studies-section-1">
+	<%= image_tag 'case-studies-intro-image.png', class: 'marginTopIntro' %>
+</section>
+
+<section id="case-studies-section-2">
+	<div class="container">
+		<%= render 'shared/clients_carousel' %>
+	</div>
+</section>
+
+<section id="case-studies-section-3" class="full-height-twice">
+	<div class="container">
+		<div class="row marginTop100">
+			<div class="col-md-12 text-center">
+				<h2><span class='light'>CASE STUDIES</span></h2>
+				<p class="lead huge"><strong>Forward-thinking Solutions for Forward-thinking Companies</strong></p>
+				<hr>
+			</div>
+		</div>
+		<div class="row text-center marginTop100">
+			<div class="col-md-6 no-padding-right">
+				<%= link_to case_interior_gone_girl_path do %>
+					<div class="case-study-div pull-right shadow-animation case-study-gonegirl">
+						<%= image_tag 'case-studies-gonegirl.png', class: 'case-studies-img' %>
+						<h2>GONE<br>GIRL</h2>
+						<br><br>
+						<p class="lead line-height">Critically acclaimed:<br> OpenDrives Avalanche gives Fox and David Fincher unprecedented 6K post-production workflow.</p>
+					</div>
+				<% end %>
+			</div>
+			<div class="col-md-6 no-padding-left">
+				<%= link_to case_interior_joke_path do %>
+					<div class="case-study-div pull-left shadow-animation">
+						<%= image_tag 'case-studies-joke.png', class: 'case-studies-img' %>
+						<br><br>
+						<%= image_tag 'case-studies-joke-logo.png', class: 'case-studies-joke-logo' %>
+						<br><br>
+						<p class="lead line-height">Increased performance:<br> OpenDrives helps Joke Productions increase editorial performance and delivers more projects in less time.</p>
+					</div>
+				<% end %>
+			</div>
+		</div>
+		<div class="row marginTop100">
+			<div class="col-md-12 text-center">
+				<%= link_to('SCHEDULE A DEMO', '', class: 'link-with-border') %>
+			</div>
+		</div>
+	</div>
+</section>
+
+

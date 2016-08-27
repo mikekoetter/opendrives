@@ -109,5 +109,20 @@ $(document).on('turbolinks:load', function() {
 													.setTween([fromLeft, fromRight])
 													.addTo(homeController);
 
+
+
+
+
+	//Shadow animation
+	$(".shadow-animation").hover(function() {
+	  	$tm.to($(this), 0.3, { boxShadow: "10px 10px 5px #444" });
+	  	$tm.to($(this), 0.3, { left: 10, top: 10 });
+	}, function() {
+	  	$tm.to($(this), 0.3, { boxShadow: "0px 0px 0px" });
+	  	$tm.to($(this), 0.3, { left: 0, top: 0 });
+	});
+
+
+
 });
 

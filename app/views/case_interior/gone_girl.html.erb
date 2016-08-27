@@ -1,5 +1,6 @@
-<section id="case-interior-gone-girl-section-1" class="full-height">
-	<%= image_tag 'case-interior-gonegirl-intro.png', class: 'case-interior-gonegirl-intro' %>
+<% @page_title = 'Case Interior - Gone Girl' %>
+<section id="case-interior-gone-girl-section-1">
+	<%= image_tag 'case-interior-gonegirl-intro.png', class: 'marginTopIntro' %>
 </section>
 
 <section id="case-interior-gone-girl-section-2">
@@ -27,7 +28,7 @@
 
 <section id="case-interior-gone-girl-section-3">
 	<div class="container">
-		<div class="row marginTop100">
+		<div class="row marginTopBottom100">
 			<div class="col-sm-4 marginTop50">
 				<%= image_tag 'iphone-gonegirl.png' %>
 			</div>
@@ -42,19 +43,49 @@
 	</div>
 </section>
 
-
-
-
-
-
-
-
-
-
+<section id="case-interior-gone-girl-section-4" class="full-height">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
-
+			<div class="col-md-12 text-center marginTop100">
+				<h2><span class="light">THE</span> <strong>SOLUTION</strong></h2>
+				<hr>
+				<br><br>
+				<p class="text-left lead">OpenDrives Avalanche delivered the perfect solution. The only system that could deliver the playback requirements, Avalanche’s all-flash system allowed editors and visual effects artists to work on multiple projects on a centralized shared infrastructure. </p>
+				<p class="text-left lead">Delivering coherent permissions and accessibility from both OSX and Windows workstations, Avalanche was self-contained in a single 4 Rack Unit controller that simplified deployment, maintenance and footprint.</p>
+				<p class="text-left lead">VFX shots and composites were completed in-house and parallel to editing. OpenDrives’ creative fluidity allowed project files to be opened, recognized and adjusted on the fly.</p>
 			</div>
 		</div>
 	</div>
+</section>
+
+<section id="case-interior-gone-girl-section-5">
+	<div class="container">
+		<div class="row marginBottom100">
+			<div class="col-md-6">
+				<h2><span class="light">THE</span> <strong>RESULTS</strong></h2>
+				<hr>
+				<br><br>
+				<p class="lead">Avalanche ensured smooth scrubbing and playback, faster exporting and transcoding, and reincorporated completed composites <strong>200% faster</strong> than traditional render and replace workflows.</p>
+				<p class="lead">In making Gone Girl, David Fincher and Fox pushed technologies and workflows to their limits.  The OpenDrives Avalanche was the only storage solution that could deliver both the performance demands and ensure the creatives were provided the tool set they needed focus on their process.</p>
+			</div>
+			<div class="col-md-6 marginTop100">
+				<%= image_tag 'case-interior-gonegirl-macbook.png' %>
+			</div>	
+		</div>
+	</div>
+</section>
+
+<section id="case-interior-gone-girl-section-6">
+	<div class="container">
+		<div class="row marginTopBottom100">
+			<div class="col-md-12 text-center">
+				<p class="lead"><strong>Read more</strong> about how OpenDrives’ combined hardware and software brings VFX closer to editorial in this <strong>interview</strong> with OpenDrives founder Jeff Brue.</p>
+				<br><br>
+				<%= link_to((fa_icon "plus", text: "READ MORE", right: true), 'https://blogs.adobe.com/creativecloud/jeff-brue-engineers-production-pipeline-for-gone-girl/ ', class: 'link-with-border', target: '_blank') %>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+

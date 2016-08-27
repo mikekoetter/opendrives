@@ -7,9 +7,15 @@
 		<%= link_to((fa_icon 'twitter'), 'https://twitter.com/opendrives?lang=en', target: '_blank') %>
 		<%= link_to((fa_icon 'linkedin'), 'https://www.linkedin.com/company/open-drives', target: '_blank') %>
 		<br>
-		<p>3522 HAYDEN AVENUE | CULVER CITY | CA 90232</p>
-		<p><a href="tel:+13106598999">+1 (310) 659-8999</a></p>
-		<p><a href="mailto:sales@opendrives.com">SALES@OPENDRIVES.COM</a></p>
+		<%= link_to 'https://www.google.com/maps/place/3522+Hayden+Ave,+Culver+City,+CA+90232/@34.0265648,-118.3824543,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2b99b2e329a97:0x18a878136430e1ce!8m2!3d34.0265604!4d-118.3802656', target: '_blank' do %>
+			<p>3522 HAYDEN AVENUE | CULVER CITY | CA 90232</p>
+		<% end %>
+		<%= link_to 'tel:+13106598999' do %>
+			<p>+1 (310) 659-8999</p>
+		<% end %>
+		<%= link_to 'mailto:sales@opendrives.com' do %>
+			<p>SALES@OPENDRIVES.COM</p>
+		<% end %>
 	</div>  
 	<div class="col-xs-6 text-center">
 		<p class="lead"><span>SIGNUP FOR OUR NEWSLETTER</span> <strong>SUBSCRIBE</strong></p>

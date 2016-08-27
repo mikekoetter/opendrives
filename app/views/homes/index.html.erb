@@ -31,7 +31,7 @@
 
 
 <section id="home-section-3">
-	<div class="container">
+	<div class="container marginBottom100">
 		<div class="row">
 			<div class="col-md-12 text-center">
 				<%= image_tag 'servers.png' %>
@@ -130,41 +130,7 @@
 </section>
 
 <section id="home-section-6">
-	<div class="container">
-		<div class="row text-center">
-			<div class="col-md-12">
-				<h2>OUR <span>CLIENTS<span></h2>
-			</div>
-			<hr>
-		</div>
-		<div class="row">
-			<div class="col-md-10 col-md-offset-1 marginTop50 carousel-anchor">
-				<%= image_tag 'carousel-left-arrow.png', class: "carousel-arrow carousel-left-arrow" %>
-				<div class="clients-carousel">
-					<div><%= image_tag 'clients-21st Century Fox.png' %></div>
-					<div><%= image_tag 'clients-avlogo.png' %></div>
-					<div><%= image_tag 'clients-bad_robot_logo.jpg' %></div>
-					<div><%= image_tag 'clients-corgan.png' %></div>
-					<div><%= image_tag 'clients-direcTV.png' %></div>
-					<div><%= image_tag 'clients-disney-abc.jpg' %></div>
-					<div><%= image_tag 'clients-hbo.jpg' %></div>
-					<div><%= image_tag 'clients-Legendary_Pictures_logo.png' %></div>
-					<div><%= image_tag 'clients-nbcU.png' %></div>
-					<div><%= image_tag 'clients-PCT.png' %></div>
-					<div><%= image_tag 'clients-pop.jpg' %></div>
-					<div><%= image_tag 'clients-riot games.png' %></div>
-					<div><%= image_tag 'clients-siren.jpg' %></div>
-					<div><%= image_tag 'clients-walt disney.png' %></div>
-					<div><%= image_tag 'clients-WB.png' %></div>
-					<div><%= image_tag 'clients-youtube nation.jpg' %></div>
-					<div><%= image_tag 'clients-gone girl.png' %></div>
-					<div><%= image_tag 'clients-therevenant.jpg' %></div>
-					<div><%= image_tag 'clients-birdman.jpg' %></div>
-				</div>
-				<%= image_tag 'carousel-right-arrow.png', class: "carousel-arrow carousel-right-arrow" %>
-			</div>
-		</div>
-	</div>
+	<%= render 'shared/clients_carousel' %>
 </section>
 
 
@@ -207,7 +173,7 @@
 				<hr>
 			</div>
 		</div>
-		<div class="row text-center marginTop50">
+		<div class="row text-center marginTop50  marginBottom100">
 			<div class="col-sm-3">
 				<%= image_tag 'partners-micron.png' %>
 			</div>
