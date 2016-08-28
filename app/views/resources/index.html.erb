@@ -1,2 +1,310 @@
-<h1>Resources#index</h1>
-<p>Find me in app/views/resources/index.html.erb</p>
+<% @page_title = 'Resources' %>
+<section id="resources-section-1">
+	<%= image_tag 'resources-intro.png', class: 'marginTopIntro' %>
+</section>
+
+<section id="resources-section-2">
+	<div class="container">
+		<div class="row marginTopBottom100">
+			<div class="col-md-12 text-center">
+				<h3 class="huge"><span class="light">YOU'RE OUR</span> <strong>#1 PRIORITY</strong></h3>
+				<hr>
+				<br><br>
+				<p class="text-left lead high-line">OpenDrives delivers <strong class="big">advanced technical support</strong> from industry professionals with <strong class="big">decades</strong> of hands-on experience building <strong class="big">facilities</strong> and designing workflows. Every member of the OpenDrives support team has years of industry experience and the expertise you need to diagnose and resolve issues in a <strong class="big">timely and efficient manner</strong>. From post-production to VFX to motion picture and television production, our team of support engineers has been at the <strong class="big">forefront of media &amp; entertainment technology</strong> for decades. And they’re at your disposal. Because we know when it’s your data, standard isn’t good enough.</p>
+			</div>
+
+			<%= link_to 'tel:+18887785491' do %>
+				<div class="col-md-4 resources-contact-div text-center black marginTop50">
+					+1 (888) 778-5491<%= image_tag 'contact-phone-logo.png', class: 'resources-contact-logo' %>
+				</div>
+			<% end %>
+
+			<%= link_to 'mailto:support@opendrives.com' do %>
+				<div class="col-md-4 resources-contact-div text-center blue marginTop50">
+					SUPPORT@OPENDRIVES.COM<%= image_tag 'contact-mail-white-logo.png', class: 'resources-contact-logo' %>
+				</div>
+			<% end %>
+
+			<%= link_to 'https://support.opendrives.com/hc/en-us', target: '_blank' do %>
+				<div class="col-md-4 resources-contact-div text-center black marginTop50">
+					CREATE A SUPPORT TICKET<%= image_tag 'contact-ticket-logo.png', class: 'resources-contact-logo' %>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</section>
+
+<section id="resources-section-3">
+	<div class="container">
+		<div class="row marginTopBottom100">
+			<div class="col-md-12 text-center">
+				<h3><span class="light">CONTACT US OR FILL OUT THE SUPPORT REQUEST FORM AND ONE OF OUR</span> <strong>SPECIALIST WILL CONTACT YOU TO RESOLVE YOUR ISSUE AS SOON AS POSSIBLE</strong>.*</h3>
+				<br>
+				<hr>
+				<br>
+				<p>*During standard business hours.</p>
+			</div>
+			<div class="col-md-12 marginTop50">
+				<%= form_tag(send_email_path, method: "post", :class=>"form-horizontal") do %>
+          <fieldset>
+
+            <div class="form-group">
+              <div class="col-md-4">
+                <input id="first-name" name="first-name" type="text" placeholder="*FIRST NAME" class="form-control" required>
+              </div>
+              <div class="col-md-4">
+                <input id="last-name" name="last-name" type="text" placeholder="*LAST NAME" class="form-control" required>
+              </div>
+              <div class="col-md-4">
+                <input id="company-name" name="company-name" type="text" placeholder="COMPANY NAME" class="form-control">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-md-6">
+                <input id="email" name="email" type="text" placeholder="*WORK EMAIL" class="form-control" required>
+              </div>
+              <div class="col-md-6">
+                <input id="phone" name="phone" type="tel" placeholder="PHONE NUMBER" class="form-control">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-md-12">
+                <textarea class="form-control " id="message" name="message" placeholder="ISSUE DESCRIPTION" rows="10"></textarea>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-md-12 marginTop20 text-center">
+              	<%= button_tag((fa_icon 'angle-right', text: 'SUBMIT', right: true), type: 'submit', class: 'link-with-border') %>
+                
+              </div>
+            </div>
+          </fieldset>
+         <% end %>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="resources-section-4">
+	<div class="container">
+		<div class="row marginTopBottom100">
+			<div class="col-md-12 text-center">
+				<h3><span class="light">SUPERIOR SUPPORT AND</span> <strong>FASTER RESOLUTION</strong></h3>
+				<hr>
+				<br><br>
+				<p class="quote">“Out of all of the hardware and software vendors we use, OpenDrives hands down has the best support. OpenDrives has continually helped support our endeavors and what really sets them apart from the competition is their response time and knowledge. As a business owner, I feel confident with them on my team and taking care of those critical infrastructure issues so I can focus on what matters most, running my business."</p>
+				<p><small>Gresham Lochner, Locktix</small></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="resources-section-5">
+	<div class="container">
+		<ul class="nav nav-tabs nav-justified">
+		  <li class="active">
+		  	<a data-toggle="tab" href="#support-service">
+		  		<%= image_tag 'resources-support-service-logo.png' %>
+		  		<br><br>
+		  		<p>SUPPORT SERVICE</p>
+		  	</a>
+		  </li>
+		  <li>
+		  	<a data-toggle="tab" href="#faqs" class="faqs-tab">
+		  		<%= image_tag 'resources-faqs-logo.png' %>
+		  		<br><br>
+		  		<p>FAQS</p>
+		  	</a>
+		  </li>
+		  <li>
+		  	<a data-toggle="tab" href="#support-document" class="support-document-tab">
+		  		<%= image_tag 'resources-support-document-logo.png' %>
+		  		<br><br>
+		  		<p>SUPPORT DOCUMENTS</p>
+		  	</a>
+		  </li>
+		  <li>
+		  	<a data-toggle="tab" href="#videos" class="videos-tab">
+		  		<%= image_tag 'resources-videos-logo.png' %>
+		  		<br><br>
+		  		<p>VIDEOS</p>
+		  	</a>
+		  </li>
+		</ul>
+	</div>
+</section>
+
+<section id="resources-section-6">
+	<div class="container">
+		<div class="tab-content marginTopBottom100">
+		  <div id="support-service" class="tab-pane fade in active">
+		  	<div class="row">
+		  		<div class="col-md-12 text-center">
+				    <h3 class="huge"><span class="light">OUR SUPPORT</span> <strong>PROMISE</strong></h3>
+				    <hr>
+				    <br>
+				    <p class="">The OpenDrives Support Option delivers hardware and software support including technical support, onsite response, remote monitoring and resolution, and the installation of non-customer replaceable units. <br> The Open Drives Support Option includes:</p>
+				  </div>
+				  <div class="col-md-6 marginTop50">
+				  	<div class="col-md-1">
+				  		<%= image_tag 'check.png', class: 'check-image' %>
+				  	</div>
+				  	<div class="col-md-11">
+				  		<p>Access to online support tools</p>
+				  		<p><span class="blue">a</span> - Initiate support requests via multiple channels, including: online chat, web, telephone, or email</p>
+				  		<p><span class="blue">b</span> - Search OpenDrives’ technical and support knowledge repository to quickly access critical information</p>
+				  		<p><span class="blue">c</span> - Register software, obtain license keys, and download product enhancements, patches, and upgrades</p>
+				  		<p><span class="blue">d</span> - Access the OpenDrives Lab interoperability and product lifecycle information</p>
+				  	</div>
+				  </div>
+				  <div class="col-md-6 marginTop50">
+				  	<div class="col-md-1">
+				  		<%= image_tag 'check.png', class: 'check-image' %>
+				  	</div>
+				  	<div class="col-md-11">
+				  		<p>Replacement parts delivery – Parts will be shipped to the customer. Customers are responsible for installation of parts deemed to be customer replaceable units (CRU’s).</p>
+				  	</div>
+				  	<div class="col-md-1">
+				  		<%= image_tag 'check.png', class: 'check-image' %>
+				  	</div>
+				  	<div class="col-md-11">
+				  		<p>Onsite response with replacement parts installation – Onsite dispatch and installation for parts deemed non-customer replaceable.</p>
+				  	</div>
+				  	<div class="col-md-1">
+				  		<%= image_tag 'check.png', class: 'check-image' %>
+				  	</div>
+				  	<div class="col-md-11">
+				  		<p>Rights to new releases of software – Access to new software releases with improved features and critical bug fixes to address evolving business needs.</p>
+				  	</div>
+				  </div>
+				  <div class="col-md-12 marginTop50">
+				  	<div class="col-md-1">
+				  		<%= image_tag 'check.png', class: 'check-image' %>
+				  	</div>
+				  	<div class="col-md-11 extrem-left">
+				  		<p>Remote monitoring – Sophisticated remote support technology securely monitors your OpenDrives systems and notifies of potential issues before business is impacted.</p>
+				  	</div>
+				  </div>
+			  </div>
+		  </div>
+		  <div id="faqs" class="tab-pane fade">
+		  	<div class="row">
+		  		<div class="col-md-12 text-center">
+		  			<h3><span class="light">FIND ANSWERS TO COMMON QUESTIONS IN OUR</span><br> <strong>FREQUENTLY ASKED QUESTIONS</strong></h3>
+		  			<hr>
+		  			<br><br>
+		  			<%= link_to(image_tag('resources-support-document-logo-black.png', class: 'logo-tab-content') + "&nbsp;&nbsp;&nbsp;DOCUMENT TITLE".html_safe, '', target: '_blank', class: "link-download") %>
+		  		</div>
+		  	</div>
+		  </div>
+		  <div id="support-document" class="tab-pane fade">
+		  	<div class="row">
+		  		<div class="col-md-12 text-center">
+		  			<h3><strong>HAVING TROUBLE WITH OPENDRIVES?</strong> <span class="light">THE FOLLOWING DOCUMENTS PROVIDE STEP-BY-STEP GUIDANCE FOR RESOLVING COMMON ISSUES.</span></h3>
+		  			<hr>
+		  			<br><br>
+		  		</div>
+		  		<div class="col-md-4 marginTop50">
+		  			<%= link_to '', class: "link-download", target: "_blank" do %>
+			  			<div class="col-md-2">
+			  				<%= image_tag 'resources-support-document-logo-black.png', class: 'logo-tab-content' %>
+			  			</div>
+			  			<div class="col-md-10">
+			  				<p>AM I GHOST MOUNTING MY AUTOMOUNT ON MY MAC?</p>
+			  			</div>
+			  		<% end %>
+		  		</div>
+		  		<div class="col-md-4 marginTop50">
+		  			<%= link_to '', class: "link-download", target: "_blank" do %>
+			  			<div class="col-md-2">
+			  				<%= image_tag 'resources-support-document-logo-black.png', class: 'logo-tab-content' %>
+			  			</div>
+			  			<div class="col-md-10">
+			  				<p>GETTING NFS SETUP AND CONNECTED TO WINDOWS 8.1E</p>
+			  			</div>
+			  		<% end %>
+		  		</div>
+		  		<div class="col-md-4 marginTop50">
+		  			<%= link_to '', class: "link-download", target: "_blank" do %>
+			  			<div class="col-md-2">
+			  				<%= image_tag 'resources-support-document-logo-black.png', class: 'logo-tab-content' %>
+			  			</div>
+			  			<div class="col-md-10">
+			  				<p>CONFIGURING MANAGED SNAPSHOTS</p>
+			  			</div>
+			  		<% end %>
+		  		</div>
+		  		<div class="col-md-4 col-md-offset-2 marginTop50">
+		  			<%= link_to '', class: "link-download", target: "_blank" do %>
+			  			<div class="col-md-2">
+			  				<%= image_tag 'resources-support-document-logo-black.png', class: 'logo-tab-content' %>
+			  			</div>
+			  			<div class="col-md-10">
+			  				<p>COMPATIBILITY <br>MATRICES</p>
+			  			</div>
+			  		<% end %>
+		  		</div>
+		  		<div class="col-md-4 marginTop50">
+		  			<%= link_to '', class: "link-download", target: "_blank" do %>
+			  			<div class="col-md-2">
+			  				<%= image_tag 'resources-support-document-logo-black.png', class: 'logo-tab-content' %>
+			  			</div>
+			  			<div class="col-md-10">
+			  				<p>BEST PRACTICES <br>ONE SHEET</p>
+			  			</div>
+			  		<% end %>
+		  		</div>
+		  	</div>
+		  </div>
+		  <div id="videos" class="tab-pane fade">
+		  	<div class="row text-center">
+					<div class="col-md-6">
+						<h4><strong>OPEN DRIVES,</strong><br><span class="light">POWERED BY INTEL</span></h4>
+						<br><br>
+						<%= image_tag 'resources-houseofcards.png', class: 'video-thumb' %>
+						<br><br><br><br>
+						<%= link_to((fa_icon 'plus', text: 'WATCH NOW', right: true), '', class: 'link-with-border') %>
+					</div>
+					<div class="col-md-6">
+						<h4><strong>OPENDRIVES DELIVERS</strong><br><span class="light">HIGH PERFORMANCE ON DEADPOOL</span></h4>
+						<br><br>
+						<%= image_tag 'resources-deadpool.png', class: 'video-thumb' %>
+						<br><br><br><br>
+						<%= link_to((fa_icon 'plus', text: 'WATCH NOW', right: true), '', class: 'link-with-border') %>
+					</div>
+				</div>
+		  </div>
+		</div>
+	</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+

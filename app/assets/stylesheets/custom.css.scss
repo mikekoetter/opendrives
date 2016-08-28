@@ -113,6 +113,10 @@ hr {
 	margin-top: 200px;
 }
 
+.big {
+	font-size: 1.5em;
+}
+
 .huge {
 	font-size: 3.5em;
 }
@@ -120,6 +124,11 @@ hr {
 .light {
 	font-weight: 100;
 	/*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+}
+
+.quote {
+	font-size: 1.2em;
+	font-style: italic;
 }
 
 .link-with-border {
@@ -166,8 +175,16 @@ hr {
 }
 
 .check-image {
-		width: 30px;
-	}
+	width: 30px;
+}
+
+.high-line {
+	line-height: 50px;
+}
+
+.blue {
+	color: #2977F2;
+}
 
 /*-------------------------  Shared Carousel   -------------------------*/
 
@@ -669,9 +686,6 @@ nav {
 /*-------------------------  Careers   -------------------------*/
 
 #career-section-1 {
-	.big {
-		font-size: 1.5em;
-	}
 	.agame {
 		font-weight: 900;
 		font-size: 2em;
@@ -716,10 +730,6 @@ nav {
 }
 
 /*-------------------------  CaseInterior   -------------------------*/
-
-.quote {
-	font-size: 1.2em;
-}
 
 /*--- Gone Girl ---*/
 #case-interior-gone-girl-section-2 {
@@ -864,13 +874,17 @@ form {
 	  box-shadow: 0 0 5px #2977F2;
 	}
 	.form-control {
+
 		height: 60px;
 		border-radius: 0;
 		border: 1px solid #000;
-		background-color: #f8f8f8;
+		background-color: rgba(255, 255, 255, 0);
 	}
 	textarea.form-control {
 		height: 200px;
+	}
+	.link-with-border {
+		background-color: rgba(255, 255, 255, 0);
 	}
 }
 
@@ -1025,6 +1039,110 @@ form {
 	}
 }
 
+/*-------------------------  Resources   -------------------------*/
+
+#resources-section-2 {
+	.resources-contact-div {
+		padding: 20px;
+		color: #fff;
+		.resources-contact-logo {
+			width: 40px;
+			padding-left: 10px;
+		}
+	}
+	.black {
+		background-color: #000;
+	}
+	.black:hover {
+		background-color: #2977F2;
+	}
+	.blue {
+		background-color: #2977F2;
+	}
+	.blue:hover {
+		background-color: #000;
+	}
+}
+
+#resources-section-3 {
+	background-image: image-url('resources-section-3-background.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+#resources-section-5 {
+	border-bottom: 10px solid #000;
+	.nav-tabs {
+		border: none !important;
+		li {
+			a {
+				margin: 0;
+				padding: 20px 40px 20px 40px;
+				color: #fff;
+				border: none !important;
+				border-left: 1px solid #fff !important;
+				background-color: #68B3FC !important;
+				border-radius: 0 !important;
+				p {
+					opacity: 0.3;
+				}
+				img {
+					opacity: 0.3;
+					width: 50px;
+				}
+			}
+			.faqs-tab {
+				background-color: #53a1fb !important;
+			}
+			.support-document-tab {
+				background-color: #3A93FC !important;
+			}
+			.videos-tab {
+				background-color: #337ADC !important;
+			}
+		}	
+	}
+	.nav-tabs > li > a:hover{
+		p {
+			opacity: 1;
+		}
+		img {
+			opacity: 1;
+		}
+	}
+	.nav-tabs > li.active > a,
+	.nav-tabs > li.active > a:focus,
+	.nav-tabs > li.active > a:hover{
+		font-weight: 900; 
+		border-radius: 0px;
+		background-color: #000 !important;
+		p {
+			opacity: 1;
+		}
+		img {
+			opacity: 1;
+		}
+	}
+}
+
+#resources-section-6 {
+	.extrem-left {
+		margin-left: -50px;
+	}
+	.logo-tab-content {
+		width: 30px;
+		opacity: 0.5;
+	}
+	.link-download:hover {
+		color: #2977F2;
+		.logo-tab-content {
+			opacity: 1;
+		}
+	}
+	.video-thumb {
+		width: 400px;
+	}
+}
 
 /*-------------------------  Footer   -------------------------*/
 
