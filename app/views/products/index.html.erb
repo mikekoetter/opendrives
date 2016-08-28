@@ -31,7 +31,7 @@
 	</div>
 	<div class="col-md-6 grey-background">
 		<div class="col-md-4 col-md-offset-1 text-center">
-			<%= link_to((fa_icon 'angle-right 4x', class: 'round-border-link'), '') %>
+			<%= link_to((fa_icon 'angle-right 4x', class: 'round-border-link'), '#opus', class: 'smooth-scroll') %>
 		</div>
 		<div class="col-md-6">
 			<p class="lead">THE PEAK OF DATA FILE SYSTEM STRUCTURE: <strong>OPUS SOFTWARE PLATFORM</strong></p>
@@ -79,45 +79,80 @@
 			<div class="col-md-12 text-center">
 				<p class="lead huge">ADDITIONALLY, ALL <strong>OPENDRIVES</strong><br>PRODUCTS INCLUDE:</p>
 			</div>
-			<div class="col-md-4">
-				<% products1.each do |product| %>
-					<div class="col-md-2">
-						<%= image_tag 'check.png', class: 'check-image' %>
-					</div>
-					<div class="col-md-10">
-						<%= product %>
-					</div>
-					<br><br><br>
-				<% end %>
-			</div>
-			<div class="col-md-4">
-				<% products2.each do |product| %>
-					<div class="col-md-2">
-						<%= image_tag 'check.png', class: 'check-image' %>
-					</div>
-					<div class="col-md-10">
-						<%= product %>
-					</div>
-					<br><br><br>
-				<% end %>
-			</div>
-			<div class="col-md-4">
-				<% products3.each do |product| %>
-					<div class="col-md-2">
-						<%= image_tag 'check.png', class: 'check-image' %>
-					</div>
-					<div class="col-md-10">
-						<%= product %>
-					</div>
-					<br><br><br>
-				<% end %>
+			<% @products.each do |product|%>
+				<div class="col-md-4">
+					<% product.each do |p| %>
+						<div class="col-md-2">
+							<%= image_tag 'check.png', class: 'check-image' %>
+						</div>
+						<div class="col-md-10">
+							<%= p %>
+						</div>
+						<br><br><br>
+					<% end %>
+				</div>
+			<% end %>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row marginTop100" id="opus">
+			<div class="col-md-12 text-center">
+				<p class="lead huge"><span class="light">THE PEAK OF DATA FILE SYSTEM<br> STRUCTURE</span> <strong>OPUS OPERATING SYSTEM</strong></p>
+				<hr>
+				<br><br>
+				<p class="lead">An Enterprise-grade Software Platform incorporating an extensible data file system structure providing efficient data striping, resilient data protection algorithms and a integrated web user interface. OPUS is the simple way to configure, optimize, and manage storage. <br>It features:</p>
 			</div>
 		</div>
 	</div>
 </section>
 
+<section id="products-section-4" class="text-center">
+	<%= render 'boxes', color: 'white', img: 'protection', title: '<strong>DATA INTEGRITY<br> AND PROTECTION</strong>', line: 2 %>
+	<%= render 'boxes', color: 'black', img: 'replication', title: '<strong>REPLICATION<br> AND MIRRORING</strong>', line: 2 %>
+	<%= render 'boxes', color: 'white', img: 'snapshots', title: '<strong>SNAPSHOTS</strong>', line: 1 %>
+	<%= render 'boxes', color: 'black', img: 'deduplication', title: '<strong>DEDUPLICATION</strong>', line: 1 %>
+	<%= render 'boxes', color: 'black', img: 'compression', title: '<strong>COMPRESSION</strong>', line: 1 %>
+	<%= render 'boxes', color: 'white', img: 'zero', title: '<strong>ZERO-DOWNTIME<br> EXPANSION</strong>', line: 2 %>
+	<%= render 'boxes', color: 'black', img: 'efficiency', title: '<strong>EFFICIENCY</strong>', line: 1 %>
+	<%= render 'boxes', color: 'white', img: 'block', title: '<strong>VARIABLE<br> BLOCK SIZE</strong>', line: 2 %>
+	
+	<%= render 'overlay', id: 'protection', 
+												title: '<span class="light">DATA INTEGRITY</span> <strong>AND PROTECTION</strong>', 
+												body: "OPUS ensures complete data integrity from application to disk using multiple mechanisms. Modified data is always written to unused blocks on disk, assuring the old data is unaffected on disk if the new data writes are corrupt. With no intermediate or unknown states, recovery and consistency scans of the whole file system are not necessary. Additionally, all data and metadata blocks are constantly checksummed, and any corrupted data is repaired in flight." %>
 
+	<%= render 'overlay', id: 'replication', 
+												title: '<span class="light">REPLICATION</span> <strong>AND MIRRORING</strong>', 
+												body: "To support mission-critical applications or disaster recovery, OPUS includes a remote replication feature that enables OpenDrives systems to asynchronously replicate data to another remote OpenDrives storage system.  A configured project or share at the primary location is automatically replicated to a destination system, providing a consistent copy that can be used as backup or as a standby site for disaster recovery. Multiple remote sites can replicate to a single central OpenDrives system for consolidated DR.  It can also be used for distribution purposes such as disseminating copies of new content releases to remote branch offices.<br><br>The initial replication copies all data in the source location (a project or share) to the destination site.  Subsequent synchronizations only transfer incremental data that has changed at the source location since the previous synchronization." %>
 
+	<%= render 'overlay', id: 'snapshots', 
+												title: '<strong>SNAPSHOTS</strong>', 
+												body: "By allowing unlimited read-only point-in-time copies of a file system, or snapshots, OPUS provides an extremely space-efficient way to store multiple versions of files for use in timely recovery and restore. OPUS replication is also powered by snapshots." %>
+
+	<%= render 'overlay', id: 'deduplication', 
+												title: '<strong>DEDUPLICATION</strong>', 
+												body: "OPUS deduplication technology reduces “on disk” usage by identifying and storing only unique data blocks. This can save significant amounts of capacity depending on the data set. For example, without data deduplication, a 1MB file emailed to 100 people and stored by each on their network share, will result in 100 identical copies of the file. By contrast, in a deduplicated environment, only one copy of the file is stored while the rest are just pointers to that file." %>
+
+	<%= render 'overlay', id: 'compression', 
+												title: '<strong>COMPRESSION</strong>', 
+												body: "OPUS implements an inline data compression algorithm that performs compression when the data is initially written. This approach has the advantage of avoiding any extra processing and temporary storage required in a post-process implementation. OPUS compression and deduplication features can be enabled on a data set simultaneously for maximum capacity savings." %>
+
+	<%= render 'overlay', id: 'zero', 
+												title: '<span class="light">ZERO-DOWNTIME</span> <strong>EXPANSION</strong>', 
+												body: "OpenDrives provides storage that scales with no interruption to your business operations by allowing you to seamlessly increase system capacity and performance on the fly without downtime or scheduled outages." %>
+
+	<%= render 'overlay', id: 'efficiency', 
+												title: '<strong>EFFICIENCY</strong>', 
+												body: "OpenDrives ensures high-density storage by delivering both physical and logical efficiencies. All OpenDrives controllers and expansion devices are 4 rack units (RU) and drive higher capacities at reduced power consumption and rack space usage. OPUS file system structure and data striping layout delivers best-in-class raw to usable capacity ratios, regardless of system size." %>
+
+	<%= render 'overlay', id: 'block', 
+												title: '<span class="light">VARIABLE</span> <strong>BLOCK SIZE</strong>', 
+												body: "OpenDrives uses either dynamic or policy-based variable block sizes for writing data. By not using fixed block sizes, OPUS optimizes data writes, increasing speed and eliminating wasted blocks common to traditional storage." %>
+</section>
+
+<section id="products-section-5">
+	<%= image_tag 'section-7-background.png', class: "product-section-5-img" %>
+	<%= render 'shared/faq_support_doc' %>
+</section>
 
 
 

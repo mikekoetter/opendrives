@@ -1,0 +1,15 @@
+<div class="product-overlay"  id="products-<%= id %>">
+		<a href='' class="close-overlay"><strong>X</strong></a>
+	<div class="container">
+		<div class="row marginTop50">
+			<div class="col-md-12 marginTop100">
+				<%= image_tag "products-#{id}.png" %>
+				<br><br>
+				<p class="lead huge"><%= title.html_safe %></p>
+				<hr>
+				<br><br>
+				<p class="lead"><%= body.html_safe %></p>
+			</div>
+		</div>
+	</div>
+</div>

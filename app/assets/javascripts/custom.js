@@ -3,7 +3,6 @@ $(document).on('turbolinks:load', function() {
 	$(".full-height").css("min-height", $(window).height());
 	$(".full-height-twice").css("min-height", ($(window).height() * 2));
 
-
 	
 
 	// SmoothScrolling
@@ -113,7 +112,7 @@ $(document).on('turbolinks:load', function() {
 
 
 
-	//Shadow animation
+	// Shadow animation
 	$(".shadow-animation").hover(function() {
 	  	$tm.to($(this), 0.3, { boxShadow: "10px 10px 5px #444" });
 	  	$tm.to($(this), 0.3, { left: 10, top: 10 });
@@ -122,6 +121,16 @@ $(document).on('turbolinks:load', function() {
 	  	$tm.to($(this), 0.3, { left: 0, top: 0 });
 	});
 
+
+	// Products Overlay Animation
+	$(".link-with-border").click(function(e){
+		e.preventDefault();
+	  $tm.to($($(this).data("target")), 0.3, { opacity: 1, zIndex: 5 });
+	});
+	$(".close-overlay").click(function(e) {
+		e.preventDefault();
+	  $tm.to($(".product-overlay"), 0.3, { opacity: 0, zIndex: -1 });
+	});
 
 
 });

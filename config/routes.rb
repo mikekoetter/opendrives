@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'resources/index'
+
   get 'products/index'
 
   post '/send_email', to: 'contact#send_email', as: :send_email 
