@@ -66,6 +66,10 @@ h3 {
 	font-size: 2.5em;
 }
 
+h4 {
+	font-size: 1.9em;
+}
+
 a {
 	color: #000;
 }
@@ -305,6 +309,7 @@ nav {
 	}
 	.nav-menu {
 		position: absolute;
+		z-index: -5;
 		right: -300px;
 		top: 0;
 		background-color: rgba(255, 255, 255, 0.8);
@@ -729,6 +734,39 @@ nav {
 	}
 }
 
+/*---  Careers - Job Opening   ---*/
+
+#career-job-opening-section-1 {
+	margin-top: 15px;
+	background-image: image-url('career-job-opening-intro.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	.job-title {
+		margin-top: 200px;
+		border: 10px solid rgba(255, 255, 255, 0.5);
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+}
+
+#career-job-opening-section-2 {
+	.job-opening-big-border {
+		border: 10px solid #000;
+		padding-top: 50px;
+		padding-bottom: 30px;
+	}
+}
+
+#career-job-opening-section-3 {
+	ul {
+		list-style-type: disc;
+		li {
+			padding-left: 10px;
+			line-height: 30px;
+		}
+	}
+}
+
 /*-------------------------  CaseInterior   -------------------------*/
 
 /*--- Gone Girl ---*/
@@ -1141,6 +1179,89 @@ form {
 	}
 	.video-thumb {
 		width: 400px;
+	}
+}
+
+/*-------------------------  Why US   -------------------------*/
+
+#why-us-section-2 {
+	hr {
+		background-color: #000;
+		width: 400px;
+	}
+}
+
+#why-us-section-3 {
+	.custom-container {
+		width: 100%;
+	}
+	.box {
+		padding-top: 100px;
+		padding-bottom: 100px;
+		img {
+			padding-top: 80px;
+			width: 80px;
+		}
+	}
+	.long-box {
+		padding-bottom: 200px;
+	}
+	.black {
+		background-color: #000;
+		color: #fff;
+	}
+}
+
+#why-us-section-4 {
+	margin-top: -100px;
+	background-image: image-url('why-us-section-4-background.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	color: #fff;
+	hr {
+		margin-left: 0;
+	}
+}
+
+#why-us-section-5 {
+	.why-us-section-5-background-div {
+		background-image: image-url('why-us-section-5-background.png');
+		background-size: 100%;
+		background-repeat: no-repeat;
+		padding-top: 700px;
+		.employee-carousel-anchor {
+			position: relative;
+			img {
+			position: relative;
+				width: 100%;
+				opacity: 0.5;
+			}
+			.padding-top {
+				padding-top: 250px;
+			}
+			.owl-item.center img {
+			  opacity: 1;
+			  width: 170%;
+			  z-index: 10;
+			  left: -150px;
+			  top: -150px;
+			}
+			.carousel-arrow {
+				width: 50px;
+				opacity: 0.5;
+				position: absolute;
+				top: 400px;
+			}
+			.carousel-arrow:hover {
+				cursor: pointer;
+			}
+			.carousel-left-arrow {
+				left: -60px;
+			}
+			.carousel-right-arrow {
+				right: -60px;
+			}
+		}
 	}
 }
 

@@ -47,27 +47,39 @@ $(document).on('turbolinks:load', function() {
     	}
     }
 	});
+	// Employee Carousel set up
+	var owlEmployee = $(".employee-carousel");
+	owlEmployee.owlCarousel({
+		loop: true,
+		center: true,
+	});
 	$('.carousel-left-arrow').click(function() {
 	    owl.trigger('prev.owl.carousel');
+	    owlEmployee.trigger('prev.owl.carousel');
 	})
 	$('.carousel-right-arrow').click(function() {
 	    owl.trigger('next.owl.carousel');
+	    owlEmployee.trigger('next.owl.carousel');
 	})
 	$('.carousel-arrow').hover(function() {
 		TweenMax.to($('.carousel-arrow'), 2, { opacity: 1 });
 	}, function() {
-		TweenMax.to($('.carousel-arrow'), 2, { opacity: 0.6 });
+		TweenMax.to($('.carousel-arrow'), 2, { opacity: 0.4 });
 	});
+
+
+	
+	
 
 	
 	// Nav menu animation
 	function hideMenu() {
-		TweenMax.to($('.nav-menu'), 0.5, { right: -300, opacity: 0 });
+		TweenMax.to($('.nav-menu'), 0.5, { right: -300, opacity: 0, zIndex: -5 });
 		TweenMax.to($('.hide-on-menu'), 0.5, { opacity: 1 });
 	}
 	$(".bars-nav").click(function(e) {
 		e.preventDefault();
-		TweenMax.to($('.nav-menu'), 0.5, { right: 0, opacity: 1 });
+		TweenMax.to($('.nav-menu'), 0.5, { right: 0, opacity: 1, zIndex: 5 });
 		TweenMax.to($('.hide-on-menu'), 0.5, { opacity: 0 });
 	});
 	$(".close-menu").click(function(e) {

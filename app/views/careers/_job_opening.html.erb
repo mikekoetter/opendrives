@@ -1,0 +1,81 @@
+<section id="career-job-opening-section-1">
+	<div class="container">
+		<div class="row marginTopBottom100">
+			<div class="col-md-12 text-center">
+				<div class="col-md-8 col-md-offset-2 job-title">
+					<h3><%= job_title.html_safe %></h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="career-job-opening-section-2">
+	<div class="container">
+		<div class="row marginTop50">
+			<div class="col-md-12">
+				<h3 class="text-center"><span class="light">JOB</span> DESCRIPTION</h3>
+				<hr>
+				<br><br>
+				<p><%= job_description.html_safe %></p>
+				<br><br>
+				<h4 class="text-center"><span class="light">WHAT YOU'LL BE</span> DOING IN THIS JOB...</h4>
+				<br><br>
+				<p><%= job_description_body.html_safe %></p>
+				<br><br>
+				<% if essential_function %>
+					<h4 class="text-center"><%= essential_function.html_safe %></h4>
+					<br><br>
+					<% essentials.each do |essential| %>
+						<div class="col-md-4">
+							<div class="col-md-2">
+								<%= image_tag 'check.png', class: 'check-image' %>
+							</div>
+							<div class="col-md-10">
+								<%= essential %>
+							</div>
+						</div>
+						<% end %>
+				<% end %>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 text-center job-opening-big-border marginTop100">
+				<p class="lead">IF THIS SOUNDS LIKE YOU, THEN WE HOPE TO MEET WITH YOU SOON!</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="career-job-opening-section-3">
+	<div class="container">
+		<div class="row marginTopBottom100">
+			<div class="col-md-12">
+				<h3 class="text-center"><span class="light">SKILLS &AMP;</span> REQUIREMENTS</h3>
+				<hr>
+				<br><br>
+				<h4 class="text-center"><span class="light">EXPERIENCE, TECHNICAL KNOWLEDGE</span><br> AND OTHER QUALITIES WE'RE LOOKING FOR...</h4>
+				<br><br>
+				<ul>
+					<% requirements.each do |requirement| %>
+						<li><%= requirement %></li>
+					<% end %>
+				</ul>
+				<br><br>
+				<% if qualities %>
+					<h4 class="text-center"><%= qualities_title.html_safe %></h4>
+					<br><br>
+					<ul>
+						<% qualities.each do |quality| %>
+							<li><%= quality %></li>
+						<% end %>
+					</ul>
+					<br><br>
+				<% end %>
+			</div>
+			<div class="col-md-12 text-center">
+				<%= link_to((fa_icon 'angle-right', text: 'SUBMIT RESUME', right: true), '', class: 'link-with-border') %>
+			</div>
+		</div>
+	</div>
+</section>

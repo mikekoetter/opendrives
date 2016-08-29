@@ -1,0 +1,2 @@
+module WhyUsHelper
+end

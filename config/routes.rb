@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'why_us/index'
+
   get 'resources/index'
 
   get 'products/index'
@@ -13,6 +15,14 @@ Rails.application.routes.draw do
   get 'case_interior/gone_girl'
 
   get 'case_interior/joke'
+
+  get 'careers/vp_engineering'
+
+  get 'careers/professional_services_engineer'
+
+  get 'careers/sales'
+
+  get 'careers/node_js_developer'
 
   get 'careers/index'
 
