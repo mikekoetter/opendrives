@@ -7,7 +7,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center">
-				<h1 class="catchphrase left">OPEN DRIVES MAKES FASTER,<br> MORE EFFICIENT DATA STORAGE<br><span>FOR HALF THE COST</span></h1>
+				<h1 class="catchphrase small-to-big">OPEN DRIVES MAKES FASTER,<br> MORE EFFICIENT DATA STORAGE<br><span>FOR HALF THE COST</span></h1>
 			</div>
 			<%= link_to((fa_icon 'angle-down 4x'), '#home-section-2', class: 'smooth-scroll') %>
 		</div>
@@ -45,27 +45,27 @@
 		<div class="tab-content">
 			<%= render 'tab', 
 				id: 'avalanche', 
-				title: "THE EXTREME PERFORMANCE OF AVALANCHE",
+				title: 'THE EXTREME PERFORMANCE OF <span class="blue">AVALANCHE</span>',
 				body: "With incredible speed and power in an all-flash array, Avalanche is perfect for content creation rendering and other applications that need instantaneous access to large files for multiple users. When you need performance requirements far beyond the norm, Avalanche delivers.", 
 				capacity: "288 / 432 / 576 TB",
 				hd_size: "2TB – 6TB",
-				link: '' %>
+				link: "/products/index#tab-avalanche" %>
 
 				<%= render 'tab', 
 				id: 'spectre', 
-				title: "SPECTRE - THE HIGH PERFORMANCE SOLUTION",
+				title: '<span class="blue">SPECTRE</span> - THE HIGH PERFORMANCE SOLUTION',
 				body: "A hybrid (SSD/HDD) solution, Spectre allows you to work on any format in any resolution using any codec easily. With industry-leading performance it provides versatile storage in a simple, efficient platform.", 
 				capacity: "72 / 144 / 216 / 288 TB",
 				hd_size: "2TB – 6TB",
-				link: '' %>
+				link: '/products/index#tab-spectre' %>
 
 				<%= render 'tab', 
 				id: 'ridgeview', 
-				title: "THE POWER AND EFFICIENCY OF RIDGEVIEW",
+				title: 'THE POWER AND EFFICIENCY OF <span class="blue">RIDGEVIEW</span>',
 				body: "A powerful cost-effective active archive solution, Ridgeview is ideal for storing multi-petabyte archives in a single, easy-to-manage volume. With forever-level integrity and single-volume simplicity, you no longer have to choose between performance and cost.", 
 				capacity: "18 / 36 / 72 TB",
 				hd_size: "500GB – 1TB",
-				link: '' %>
+				link: '/products/index#tab-ridgeview' %>
 		</div>
 	</div>
 </section>
@@ -79,23 +79,23 @@
 			</div>
 		</div>
 		<div class="row marginTop100">
-			<div class="col-sm-15">
+			<div class="col-sm-15 from-up">
 				<%= image_tag 'speed.png', class: 'home-reason-logo' %>
 				<p>HIGH PERFORMANCE AND SPEED</p>
 			</div>
-			<div class="col-sm-15">
+			<div class="col-sm-15 from-down">
 				<%= image_tag 'cost-effective.png', class: 'home-reason-logo' %>
 				<p>COST EFFECTIVE DATA STORAGE</p>
 			</div>
-			<div class="col-sm-15">
+			<div class="col-sm-15 from-up">
 				<%= image_tag 'protection.png', class: 'home-reason-logo' %>
 				<p>DATA INTEGRITY AND PROTECTION</p>
 			</div>
-			<div class="col-sm-15">
+			<div class="col-sm-15 from-down">
 				<%= image_tag 'zero-downtime.png', class: 'home-reason-logo' %>
 				<p>ZERO DOWNTIME SOTRAGE EXPANSION</p>
 			</div>
-			<div class="col-sm-15">
+			<div class="col-sm-15 from-up">
 				<%= image_tag 'just-in-time.png', class: 'home-reason-logo' %>
 				<p>JUST-IN-TIME PRODUCTION</p>
 			</div>
@@ -104,7 +104,7 @@
 			<div class="col-md-12 marginTop50">
 				<h4>AND THAT'S JUST THE BEGNNING</h4>
 				<br>
-				<%= link_to((fa_icon "plus-circle", text: "LEARN MORE", right: true), '', class: 'link-no-border') %>
+				<%= link_to((fa_icon "plus-circle", text: "LEARN MORE", right: true), products_index_path, class: 'link-no-border') %>
 			</div>
 		</div>
 	</div>

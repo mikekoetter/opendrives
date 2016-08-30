@@ -170,7 +170,11 @@ hr {
 	}
 }
 
-.from-left, .from-right {
+.hvr-shutter-out-horizontal:hover, .hvr-sweep-to-right:hover {
+	background-color: #fff;
+}
+
+.from-left, .from-right, .from-up, .from-down {
 	position: relative;
 }
 
@@ -337,12 +341,11 @@ nav {
 			li {
 				width: 100%;
 				padding: 5px 40px 5px 30px;
-				margin-bottom: 35px;
 			}
-			li:hover {
-				background-color: #2977F2;
-				a {
-					color: #fff;
+			a:hover {
+				color: #fff;
+				li {
+					background-color: #2977F2;
 				}
 			}
 		}
@@ -694,23 +697,15 @@ nav {
 	.agame {
 		font-weight: 900;
 		font-size: 2em;
-		margin-bottom: 100px;
-		span {
-			color: #2977F2;
-		}
 	}
 }
 
 #career-section-2 {
 	color: #fff;
-	background-image: image-url('career-black-background.png');
+	background-image: image-url('career-section-2-background.png');
 	background-size: 100%;
 	background-repeat: no-repeat;
-	h3 {
-		letter-spacing: 0px;
-		margin-top: 270px;
-		margin-bottom: 70px;
-	}
+	
 	.col-sm-4 {
 		margin-bottom: 30px;
 	}
@@ -872,9 +867,6 @@ nav {
 	.case-study-div:hover {
 		border-bottom: 4px solid #000;
 	}
-	.case-study-gonegirl {
-		z-index: 2;
-	}
 	.no-padding-left {
 		padding-left: 0;
 	}
@@ -888,6 +880,9 @@ nav {
 	.link-with-border:hover {
 		background-color: #2977F2;
 		font-size: 1.5em;
+	}
+	.hvr-shutter-out-horizontal:hover {
+		background-color: rgba(255, 255, 255, 0);
 	}
 }
 
@@ -996,8 +991,12 @@ form {
 			padding: 25px 45px 25px 45px;
 		}
 		.round-border-link:hover {
-			background-color: #2977F2;
 			color: #fff;
+		}
+		i {
+			position: relative;
+			top: -5px;
+			left: 5px;
 		}
 	}
 	.tab-content {
@@ -1026,6 +1025,7 @@ form {
 
 #products-section-4 {
 	position: relative;
+	z-index: 3;
 	.col-md-3 {
 		padding-top: 5%;
 		border: 1px solid black;
@@ -1043,7 +1043,7 @@ form {
 			border-color: #fff;
 		}
 		.link-with-border:hover {
-			background-color: #2977F2;
+			background-color: #000;
 		}
 	}
 	.product-overlay {
@@ -1069,6 +1069,7 @@ form {
 
 #products-section-5 {
 	position: relative;
+	
 	.product-section-5-img {
 		position: absolute;
 		top: 800px;
@@ -1092,13 +1093,13 @@ form {
 		background-color: #000;
 	}
 	.black:hover {
-		background-color: #2977F2;
+		
 	}
 	.blue {
 		background-color: #2977F2;
 	}
 	.blue:hover {
-		background-color: #000;
+		/*background-color: #000;*/
 	}
 }
 
@@ -1177,9 +1178,56 @@ form {
 			opacity: 1;
 		}
 	}
-	.video-thumb {
-		width: 400px;
+	.video-thumb-anchor {
+		position: relative;
+		.video-thumb {
+			width: 400px;
+		}
+		.logo-play {
+			position: absolute;
+			top: 37%;
+			left: 45%;
+			width: 11%;
+			opacity: 0.5;
+		}
 	}
+	.video-thumb-anchor:hover {
+		.logo-play {
+			opacity: 1;
+		}
+	}
+}
+
+/*---  Modal   ---*/
+
+iframe {
+	width: 100%;
+}
+
+.modal-dialog {
+	margin-top: 15%;
+}
+
+.modal-content {
+	border-radius: 0;
+	height: 315px;
+	padding: 0;
+}
+
+.modal-header {
+	border: none;
+	padding: 0;
+}
+
+.modal .close {
+	opacity: 1;
+	padding: 10px 15px 10px 15px;
+	background-color: #fff;
+	border-radius: 50%;
+	border: 1px solid #000;
+	position: absolute;
+	top: -15px;
+	right: -15px;
 }
 
 /*-------------------------  Why US   -------------------------*/
@@ -1312,7 +1360,7 @@ footer {
 	}
 	.col-xs-6 {
 		color: #000;
-		width: 460px;
+		width: 450px;
 		margin-top: 160px;
 		margin-left: 50px;
 		p {
@@ -1330,7 +1378,152 @@ footer {
 			}
 		}
 	}
+	/*--- just for safari ---*/
+	_::-webkit-:not(:root:root), .safari_only {
+  	width: 460px; 
+	}
+}
+
+/*-------------------------  CSS Hover Effects   -------------------------*/
+
+/* Shutter Out Horizontal */
+.hvr-shutter-out-horizontal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  background: #fff;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-shutter-out-horizontal:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #2977F2;
+  border-radius: 17px;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active {
+  color: white;
+}
+.hvr-shutter-out-horizontal:hover:before, .hvr-shutter-out-horizontal:focus:before, .hvr-shutter-out-horizontal:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 
+/* Sweep To Right */
+.hvr-sweep-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-sweep-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2977F2;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.blue.hvr-sweep-to-right:before {
+	background: #000;
+}
+.hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+  color: white;
+}
+.hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+/* Radial In */
+.hvr-radial-in {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+  background: #2977F2;
+  border-radius: 100%;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-radial-in:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #E5E8F1;
+  border-radius: 100%;
+  -webkit-transform: scale(2);
+  transform: scale(2);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-radial-in:hover, .hvr-radial-in:focus, .hvr-radial-in:active {
+  color: white;
+}
+.hvr-radial-in:hover:before, .hvr-radial-in:focus:before, .hvr-radial-in:active:before {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
 

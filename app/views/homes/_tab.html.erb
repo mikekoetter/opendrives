@@ -1,15 +1,17 @@
 <div id="tab-<%= id %>" class="tab-pane fade <%= 'in active' if id == 'avalanche' %>">
-	<div class="col-md-8">
-		<h3><%= title %></h3>
+	<div class="col-md-8 marginTop50">
+		<h4><%= title.html_safe %></h4>
+		<br><br>
 		<p class="border-left lead"><%= body %></p>
 	</div>
-	<div class="col-md-4">
-		<h3>SPECS:</h3>
+	<div class="col-md-4 marginTop50">
+		<h4>SPECS:</h4>
+		<br><br><br>
 		<p><%= fa_icon 'check' %>&nbsp;&nbsp;CAPACITY: <%= capacity %></p>
 		<p><%= fa_icon 'check' %>&nbsp;&nbsp;HARD DRIVE SIZE: <%= hd_size %></p>
 		<p><%= fa_icon 'check' %>&nbsp;&nbsp;CPU: 12 CORE INTEL XEON</p>
 	</div>
 	<div class="col-md-12 text-center marginTop20">
-		<%= link_to((fa_icon "plus", text: "LEARN MORE", right: true), link, class: 'link-with-border') %>
+		<%= link_to((fa_icon "plus", text: "LEARN MORE", right: true), link, class: 'link-with-border link_to_tab hvr-shutter-out-horizontal') %>
 	</div>
 </div>

@@ -18,12 +18,12 @@
       <a href='' class="close-menu"><strong>X</strong></a>
     </div>
     <ul>
-      <li><%= link_to 'WHY US', why_us_index_path %></li>
-      <li><%= link_to 'PRODUCTS', products_index_path %></li>
-      <li><%= link_to 'CASE STUDIES', case_studies_index_path %></li>
-      <li><%= link_to 'RESOURCES', resources_index_path %></li>
-      <li><%= link_to 'CAREERS', careers_index_path %></li>
-      <li><%= link_to 'CONTACT', contacts_index_path %></li>
+      <%= link_to '<li>WHY US</li>'.html_safe, why_us_index_path %>
+      <%= link_to '<li>PRODUCTS</li>'.html_safe, products_index_path %>
+      <%= link_to '<li>CASE STUDIES</li>'.html_safe, case_studies_index_path %>
+      <%= link_to '<li>RESOURCES</li>'.html_safe, resources_index_path %>
+      <%= link_to '<li>CAREERS</li>'.html_safe, careers_index_path %>
+      <%= link_to '<li>CONTACT</li>'.html_safe, contacts_index_path %>
     </ul>
   </div>
 </nav>
