@@ -44,10 +44,11 @@ blue: #2977F2;
 
 /*-------------------------  Generals   -------------------------*/
 
-body {
+html, body {
 	/*font-family: Arial, Helvetica, sans-serif;*/
 	/*font-family: 'proxima_novaregular';*/
 	letter-spacing: 2px;
+	overflow-x: hidden;
 }
 
 ul {
@@ -88,6 +89,10 @@ hr {
 
 /*-------------------------  Helpers   -------------------------*/
 
+.marginBottom50 {
+	margin-bottom: 50px;
+}
+
 .marginBottom100 {
 	margin-bottom: 100px;
 }
@@ -98,7 +103,7 @@ hr {
 }
 
 .marginTopIntro {
-	margin-top: 15px;
+	margin-top: 35px;
 }
 
 .marginTop20 {
@@ -194,6 +199,10 @@ hr {
 	color: #2977F2;
 }
 
+.hide-in-desktop {
+	display: none;
+}
+
 /*-------------------------  Shared Carousel   -------------------------*/
 
 .carousel-anchor {
@@ -220,20 +229,19 @@ hr {
 			width: 50px;
 		}
 	}
-	@media only screen and (max-width: 992px) {
+	@media only screen and (max-width: 991px) {
 		.carousel-arrow {
+			bottom: 70px;
 			width: 40px;
 		}
 		.carousel-left-arrow {
-			top: 55px;
 			left: -60px;
 		}
 		.carousel-right-arrow {
-			bottom: 57px;
 			right: -60px;
 		}
 	}
-	@media only screen and (max-width: 768px) {
+	@media only screen and (max-width: 900px) {
 		.carousel-arrow {
 			display: none;
 		}
@@ -347,6 +355,27 @@ nav {
 					background-color: #2977F2;
 				}
 			}
+		}
+	}
+	@media (max-width: 1050px) { 
+		img {
+			width: 130px;
+			position: absolute;
+			top: 25px;
+			left: 5%;
+		}
+	}
+	@media (max-width: 767px) {
+		ul {
+			position: absolute;
+			right: 10px;
+			top: -5px;
+			padding-top: 30px;
+			padding-right: 50px;
+		}
+		ul li {
+			margin-right: 10px;
+			float: left;
 		}
 	}
 }
@@ -549,6 +578,22 @@ nav {
 		bottom: 3%;
 		left: 49%;
 	}
+	@media (max-width: 1200px) { 
+		h1 {
+			font-size: 2.5em;
+			span {
+				font-size: 2.2em;
+			}
+		} 
+	}
+	@media (max-width: 991px) { 
+		h1 {
+			font-size: 2.3em;
+			span {
+				font-size: 2em;
+			}
+		} 
+	}
 }
 
 #home-section-2 {
@@ -556,23 +601,40 @@ nav {
 	background-size: cover;
 	background-position: center;
 	.container div {
-		margin-top: 50px;
-		img {
-			width: 100%;
-		}
 		h3 {
 			color: #2977F2;
 			span {
 				color: #000;
 				font-weight: 200;
-				font-size: 2.5em;
+				font-size: 2em;
 			}
 		}
 	} 
+	@media (max-width: 850px) { 
+		.container div {
+			h3 {
+				span {
+					font-weight: 200;
+					font-size: 1.7em;
+				}
+			}
+		} 
+	}
+	@media (max-width: 767px) { 
+		img {
+			width: 50%;
+		}
+		h3 {
+			margin-top: -300px;
+		}
+		.margin-in-mobile {
+			margin-top: 200px;
+		}
+	}
 }
 
 #home-section-3 {
-	img {
+	.home-section-3-server {
 		width: 75%;
 	}
 	.nav-tabs > li > a{
@@ -600,16 +662,69 @@ nav {
 		.border-left {
 			border-right: 1px solid #000;
 		}
-		p {
-			i {
-				color: #2977F2;
+		.col-md-4 {
+			.col-md-2 {
+				padding: 0;
+				padding-left: 10px;
+				padding-right: 10px;
+				margin: 0;
+			}
+			.col-md-2, .col-md-10 {
+				margin-bottom: 10px;
+			}
+			p {
+				margin-left: -20px;
+			}
+		}
+	}
+	@media (max-width: 991px) { 
+		.tab-content {
+			p {
+				text-align: center;
+			}
+			.border-left {
+				border-right: 0px solid #000;
+				padding-bottom: 50px;
+				border-bottom: 1px solid #000;
+			}
+			.col-md-4 {
+				margin-bottom: 50px;
+				.pull-up {
+					margin-top: -100px;
+				}
+				.col-md-2 {
+					margin-left: 25%;
+				}
+			}
+		}
+	}
+	@media (max-width: 767px) { 
+		.nav-justified {
+			left: 25%;
+		}
+		.nav-justified > li {
+	    display: table-cell;
+	    width: 1%;
+	  }
+	  .tab-content {
+			h4 {
+				text-align: center;
+			}
+			.col-md-4 {
+				margin-top: 20px;
+				.pull-up {
+					margin-top: -30px;
+				}
+				.col-md-2 {
+					margin-left: 5%;
+				}
 			}
 		}
 	}
 }
 
 #home-section-4-5 {
-	background-size: 100%;
+	background-size: cover;
 	background-image: image-url('serversroom-gonegirl.png');
 	background-position: center;
 	background-repeat: no-repeat;
@@ -641,7 +756,7 @@ nav {
       float: left;
     }
 	}
-	@media (min-width: 992px) {
+	@media (min-width: 991px) {
     .col-md-15 {
       width: 20%;
       float: left;
@@ -670,10 +785,49 @@ nav {
 			border-bottom: 2px solid #fff;
 		}
 	}
+	@media (max-width: 991px) { 
+		.col-sm-4, .col-sm-6 {
+			margin-bottom: 50px;
+		}
+		.container-section-5 {
+			margin-top: 200px;
+			h2 {
+				font-size: 3em;
+				font-weight: 100;
+				span {
+					font-weight: 500;
+				}
+			}
+		}
+	}
+	@media (max-width: 767px) { 
+		margin-top: 0px;
+		.home-reason-logo {
+			width: 60px;
+		}
+		.col-sm-4, .col-sm-6 {
+			margin-bottom: 20px;
+		}
+		.container-section-5 {
+			h2 {
+				font-size: 2.5em;
+				font-weight: 100;
+				span {
+					font-weight: 500;
+				}
+			}
+			.col-md-2 {
+				width: 200px;
+				height: 20px;
+				margin-left: 15px;
+				border-bottom: 2px solid #fff;
+			}
+		}
+	}
 }
  
 #home-section-7 {
-	height: 500px;
+	min-height: 500px;
 	background-image: image-url('section-7-background.png');
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -703,9 +857,9 @@ nav {
 #career-section-2 {
 	color: #fff;
 	background-image: image-url('career-section-2-background.png');
-	background-size: 100%;
+	background-size: cover;
+	background-position: center;
 	background-repeat: no-repeat;
-	
 	.col-sm-4 {
 		margin-bottom: 30px;
 	}
@@ -735,7 +889,8 @@ nav {
 	margin-top: 15px;
 	background-image: image-url('career-job-opening-intro.png');
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-position: center;
+	background-size: cover;
 	.job-title {
 		margin-top: 200px;
 		border: 10px solid rgba(255, 255, 255, 0.5);
@@ -745,6 +900,9 @@ nav {
 }
 
 #career-job-opening-section-2 {
+	.col-xs-2, .col-xs-10 {
+		margin-top: 10px;
+	}
 	.job-opening-big-border {
 		border: 10px solid #000;
 		padding-top: 50px;
@@ -775,22 +933,43 @@ nav {
 	.big-drive-img {
 		width: 110%;
 	}
+	@media (max-width: 767px) { 
+		h2 {
+			text-align: center;
+		}
+		hr {
+			margin-left: auto;
+		}
+	}
 }
 
 #case-interior-gone-girl-section-3 {
 	hr {
 		margin-left: 0;
 	}
+	@media (max-width: 767px) { 
+		.col-xs-6 {
+			margin-left: 25%;
+		}
+		h2 {
+			text-align: center;
+		}
+		hr {
+			margin-left: auto;
+		}
+	}
 }
 
 #case-interior-gone-girl-section-4 {
 	background-image: image-url('case-interior-gonegirl-section-4-background.png');
-	background-size: 100%;
+	background-size: cover;
+	background-position: center;
 	background-repeat: no-repeat;
 	color: #fff;
 }
 
 #case-interior-gone-girl-section-5 {
+	margin-top: 100px;
 	background: #fff; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(#fff, #f5f5f5); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(#fff, #f5f5f5); /* For Opera 11.1 to 12.0 */
@@ -798,6 +977,25 @@ nav {
   background: linear-gradient(#fff, #f5f5f5); /* Standard syntax */
 	hr {
 		margin-left: 0;
+	}
+	@media (max-width: 991px) { 
+		.col-sm-6 img {
+			margin-top: 100px;
+		}
+	}
+	@media (max-width: 767px) { 
+		.col-sm-6 img {
+			margin-top: 50px;
+		}
+		.col-xs-6 {
+			margin-left: 25%;
+		}
+		h2 {
+			text-align: center;
+		}
+		hr {
+			margin-left: auto;
+		}
 	}
 }
 
@@ -812,6 +1010,15 @@ nav {
   hr {
   	margin-right: 0;
   }
+  @media (max-width: 767px) { 
+  	margin-top: 0px;
+  	hr {
+	  	margin-right: auto;
+	  }
+	  p {
+	  	text-align: center;
+	  }
+	}
 }
 
 #case-interior-joke-productions-section-3 {
@@ -822,12 +1029,26 @@ nav {
   	margin-top: 80px;
   	width: 110%;
   }
+  @media (max-width: 767px) { 
+  	hr {
+	  	margin-right: auto;
+	  }
+	  .joke-macbook {
+	  	margin-top: 40px;
+	  	width: 100%;
+	  	margin-left: 50%;
+	  }
+	  p {
+	  	text-align: center;
+	  }
+	}
 }
 
 #case-interior-joke-productions-section-4 {
 	color: #fff;
 	background-image: image-url('case-interior-joke-section-4-background.png');
-	background-size: 100%;
+	background-size: cover;
+	background-position: center;
 	background-repeat: no-repeat;
 }
 
@@ -835,13 +1056,22 @@ nav {
 	hr {
 		margin-left: 0;
 	}
+	 @media (max-width: 767px) { 
+	 	hr {
+			margin-left: auto;
+		}
+		p {
+			text-align: center;
+		}
+	}
 }
 
 /*-------------------------  CaseStudies   -------------------------*/
 
 #case-studies-section-3 {
 	background-image: image-url('case-studies-section-3-background.png');
-	background-size: 100%;
+	background-size: cover;
+	background-position: center;
 	background-repeat: no-repeat;
 	.huge {
 		font-size: 2.5em;
@@ -883,6 +1113,41 @@ nav {
 	}
 	.hvr-shutter-out-horizontal:hover {
 		background-color: rgba(255, 255, 255, 0);
+	}
+	@media (min-width: 767px) {
+    .pull-right-sm {
+      float: right;
+	  }
+	  .pull-left-sm {
+      float: left;
+	  }
+	}
+	@media (max-width: 1200px) { 
+		.h2-gonegirl {
+			margin-top: 50px;
+		}
+	}
+	@media (max-width: 991px) { 
+		.h2-gonegirl {
+			margin-bottom: 50px;
+		}
+	}
+
+	@media (max-width: 767px) { 
+		.pull-right-sm {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.pull-left-sm {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.no-padding-left {
+			padding-right: 0;
+		}
+		.no-padding-right {
+			padding-left: 0;
+		}
 	}
 }
 
@@ -1324,10 +1589,9 @@ iframe {
 
 footer {
 	color: #fff;
-	/*margin-top: 100px;*/
 	height: 350px;
 	background-image: image-url('footer-background.png');
-	background-size: 100%;
+	background-size: cover;
 	background-repeat: no-repeat;
 	.col-xs-2 img {
 		margin-right: 20px;
@@ -1388,6 +1652,57 @@ footer {
 	/*--- just for safari ---*/
 	_::-webkit-:not(:root:root), .safari_only {
   	width: 460px; 
+	}
+	@media (max-width: 1050px) { 
+		.col-xs-6 {
+			width: 420px;
+			margin-top: 170px;
+			p {
+				font-size: 0.8em;
+				padding: 15px;
+				span {
+					padding: 15px 15px 15px 20px;
+					margin-left: -25px;
+				}
+			}
+		}
+		/*--- just for safari ---*/
+		_::-webkit-:not(:root:root), .safari_only {
+	  	width: 420px; 
+	  	P {
+		  	span {
+					margin-left: -30px;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 991px) { 
+		.col-xs-6 {
+			width: 350px;
+			margin-top: 180px;
+			p {
+				font-size: 0.7em;
+				padding: 10px;
+				span {
+					padding: 10px 5px 10px 5px;
+					margin-left: -12px;
+				}
+			}
+		}
+		/*--- just for safari ---*/
+		_::-webkit-:not(:root:root), .safari_only {
+	  	width: 355px; 
+	  	P {
+		  	span {
+					margin-left: -11px;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 767px) { 
+
 	}
 }
 
@@ -1533,4 +1848,111 @@ footer {
   -webkit-transform: scale(0);
   transform: scale(0);
 }
+
+
+/*--------------------------------------------------*/
+/*--------------------------------------------------*/
+/*--------------------------------------------------*/
+/*--------------------------------------------------*/
+/*--------------------------------------------------*/
+
+
+/*-------------------------  1200   -------------------------*/
+
+@media (max-width: 1200px) {
+	h2 {
+		font-size: 4em;
+	}
+	h3 {
+		font-size: 2.3em;
+	}
+	.lead {
+		font-size: 1.2em;
+	}
+	.marginTop100 {
+		margin-top: 80px;
+	}
+	.marginTop200 {
+		margin-top: 150px;
+	}
+}
+
+/*-------------------------  1050   -------------------------*/
+
+/*@media (max-width: 1050px) { 
+	
+}	*/
+
+/*-------------------------  991   -------------------------*/
+
+@media (max-width: 991px) {
+	.check-image {
+		width: 20px;
+	}
+	.hide-in-desktop {
+		display: inline;
+	}
+	.hide-in-mobile {
+		display: none;
+	}
+	h2 {
+		font-size: 3em;
+	}
+	h3 {
+		font-size: 1.6em;
+	}
+	h4 {
+		font-size: 1.5em;
+	}
+	.marginTop100 {
+		margin-top: 50px;
+	}
+	.marginTopIntro {
+		margin-top: 55px;
+	}
+	.huge {
+		font-size: 3em;
+	}
+}	
+
+/*-------------------------  767   -------------------------*/	
+
+@media (max-width: 767px) {
+	h2 {
+		text-align: center;
+	}
+	.hide-in-sm-mobile {
+		display: none;
+	}
+	.marginTopBottom100 {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+	.marginTop50 {
+		margin-top: 25px;
+	}
+	.marginTopIntro {
+		margin-top: 75px;
+	}
+	.lead {
+		font-size: 1.2em;
+	}
+}
+
+
+	@media (max-width: 1200px) { 
+
+	}
+
+	@media (max-width: 1050px) { 
+
+	}
+
+	@media (max-width: 991px) { 
+
+	}
+
+	@media (max-width: 767px) { 
+
+	}
 

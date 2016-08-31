@@ -1,5 +1,44 @@
 $(document).on('turbolinks:load', function() {
 
+
+
+	 
+	// For sticky images
+	// var stickyTop = $(".sticky").offset().top + 450;
+	// $(window).scroll(function() {
+ //    var windowTop = $(window).scrollTop();
+ //    if (stickyTop < windowTop && $("#case-interior-gone-girl-section-3").height() - 100 + $("#case-interior-gone-girl-section-3").offset().top - $(".sticky").height() > windowTop) {
+ //      $('.sticky').css({position: 'fixed', top: '150px', width: '200px', left: '8%'});
+ //    } else {
+ //      $('.sticky').css({position: 'relative'});
+ //    }
+ //  });
+	
+
+
+	// $(function() {
+	//   var body = $('#home-section-4-5');
+	//   var backgrounds = ['url(http://static.jsbin.com/images/jsbin_static.png)', 'url(http://static.jsbin.com/images/popout.png)'];
+	// 	var current = 0;
+
+	// 	function nextBackground() {
+	// 	  body.css(
+	// 	   'background',
+	// 	    backgrounds[current = ++current % backgrounds.length]
+	// 	 	);
+ // 			setTimeout(nextBackground, 5000);
+ // 		}
+
+ // 		setTimeout(nextBackground, 500);
+ //   	body.css('background', backgrounds[0]);
+ // 	});
+
+
+
+
+
+
+
 	$(".full-height").css("min-height", $(window).height());
 	$(".full-height-twice").css("min-height", ($(window).height() * 2));
 
@@ -200,13 +239,13 @@ $(document).on('turbolinks:load', function() {
 	var normalBigNormal = $tm.to($(".normal-big-normal"), 2, { fontSize: "2em" });
 	var fromUp = $tm.from($(".from-up"), 1, { top: -50, opacity: 0 });
 	var fromDown = $tm.from($(".from-down"), 1, { top: 50, opacity: 0 });
-	var hrTween600 = $tm.to($('.hr-anim-600'), 5, { width: 600 });
-	var hrTween550 = $tm.to($('.hr-anim-550'), 5, { width: 550 });
+	var hrTween600 = $tm.to($('.hr-anim-600'), 5, { width: "100%" });
+	var hrTween550 = $tm.to($('.hr-anim-550'), 5, { width: "100%" });
 	var hrTween500 = $tm.to($('.hr-anim-500'), 5, { width: 500 });
-	var hrTween450 = $tm.to($('.hr-anim-450'), 5, { width: 450 });
-	var hrTween400 = $tm.to($('.hr-anim-400'), 5, { width: 400 });
+	var hrTween450 = $tm.to($('.hr-anim-450'), 5, { width: "100%" });
+	var hrTween400 = $tm.to($('.hr-anim-400'), 5, { width: "100%" });
 	var hrTweenCareerLife = $tm.to($('.hr-anim-career-life'), 5, { width: 600 });
-	var hrTweenCaseStudies = $tm.to($('.hr-anim-case-studies'), 5, { width: 1000 });
+	var hrTweenCaseStudies = $tm.to($('.hr-anim-case-studies'), 5, { width: "100%" });
 	var hrTweenContact = $tm.to($('.hr-anim-contact'), 5, { width: 1000 });
 	var hrTweenProductsOpus = $tm.to($('.hr-anim-product-opus'), 5, { width: 700 });
 	var hrTweenResourcesForm = $tm.to($('.hr-anim-resources-form'), 5, { width: 1000 });
@@ -235,7 +274,7 @@ $(document).on('turbolinks:load', function() {
 	// Case Interior Scene
 	var caseInteriorSection2SceneGoneGirl = new ScrollMagic.Scene({triggerElement: "#case-interior-gone-girl-section-2", duration: 500})
 													.setTween(hrTween400)
-													.addTo(homeController);
+													.addTo(caseInteriorController);
 	var caseInteriorSection2SceneJoke = new ScrollMagic.Scene({triggerElement: "#case-interior-joke-productions-section-2", duration: 500})
 													.setTween(hrTween550)
 													.addTo(caseInteriorController);

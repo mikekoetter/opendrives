@@ -4,12 +4,33 @@
 		<br><br>
 		<p class="border-left lead"><%= body %></p>
 	</div>
-	<div class="col-md-4 marginTop50">
+	<div class="col-md-4 col-xs-12 marginTop50">
 		<h4>SPECS:</h4>
 		<br><br><br>
-		<p><%= fa_icon 'check' %>&nbsp;&nbsp;CAPACITY: <%= capacity %></p>
-		<p><%= fa_icon 'check' %>&nbsp;&nbsp;HARD DRIVE SIZE: <%= hd_size %></p>
-		<p><%= fa_icon 'check' %>&nbsp;&nbsp;CPU: 12 CORE INTEL XEON</p>
+		<div class="row pull-up">
+			<div class="col-md-2 col-xs-1">
+				<%= image_tag 'check.png', class: 'check-image' %>
+			</div>
+			<div class="col-md-10 col-xs-8">
+				<p>CAPACITY: <%= capacity %></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2 col-xs-1">
+				<%= image_tag 'check.png', class: 'check-image' %>
+			</div>
+			<div class="col-md-10 col-xs-8">
+				<p>HARD DRIVE SIZE: <%= hd_size %></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2 col-xs-1">
+				<%= image_tag 'check.png', class: 'check-image' %>
+			</div>
+			<div class="col-md-10 col-xs-8">
+				<p>CPU: 12 CORE INTEL XEON</p>
+			</div>
+		</div>
 	</div>
 	<div class="col-md-12 text-center marginTop20">
 		<%= link_to((fa_icon "plus", text: "LEARN MORE", right: true), link, class: 'link-with-border link_to_tab hvr-shutter-out-horizontal') %>
