@@ -76,7 +76,7 @@
 
             <div class="form-group">
               <div class="col-md-12 marginTop20 text-center">
-              	<%= button_tag((fa_icon 'angle-right', text: 'SUBMIT', right: true), type: 'submit', class: 'link-with-border') %>
+              	<%= button_tag((fa_icon 'angle-right', text: 'SUBMIT', right: true), type: 'submit', class: 'link-with-border hvr-shutter-out-horizontal') %>
                 
               </div>
             </div>
@@ -101,7 +101,7 @@
 	</div>
 </section>
 
-<section id="resources-section-5" class="smooth-scroll">
+<section id="resources-section-5">
 	<div class="container">
 		<ul class="nav nav-tabs nav-justified">
 		  <li class="active">
@@ -264,8 +264,10 @@
 						<h4>OPEN DRIVES,<br><span class="light">POWERED BY INTEL</span></h4>
 						<br><br>
 						<div class="video-thumb-anchor">
-							<%= link_to(image_tag('resources-houseofcards.png', class: 'video-thumb'), '', data: { toggle: 'modal', target: '#modal-house-cards' }) %>
-							<%= link_to(image_tag('resources-videos-logo.png', class: 'logo-play'), '', data: { toggle: 'modal', target: '#modal-house-cards' }) %>
+							<%= link_to '', data: { toggle: 'modal', target: '#modal-house-cards' } do %>
+								<%= image_tag 'resources-houseofcards.png', class: 'video-thumb' %>
+								<%= image_tag 'resources-videos-logo.png', class: 'logo-play' %>
+							<% end %>
 						</div>
 						<br><br><br><br>
 						<%= link_to((fa_icon 'plus', text: 'WATCH NOW', right: true), '', data: { toggle: 'modal', target: '#modal-house-cards' }, class: 'link-with-border') %>
@@ -274,8 +276,10 @@
 						<h4>OPENDRIVES DELIVERS<br><span class="light">HIGH PERFORMANCE ON DEADPOOL</span></h4>
 						<br><br>
 						<div class="video-thumb-anchor">
-							<%= link_to(image_tag('resources-deadpool.png', class: 'video-thumb'), '', data: { toggle: 'modal', target: '#modal-deadpool' }) %>
-							<%= link_to(image_tag('resources-videos-logo.png', class: 'logo-play'), '', data: { toggle: 'modal', target: '#modal-deadpool' }) %>
+							<%= link_to '', data: { toggle: 'modal', target: '#modal-deadpool' } do %>
+								<%= image_tag 'resources-deadpool.png', class: 'video-thumb' %>
+								<%= image_tag 'resources-videos-logo.png', class: 'logo-play logo-play-dead' %>
+							<% end %>
 						</div>
 						<br><br><br><br>
 						<%= link_to((fa_icon 'plus', text: 'WATCH NOW', right: true), '', data: { toggle: 'modal', target: '#modal-deadpool' }, class: 'link-with-border') %>
@@ -295,7 +299,6 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/p5RNOK5NuSM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
-
   </div>
 </div>
 
@@ -307,7 +310,6 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/BELaZoVldwI?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
-
   </div>
 </div>
 

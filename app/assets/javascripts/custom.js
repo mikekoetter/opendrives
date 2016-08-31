@@ -3,6 +3,10 @@ $(document).on('turbolinks:load', function() {
 	$(".full-height").css("min-height", $(window).height());
 	$(".full-height-twice").css("min-height", ($(window).height() * 2));
 
+	// Fix turbolink issue on back link browser, 
+	// refresh page, hidden field in footer
+	var $input = $('#refresh');
+	$input.val() == 'yes' ? location.reload(true) : $input.val('yes');
 
 
 	// Stop Videos on modal close
@@ -13,6 +17,24 @@ $(document).on('turbolinks:load', function() {
 	    $("#modal-deadpool iframe").attr("src", $("#modal-deadpool iframe").attr("src"));
 	});
 
+	// Contact Logo Animations
+	$(".logo-address-div").hover(function() {
+		$('.contact-logo-address').addClass('animated bounce');
+	}, function() {
+		$('.contact-logo-address').removeClass('animated bounce');
+	});
+	$(".logo-phone-div").hover(function() {
+		$('.contact-logo-phone').addClass('animated tada');
+	}, function() {
+		$('.contact-logo-phone').removeClass('animated tada');
+	});
+	$(".logo-mail-div").hover(function() {
+		$('.contact-logo-mail').addClass('animated swing');
+	}, function() {
+		$('.contact-logo-mail').removeClass('animated swing');
+	});
+
+
 
 
 
@@ -20,11 +42,15 @@ $(document).on('turbolinks:load', function() {
 	var hash = window.location.hash;
 	hash && $('ul.nav a[href="' + hash + '"]').tab('show');
 	$(".link_to_tab").click(function() {
-		window.scrollTo(0,1300);
+		setTimeout(function(){ 
+			window.scrollTo(0,1300);
+		}, 300);
 	});
-	// $(".link_to_tab_support").click(function() {
-	// 	window.location.hash = '#resources-section-5';
-	// });
+	$(".link_to_tab_support").click(function() {
+		setTimeout(function(){ 
+			window.scrollTo(0,2930);
+		}, 300);
+	});
 
 
 
@@ -100,9 +126,9 @@ $(document).on('turbolinks:load', function() {
 	    owlEmployee.trigger('next.owl.carousel');
 	})
 	$('.carousel-arrow').hover(function() {
-		TweenMax.to($('.carousel-arrow'), 2, { opacity: 1 });
+		TweenMax.to($('.carousel-arrow'), 1, { opacity: 1, scale: 1.5 });
 	}, function() {
-		TweenMax.to($('.carousel-arrow'), 2, { opacity: 0.4 });
+		TweenMax.to($('.carousel-arrow'), 1, { opacity: 0.4, scale: 1 });
 	});
 
 
@@ -171,9 +197,9 @@ $(document).on('turbolinks:load', function() {
 	var fromLeft = $tm.from($(".from-left"), 3, { left: -50, top: -50,  opacity: 0, ease: Power4.easeOut });
 	var fromRight = $tm.from($(".from-right"), 3, { right: -50, top: 50, opacity: 0, ease: Power4.easeOut });
 	var smallToBig = $tm.from($(".small-to-big"), 2, { scale: 0, ease: Elastic.easeOut.config(2, 1) });
-	// var normalBigNormal = $tm.from($(".normal-big-normal"), 2, { opacity: 0 });
-	var fromUp = $tm.from($(".from-up"), 2, { top: -50, opacity: 0 });
-	var fromDown = $tm.from($(".from-down"), 2, { top: 50, opacity: 0 });
+	var normalBigNormal = $tm.to($(".normal-big-normal"), 2, { fontSize: "2em" });
+	var fromUp = $tm.from($(".from-up"), 1, { top: -50, opacity: 0 });
+	var fromDown = $tm.from($(".from-down"), 1, { top: 50, opacity: 0 });
 	var hrTween600 = $tm.to($('.hr-anim-600'), 5, { width: 600 });
 	var hrTween550 = $tm.to($('.hr-anim-550'), 5, { width: 550 });
 	var hrTween500 = $tm.to($('.hr-anim-500'), 5, { width: 500 });
@@ -199,9 +225,9 @@ $(document).on('turbolinks:load', function() {
 													.addTo(homeController);
 
 	// Career Scene
-	// var careerSection1Scene = new ScrollMagic.Scene({triggerElement: "#career-section-1", duration: 1000})
-														// .setTween(normalBigNormal)
-														// .addTo(careerController);
+	var careerSection1Scene = new ScrollMagic.Scene({triggerElement: ".start_agame_anim", duration: 500})
+														.setTween(normalBigNormal)
+														.addTo(careerController);
 	var careerSection2Scene = new ScrollMagic.Scene({triggerElement: "#career-section-2", duration: 500})
 														.setTween(hrTweenCareerLife)
 														.addTo(careerController);
