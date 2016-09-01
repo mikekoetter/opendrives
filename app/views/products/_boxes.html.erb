@@ -1,7 +1,31 @@
-<div class="col-md-3 <%= color %>">
+<div class="col-sm-3 <%= color %> hide-in-sm-mobile">
 	<%= image_tag "products-#{img}.png" %>
-	<br><br><br>
+	<br><br><br class="hide-in-mobile">
 	<p class="lead"><%= title.html_safe %></p>
-	<br><br><%= '<br>'.html_safe if on_liner?(line) %>
+	<br><br class="hide-in-mobile"><%= '<br>'.html_safe if on_liner?(line) %>
 	<%= link_to((fa_icon 'plus', text: 'MORE', right: true), '', data: { target: "#products-#{img}" }, class: 'to-overlay link-with-border hvr-shutter-out-horizontal') %>
 </div>
+
+<div class="col-sm-3 <%= color %> hide-in-sm-desktop">
+	<%= image_tag "products-#{img}.png" %>
+	<br><br><br class="hide-in-mobile">
+	<p class="lead"><%= title.html_safe %></p>
+	<br><br class="hide-in-mobile"><%= '<br>'.html_safe if on_liner?(line) %>
+	<%= link_to((fa_icon 'plus', text: 'MORE', right: true), '', data: { target: "#products-mobile-#{img}" }, class: 'to-overlay link-with-border hvr-shutter-out-horizontal') %>
+	<div class="product-overlay-mobile"  id="products-mobile-<%= img %>">
+		<a href='' class="close-overlay"><strong>X</strong></a>
+		<div class="container">
+			<div class="row marginTop50">
+				<div class="col-md-12">
+					<%= image_tag "products-#{img}.png" %>
+					<p class="lead huge"><%= title_overlay.html_safe %></p>
+					<hr>
+					<p class="lead"><%= body_overlay.html_safe %></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+

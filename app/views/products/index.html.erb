@@ -4,7 +4,15 @@
 </section>
 
 <section id="products-section-2">
-	<div class="col-md-6 black-background">
+	<div class="col-md-6 col-sm-12 grey-background pull-right-sm">
+		<div class="col-xs-4 col-md-offset-1 text-center">
+			<%= link_to((fa_icon 'angle-right 4x', class: ''), '#opus', class: 'smooth-scroll hvr-radial-in round-border-link') %>
+		</div>
+		<div class="col-xs-6">
+			<p class="lead">THE PEAK OF DATA FILE SYSTEM STRUCTURE: <strong>OPUS SOFTWARE PLATFORM</strong></p>
+		</div>
+	</div>
+	<div class="col-md-6 col-sm-12 black-background">
 		<ul class="nav nav-tabs pull-right text-center">
 		  <li class="active">
 		  	<a data-toggle="tab" href="#tab-avalanche" class="avalanche-tab">
@@ -29,21 +37,14 @@
 		  </li>
 		</ul>
 	</div>
-	<div class="col-md-6 grey-background">
-		<div class="col-md-4 col-md-offset-1 text-center">
-			<%= link_to((fa_icon 'angle-right 4x', class: ''), '#opus', class: 'smooth-scroll hvr-radial-in round-border-link') %>
-		</div>
-		<div class="col-md-6">
-			<p class="lead">THE PEAK OF DATA FILE SYSTEM STRUCTURE: <strong>OPUS SOFTWARE PLATFORM</strong></p>
-		</div>
-	</div>
+	
 	<div class="container">
 		<div class="tab-content marginTopBottom100">
 			
 		  <%= render 'tab', id: 'avalanche',
-		  									h3_title: '<span class="light">FOR TRULY MASSIVE DATAFLOWS,<br> NOTHING CAN STOP THE POWER OF</span> <br><strong>AVALANCHE</strong>',
+		  									h3_title: '<span class="light">FOR TRULY MASSIVE DATAFLOWS,<br class="hide-in-sm-mobile"> NOTHING CAN STOP THE POWER OF</span> <br class="hide-in-sm-mobile"><strong>AVALANCHE</strong>',
 		  									body: 'When performance requirements far exceed the current norms of data storage throughput, Avalanche delivers. Ideal for handling 6K, 8K, High Dynamic Range (HDR), (HFR) and (VR) workflows, <strong>Avalanche</strong> forms the center of your high performance, high throughput workflow.',
-		  									h2_title: '<strong>AVALANCHE</strong> <span class="light">GIVES YOU</span>',
+		  									h2_title: 'AVALANCHE <span class="light">GIVES YOU</span>',
 		  									features1: ['Up to 9GB/s', 'Multiple concurrent users', 'Seamless integration with all software applications', 'Up to 4.0 GB/s to a single client'],
 		  									features2: ['Consistent access latency', 'The ability to edit, render, color and add visual effects faster than ever', 'Editing, compositing and playback of uncompressed 4K and 6K content'], 
 		  									link: '' %>
@@ -51,7 +52,7 @@
 		  <%= render 'tab', id: 'spectre',
 		  									h3_title: '<span class="light">IN A DEMANDING<br> MULTI-USER ENVIRONMENT</span> <br><strong>SPECTRE</strong><span class="light"> SHINES</span>',
 		  									body: 'As a hybrid SSD/HDD solution, <strong>Spectre</strong> delivers the high performance and high capacity you need when multiple users need instantaneous access to large files and projects. Versatile and powerful, it forms the center of daily workflows from start to finish.',
-		  									h2_title: '<strong>SPECTRE</strong> <span class="light">GIVES YOU</span>',
+		  									h2_title: 'SPECTRE <span class="light">GIVES YOU</span>',
 		  									features1: ['Up to 6GB/s', 'The ability to use any format, codec or resolution'],
 		  									features2: ['Industry-leading 90+% cache hit accuracy', '3 layers of cache with 6GB/s consistently delivered across the entire Spectre line'], 
 		  									link: '' %>
@@ -59,7 +60,7 @@
 		   <%= render 'tab', id: 'ridgeview',
 		  									h3_title: '<span class="light">DATA STORAGE AND,<br> MANAGEMENT MADE EASY</span> <br><strong>RIDGEVIEW</strong>',
 		  									body: 'A high-density, ultra-efficient storage solution for customers targeting nearline and active archive use cases, <strong>Ridgeview</strong> is an extremely cost-effective way to get data resiliency, reliability, and accessibility for the long term. Perfect for storing multi-petabyte content libraries in a single, easy-to-manage volume, it delivers unmatched density.',
-		  									h2_title: '<strong>RIDGEVIEW</strong> <span class="light">GIVES YOU</span>',
+		  									h2_title: 'RIDGEVIEW <span class="light">GIVES YOU</span>',
 		  									features1: ['Up to 3GB/s', 'Scalability to more than 6 petabytes in a single volume', 'Performance active-archive to store large content repositories that need real-time access'],
 		  									features2: ['Ultra density - 576TB in 4 rack units', 'Low cost per terabyte', 'Access to important files while reducing costs and freeing up space on your Tier 1 storage'], 
 		  									link: '' %>
@@ -68,7 +69,7 @@
 	</div>
 </section>
 
-<section id="products-section-3" class="full-height-twice">
+<section id="products-section-3">
 	<div class="container">
 		<div class="row marginTop100">
 			<div class="col-md-12">
@@ -80,12 +81,12 @@
 				<p class="lead huge">ADDITIONALLY, ALL <strong>OPENDRIVES</strong><br>PRODUCTS INCLUDE:</p>
 			</div>
 			<% @products.each do |product|%>
-				<div class="col-md-4">
+				<div class="col-sm-4">
 					<% product.each do |p| %>
-						<div class="col-md-2">
+						<div class="col-xs-2">
 							<%= image_tag 'check.png', class: 'check-image' %>
 						</div>
-						<div class="col-md-10">
+						<div class="col-xs-10">
 							<%= p %>
 						</div>
 						<br><br><br>
@@ -107,14 +108,57 @@
 </section>
 
 <section id="products-section-4" class="text-center">
-	<%= render 'boxes', color: 'white', img: 'protection', title: '<strong>DATA INTEGRITY<br> AND PROTECTION</strong>', line: 2 %>
-	<%= render 'boxes', color: 'black', img: 'replication', title: '<strong>REPLICATION<br> AND MIRRORING</strong>', line: 2 %>
-	<%= render 'boxes', color: 'white', img: 'snapshots', title: '<strong>SNAPSHOTS</strong>', line: 1 %>
-	<%= render 'boxes', color: 'black', img: 'deduplication', title: '<strong>DEDUPLICATION</strong>', line: 1 %>
-	<%= render 'boxes', color: 'black', img: 'compression', title: '<strong>COMPRESSION</strong>', line: 1 %>
-	<%= render 'boxes', color: 'white', img: 'zero', title: '<strong>ZERO-DOWNTIME<br> EXPANSION</strong>', line: 2 %>
-	<%= render 'boxes', color: 'black', img: 'efficiency', title: '<strong>EFFICIENCY</strong>', line: 1 %>
-	<%= render 'boxes', color: 'white', img: 'block', title: '<strong>VARIABLE<br> BLOCK SIZE</strong>', line: 2 %>
+	<%= render 'boxes', color: 'white', 
+											img: 'protection', 
+											title: '<strong>DATA INTEGRITY<br> AND PROTECTION</strong>', 
+											line: 2, 
+											title_overlay: '<span class="light">DATA INTEGRITY</span> <strong>AND PROTECTION</strong>', 
+											body_overlay: "OPUS ensures complete data integrity from application to disk using multiple mechanisms. Modified data is always written to unused blocks on disk, assuring the old data is unaffected on disk if the new data writes are corrupt. With no intermediate or unknown states, recovery and consistency scans of the whole file system are not necessary. Additionally, all data and metadata blocks are constantly checksummed, and any corrupted data is repaired in flight." %>
+	<%= render 'boxes', color: 'black', 
+											img: 'replication', 
+											title: '<strong>REPLICATION<br> AND MIRRORING</strong>', 
+											line: 2, 
+											title_overlay: '<span class="light">REPLICATION</span> <strong>AND MIRRORING</strong>', 
+											body_overlay: "To support mission-critical applications or disaster recovery, OPUS includes a remote replication feature that enables OpenDrives systems to asynchronously replicate data to another remote OpenDrives storage system.  A configured project or share at the primary location is automatically replicated to a destination system, providing a consistent copy that can be used as backup or as a standby site for disaster recovery. Multiple remote sites can replicate to a single central OpenDrives system for consolidated DR.  It can also be used for distribution purposes such as disseminating copies of new content releases to remote branch offices.<br><br>The initial replication copies all data in the source location (a project or share) to the destination site.  Subsequent synchronizations only transfer incremental data that has changed at the source location since the previous synchronization." %>
+	<%= render 'boxes', color: 'white', 
+											img: 'snapshots', 
+											title: '<strong>SNAPSHOTS</strong>', 
+											line: 1, 
+											title_overlay: '<strong>SNAPSHOTS</strong>', 
+											body_overlay: "By allowing unlimited read-only point-in-time copies of a file system, or snapshots, OPUS provides an extremely space-efficient way to store multiple versions of files for use in timely recovery and restore. OPUS replication is also powered by snapshots." %>
+	<%= render 'boxes', color: 'black', 
+											img: 'deduplication', 
+											title: '<strong>DEDUPLICATION</strong>', 
+											line: 1, 
+											title_overlay: '<strong>DEDUPLICATION</strong>', 
+											body_overlay: "OPUS deduplication technology reduces “on disk” usage by identifying and storing only unique data blocks. This can save significant amounts of capacity depending on the data set. For example, without data deduplication, a 1MB file emailed to 100 people and stored by each on their network share, will result in 100 identical copies of the file. By contrast, in a deduplicated environment, only one copy of the file is stored while the rest are just pointers to that file." %>
+	<%= render 'boxes', color: 'black white-in-mobile', 
+											img: 'compression', 
+											title: '<strong>COMPRESSION</strong>', 
+											line: 1,
+											title_overlay: '<strong>COMPRESSION</strong>', 
+											body_overlay: "OPUS implements an inline data compression algorithm that performs compression when the data is initially written. This approach has the advantage of avoiding any extra processing and temporary storage required in a post-process implementation. OPUS compression and deduplication features can be enabled on a data set simultaneously for maximum capacity savings." %>
+	<%= render 'boxes', color: 'white black-in-mobile', 
+											img: 'zero', 
+											title: '<strong>ZERO-DOWNTIME<br> EXPANSION</strong>', 
+											line: 2, 
+											title_overlay: '<span class="light">ZERO-DOWNTIME</span> <strong>EXPANSION</strong>', 
+											body_overlay: "OpenDrives provides storage that scales with no interruption to your business operations by allowing you to seamlessly increase system capacity and performance on the fly without downtime or scheduled outages." %>
+	<%= render 'boxes', color: 'black white-in-mobile', 
+											img: 'efficiency', 
+											title: '<strong>EFFICIENCY</strong>', 
+											line: 1, 
+											title_overlay: '<strong>EFFICIENCY</strong>', 
+											body_overlay: "OpenDrives ensures high-density storage by delivering both physical and logical efficiencies. All OpenDrives controllers and expansion devices are 4 rack units (RU) and drive higher capacities at reduced power consumption and rack space usage. OPUS file system structure and data striping layout delivers best-in-class raw to usable capacity ratios, regardless of system size." %>
+	<%= render 'boxes', color: 'white black-in-mobile', 
+											img: 'block', 
+											title: '<strong>VARIABLE<br> BLOCK SIZE</strong>', 
+											line: 2, 
+											title_overlay: '<span class="light">VARIABLE</span> <strong>BLOCK SIZE</strong>', 
+											body_overlay: "OpenDrives uses either dynamic or policy-based variable block sizes for writing data. By not using fixed block sizes, OPUS optimizes data writes, increasing speed and eliminating wasted blocks common to traditional storage." %>
+
+
+
 	
 	<%= render 'overlay', id: 'protection', 
 												title: '<span class="light">DATA INTEGRITY</span> <strong>AND PROTECTION</strong>', 

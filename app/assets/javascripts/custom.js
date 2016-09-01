@@ -56,22 +56,7 @@ $(document).on('turbolinks:load', function() {
 	    $("#modal-deadpool iframe").attr("src", $("#modal-deadpool iframe").attr("src"));
 	});
 
-	// Contact Logo Animations
-	$(".logo-address-div").hover(function() {
-		$('.contact-logo-address').addClass('animated bounce');
-	}, function() {
-		$('.contact-logo-address').removeClass('animated bounce');
-	});
-	$(".logo-phone-div").hover(function() {
-		$('.contact-logo-phone').addClass('animated tada');
-	}, function() {
-		$('.contact-logo-phone').removeClass('animated tada');
-	});
-	$(".logo-mail-div").hover(function() {
-		$('.contact-logo-mail').addClass('animated swing');
-	}, function() {
-		$('.contact-logo-mail').removeClass('animated swing');
-	});
+	
 
 
 
@@ -198,6 +183,31 @@ $(document).on('turbolinks:load', function() {
 	// 		hideMenu();
 	// 	}
 	// })
+
+
+
+	//=======================================   Products   =======================================//
+	// Products Overlay Animation
+	if ($(window).width() > 767) {
+		$(".to-overlay").click(function(e){
+			e.preventDefault();
+		  $tm.to($($(this).data("target")), 0.3, { opacity: 1, zIndex: 5 });
+		});
+		$(".close-overlay").click(function(e) {
+			e.preventDefault();
+		  $tm.to($(".product-overlay"), 0.3, { opacity: 0, zIndex: -1 });
+		});
+	} else {
+		$(".to-overlay").click(function(e){
+			e.preventDefault();
+		  $tm.to($($(this).data("target")), 0.3, { opacity: 1, zIndex: 5 });
+		});
+		$(".close-overlay").click(function(e) {
+			e.preventDefault();
+		  $tm.to($(".product-overlay-mobile"), 0.3, { opacity: 0, zIndex: -1 });
+		});
+	}
+
 		
 	//=======================================   Contact   =======================================//
 	// Boostrap Datepicker options
@@ -207,12 +217,38 @@ $(document).on('turbolinks:load', function() {
 		todayHighlight: true,
 		weekStart: 1
 	});
+
 	// Schedule a demo show/hide
 	$(".schedule-demo-input").hide();
 	$(".schedule-demo-div").click(function() {
 		$(".schedule-demo-input").show();
 		$(".schedule-demo-div").hide();
 	});
+
+	// Contact Logo Animations
+	$(".logo-address-div").hover(function() {
+		$('.contact-logo-address').addClass('animated bounce');
+	}, function() {
+		$('.contact-logo-address').removeClass('animated bounce');
+	});
+	$(".logo-phone-div").hover(function() {
+		$('.contact-logo-phone').addClass('animated tada');
+	}, function() {
+		$('.contact-logo-phone').removeClass('animated tada');
+	});
+	$(".logo-mail-div").hover(function() {
+		$('.contact-logo-mail').addClass('animated swing');
+	}, function() {
+		$('.contact-logo-mail').removeClass('animated swing');
+	});
+
+
+
+
+
+
+
+
 
 	var $tm = TweenMax;
 	var downArrow = $('#home-section-1 i');
@@ -272,8 +308,8 @@ $(document).on('turbolinks:load', function() {
 	var hrTweenCaseStudies = $tm.to($('.hr-anim-case-studies'), 5, { width: "100%" });
 	var hrTweenContact = $tm.to($('.hr-anim-contact'), 5, { width: "100%" });
 	var hrTweenProductsOpus = $tm.to($('.hr-anim-product-opus'), 5, { width: 700 });
-	var hrTweenResourcesForm = $tm.to($('.hr-anim-resources-form'), 5, { width: 1000 });
-	var hrTweenResourcesSection4 = $tm.to($('.hr-anim-resources-section-4'), 5, { width: 800 });
+	var hrTweenResourcesForm = $tm.to($('.hr-anim-resources-form'), 5, { width: "100%" });
+	var hrTweenResourcesSection4 = $tm.to($('.hr-anim-resources-section-4'), 5, { width: "80%" });
 	var hrTweenWhyUsSection3 = $tm.to($('.hr-anim-why-us-section-3'), 5, { width: 800 });
 
 	// Home Scene
@@ -372,15 +408,6 @@ $(document).on('turbolinks:load', function() {
 	});
 
 
-	// Products Overlay Animation
-	$(".to-overlay").click(function(e){
-		e.preventDefault();
-	  $tm.to($($(this).data("target")), 0.3, { opacity: 1, zIndex: 5 });
-	});
-	$(".close-overlay").click(function(e) {
-		e.preventDefault();
-	  $tm.to($(".product-overlay"), 0.3, { opacity: 0, zIndex: -1 });
-	});
 
 
 });
