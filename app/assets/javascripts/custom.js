@@ -205,7 +205,7 @@ $(document).on('turbolinks:load', function() {
 
 	var $tm = TweenMax;
 	var downArrow = $('#home-section-1 i');
-	$tm.from(downArrow, 2, { opacity: 0, bottom: '6%', ease: Elastic.easeOut.config(2.5, 0.3), repeat: -1 });
+	$tm.from(downArrow, 2, { opacity: 0, bottom: '7%', delay: 0.5, ease: Elastic.easeOut.config(2.5, 0.3), repeat: -1 });
 
 
 	// Init ScrollMagic Home Controller
@@ -235,15 +235,28 @@ $(document).on('turbolinks:load', function() {
 	// Animation home section 2 on scroll
 	var fromLeft = $tm.from($(".from-left"), 3, { left: -50, top: -50,  opacity: 0, ease: Power4.easeOut });
 	var fromRight = $tm.from($(".from-right"), 3, { right: -50, top: 50, opacity: 0, ease: Power4.easeOut });
+	var titleFromRight = new TimelineMax()
+										.from($(".line-from-right"), 1, { right: -50, opacity: 0, ease: Power2.easeOut })
+										.from($(".line1-from-right"), 1, { right: -50, opacity: 0, ease: Power2.easeOut }, "-=0.5")
+										.from($(".line2-from-right"), 1, { right: -50, opacity: 0, ease: Power2.easeOut }, "-=0.5")
+										.from($(".line3-from-right"), 1, { right: -50, opacity: 0, ease: Power2.easeOut }, "-=0.5")
+										.from($(".line4-from-right"), 1, { right: -50, opacity: 0, ease: Power2.easeOut }, "-=0.5");
 	var smallToBig = $tm.from($(".small-to-big"), 2, { scale: 0, ease: Elastic.easeOut.config(2, 1) });
+	//var down = $tm.to($(".down"), 1, { top: 100 });
 	var normalBigNormal = $tm.to($(".normal-big-normal"), 2, { fontSize: "2em" });
 	var fromUp = $tm.from($(".from-up"), 1, { top: -50, opacity: 0 });
 	var fromDown = $tm.from($(".from-down"), 1, { top: 50, opacity: 0 });
+	var check = new TimelineMax()
+							.to($(".mini-overlay-anim"), 1, { width: 0 })
+							.to($(".mini-overlay-anim1"), 1, { width: 0 }, "-=0.5")
+							.to($(".mini-overlay-anim2"), 1, { width: 0 }, "-=0.5");
 	var hrTween600 = $tm.to($('.hr-anim-600'), 5, { width: "100%" });
 	var hrTween550 = $tm.to($('.hr-anim-550'), 5, { width: "100%" });
 	var hrTween500 = $tm.to($('.hr-anim-500'), 5, { width: 500 });
 	var hrTween450 = $tm.to($('.hr-anim-450'), 5, { width: "100%" });
 	var hrTween400 = $tm.to($('.hr-anim-400'), 5, { width: "100%" });
+	var hrTweenCarousel = $tm.to($('.hr-anim-carousel'), 5, { width: "80%" });
+	var hrTweenHome8 = $tm.to($('.hr-anim-home-8'), 5, { width: "60%" });
 	var hrTweenCareerLife = $tm.to($('.hr-anim-career-life'), 5, { width: 600 });
 	var hrTweenCaseStudies = $tm.to($('.hr-anim-case-studies'), 5, { width: "100%" });
 	var hrTweenContact = $tm.to($('.hr-anim-contact'), 5, { width: 1000 });
@@ -254,14 +267,27 @@ $(document).on('turbolinks:load', function() {
 
 	// Home Scene
 	var homeSection1Scene = new ScrollMagic.Scene()
-													.setTween(smallToBig)
+													.setTween([smallToBig])
 													.addTo(homeController);
 	var homeSection2Scene = new ScrollMagic.Scene({triggerElement: "#home-section-2", offset: 100})
 													.setTween([fromLeft, fromRight])
 													.addTo(homeController);
+	var homeSection3Scene = new ScrollMagic.Scene({triggerElement: ".tab-content", offset: -100})
+													.setTween(check)
+													.addTo(homeController);
 	var homeSection4Scene = new ScrollMagic.Scene({triggerElement: "#home-section-4-5", offset: 150})
 													.setTween([fromUp, fromDown])
 													.addTo(homeController);
+	var homeSection5Scene = new ScrollMagic.Scene({triggerElement: ".container-section-5", offset: -100})
+													.setTween(titleFromRight)
+													.addTo(homeController);
+	var homeSection6Scene = new ScrollMagic.Scene({triggerElement: "#home-section-6", duration: 500})
+													.setTween(hrTweenCarousel)
+													.addTo(homeController);
+	var homeSection8Scene = new ScrollMagic.Scene({triggerElement: "#home-section-8", duration: 500})
+													.setTween(hrTweenHome8)
+													.addTo(homeController);
+
 
 	// Career Scene
 	var careerSection1Scene = new ScrollMagic.Scene({triggerElement: ".start_agame_anim", duration: 500})

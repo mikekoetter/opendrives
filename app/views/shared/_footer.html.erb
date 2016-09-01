@@ -1,8 +1,11 @@
 <footer>
-	<div class="col-xs-2 text-right">
+	<div class="col-sm-6 col-xs-12 text-center safari_only pull-right-sm">
+		<p class="lead"><span>SIGNUP FOR OUR NEWSLETTER</span> <strong class="footer-subscribe">SUBSCRIBE</strong></p>
+	</div> 
+	<div class="col-sm-2 col-xs-4">
 		<%= image_tag 'footer-OD-logo.png' %>
 	</div>
-	<div class="col-xs-4">
+	<div class="col-sm-4 col-xs-8">
 		<%= link_to((fa_icon 'facebook', class: 'facebook-logo'), 'https://www.facebook.com/OpenDrives/?fref=photo', target: '_blank') %>
 		<%= link_to((fa_icon 'twitter'), 'https://twitter.com/opendrives?lang=en', target: '_blank') %>
 		<%= link_to((fa_icon 'linkedin'), 'https://www.linkedin.com/company/open-drives', target: '_blank') %>
@@ -17,8 +20,6 @@
 			<p>SALES@OPENDRIVES.COM</p>
 		<% end %>
 	</div>  
-	<div class="col-xs-6 text-center safari_only">
-		<p class="lead"><span>SIGNUP FOR OUR NEWSLETTER</span> <strong>SUBSCRIBE</strong></p>
-	</div> 
+	
 	<input type="hidden" id="refresh" value="no">
 </footer>
