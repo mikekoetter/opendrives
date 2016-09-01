@@ -1172,15 +1172,25 @@ nav {
 	.contact-logo {
 		width: 100px;
 	}
+	@media (max-width: 767px) {
+		.col-sm-4 {
+			margin-bottom: 50px;
+		}
+	}
 }
 
 #contact-section-3 {
 	background-image: image-url('contact-form-background.png');
-	background-size: 100%;
+	background-size: cover;
+	background-position: center;
 	background-repeat: no-repeat;
 }
 
 form {
+	.schedule-demo-div.form-control {
+		padding-top: 20px !important;
+		cursor: pointer;
+	}
 	.form-control:focus {
 	  outline: none !important;
 	  border: 1px solid #2977F2;
@@ -1199,6 +1209,43 @@ form {
 	.link-with-border {
 		background-color: rgba(255, 255, 255, 0);
 	}
+	@media (max-width: 767px) {
+		.form-group {
+			margin-bottom: 0;
+		}
+		.col-sm-6 {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+/*---  DatePicker   ---*/
+
+.datepicker table tr td.today,
+.datepicker table tr td.today:hover,
+.datepicker table tr td.today.disabled,
+.datepicker table tr td.today.disabled:hover {
+  border-radius: 0;
+  color: #000;
+}
+.datepicker table tr td.active,
+.datepicker table tr td.active:hover,
+.datepicker table tr td.active.disabled,
+.datepicker table tr td.active.disabled:hover {
+  background-color: #2977F2;
+  background-image: -moz-linear-gradient(to bottom, #2977F2, #2977F2);
+  background-image: -ms-linear-gradient(to bottom, #2977F2, #2977F2);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2977F2), to(#2977F2));
+  background-image: -webkit-linear-gradient(to bottom, #2977F2, #2977F2);
+  background-image: -o-linear-gradient(to bottom, #2977F2, #2977F2);
+  background-image: linear-gradient(to bottom, #2977F2, #2977F2);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2977F2', endColorstr='#2977F2', GradientType=0);
+  border: 1px solid #000;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 0;
 }
 
 /*-------------------------  Products   -------------------------*/

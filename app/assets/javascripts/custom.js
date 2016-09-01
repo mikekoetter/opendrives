@@ -199,9 +199,20 @@ $(document).on('turbolinks:load', function() {
 	// 	}
 	// })
 		
-	
-	
-
+	//=======================================   Contact   =======================================//
+	// Boostrap Datepicker options
+	$('.datepicker').datepicker({
+		startDate: "+3d",
+		daysOfWeekDisabled: "0,6",
+		todayHighlight: true,
+		weekStart: 1
+	});
+	// Schedule a demo show/hide
+	$(".schedule-demo-input").hide();
+	$(".schedule-demo-div").click(function() {
+		$(".schedule-demo-input").show();
+		$(".schedule-demo-div").hide();
+	});
 
 	var $tm = TweenMax;
 	var downArrow = $('#home-section-1 i');
@@ -259,7 +270,7 @@ $(document).on('turbolinks:load', function() {
 	var hrTweenHome8 = $tm.to($('.hr-anim-home-8'), 5, { width: "60%" });
 	var hrTweenCareerLife = $tm.to($('.hr-anim-career-life'), 5, { width: 600 });
 	var hrTweenCaseStudies = $tm.to($('.hr-anim-case-studies'), 5, { width: "100%" });
-	var hrTweenContact = $tm.to($('.hr-anim-contact'), 5, { width: 1000 });
+	var hrTweenContact = $tm.to($('.hr-anim-contact'), 5, { width: "100%" });
 	var hrTweenProductsOpus = $tm.to($('.hr-anim-product-opus'), 5, { width: 700 });
 	var hrTweenResourcesForm = $tm.to($('.hr-anim-resources-form'), 5, { width: 1000 });
 	var hrTweenResourcesSection4 = $tm.to($('.hr-anim-resources-section-4'), 5, { width: 800 });

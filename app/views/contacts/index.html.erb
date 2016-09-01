@@ -6,21 +6,21 @@
 <section id="contact-section-2">
 	<div class="container">
 		<div class="row text-center marginTopBottom100">
-			<div class="col-md-4 logo-address-div">
+			<div class="col-sm-4 logo-address-div">
 				<%= link_to 'https://www.google.com/maps/place/3522+Hayden+Ave,+Culver+City,+CA+90232/@34.0265648,-118.3824543,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2b99b2e329a97:0x18a878136430e1ce!8m2!3d34.0265604!4d-118.3802656', target: '_blank' do %>
 					<%= image_tag 'contact-address-logo.png', class: 'contact-logo contact-logo-address' %>
 					<br><br>
 					<p>3522 HAYDEN AVENUE <br>CULVER CITY | CA 90232</p>
 				<% end %>
 			</div>
-			<div class="col-md-4 logo-phone-div">
+			<div class="col-sm-4 logo-phone-div">
 				<%= link_to 'tel:+13106598999' do %>
 					<%= image_tag 'contact-phone-logo.png', class: 'contact-logo contact-logo-phone' %>
 					<br><br>
 					<p>+1 (310) 659-8999</p>
 				<% end %>
 			</div>
-			<div class="col-md-4 logo-mail-div">
+			<div class="col-sm-4 logo-mail-div">
 				<%= link_to 'mailto:sales@opendrives.com' do %>
 					<%= image_tag 'contact-mail-logo.png', class: 'contact-logo contact-logo-mail' %>
 					<br><br>
@@ -44,40 +44,46 @@
           <fieldset>
 
             <div class="form-group">
-              <div class="col-md-6">
+              <div class="col-sm-6">
                 <input id="first-name" name="first-name" type="text" placeholder="*FIRST NAME" class="form-control" required>
               </div>
-              <div class="col-md-6">
+              <div class="col-sm-6">
                 <input id="last-name" name="last-name" type="text" placeholder="*LAST NAME" class="form-control" required>
               </div>
             </div>
 
             <div class="form-group">
-              <div class="col-md-6">
+              <div class="col-sm-6">
                 <input id="email" name="email" type="text" placeholder="*WORK EMAIL" class="form-control" required>
               </div>
-              <div class="col-md-6">
+              <div class="col-sm-6">
                 <input id="company-name" name="company-name" type="text" placeholder="*COMPANY NAME" class="form-control" required>
               </div>
             </div>
 
             <div class="form-group">
-              <div class="col-md-6">
+              <div class="col-sm-6">
                 <input id="job-title" name="job-title" type="text" placeholder="JOB TITLE" class="form-control">
               </div>
-              <div class="col-md-6">
+              <div class="col-sm-6">
                 <input id="phone" name="phone" type="tel" placeholder="PHONE NUMBER" class="form-control">
               </div>
             </div>
 
             <div class="form-group">
-              <div class="col-md-6">
+              <div class="col-sm-6">
                 <input id="country" name="country" type="text" placeholder="COUNTRY" class="form-control">
+              </div>
+              <div class="col-sm-6">
+                <input id="date" name="date" type="date" placeholder="MM/DD/YYYY" class="form-control datepicker schedule-demo-input">
+                <div class="schedule-demo-div form-control hvr-sweep-to-right">
+                  WANT TO SCHEDULE A DEMO?
+                </div>
               </div>
             </div>
 
             <div class="form-group">
-              <div class="col-md-12">
+              <div class="col-sm-12">
                 <textarea class="form-control " id="message" name="message" placeholder="QUESTION" rows="10"></textarea>
               </div>
             </div>
