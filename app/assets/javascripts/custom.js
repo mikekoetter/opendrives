@@ -1,4 +1,21 @@
+$.fn.clicktoggle = function(a, b) {
+    return this.each(function() {
+        var clicked = false;
+        $(this).click(function(e) {
+        		e.preventDefault;
+            if (clicked) {
+                clicked = false;
+                return b.apply(this, arguments);
+            }
+            clicked = true;
+            return a.apply(this, arguments);
+        });
+    });
+};
+
 $(document).ready(function() {
+
+
 
 	 
 	// For sticky images
@@ -37,11 +54,6 @@ $(document).ready(function() {
 	//=======================================   Generals   =======================================//
 	$(".full-height").css("min-height", $(window).height());
 	$(".full-height-twice").css("min-height", ($(window).height() * 2));
-
-	// Fix turbolink issue on back link browser, 
-	// refresh page, hidden field in footer
-	// var $input = $('#refresh');
-	// $input.val() == 'yes' ? location.reload(true) : $input.val('yes');
 
 	// Tab to Page to Tab 
 	var hash = window.location.hash;
@@ -89,7 +101,7 @@ $(document).ready(function() {
 
 	// Shadow animation
 	$(".shadow-animation").hover(function() {
-	  	$tm.to($(this), 0.3, { boxShadow: "10px 10px 5px #444" });
+	  	$tm.to($(this), 0.3, { boxShadow: "10px 10px 5px #666" });
 	  	$tm.to($(this), 0.3, { left: -10, top: -10 });
 	}, function() {
 	  	$tm.to($(this), 0.3, { boxShadow: "0px 0px 0px" });
@@ -146,15 +158,19 @@ $(document).ready(function() {
 	owlEmployee.owlCarousel({
 		loop: true,
 		center: true,
+		onInitialized: callback
 	});
-
-	// owlEmployee.on('changed.owl.carousel', function( event ) {
- //  	TweenMax.to($(".owl-item.active img"), 0.5, { width: "100%", opacity: 0.5, zIndex: 0, left: 0, top: 0 })
- //  	TweenMax.to($(".owl-item.active.center img"), 0.5, { width: "170%", opacity: 1, zIndex: 1, left: -150, top: -150 })
-	// });
-	// // owlEmployee.on('next.owl.carousel', function( event ) {
- //  	TweenMax.to($(".owl-item.center.active img"), 0.5, { width: "170%", opacity: 1, zIndex: 1, left: -150, top: -150 })
-	// });
+	function callback() {
+		TweenMax.to($(".owl-item.active.center img"), 1.5, { scale: 1.7, opacity: 1, zIndex: 1, ease: Elastic.easeOut.config(1, 0.5) });
+	}
+	
+	owlEmployee.on('translate.owl.carousel', function( event ) {
+		TweenMax.to($(".owl-item.active img"), 1, { scale: 1, opacity: 0.5, zIndex: 0 })
+	});
+	owlEmployee.on('translated.owl.carousel', function( event ) {
+		TweenMax.to($(".owl-item.active img"), 1, { scale: 1, opacity: 0.5, zIndex: 0 })
+		TweenMax.to($(".owl-item.active.center img"), 1.5, { scale: 1.7, opacity: 1, zIndex: 1, ease: Elastic.easeOut.config(1, 0.5) })
+	});
 	$('.carousel-left-arrow').click(function() {
 	    owl.trigger('prev.owl.carousel');
 	    owlEmployee.trigger('prev.owl.carousel');
@@ -177,16 +193,43 @@ $(document).ready(function() {
 	function hideMenu() {
 		TweenMax.to($('.nav-menu'), 0.5, { right: -300, opacity: 0, zIndex: -5 });
 		TweenMax.to($('.hide-on-menu'), 0.5, { opacity: 1 });
+		TweenMax.to($('.no-hamburgler, .hamburgler'), 0.3, {  zIndex: 6, left: 15, top: 2 });
+		TweenMax.to($('.bun, .meat'), 0.3, {  clearProps:"all" });
+		$(".hamburgler").removeClass('no-hamburgler blue-hover');
 	}
-	$(".bars-nav").click(function(e) {
-		e.preventDefault();
+	function showMenu() {
+		$(".hamburgler").addClass('no-hamburgler blue-hover');
+		TweenMax.to($('.no-hamburgler'), 0.3, {  zIndex: 6, left: 40 });
 		TweenMax.to($('.nav-menu'), 0.3, { right: 0, opacity: 1, zIndex: 5 });
 		TweenMax.to($('.hide-on-menu'), 0.3, { opacity: 0 });
+	}
+
+	$(".hamburgler").clicktoggle(function() {
+		$(this).addClass('no-hamburgler blue-hover');
+		TweenMax.to($('.no-hamburgler'), 0.3, {  zIndex: 6, left: 40, top: -10 });
+		TweenMax.to($('.nav-menu'), 0.3, { right: 0, opacity: 1, zIndex: 5 });
+		TweenMax.to($('.hide-on-menu'), 0.3, { opacity: 0 });
+	}, function() {
+		TweenMax.to($('.nav-menu'), 0.5, { right: -300, opacity: 0, zIndex: -5 });
+		TweenMax.to($('.hide-on-menu'), 0.5, { opacity: 1 });
+		TweenMax.to($('.no-hamburgler, .hamburgler'), 0.3, {  zIndex: 6, left: 15, top: 2 });
+		TweenMax.to($('.bun, .meat'), 0.3, {  clearProps:"all" });
+		$(".hamburgler").removeClass('no-hamburgler blue-hover');
 	});
-	$(".close-menu").click(function(e) {
-		e.preventDefault();
-		hideMenu();
-	});
+
+
+	// $(".testyz").click(function(e) {
+	// 	e.preventDefault();
+	// 	hideMenu();
+	// });
+	// $(".testy").click(function(e) {
+	// 	e.preventDefault();
+	// 	$(".hamburgler").addClass('no-hamburgler blue-hover');
+	// 	TweenMax.to($('.no-hamburgler'), 0.3, {  zIndex: 6, left: 40 });
+	// 	TweenMax.to($('.nav-menu'), 0.3, { right: 0, opacity: 1, zIndex: 5 });
+	// 	TweenMax.to($('.hide-on-menu'), 0.3, { opacity: 0 });
+	// });
+	
 	$(window).scroll(function() {
 		hideMenu();
 	});
@@ -196,8 +239,7 @@ $(document).ready(function() {
 	// 		hideMenu();
 	// 	}
 	// })
-
-
+	
 
 	//=======================================   Products   =======================================//
 	// Products Overlay Animation
@@ -305,8 +347,8 @@ $(document).ready(function() {
 									.addTo(homeController);
 
 	// Animation home section 2 on scroll
-	var fromLeft = $tm.from($(".from-left"), 3, { left: -50, top: -50,  opacity: 0, ease: Power4.easeOut });
-	var fromRight = $tm.from($(".from-right"), 3, { right: -50, top: 50, opacity: 0, ease: Power4.easeOut });
+	var fromLeft = $tm.from($(".from-left"), 2, { left: -50, top: -50,  opacity: 0, ease: Power4.easeOut });
+	var fromRight = $tm.from($(".from-right"), 2, { right: -50, top: 50, opacity: 0, ease: Power4.easeOut });
 	var titleFromRight = new TimelineMax()
 										.from($(".line-from-right"), 1, { right: -50, opacity: 0, ease: Power2.easeOut })
 										.from($(".line1-from-right"), 1, { right: -50, opacity: 0, ease: Power2.easeOut }, "-=0.5")
