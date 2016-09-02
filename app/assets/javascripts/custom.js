@@ -1,6 +1,4 @@
-$(document).on('turbolinks:load', function() {
-
-
+$(document).ready(function() {
 
 	 
 	// For sticky images
@@ -36,56 +34,43 @@ $(document).on('turbolinks:load', function() {
 
 
 
-
-
-
+	//=======================================   Generals   =======================================//
 	$(".full-height").css("min-height", $(window).height());
 	$(".full-height-twice").css("min-height", ($(window).height() * 2));
 
 	// Fix turbolink issue on back link browser, 
 	// refresh page, hidden field in footer
-	var $input = $('#refresh');
-	$input.val() == 'yes' ? location.reload(true) : $input.val('yes');
+	// var $input = $('#refresh');
+	// $input.val() == 'yes' ? location.reload(true) : $input.val('yes');
 
-
-	// Stop Videos on modal close
-	$("#modal-house-cards").on('hidden.bs.modal', function (e) {
-	    $("#modal-house-cards iframe").attr("src", $("#modal-house-cards iframe").attr("src"));
-	});
-	$("#modal-deadpool").on('hidden.bs.modal', function (e) {
-	    $("#modal-deadpool iframe").attr("src", $("#modal-deadpool iframe").attr("src"));
-	});
-
-	
-
-
-
-
-
-	// Tab to Page to Tab
+	// Tab to Page to Tab 
 	var hash = window.location.hash;
-	hash && $('ul.nav a[href="' + hash + '"]').tab('show');
-	$(".link_to_tab").click(function() {
-		setTimeout(function(){ 
-			window.scrollTo(0,1300);
-		}, 300);
-	});
-	$(".link_to_tab_support").click(function() {
-		setTimeout(function(){ 
-			window.scrollTo(0,2930);
-		}, 300);
-	});
+	console.log(hash.split("#"))
+	hash = hash.split("#");
+	// Triggers the right tab
+	hash[2] && $('ul.nav a[href="#' + hash[2] + '"]').tab('show');
+	// Scroll to right id
+	window.location = "#" + hash[1]
+	var heightToScroll = 500
+	if ($(window).width() < 767) {
+		heightToScroll = -300;
+	} else if ($(window).width() < 991) {
+		heightToScroll = 280;
+	} else if ($(window).width() < 1200) {
+		heightToScroll = 370;
+	} else {
+		heightToScroll
+	}
+	if (hash[1] != "undefined" && hash[1] != undefined) {
+		if (hash[1] === 'resources-section-6') {
+			$("html, body").animate({scrollTop: ($("#" + hash[1]).offset().top + heightToScroll) });
+		} else {
+			$("html, body").animate({scrollTop: ($("#" + hash[1]).offset().top - 100) });
+		}
+	} else {
+		window.location.hash = '';
+	}
 
-
-
-	// Link Icon animation
-	// $(".animate-icon").hover(function() {
-	// 	TweenMax.to($(".animate-icon i"), 0.5, { left: 5, ease: Elastic.easeOut.config(1, 0.3) })
-	// }, function() {
-	// 	TweenMax.to($(".animate-icon i"), 0.5, { left: 0 })
-	// });
-		
-	
 	// SmoothScrolling
 	$(function() {
 	  $('.smooth-scroll').click(function() {
@@ -101,8 +86,36 @@ $(document).on('turbolinks:load', function() {
 			}
 	  });
 	});
+
+	// Shadow animation
+	$(".shadow-animation").hover(function() {
+	  	$tm.to($(this), 0.3, { boxShadow: "10px 10px 5px #444" });
+	  	$tm.to($(this), 0.3, { left: -10, top: -10 });
+	}, function() {
+	  	$tm.to($(this), 0.3, { boxShadow: "0px 0px 0px" });
+	  	$tm.to($(this), 0.3, { left: 0, top: 0 });
+	});
+
 	
 
+
+
+
+
+	
+	
+
+
+	// Link Icon animation
+	// $(".animate-icon").hover(function() {
+	// 	TweenMax.to($(".animate-icon i"), 0.5, { left: 5, ease: Elastic.easeOut.config(1, 0.3) })
+	// }, function() {
+	// 	TweenMax.to($(".animate-icon i"), 0.5, { left: 0 })
+	// });
+		
+	
+	
+	//=======================================   Carousel   =======================================//	
 	// Clients Carousel set up
 	var owl = $(".clients-carousel");
 	owl.owlCarousel({
@@ -159,8 +172,7 @@ $(document).on('turbolinks:load', function() {
 
 	
 	
-
-	
+	//=======================================   Nav   =======================================//
 	// Nav menu animation
 	function hideMenu() {
 		TweenMax.to($('.nav-menu'), 0.5, { right: -300, opacity: 0, zIndex: -5 });
@@ -210,6 +222,16 @@ $(document).on('turbolinks:load', function() {
 	}
 
 		
+	//=======================================   Resources   =======================================//
+	// Stop Videos on modal close
+	$("#modal-house-cards").on('hidden.bs.modal', function (e) {
+	    $("#modal-house-cards iframe").attr("src", $("#modal-house-cards iframe").attr("src"));
+	});
+	$("#modal-deadpool").on('hidden.bs.modal', function (e) {
+	    $("#modal-deadpool iframe").attr("src", $("#modal-deadpool iframe").attr("src"));
+	});
+
+
 	//=======================================   Contact   =======================================//
 	// Boostrap Datepicker options
 	$('.datepicker').datepicker({
@@ -247,7 +269,9 @@ $(document).on('turbolinks:load', function() {
 
 
 
-
+	//===========================================================================================//
+	//===============================   Animation Center   ======================================//
+	//===========================================================================================//
 
 
 
@@ -391,22 +415,7 @@ $(document).on('turbolinks:load', function() {
 													.addTo(whyUsController);
 
 
-
-	// Init ScrollMagic hr Controller
-	// var hrController = new ScrollMagic.Controller();
 	
-	// var hrScene = new ScrollMagic.Scene({ triggerElement: ".hr-anim", offset: 100 })
-	// 								.setTween(hrTween)
-	// 								.addTo(hrController);
-
-	// Shadow animation
-	$(".shadow-animation").hover(function() {
-	  	$tm.to($(this), 0.3, { boxShadow: "10px 10px 5px #444" });
-	  	$tm.to($(this), 0.3, { left: -10, top: -10 });
-	}, function() {
-	  	$tm.to($(this), 0.3, { boxShadow: "0px 0px 0px" });
-	  	$tm.to($(this), 0.3, { left: 0, top: 0 });
-	});
 
 
 
