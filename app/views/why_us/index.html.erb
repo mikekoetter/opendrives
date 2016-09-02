@@ -1,9 +1,9 @@
-<% @page_title = 'Resources' %>
-<section id="why-us-section-1">
+<% @page_title = 'Why Us' %>
+<div id="why-us-section-1">
 	<%= image_tag 'why-us-intro.png', class: 'marginTopIntro' %>
-</section>
+</div>
 
-<section id="why-us-section-2">
+<div id="why-us-section-2">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center">
@@ -14,9 +14,9 @@
 			</div>
 		</div>
 	</div>
-</section>
+</div>
 
-<section id="why-us-section-3" class="full-height">
+<div id="why-us-section-3">
 	<div class="container">
 		<div class="row marginTop100">
 			<div class="col-md-12 text-center">
@@ -27,60 +27,60 @@
 	</div>
 	<div class="container custom-container">
 		<div class="row marginTop50">
-			<div class="col-md-6 black box">
-				<div class="col-md-4 text-center">
+			<div class="col-sm-6 black box">
+				<div class="col-sm-4 text-center">
 					<%= image_tag 'why-us-lightning-logo.png' %>
 					<br><br>
 					<p>MIND-BLOWING<br> SPEED</p>
 				</div>
-				<div class="col-md-8">
+				<div class="col-sm-8">
 					<p class="lead high-line">OpenDrives gives you benchmark-shattering speed through a combination of proprietary software and hardware. Working together, they maximize <span class="blue">performance</span> to give you speed no one else can come close to.</p>
 				</div>
 			</div>
-			<div class="col-md-6 box">
-				<div class="col-md-4 text-center">
+			<div class="col-sm-6 box">
+				<div class="col-sm-4 text-center">
 					<%= image_tag 'why-us-lock-logo.png' %>
 					<br><br>
 					<p>LOCKDOWN<br> SECURITY</p>
 				</div>
-				<div class="col-md-8">
+				<div class="col-sm-8">
 					<p class="lead high-line">Because your data is secured on hardware at your location, you have greater <span class="blue">control</span> over it. OpenDrives lets you eliminate the potential leaks and security threats that come with other forms of storage.</p>
 				</div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-6 box">
-				<div class="col-md-4 text-center">
+			<div class="col-sm-6 box switch-to-black">
+				<div class="col-sm-4 text-center">
 					<%= image_tag 'why-us-double-check-logo.png' %>
 					<br><br>
 					<p>RELIABILITY YOU<br> CAN COUNT ON</p>
 				</div>
-				<div class="col-md-8">
+				<div class="col-sm-8">
 					<p class="lead high-line">OpenDrives has built-in replication and mirroring processes that ensure your data is <span class="blue">protected</span>. OpenDrives utilizes in-flight corruption correction and power-loss corruption prevention on a fully check-summed file system to deliver industry-leading data integrity and protection.</p>
 				</div>
 			</div>
-			<div class="col-md-6 black box long-box">
-				<div class="col-md-4 text-center">
+			<div class="col-sm-6 black box long-box switch-to-white">
+				<div class="col-sm-4 text-center">
 					<%= image_tag 'why-us-dollar-logo.png' %>
 					<br><br>
 					<p>PREMIER<br> VALUE</p>
 				</div>
-				<div class="col-md-8">
+				<div class="col-sm-8">
 					<p class="lead high-line">By offering superior performance at half the price, OpenDrives gives you the absolute best bang for your buck. Stop choosing between the storage you need and the storage you can <span class="blue">afford</span>. OpenDrives gives you both.</p>
 				</div>
 			</div>
 		</div>
 	</div>
-</section>
+</div>
 
-<section id="why-us-section-4">
+<div id="why-us-section-4">
 	<div class="container">
 		<div class="row marginTop100">
 			<div class="col-md-6 marginTop100">
 				<h3>THE TOTAL PACKAGE</h3>
 				<hr>
 				<br><br>
-				<p class="lead huge"><span class="light">IN ADDITION TO ALL OF THIS,</span> <strong>OPENDRIVES</strong> <span class="light">ALSO GIVES YOU</span></p>
+				<p class="huge"><span class="light">IN ADDITION TO ALL OF THIS,</span> <strong>OPENDRIVES</strong> <span class="light">ALSO GIVES YOU</span></p>
 			</div>
 			<div class="col-md-6">
 				<%= image_tag 'bigdrive2.png' %>
@@ -88,12 +88,12 @@
 		</div>
 		<div class="row marginTopBottom100">
 			<% @datas.each do |data| %>
-				<div class="col-md-4">
+				<div class="col-sm-4">
 					<% data.each do |d| %>
-						<div class="col-md-2">
+						<div class="col-xs-2">
 							<%= image_tag 'check.png', class: "check-image" %>
 						</div>
-						<div class="col-md-10">
+						<div class="col-xs-10">
 							<p><%= d %></p>
 						</div>
 						<br><br>
@@ -102,12 +102,12 @@
 			<% end %>
 		</div>
 	</div>
-</section>
+</div>
 
-<section id="why-us-section-5">
+<div id="why-us-section-5">
 	<div class="container">
 		<div class="row marginTop50">
-			<div class="col-md-12 text-center">
+			<div class="col-md-6 col-md-offset-3 text-center">
 				<h2><span class="light">OUR</span> TEAM</h2>
 				<hr>
 			</div>
@@ -116,22 +116,28 @@
 	<div class="why-us-section-5-background-div full-height-twice marginTop50">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 employee-carousel-anchor">
+				<div class="col-md-12 employee-carousel-anchor hide-in-sm-mobile">
 					<div class="employee-carousel">
 						<div class="padding-top"><%= image_tag 'why-us-testy.png' %></div>
 						<div class="padding-top"><%= image_tag 'why-us-testy.png' %></div>
 						<div class="padding-top"><%= image_tag 'why-us-testy.png' %></div>
 						<div class="padding-top"><%= image_tag 'why-us-testy.png' %></div>
 					</div>
-					<%= image_tag 'carousel-left-arrow.png', class: "carousel-arrow carousel-left-arrow" %>
-					<%= image_tag 'carousel-right-arrow.png', class: "carousel-arrow carousel-right-arrow" %>
+					<%= image_tag 'carousel-left-arrow.png', class: "carousel-arrow carousel-left-arrow hide-in-sm-mobile" %>
+					<%= image_tag 'carousel-right-arrow.png', class: "carousel-arrow carousel-right-arrow hide-in-sm-mobile" %>
+				</div>
+				<div class="col-md-12 hide-in-sm-desktop">
+					<%= render 'mobile_employee_pic', img: 'why-us-testy' %>
+					<%= render 'mobile_employee_pic', img: 'why-us-testy' %>
+					<%= render 'mobile_employee_pic', img: 'why-us-testy' %>
+					<%= render 'mobile_employee_pic', img: 'why-us-testy' %>
 				</div>
 			</div>
 		</div>
 	</div>
-</section>
+</div>
 
-<section id="why-us-section-6">
+<div id="why-us-section-6">
 	<div class="container">
 		<div class="row marginTopBottom100">
 			<div class="col-md-12">
@@ -144,7 +150,7 @@
 			</div>
 		</div>
 	</div>
-</section>
+</div>
 
 
 

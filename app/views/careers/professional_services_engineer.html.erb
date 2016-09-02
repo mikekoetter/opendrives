@@ -1,2 +1,103 @@
 <% @page_title = 'Careers - Professional Services Engineer' %>
 
+<div id="career-job-opening-section-1">
+	<div class="container">
+		<div class="row marginTopBottom100">
+			<div class="col-md-12 text-center">
+				<div class="col-md-8 col-md-offset-2 job-title">
+					<h3><span class="light">PROFESSIONAL</span> SERVICES ENGINEER</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="career-job-opening-section-2">
+	<div class="container">
+		<div class="row marginTop50">
+			<div class="col-md-12">
+				<h3 class="text-center"><span class="light">JOB</span> DESCRIPTION</h3>
+				<hr>
+				<br><br>
+				<p>Open Drives will continue to evolve toward higher value-added solutions and Professional Services Engineers are integral to the success of these solutions. Solution examples are complex storage architectures to support mission critical applications such as 4K+ resolution editing, visual effects, rendering and animation workflows. Solutions also include backup and restore, disaster recovery, storage consolidation, data protection, storage performance, etc.</p>
+				<br><br>
+				<h4 class="text-center"><span class="light">WHAT YOU'LL BE</span> DOING IN THIS JOB...</h4>
+				<br><br>
+				<p>As a Professional Services Engineer, you will provide post-sales services and support for Open Drives enterprise customers. Professional Services Engineers team with Open Drives account teams and customers to understand customer requirements, scope appropriate services, and deliver service projects. Service projects include various aspects of project planning, project management, installations, requirements analysis, architecture/design, implementation, optimization, and on-going customer support processes.</p>
+				<br><br>
+				
+				<h4 class="text-center high-line"><span class="light">PRINCIPAL DUTIES</span> <br> AND RESPONSIBILITIES</h4>
+				<br><br>
+				<div class="col-md-6">
+					<p>The essential responsibilities of the Professional Services Engineer are to collaborate with Open Drives customers through on-site support and consulting services including:</p>
+					<br>
+					<% @duties[0].each do |duty| %>
+						<div class="col-xs-2">
+							<%= image_tag 'check.png', class: 'check-image' %>
+						</div>
+						<div class="col-xs-10">
+							<%= duty %>
+						</div>
+					<% end %>
+				</div>
+				<div class="col-md-6">
+					<p>It is critical for this individual to understand the customer’s technical environment in order to be able to deliver effective solutions. Typical customer technical environments include:</p>
+					<br>
+					<% @duties[1].each do |duty| %>
+						<div class="col-xs-2">
+							<%= image_tag 'check.png', class: 'check-image' %>
+						</div>
+						<div class="col-xs-10">
+							<%= duty %>
+						</div>
+					<% end %>
+				</div>
+				<div class="col-md-12">
+					<br><br>
+					<p>This individual will contribute positively to specific projects as part of the project planning, project management, installations, requirements analysis, architecture/design, implementation, optimization, and customer support processes.</p>
+					<br><br>
+					<% 2.times do |t| %>
+						<div class="col-md-6">
+							<% @duties[t + 2].each do |duty| %>
+								<div class="col-xs-2">
+									<%= image_tag 'check.png', class: 'check-image' %>
+								</div>
+								<div class="col-xs-10">
+									<%= duty %>
+								</div>
+							<% end %>
+						</div>
+					<% end %>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 text-center job-opening-big-border marginTop100">
+				<p class="lead">IF THIS SOUNDS LIKE YOU, THEN WE HOPE TO MEET WITH YOU SOON!</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="career-job-opening-section-3">
+	<div class="container">
+		<div class="row marginTopBottom100">
+			<div class="col-md-12">
+				<h3 class="text-center"><span class="light">SKILLS &AMP;</span> REQUIREMENTS</h3>
+				<hr>
+				<br><br>
+				<h4 class="text-center high-line"><span class="light">EXPERIENCE, TECHNICAL KNOWLEDGE</span><br> AND OTHER QUALITIES WE'RE LOOKING FOR...</h4>
+				<br><br>
+				<ul>
+					<% @requirements.each do |requirement| %>
+						<li><%= requirement %></li>
+					<% end %>
+				</ul>
+				<br><br>
+			</div>
+			<div class="col-md-12 text-center">
+				<%= link_to((fa_icon 'angle-right', text: 'SUBMIT RESUME', right: true), '', class: 'link-with-border') %>
+			</div>
+		</div>
+	</div>
+</div>

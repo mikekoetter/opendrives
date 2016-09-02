@@ -931,6 +931,9 @@ nav {
 		padding-top: 50px;
 		padding-bottom: 30px;
 	}
+	.high-line {
+		line-height: 35px;
+	}
 }
 
 #career-job-opening-section-3 {
@@ -940,6 +943,9 @@ nav {
 			padding-left: 10px;
 			line-height: 30px;
 		}
+	}
+	.high-line {
+		line-height: 35px;
 	}
 }
 
@@ -1881,26 +1887,63 @@ iframe {
 		background-color: #000;
 		color: #fff;
 	}
+	@media (max-width: 767px) { 
+		.box {
+			padding-top: 50px;
+			padding-bottom: 50px;
+			img {
+				padding-top: 30px;
+				width: 80px;
+			}
+		}
+		.switch-to-black {
+			background-color: #000;
+			color: #fff;
+		}
+		.black.switch-to-white {
+			background-color: #fff;
+			color: #000;
+		}
+	}
 }
 
 #why-us-section-4 {
 	margin-top: -100px;
 	background-image: image-url('why-us-section-4-background.png');
-	background-size: 100%;
+	background-size: cover;
+	background-position: center;
 	background-repeat: no-repeat;
 	color: #fff;
 	hr {
 		margin-left: 0;
+	}
+	@media (max-width: 991px) {
+		h3, p.huge {
+			text-align: center;
+		}
+		hr {
+			margin-left: auto;
+		}
+		.col-md-6 img {
+			margin-top: 50px;
+			margin-left: 25%;
+			width: 300px;
+		}
+	}
+	@media (max-width: 767px) {
+		margin-top: 0;
 	}
 }
 
 #why-us-section-5 {
 	.why-us-section-5-background-div {
 		background-image: image-url('why-us-section-5-background.png');
-		background-size: 100%;
+		background-size: cover;
+		background-position: center;
 		background-repeat: no-repeat;
 		padding-top: 700px;
 		.employee-carousel-anchor {
+			width: 100%;
 			position: relative;
 			img {
 			position: relative;
@@ -1933,6 +1976,75 @@ iframe {
 				right: -60px;
 			}
 		}
+	}
+	@media (max-width: 1290px) {
+		.why-us-section-5-background-div {
+			padding-top: 800px;
+			.employee-carousel-anchor {
+				/*img {
+					width: 100%;
+				}*/
+				.owl-item.center img {
+				  width: 150%;
+				  left: -120px;
+				  top: -100px;
+				}
+				.carousel-arrow {
+					width: 30px;
+					top: 420px;
+				}
+				.carousel-left-arrow {
+					left: -40px;
+				}
+				.carousel-right-arrow {
+					right: -40px;
+				}
+			}
+		}
+	}
+	@media (max-width: 1200px) {
+		.why-us-section-5-background-div {
+			.employee-carousel-anchor {
+				.owl-item.center img {
+				  width: 150%;
+				  left: -90px;
+				  top: -90px;
+				}
+				.carousel-arrow {
+					width: 30px;
+					top: 390px;
+				}
+				.carousel-left-arrow {
+					left: -25px;
+				}
+				.carousel-right-arrow {
+					right: -25px;
+				}
+			}
+		}
+	}
+	@media (max-width: 991px) {
+		.why-us-section-5-background-div {
+			.employee-carousel-anchor {
+				.owl-item.center img {
+				  left: -60px;
+				  top: -60px;
+				}
+				.carousel-arrow {
+					width: 30px;
+					top: 360px;
+				}
+			}
+		}
+	}
+}
+
+#why-us-section-6 {
+	@media (max-width: 1200px) {
+		margin-top: -100px;
+	}
+	@media (max-width: 767px) {
+		margin-top: 0px;
 	}
 }
 
@@ -2269,6 +2381,9 @@ footer {
 	.lead {
 		font-size: 1.2em;
 	}
+	.huge {
+		font-size: 3em;
+	}
 	.marginTop100 {
 		margin-top: 80px;
 	}
@@ -2311,7 +2426,7 @@ footer {
 		margin-top: 55px;
 	}
 	.huge {
-		font-size: 3em;
+		font-size: 2.5em;
 	}
 	.high-line {
 		line-height: 35px;

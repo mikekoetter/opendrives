@@ -134,6 +134,7 @@ $(document).on('turbolinks:load', function() {
 		loop: true,
 		center: true,
 	});
+
 	// owlEmployee.on('changed.owl.carousel', function( event ) {
  //  	TweenMax.to($(".owl-item.active img"), 0.5, { width: "100%", opacity: 0.5, zIndex: 0, left: 0, top: 0 })
  //  	TweenMax.to($(".owl-item.active.center img"), 0.5, { width: "170%", opacity: 1, zIndex: 1, left: -150, top: -150 })
@@ -167,8 +168,8 @@ $(document).on('turbolinks:load', function() {
 	}
 	$(".bars-nav").click(function(e) {
 		e.preventDefault();
-		TweenMax.to($('.nav-menu'), 0.5, { right: 0, opacity: 1, zIndex: 5 });
-		TweenMax.to($('.hide-on-menu'), 0.5, { opacity: 0 });
+		TweenMax.to($('.nav-menu'), 0.3, { right: 0, opacity: 1, zIndex: 5 });
+		TweenMax.to($('.hide-on-menu'), 0.3, { opacity: 0 });
 	});
 	$(".close-menu").click(function(e) {
 		e.preventDefault();
@@ -310,7 +311,7 @@ $(document).on('turbolinks:load', function() {
 	var hrTweenProductsOpus = $tm.to($('.hr-anim-product-opus'), 5, { width: 700 });
 	var hrTweenResourcesForm = $tm.to($('.hr-anim-resources-form'), 5, { width: "100%" });
 	var hrTweenResourcesSection4 = $tm.to($('.hr-anim-resources-section-4'), 5, { width: "80%" });
-	var hrTweenWhyUsSection3 = $tm.to($('.hr-anim-why-us-section-3'), 5, { width: 800 });
+	var hrTweenWhyUsSection3 = $tm.to($('.hr-anim-why-us-section-3'), 5, { width: "70%" });
 
 	// Home Scene
 	var homeSection1Scene = new ScrollMagic.Scene()

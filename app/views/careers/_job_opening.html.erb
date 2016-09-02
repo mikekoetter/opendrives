@@ -1,4 +1,4 @@
-<section id="career-job-opening-section-1">
+<div id="career-job-opening-section-1">
 	<div class="container">
 		<div class="row marginTopBottom100">
 			<div class="col-md-12 text-center">
@@ -8,9 +8,9 @@
 			</div>
 		</div>
 	</div>
-</section>
+</div>
 
-<section id="career-job-opening-section-2">
+<div id="career-job-opening-section-2">
 	<div class="container">
 		<div class="row marginTop50">
 			<div class="col-md-12">
@@ -24,7 +24,7 @@
 				<p><%= job_description_body.html_safe %></p>
 				<br><br>
 				<% if essential_function %>
-					<h4 class="text-center"><%= essential_function.html_safe %></h4>
+					<h4 class="text-center high-line"><%= essential_function.html_safe %></h4>
 					<br><br>
 					<% essentials.each do |essential| %>
 						<div class="col-md-4">
@@ -45,16 +45,16 @@
 			</div>
 		</div>
 	</div>
-</section>
+</div>
 
-<section id="career-job-opening-section-3">
+<div id="career-job-opening-section-3">
 	<div class="container">
 		<div class="row marginTopBottom100">
 			<div class="col-md-12">
 				<h3 class="text-center"><span class="light">SKILLS &AMP;</span> REQUIREMENTS</h3>
 				<hr>
 				<br><br>
-				<h4 class="text-center"><span class="light">EXPERIENCE, TECHNICAL KNOWLEDGE</span><br> AND OTHER QUALITIES WE'RE LOOKING FOR...</h4>
+				<h4 class="text-center high-line"><span class="light">EXPERIENCE, TECHNICAL KNOWLEDGE</span><br> AND OTHER QUALITIES WE'RE LOOKING FOR...</h4>
 				<br><br>
 				<ul>
 					<% requirements.each do |requirement| %>
@@ -63,7 +63,7 @@
 				</ul>
 				<br><br>
 				<% if qualities %>
-					<h4 class="text-center"><%= qualities_title.html_safe %></h4>
+					<h4 class="text-center high-line"><%= qualities_title.html_safe %></h4>
 					<br><br>
 					<ul>
 						<% qualities.each do |quality| %>
@@ -78,4 +78,4 @@
 			</div>
 		</div>
 	</div>
-</section>
+</div>

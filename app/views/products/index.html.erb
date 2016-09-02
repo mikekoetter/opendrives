@@ -1,9 +1,9 @@
 <% @page_title = 'Products' %>
-<section id="products-section-1">
+<div id="products-section-1">
 	<%= image_tag 'products-intro.png', class: 'marginTopIntro' %>
-</section>
+</div>
 
-<section id="products-section-2">
+<div id="products-section-2">
 	<div class="col-md-6 col-sm-12 grey-background pull-right-sm">
 		<div class="col-xs-4 col-md-offset-1 text-center">
 			<%= link_to((fa_icon 'angle-right 4x', class: ''), '#opus', class: 'smooth-scroll hvr-radial-in round-border-link') %>
@@ -67,9 +67,9 @@
 
 		</div>
 	</div>
-</section>
+</div>
 
-<section id="products-section-3">
+<div id="products-section-3">
 	<div class="container">
 		<div class="row marginTop100">
 			<div class="col-md-12">
@@ -105,9 +105,9 @@
 			</div>
 		</div>
 	</div>
-</section>
+</div>
 
-<section id="products-section-4" class="text-center">
+<div id="products-section-4" class="text-center">
 	<%= render 'boxes', color: 'white', 
 											img: 'protection', 
 											title: '<strong>DATA INTEGRITY<br> AND PROTECTION</strong>', 
@@ -191,13 +191,13 @@
 	<%= render 'overlay', id: 'block', 
 												title: '<span class="light">VARIABLE</span> <strong>BLOCK SIZE</strong>', 
 												body: "OpenDrives uses either dynamic or policy-based variable block sizes for writing data. By not using fixed block sizes, OPUS optimizes data writes, increasing speed and eliminating wasted blocks common to traditional storage." %>
-</section>
+</div>
 
-<section id="products-section-5">
+<div id="products-section-5">
 	<%= image_tag 'section-7-background.png', class: "product-section-5-img" %>
 	
 	<%= render 'shared/faq_support_doc' %>
-</section>
+</div>
 
 
 

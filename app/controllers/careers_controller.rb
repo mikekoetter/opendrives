@@ -11,7 +11,8 @@ class CareersController < ApplicationController
   end
 
   def professional_services_engineer
-  	
+  	@duties = Career.services_engineer_duties
+    @requirements = Career.requirements
   end
 
   def vp_engineering
