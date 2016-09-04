@@ -7,20 +7,21 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center">
-				<h1 class="catchphrase small-to-big">OPEN DRIVES MAKES FASTER,<br> MORE EFFICIENT DATA STORAGE<br><span class="down">FOR HALF THE COST</span></h1>
+				<h1 class="catchphrase">OPEN DRIVES MAKES FASTER,<br> MORE EFFICIENT DATA STORAGE</h1>
+				<h1 class="catchphrase2"><span class="down">FOR HALF THE COST</span></h1>
 			</div>
 			<%= link_to((fa_icon 'angle-down 4x'), '#home-section-2', class: 'smooth-scroll') %>
 		</div>
 	</div>
 </div>
 
-<div class="full-height" id="home-section-2">
+<div id="home-section-2">
 	<div class="container">
-		<div class="row marginTop50">
+		<div class="row marginTopBottom100">
 			<div class="col-sm-6 text-right marginTop50">
-				<%= image_tag 'harddrive.png', class: 'from-left' %>
+				<%= image_tag 'harddrive.png', class: 'from-left-top anim' %>
 			</div>
-			<div class="col-sm-6 text-left from-right">
+			<div class="col-sm-6 text-left from-right-bottom anim">
 				<h3>POWERED BY <br><span>IMAGINATION</span></h3>
 				<p class="lead margin-in-mobile">OpenDrives is changing the way data is stored. By giving you more control over your content, our hardware solutions provide large data storage with superior performance, security, efficiency and reliability. Unmatched speed enables new workflows and increases the number or iterations. And at half the cost of traditional storage, OpenDrives is the pinnacle of data storage solutions.</p>
 				<p class="lead">If you haven’t experienced OpenDrives, you don’t know what you’re missing. Forget what you’ve heard. See the difference for yourself</p>
@@ -34,7 +35,7 @@
 	<div class="container marginBottom100">
 		<div class="row">
 			<div class="col-md-12 text-center">
-				<%= image_tag 'servers.png', class: "home-section-3-server" %>
+				<%= image_tag 'servers.png', class: "home-section-3-server server-anim" %>
 			</div>
 			<ul class="nav nav-tabs nav-justified">
 			  <li class="active"><a data-toggle="tab" href="#tab-avalanche">AVALANCHE</a></li>
@@ -79,23 +80,23 @@
 			</div>
 		</div>
 		<div class="row marginTop100">
-			<div class="col-md-15 from-up col-sm-4">
+			<div class="col-md-15 stagger-from-left anim col-sm-4">
 				<%= image_tag 'speed.png', class: 'home-reason-logo' %>
 				<p>HIGH PERFORMANCE AND SPEED</p>
 			</div>
-			<div class="col-md-15 from-down col-sm-4">
+			<div class="col-md-15 stagger-from-left anim col-sm-4">
 				<%= image_tag 'cost-effective.png', class: 'home-reason-logo' %>
 				<p>COST EFFECTIVE DATA STORAGE</p>
 			</div>
-			<div class="col-md-15 from-up col-sm-4">
+			<div class="col-md-15 stagger-from-left anim col-sm-4">
 				<%= image_tag 'protection.png', class: 'home-reason-logo' %>
 				<p>DATA INTEGRITY AND PROTECTION</p>
 			</div>
-			<div class="col-md-15 from-down col-sm-6">
+			<div class="col-md-15 stagger-from-left anim col-sm-6">
 				<%= image_tag 'zero-downtime.png', class: 'home-reason-logo' %>
 				<p>ZERO DOWNTIME SOTRAGE EXPANSION</p>
 			</div>
-			<div class="col-md-15 from-up col-sm-6">
+			<div class="col-md-15 stagger-from-left anim col-sm-6">
 				<%= image_tag 'just-in-time.png', class: 'home-reason-logo' %>
 				<p>JUST-IN-TIME PRODUCTION</p>
 			</div>
@@ -111,19 +112,19 @@
 	<div class="container container-section-5">
 		<div class="row">
 			<div class="col-md-6">
-				<h2 class="line-from-right lines-anim">CLIENT <span>SPOTLIGHT</span></h2>
+				<h2 class="line-from-right anim">CLIENT <span>SPOTLIGHT</span></h2>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-2 line1-from-right lines-anim">
+			<div class="col-md-2 line-from-right anim">
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-6 marginTop50">
-				<h3 class="line2-from-right lines-anim">GONE GIRL</h3>
-				<p class="lead line3-from-right lines-anim">CRITICALLY ACCLAIMED: OPENDRIVES' AVALANCHE GIVES FOX AND DAVID FINCHER UNPRECEDENTED 6K POST-PRODUCTION WORKFLOW.</p>
+				<h3 class="line-from-right anim">GONE GIRL</h3>
+				<p class="lead line-from-right anim">CRITICALLY ACCLAIMED: OPENDRIVES' AVALANCHE GIVES FOX AND DAVID FINCHER UNPRECEDENTED 6K POST-PRODUCTION WORKFLOW.</p>
 				<br><br>
-				<%= link_to((fa_icon "plus-circle", text: "LEARN MORE", right: true), case_interior_gone_girl_path, class: 'link-no-border line4-from-right lines-anim hvr-shutter-in-horizontal') %>
+				<%= link_to((fa_icon "plus-circle", text: "LEARN MORE", right: true), case_interior_gone_girl_path, class: 'link-no-border line-from-right anim hvr-shutter-in-horizontal') %>
 			</div>
 		</div>
 	</div>

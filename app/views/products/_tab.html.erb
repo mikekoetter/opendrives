@@ -15,11 +15,12 @@
     	<h2><%= h2_title.html_safe %></h2>
     </div>
   </div>
-  <div class="row marginTop50">
+  <div class="row marginTop50 trigger-overlay">
   	<div class="col-sm-6">
   		<% features1.each do |feature| %>
 	  		<div class="col-xs-2 col-md-1">
 	  			<%= image_tag 'check.png', class: 'check-image' %>
+          <div class="mini-overlay"></div>
 	  		</div>
 	  		<div class="col-xs-10 col-md-11">
 	  			<%= feature %>
@@ -31,6 +32,7 @@
   		<% features2.each do |feature| %>
   			<div class="col-xs-2 col-md-1">
 	  			<%= image_tag 'check.png', class: 'check-image' %>
+          <div class="mini-overlay"></div>
 	  		</div>
 	  		<div class="col-xs-10 col-md-11">
 	  			<%= feature %>

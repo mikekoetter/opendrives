@@ -1,5 +1,21 @@
 class Career
 
+	def self.benefits
+		[
+			"Medical, Dental, and Vision",
+			"Flexible Spending account",
+			"Employee Assistance Program",
+			"Flexible Vacation Days",
+			"Maternity Leave",
+			"Potential for Stock Options",
+			"Company Sponsored 401K Plans",
+			"Regular Team Events",
+			"Competitive Salaries",
+			"14 Company Sponsored Holidays",
+			"And the list goes on!"
+		]
+	end
+
 	def self.services_engineer_duties
 		[
 			[

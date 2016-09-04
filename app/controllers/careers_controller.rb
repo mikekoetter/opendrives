@@ -1,5 +1,6 @@
 class CareersController < ApplicationController
   def index
+    @benefits = Career.benefits
   end
 
   def node_js_developer

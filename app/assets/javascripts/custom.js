@@ -1,3 +1,5 @@
+
+// Adding method to jQuery
 $.fn.clicktoggle = function(a, b) {
     return this.each(function() {
         var clicked = false;
@@ -203,7 +205,6 @@ $(document).ready(function() {
 		TweenMax.to($('.nav-menu'), 0.3, { right: 0, opacity: 1, zIndex: 5 });
 		TweenMax.to($('.hide-on-menu'), 0.3, { opacity: 0 });
 	}
-
 	$(".hamburgler").clicktoggle(function() {
 		$(this).addClass('no-hamburgler blue-hover');
 		TweenMax.to($('.no-hamburgler'), 0.3, {  zIndex: 6, left: 40, top: -10 });
@@ -216,23 +217,12 @@ $(document).ready(function() {
 		TweenMax.to($('.bun, .meat'), 0.3, {  clearProps:"all" });
 		$(".hamburgler").removeClass('no-hamburgler blue-hover');
 	});
-
-
-	// $(".testyz").click(function(e) {
-	// 	e.preventDefault();
-	// 	hideMenu();
-	// });
-	// $(".testy").click(function(e) {
-	// 	e.preventDefault();
-	// 	$(".hamburgler").addClass('no-hamburgler blue-hover');
-	// 	TweenMax.to($('.no-hamburgler'), 0.3, {  zIndex: 6, left: 40 });
-	// 	TweenMax.to($('.nav-menu'), 0.3, { right: 0, opacity: 1, zIndex: 5 });
-	// 	TweenMax.to($('.hide-on-menu'), 0.3, { opacity: 0 });
-	// });
-	
 	$(window).scroll(function() {
 		hideMenu();
 	});
+
+	
+	
 	// $(document).click(function(e) {
 	// 	if (e.target.id != 'nav-menu' ) {
 	// 		e.preventDefault();
@@ -318,8 +308,8 @@ $(document).ready(function() {
 
 
 	var $tm = TweenMax;
+	var widthScreen = $(window).width();
 	var downArrow = $('#home-section-1 i');
-	$tm.from(downArrow, 2, { opacity: 0, bottom: '7%', delay: 0.5, ease: Elastic.easeOut.config(2.5, 0.3), repeat: -1 });
 
 
 	// Init ScrollMagic Home Controller
@@ -338,32 +328,30 @@ $(document).ready(function() {
 	var resourcesController = new ScrollMagic.Controller();
 	// Init ScrollMagic Why Us Controller
 	var whyUsController = new ScrollMagic.Controller();
+	// Init ScrollMagic MiniOverlay Controller
+	var miniOverlayController = new ScrollMagic.Controller();
 
 
-	// Navigation Bar Scene
-	var navTween = $tm.to($('nav'), 0.5, { backgroundColor: '#000' });
-	var navScene = new ScrollMagic.Scene({ offset: 100 })
-									.setTween(navTween)
-									.addTo(homeController);
-
-	// Animation home section 2 on scroll
-	var fromLeft = $tm.from($(".from-left"), 2, { left: -50, top: -50,  opacity: 0, ease: Power4.easeOut });
-	var fromRight = $tm.from($(".from-right"), 2, { right: -50, top: 50, opacity: 0, ease: Power4.easeOut });
-	var titleFromRight = new TimelineMax()
-										.from($(".line-from-right"), 1, { right: -50, opacity: 0, ease: Power2.easeOut })
-										.from($(".line1-from-right"), 1, { right: -50, opacity: 0, ease: Power2.easeOut }, "-=0.5")
-										.from($(".line2-from-right"), 1, { right: -50, opacity: 0, ease: Power2.easeOut }, "-=0.5")
-										.from($(".line3-from-right"), 1, { right: -50, opacity: 0, ease: Power2.easeOut }, "-=0.5")
-										.from($(".line4-from-right"), 1, { right: -50, opacity: 0, ease: Power2.easeOut }, "-=0.5");
-	var smallToBig = $tm.from($(".small-to-big"), 2, { scale: 0, ease: Elastic.easeOut.config(2, 1) });
-	//var down = $tm.to($(".down"), 1, { top: 100 });
+	var rotateSmallBig = $tm.staggerFrom($(".rotate-small-big"), 1, { scale: 0, rotation: 1080 }, 0.5);
+	var navTweenLogo = $tm.to($(".logo-nav"), 0.5, { scale: 0.7, top: 5 })
+	var navTween = $tm.to($('nav'), 1, { backgroundColor: '#000', ease: Power4.easeOut });
+	var fromLeftTop = $tm.from($(".from-left-top"), 2, { left: -50, top: -50,  opacity: 0, ease: Power4.easeOut });
+	var fromRightBottom = $tm.from($(".from-right-bottom"), 2, { right: -50, top: 50, opacity: 0, ease: Power4.easeOut });
+	var fromLeft = $tm.staggerFrom($(".from-left"), 2, { left: -50,  opacity: 0, ease: Power4.easeOut }, 0.5);
+	var titleFromRight = $tm.staggerFrom($(".line-from-right"), 1, { right: -50, opacity: 0, ease: Power2.easeOut }, 0.5);
+	var smallToBig = new TimelineMax()
+										.from($(".catchphrase"), 2, { scale: 0, delay: 0.5 })
+										.from($(".catchphrase2"), 2, { scale: 0, ease: Power4.easeIn }, "-=2")
+										.to($(".catchphrase2"), 1, { scale: 1.2, ease: Elastic.easeOut.config(2, 0.5) })
+										.from(downArrow, 2, { opacity: 0, bottom: '7%', delay: 0.5, ease: Elastic.easeOut.config(2.5, 0.3), repeat: -1 }, "+=0.5");
+	var cloudAnimation1 = $tm.to($(".clouds_one"), 200, { repeat: -1, right: widthScreen + 500 });
+	var cloudAnimation2 =	$tm.from($(".clouds_two"), 75, { repeat: -1, right: widthScreen - 100 })
+	var cloudAnimation3 = $tm.to($(".clouds_three"), 200, { repeat: -1, left: widthScreen + 700 })
 	var normalBigNormal = $tm.to($(".normal-big-normal"), 2, { fontSize: "2em" });
-	var fromUp = $tm.from($(".from-up"), 1, { top: -50, opacity: 0 });
-	var fromDown = $tm.from($(".from-down"), 1, { top: 50, opacity: 0 });
-	var check = new TimelineMax()
-							.to($(".mini-overlay-anim"), 1, { width: 0 })
-							.to($(".mini-overlay-anim1"), 1, { width: 0 }, "-=0.5")
-							.to($(".mini-overlay-anim2"), 1, { width: 0 }, "-=0.5");
+	var staggerFromLeft = $tm.staggerFrom($(".stagger-from-left"), 1, { left: -500, opacity: 0 }, 0.5);
+	var check = $tm.staggerTo($('.mini-overlay'), 1, { width: 0 }, 0.4);
+	var checkProd = $tm.staggerTo($('.mini-overlay-prod'), 1, { width: 0 }, 0.4);
+	var hrTween = $tm.to($('.hr-anim'), 1, { width: "100%" });
 	var hrTween600 = $tm.to($('.hr-anim-600'), 5, { width: "100%" });
 	var hrTween550 = $tm.to($('.hr-anim-550'), 5, { width: "100%" });
 	var hrTween500 = $tm.to($('.hr-anim-500'), 5, { width: 500 });
@@ -371,94 +359,127 @@ $(document).ready(function() {
 	var hrTween400 = $tm.to($('.hr-anim-400'), 5, { width: "100%" });
 	var hrTweenCarousel = $tm.to($('.hr-anim-carousel'), 5, { width: "80%" });
 	var hrTweenHome8 = $tm.to($('.hr-anim-home-8'), 5, { width: "60%" });
-	var hrTweenCareerLife = $tm.to($('.hr-anim-career-life'), 5, { width: 600 });
+	var hrTweenCareerSection2 = $tm.to($('.hr-anim-career-section-2'), 5, { width: "100%" });
+	var hrTweenCareerSection3 = $tm.to($('.hr-anim-career-section-3'), 5, { width: "60%" });
 	var hrTweenCaseStudies = $tm.to($('.hr-anim-case-studies'), 5, { width: "100%" });
 	var hrTweenContact = $tm.to($('.hr-anim-contact'), 5, { width: "100%" });
 	var hrTweenProductsOpus = $tm.to($('.hr-anim-product-opus'), 5, { width: 700 });
+	var hrTweenResourcesSection2 = $tm.to($('.hr-anim-resources-section-2'), 5, { width: "100%" });
 	var hrTweenResourcesForm = $tm.to($('.hr-anim-resources-form'), 5, { width: "100%" });
 	var hrTweenResourcesSection4 = $tm.to($('.hr-anim-resources-section-4'), 5, { width: "80%" });
+	var hrTweenResourcesSection6 = $tm.to($('.hr-anim-resources-section-6'), 5, { width: "90%" });
 	var hrTweenWhyUsSection3 = $tm.to($('.hr-anim-why-us-section-3'), 5, { width: "70%" });
+	var hrTweenWhyUsSection4 = $tm.to($('.hr-anim-why-us-section-4'), 5, { width: "80%" });
+	var hrTweenWhyUsSection5 = $tm.to($('.hr-anim-why-us-section-5'), 5, { width: "80%" });
+	var hrTweenWhyUsSection6 = $tm.to($('.hr-anim-why-us-section-6'), 5, { width: "50%" });
+
+
+	// Navigation Bar Scene
+	var navScene = new ScrollMagic.Scene({ offset: 20, duration: 200 })
+													.setTween([navTween, navTweenLogo])
+													.addTo(homeController);
+	// Mini Overlay Animation Scene
+	var miniOverlayAnimation = new ScrollMagic.Scene({triggerElement: '.trigger-overlay', offset: -100, reverse: false})
+													.setTween(check)
+													.addTo(miniOverlayController);
+	var miniOverlayAnimationProd = new ScrollMagic.Scene({triggerElement: '.trigger-overlay-second', offset: -100, reverse: false})
+													.setTween(checkProd)
+													.addTo(miniOverlayController);
+
 
 	// Home Scene
-	var homeSection1Scene = new ScrollMagic.Scene()
-													.setTween([smallToBig])
+	var homeScene1 = new ScrollMagic.Scene({offset: -200})
+													.setTween([smallToBig, cloudAnimation1, cloudAnimation2, cloudAnimation3])
 													.addTo(homeController);
-	var homeSection2Scene = new ScrollMagic.Scene({triggerElement: "#home-section-2", offset: 100})
-													.setTween([fromLeft, fromRight])
+	var homeScene2 = new ScrollMagic.Scene({triggerElement: "#home-section-2", offset: 100})
+													.setTween([fromLeftTop, fromRightBottom])
 													.addTo(homeController);
-	var homeSection3Scene = new ScrollMagic.Scene({triggerElement: ".tab-content", offset: -100})
-													.setTween(check)
+	var homeScene3 = new ScrollMagic.Scene({triggerElement: "#home-section-4-5", offset: 150})
+													.setTween(staggerFromLeft)
 													.addTo(homeController);
-	var homeSection4Scene = new ScrollMagic.Scene({triggerElement: "#home-section-4-5", offset: 150})
-													.setTween([fromUp, fromDown])
-													.addTo(homeController);
-	var homeSection5Scene = new ScrollMagic.Scene({triggerElement: ".container-section-5", offset: -100})
+	var homeScene4 = new ScrollMagic.Scene({triggerElement: ".container-section-5", offset: -100})
 													.setTween(titleFromRight)
 													.addTo(homeController);
-	var homeSection6Scene = new ScrollMagic.Scene({triggerElement: "#home-section-6", duration: 500})
+	var homeScene5 = new ScrollMagic.Scene({triggerElement: ".hr-carousel-trigger", duration: 500})
 													.setTween(hrTweenCarousel)
 													.addTo(homeController);
-	var homeSection8Scene = new ScrollMagic.Scene({triggerElement: "#home-section-8", duration: 500})
+	var homeScene6 = new ScrollMagic.Scene({triggerElement: "#home-section-8", duration: 500})
 													.setTween(hrTweenHome8)
 													.addTo(homeController);
 
-
 	// Career Scene
-	var careerSection1Scene = new ScrollMagic.Scene({triggerElement: ".start_agame_anim", duration: 500})
-														.setTween(normalBigNormal)
-														.addTo(careerController);
-	var careerSection2Scene = new ScrollMagic.Scene({triggerElement: "#career-section-2", duration: 500})
-														.setTween(hrTweenCareerLife)
-														.addTo(careerController);
+	var careerScene1 = new ScrollMagic.Scene({triggerElement: ".start_agame_anim", duration: 500})
+													.setTween(normalBigNormal)
+													.addTo(careerController);
+	var careerScene2 = new ScrollMagic.Scene({triggerElement: "#career-section-2", duration: 500})
+													.setTween(hrTweenCareerSection2)
+													.addTo(careerController);
+	var careerScene3 = new ScrollMagic.Scene({triggerElement: "#career-section-3", duration: 500})
+													.setTween(hrTweenCareerSection3)
+													.addTo(careerController);
+	var careerScene3 = new ScrollMagic.Scene({triggerElement: "#career-section-3", offset: 100, reverse: false})
+													.setTween([rotateSmallBig, fromLeft])
+													.addTo(careerController);
 
 	// Case Interior Scene
-	var caseInteriorSection2SceneGoneGirl = new ScrollMagic.Scene({triggerElement: "#case-interior-gone-girl-section-2", duration: 500})
+	var caseInteriorScene1 = new ScrollMagic.Scene({triggerElement: "#case-interior-gone-girl-section-2", duration: 500})
 													.setTween(hrTween400)
 													.addTo(caseInteriorController);
-	var caseInteriorSection2SceneJoke = new ScrollMagic.Scene({triggerElement: "#case-interior-joke-productions-section-2", duration: 500})
+	var caseInteriorScene2 = new ScrollMagic.Scene({triggerElement: "#case-interior-joke-productions-section-2", duration: 500})
 													.setTween(hrTween550)
 													.addTo(caseInteriorController);
-	var caseInteriorSection3Scene = new ScrollMagic.Scene({triggerElement: ".case-interior-section3", duration: 500})
+	var caseInteriorScene3 = new ScrollMagic.Scene({triggerElement: ".case-interior-section3", duration: 500})
 													.setTween(hrTween600)
 													.addTo(caseInteriorController);
-	var caseInteriorSection4Scene = new ScrollMagic.Scene({triggerElement: ".case-interior-section4", duration: 500})
+	var caseInteriorScene4 = new ScrollMagic.Scene({triggerElement: ".case-interior-section4", duration: 500})
 													.setTween(hrTween500)
 													.addTo(caseInteriorController);
-	var caseInteriorSection5Scene = new ScrollMagic.Scene({triggerElement: ".case-interior-section5", duration: 300})
+	var caseInteriorScene5 = new ScrollMagic.Scene({triggerElement: ".case-interior-section5", duration: 300})
 													.setTween(hrTween450)
 													.addTo(caseInteriorController);											
 
 	// Case Studies Scene
-	var caseStudiesScene = new ScrollMagic.Scene({triggerElement: "#case-studies-section-3", duration: 500})
+	var caseStudiesScene1 = new ScrollMagic.Scene({triggerElement: "#case-studies-section-3", duration: 500})
 													.setTween(hrTweenCaseStudies)
 													.addTo(caseStudiesController);
 
 	// Contact Scene
-	var contactScene = new ScrollMagic.Scene({triggerElement: "#contact-section-3", duration: 500})
+	var contactScene1 = new ScrollMagic.Scene({triggerElement: "#contact-section-3", duration: 500})
 													.setTween(hrTweenContact)
 													.addTo(contactController);		
 
 	// Products	Scene									
-	var productsScene = new ScrollMagic.Scene({triggerElement: "#opus", duration: 500})
+	var productsScene1 = new ScrollMagic.Scene({triggerElement: "#opus", duration: 500})
 													.setTween(hrTweenProductsOpus)
 													.addTo(productsController);
 
-	// Resources Scene										
-	var resourcesScene = new ScrollMagic.Scene({triggerElement: "#resources-section-3", duration: 500})
+	// Resources Scene				
+	var resourcesScene1 = new ScrollMagic.Scene({triggerElement: "#resources-section-2", duration: 500})
+													.setTween(hrTweenResourcesSection2)
+													.addTo(resourcesController);						
+	var resourcesScene2 = new ScrollMagic.Scene({triggerElement: "#resources-section-3", duration: 500})
 													.setTween(hrTweenResourcesForm)
 													.addTo(resourcesController);
-	var resourcesSceneSection4 = new ScrollMagic.Scene({triggerElement: "#resources-section-4", duration: 500})
+	var resourcesScene3 = new ScrollMagic.Scene({triggerElement: "#resources-section-4", duration: 500})
 													.setTween(hrTweenResourcesSection4)
+													.addTo(resourcesController);
+	var resourcesScene4 = new ScrollMagic.Scene({triggerElement: "#resources-section-6", duration: 500})
+													.setTween(hrTweenResourcesSection6)
 													.addTo(resourcesController);
 
 	// Why Us Scene										
 	var whyUsScene = new ScrollMagic.Scene({triggerElement: "#why-us-section-3", duration: 500})
 													.setTween(hrTweenWhyUsSection3)
 													.addTo(whyUsController);
-
-
-	
-
+	var whyUsScene2 = new ScrollMagic.Scene({triggerElement: "#why-us-section-4", duration: 500})
+													.setTween(hrTweenWhyUsSection4)
+													.addTo(whyUsController);
+	var whyUsScene3 = new ScrollMagic.Scene({triggerElement: "#why-us-section-5", duration: 500})
+													.setTween(hrTweenWhyUsSection5)
+													.addTo(whyUsController);
+	var whyUsScene4 = new ScrollMagic.Scene({triggerElement: "#why-us-section-6", duration: 500})
+													.setTween(hrTweenWhyUsSection6)
+													.addTo(whyUsController);
 
 
 

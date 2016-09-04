@@ -6,10 +6,20 @@
 		<%= image_tag 'footer-OD-logo.png' %>
 	</div>
 	<div class="col-sm-4 col-xs-8">
-		<%= link_to((fa_icon 'facebook', class: 'facebook-logo'), 'https://www.facebook.com/OpenDrives/?fref=photo', target: '_blank') %>
-		<%= link_to((fa_icon 'twitter'), 'https://twitter.com/opendrives?lang=en', target: '_blank') %>
-		<%= link_to((fa_icon 'linkedin'), 'https://www.linkedin.com/company/open-drives', target: '_blank') %>
-		<br>
+		<%= link_to 'https://www.facebook.com/OpenDrives/?fref=photo', target: '_blank', class: "social-icon-link hvr-radial-out" do %>
+			<%= image_tag('footer-facebook-black.png', class: "footer-social-icon hide-on-hover") %>
+			<%= image_tag('footer-facebook-white.png', class: "footer-social-icon show-on-hover") %>
+		<% end %>
+		<%= link_to 'https://twitter.com/opendrives?lang=en', target: '_blank', class: "social-icon-link hvr-radial-out" do %>
+			<%= image_tag('footer-twitter-black.png', class: "footer-social-icon hide-on-hover") %>
+			<%= image_tag('footer-twitter-white.png', class: "footer-social-icon show-on-hover") %>
+		<% end %>
+		<%= link_to 'https://www.linkedin.com/company/open-drives', target: '_blank', class: "social-icon-link hvr-radial-out" do %>
+			<%= image_tag('footer-linkedin-black.png', class: "footer-social-icon hide-on-hover") %>
+			<%= image_tag('footer-linkedin-white.png', class: "footer-social-icon show-on-hover") %>
+		<% end %>
+
+		<br><br>
 		<%= link_to 'https://www.google.com/maps/place/3522+Hayden+Ave,+Culver+City,+CA+90232/@34.0265648,-118.3824543,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2b99b2e329a97:0x18a878136430e1ce!8m2!3d34.0265604!4d-118.3802656', target: '_blank' do %>
 			<p>3522 HAYDEN AVENUE | CULVER CITY | CA 90232</p>
 		<% end %>

@@ -76,7 +76,7 @@
 				<%= image_tag 'products-software-snapshot.png' %>
 			</div>
 		</div>
-		<div class="row marginTop100">
+		<div class="row marginTop100 trigger-overlay-second">
 			<div class="col-md-12 text-center">
 				<p class="lead huge">ADDITIONALLY, ALL <strong>OPENDRIVES</strong><br>PRODUCTS INCLUDE:</p>
 			</div>
@@ -85,6 +85,7 @@
 					<% product.each do |p| %>
 						<div class="col-xs-2">
 							<%= image_tag 'check.png', class: 'check-image' %>
+							<div class="mini-overlay-prod mini-overlay-black"></div>
 						</div>
 						<div class="col-xs-10">
 							<%= p %>

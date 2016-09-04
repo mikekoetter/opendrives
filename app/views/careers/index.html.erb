@@ -1,4 +1,4 @@
-div<% @page_title = 'Careers' %>
+<% @page_title = 'Careers' %>
 <div id="career-section-1">
 	<%= image_tag 'career-intro-image.png', class: "marginTopIntro" %>
 	<div class="container">
@@ -17,102 +17,25 @@ div<% @page_title = 'Careers' %>
 
 <div id="career-section-2" class="full-height">
 	<div class="container">
-		<div class="row marginTopBottom100">
-			<div class="col-md-12 text-center">
+		<div class="row marginTopBottom100 trigger-overlay">
+			<div class="col-md-8 col-md-offset-2 text-center">
 				<h2><span class="light">LIFE AT </span>OPENDRIVES</h2>
-				<hr class="hr-anim-career-life">
+				<hr class="hr-anim-career-section-2">
 				<br>
 				<h4>SOME OF THE BENEFITS</h4>
 				<br><br><br>
 			</div>
-			<div class="col-sm-4">
-				<div class="col-xs-2">
-					<%= image_tag 'check.png', class: 'check-image' %>
+			<% @benefits.each do |benefit| %>
+				<div class="col-sm-4">
+					<div class="col-xs-2">
+						<%= image_tag 'check.png', class: 'check-image' %>
+						<div class="mini-overlay mini-overlay-black"></div>
+					</div>
+					<div class="col-xs-10">
+						<%= benefit %>
+					</div>
 				</div>
-				<div class="col-xs-10">
-					Medical, Dental, and Vision Benefits
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="col-xs-2">
-					<%= image_tag 'check.png', class: 'check-image' %>
-				</div>
-				<div class="col-xs-10">
-					Flexible Spending account
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="col-xs-2">
-					<%= image_tag 'check.png', class: 'check-image' %>
-				</div>
-				<div class="col-xs-10">
-					Employee Assistance Program
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="col-xs-2">
-					<%= image_tag 'check.png', class: 'check-image' %>
-				</div>
-				<div class="col-xs-10">
-					Flexible Vacation Days
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="col-xs-2">
-					<%= image_tag 'check.png', class: 'check-image' %>
-				</div>
-				<div class="col-xs-10">
-					Maternity Leave
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="col-xs-2">
-					<%= image_tag 'check.png', class: 'check-image' %>
-				</div>
-				<div class="col-xs-10">
-					Potential for Stock Options
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="col-xs-2">
-					<%= image_tag 'check.png', class: 'check-image' %>
-				</div>
-				<div class="col-xs-10">
-					Company Sponsored 401K Plans
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="col-xs-2">
-					<%= image_tag 'check.png', class: 'check-image' %>
-				</div>
-				<div class="col-xs-10">
-					Regular Team Events
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="col-xs-2">
-					<%= image_tag 'check.png', class: 'check-image' %>
-				</div>
-				<div class="col-xs-10">
-					And the list goes on!
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="col-xs-2">
-					<%= image_tag 'check.png', class: 'check-image' %>
-				</div>
-				<div class="col-xs-10">
-					Competitive Salaries
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="col-xs-2">
-					<%= image_tag 'check.png', class: 'check-image' %>
-				</div>
-				<div class="col-xs-10">
-					14 Company Sponsored Holidays
-				</div>
-			</div>
+			<% end %>
 		</div>
 	</div>
 </div>
@@ -124,30 +47,50 @@ div<% @page_title = 'Careers' %>
 			<div class="col-md-12 text-center">
 				<p class="huge">WE'RE MAKING A DIFFERENCE... <br>AND WE'RE HAVING FUN DOING IT!</p>
 				<p class='lead'><strong>THINK YOU HAVE WHAT IT TAKES TO BE<br> PART OF THE OPENDRIVES TEAM?</strong></p>
-				<hr>
+				<hr class="hr-anim-career-section-3">
 				<br><br>
 				<h1><strong>OPENINGS</strong></h1>
 				<br><br>
 			</div>
 			<div class="col-sm-3 col-xs-6 text-center">
-				<%= link_to(image_tag('career-nodejs.png', class: 'career-logo'), careers_node_js_developer_path) %>
+				<div class="career-logo-div rotate-small-big hvr-radial-out">
+					<%= link_to careers_node_js_developer_path do %>
+						<%= image_tag 'career-nodejs.png', class: 'career-logo more-pad hide-on-hover' %>
+						<%= image_tag 'career-nodejs-white.png', class: 'career-logo more-pad show-on-hover' %>
+					<% end %>
+				</div>
 				<br><br>
-				<p><strong>NODE.JS SOFTWARE DEVELOPER</strong></p>
+				<p class="anim from-left"><strong>NODE.JS SOFTWARE DEVELOPER</strong></p>
 			</div>
 			<div class="col-sm-3 col-xs-6 text-center">
-				<%= link_to(image_tag('career-pro-engineer.png', class: 'career-logo'), careers_professional_services_engineer_path) %>
+				<div class="career-logo-div rotate-small-big hvr-radial-out">
+					<%= link_to careers_professional_services_engineer_path do %>
+						<%= image_tag 'career-pro-engineer.png', class: 'career-logo hide-on-hover' %>
+						<%= image_tag 'career-pro-engineer-white.png', class: 'career-logo show-on-hover' %>
+					<% end %>
+				</div>
 				<br><br>
-				<p><strong>PROFESSIONAL SERVICES ENGINEER</strong></p>
+				<p class="anim from-left"><strong>PROFESSIONAL SERVICES ENGINEER</strong></p>
 			</div>
 			<div class="col-sm-3 col-xs-6 text-center">
-				<%= link_to(image_tag('career-vp-engineer.png', class: 'career-logo'), careers_vp_engineering_path) %>
+				<div class="career-logo-div rotate-small-big hvr-radial-out">
+					<%= link_to careers_vp_engineering_path do %>
+						<%= image_tag 'career-vp-engineer.png', class: 'career-logo hide-on-hover' %>
+						<%= image_tag 'career-vp-engineer-white.png', class: 'career-logo show-on-hover' %>
+					<% end %>
+				</div>
 				<br><br>
-				<p><strong>VP ENGINEERING</strong></p>
+				<p class="anim from-left"><strong>VP ENGINEERING</strong></p>
 			</div>
 			<div class="col-sm-3 col-xs-6 text-center">
-				<%= link_to(image_tag('career-sales.png', class: 'career-logo'), careers_sales_path) %>
+				<div class="career-logo-div rotate-small-big hvr-radial-out">
+					<%= link_to careers_sales_path do %>
+						<%= image_tag 'career-sales.png', class: 'career-logo hide-on-hover' %>
+						<%= image_tag 'career-sales-white.png', class: 'career-logo show-on-hover' %>
+					<% end %>
+				</div>
 				<br><br>
-				<p><strong>SALES</strong></p>
+				<p class="anim from-left"><strong>SALES</strong></p>
 			</div>
 		</div>
 	</div>

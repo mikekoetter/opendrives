@@ -1,4 +1,4 @@
-<div id="tab-<%= id %>" class="tab-pane fade <%= 'in active' if id == 'avalanche' %>">
+<div id="tab-<%= id %>" class="trigger-overlay tab-pane fade <%= 'in active' if id == 'avalanche' %>">
 	<div class="col-md-8 marginTop50">
 		<h4><%= title.html_safe %></h4>
 		<br><br>
@@ -10,7 +10,7 @@
 		<div class="row pull-up">
 			<div class="col-md-2 col-xs-1">
 				<%= image_tag 'check.png', class: 'check-image' %>
-				<div class="mini-overlay mini-overlay-anim"></div>
+				<div class="mini-overlay"></div>
 			</div>
 			<div class="col-md-10 col-xs-8">
 				<p>CAPACITY: <%= capacity %></p>
@@ -19,7 +19,7 @@
 		<div class="row">
 			<div class="col-md-2 col-xs-1">
 				<%= image_tag 'check.png', class: 'check-image' %>
-				<div class="mini-overlay mini-overlay-anim1"></div>
+				<div class="mini-overlay"></div>
 			</div>
 			<div class="col-md-10 col-xs-8">
 				<p>HARD DRIVE SIZE: <%= hd_size %></p>
@@ -28,7 +28,7 @@
 		<div class="row">
 			<div class="col-md-2 col-xs-1">
 				<%= image_tag 'check.png', class: 'check-image' %>
-				<div class="mini-overlay mini-overlay-anim2"></div>
+				<div class="mini-overlay"></div>
 			</div>
 			<div class="col-md-10 col-xs-8">
 				<p>CPU: 12 CORE INTEL XEON</p>

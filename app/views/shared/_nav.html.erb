@@ -1,12 +1,12 @@
-<nav class="navbar navbar-fixed-top" <%= 'style="background-color:#000"'.html_safe if !current_page?(root_path) %>>
+<nav class="navbar navbar-fixed-top" >
   <div class="container-fluid">
     <div class="navbar-header">
-      <%= link_to(image_tag('logo.png'), root_path) %>
+      <%= link_to(image_tag('logo.png', class: "logo-nav"), root_path) %>
     </div>
 
     <ul class="nav navbar-nav navbar-right">
       <li><%= link_to 'CONTACT', contacts_index_path, class: 'hvr-underline-from-center' %></li>
-      <li><%= link_to 'SCHEDULE A DEMO', '/contacts/index#contact-section-3', class: 'link-border hide-on-menu hvr-shutter-out-horizontal' %></li>
+      <li><%= link_to 'SCHEDULE A DEMO', contacts_index_path(anchor: 'contact-section-3'), class: 'link-border hide-on-menu hvr-shutter-out-horizontal' %></li>
       <li>
         <div class="hamburgler">
           <div class="bun top"></div>
@@ -15,10 +15,9 @@
         </div>
       </li>
     </ul>
-  </div><!-- /.container-fluid -->
+  </div>
   <div class="nav-menu full-height" id='nav-menu'>
     <div class="close-menu-div">
-      <!-- <a href='' class="close-menu"><strong>X</strong></a> -->
     </div>
     <ul>
       <%= link_to '<li>WHY US</li>'.html_safe, why_us_index_path %>
