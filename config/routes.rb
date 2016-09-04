@@ -6,9 +6,10 @@ Rails.application.routes.draw do
 
   get 'products/index'
 
-  post '/send_email', to: 'contact#send_email', as: :send_email 
+  # post '/send_email', to: 'contacts#send_email', as: :send_email 
 
-  get 'contacts/index'
+  # get 'contacts/index'
+  resources :contacts, only: [:index, :create]
 
   get 'case_studies/index'
 

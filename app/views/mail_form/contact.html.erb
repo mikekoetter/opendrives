@@ -1,0 +1,18 @@
+<div style="text-align:center">
+	<% if @resource.mail_form_attributes['date'] == '' || @resource.mail_form_attributes['date'] == nil %>
+		<h1 style="font-weight:200"><%= "#{@resource.mail_form_attributes['first_name']} #{@resource.mail_form_attributes['last_name']}" %> wants to get in touch!</h1>
+		<br><br>
+	<% else %>
+		<h1 style="font-weight:200">Yeah! A <b>Demo</b> has been requested</h1>
+		<br><br>
+	<% end %>	
+</div>
+<h4 style="text-decoration:underline">Details:</h4>
+<% @resource.mail_form_attributes.each do |attribute, value| next if value.blank? %>
+	<% if attribute == 'date' %>
+		<p><b style="color:#2977F2">Demo Scheduled for: </b> <%= value %></p>
+	<% else %>
+		<p><b><%= @resource.class.human_attribute_name(attribute) %>: </b> <%= value %></p>
+	<% end %>
+<% end %>
+

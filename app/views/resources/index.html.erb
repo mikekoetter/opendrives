@@ -17,19 +17,25 @@
 
 			<%= link_to 'tel:+18887785491' do %>
 				<div class="col-xs-4 resources-contact-div text-center black marginTop50 hvr-sweep-to-right">
-					+1 (888) 778-5491<br class="hide-in-desktop"><%= image_tag 'contact-phone-logo.png', class: 'resources-contact-logo' %>
+					+1 (888) 778-5491<br class="hide-in-desktop">
+					<%= image_tag 'contact-phone-logo.png', class: 'resources-contact-logo hide-on-hover' %>
+					<%= image_tag 'contact-phone-white-logo.png', class: 'resources-contact-logo show-on-hover' %>
 				</div>
 			<% end %>
 
 			<%= link_to 'mailto:support@opendrives.com' do %>
 				<div class="col-xs-4 resources-contact-div text-center blue marginTop50 hvr-sweep-to-right">
-					SUPPORT@OPENDRIVES.COM<br class="hide-in-desktop"><%= image_tag 'contact-mail-white-logo.png', class: 'resources-contact-logo' %>
+					SUPPORT@OPENDRIVES.COM<br class="hide-in-desktop">
+					<%= image_tag 'contact-mail-white-logo.png', class: 'resources-contact-logo hide-on-hover' %>
+					<%= image_tag 'contact-mail-logo.png', class: 'resources-contact-logo show-on-hover' %>
 				</div>
 			<% end %>
 
 			<%= link_to 'https://support.opendrives.com/hc/en-us', target: '_blank' do %>
 				<div class="col-xs-4 resources-contact-div text-center black marginTop50 hvr-sweep-to-right">
-					CREATE A SUPPORT TICKET<br class="hide-in-desktop"><%= image_tag 'contact-ticket-logo.png', class: 'resources-contact-logo' %>
+					CREATE A SUPPORT TICKET<br class="hide-in-desktop">
+					<%= image_tag 'contact-ticket-logo.png', class: 'resources-contact-logo hide-on-hover' %>
+					<%= image_tag 'contact-ticket-white-logo.png', class: 'resources-contact-logo show-on-hover' %>
 				</div>
 			<% end %>
 		</div>
@@ -46,33 +52,33 @@
 				<p>*During standard business hours.</p>
 			</div>
 			<div class="col-md-12 marginTop50">
-				<%= form_tag(send_email_path, method: "post", :class=>"form-horizontal") do %>
+				<%= simple_form_for(@contact, html: { class: "form-horizontal" }) do |f| %>
           <fieldset>
 
             <div class="form-group">
               <div class="col-sm-4">
-                <input id="first-name" name="first-name" type="text" placeholder="*FIRST NAME" class="form-control" required>
+                <%= f.input :first_name, label: false, placeholder: '*FIRST NAME', required: true, input_html: { class: 'form-control' } %>
               </div>
               <div class="col-sm-4">
-                <input id="last-name" name="last-name" type="text" placeholder="*LAST NAME" class="form-control" required>
+                 <%= f.input :last_name, label: false, placeholder: '*LAST NAME', required: true, input_html: { class: 'form-control' } %>
               </div>
               <div class="col-sm-4">
-                <input id="company-name" name="company-name" type="text" placeholder="COMPANY NAME" class="form-control">
+                <%= f.input :company_name, label: false, placeholder: '*COMPANY NAME', required: true, input_html: { class: 'form-control' } %>
               </div>
             </div>
 
             <div class="form-group">
               <div class="col-sm-6">
-                <input id="email" name="email" type="text" placeholder="*WORK EMAIL" class="form-control" required>
+                <%= f.input :email, label: false, placeholder: '*WORK EMAIL', required: true, input_html: { class: 'form-control' } %>
               </div>
               <div class="col-sm-6">
-                <input id="phone" name="phone" type="tel" placeholder="PHONE NUMBER" class="form-control">
+                <%= f.input :phone, label: false, placeholder: 'PHONE NUMBER', required: false, input_html: { class: 'form-control' } %>
               </div>
             </div>
 
             <div class="form-group">
               <div class="col-sm-12">
-                <textarea class="form-control " id="message" name="message" placeholder="ISSUE DESCRIPTION" rows="10"></textarea>
+                <%= f.input :message, as: :text, rows: 10, label: false, placeholder: 'QUESTION', required: false, input_html: { class: 'form-control' } %>
               </div>
             </div>
 

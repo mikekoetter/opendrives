@@ -5,8 +5,8 @@
     </div>
 
     <ul class="nav navbar-nav navbar-right">
-      <li><%= link_to 'CONTACT', contacts_index_path, class: 'hvr-underline-from-center' %></li>
-      <li><%= link_to 'SCHEDULE A DEMO', contacts_index_path(anchor: 'contact-section-3'), class: 'link-border hide-on-menu hvr-shutter-out-horizontal' %></li>
+      <li><%= link_to 'CONTACT', contacts_path, class: 'hvr-underline-from-center' %></li>
+      <li><%= link_to 'SCHEDULE A DEMO', contacts_path(anchor: 'contact-section-3'), class: 'link-border hide-on-menu hvr-shutter-out-horizontal' %></li>
       <li>
         <div class="hamburgler">
           <div class="bun top"></div>
@@ -25,7 +25,7 @@
       <%= link_to '<li>CASE STUDIES</li>'.html_safe, case_studies_index_path %>
       <%= link_to '<li>RESOURCES</li>'.html_safe, resources_index_path %>
       <%= link_to '<li>CAREERS</li>'.html_safe, careers_index_path %>
-      <%= link_to '<li>CONTACT</li>'.html_safe, contacts_index_path %>
+      <%= link_to '<li>CONTACT</li>'.html_safe, contacts_path %>
     </ul>
   </div>
 </nav>
