@@ -1,12 +1,13 @@
 <nav class="navbar navbar-fixed-top" >
   <div class="container-fluid">
     <div class="navbar-header">
-      <%= link_to(image_tag('logo.png', class: "logo-nav"), root_path) %>
+      <%= link_to(image_tag('logo.png', class: "logo-nav hide-on-scroll"), root_path, class: '') %>
+      <%= link_to(image_tag('logo-blue.png', class: "logo-nav show-on-scroll"), root_path, class: "") %>
     </div>
 
     <ul class="nav navbar-nav navbar-right">
-      <li><%= link_to 'CONTACT', contacts_path, class: 'hvr-underline-from-center' %></li>
-      <li><%= link_to 'SCHEDULE A DEMO', contacts_path(anchor: 'contact-section-3'), class: 'link-border hide-on-menu hvr-shutter-out-horizontal' %></li>
+      <li class="nav-contact"><%= link_to 'CONTACT', contacts_path, class: 'hvr-underline-from-center' %></li>
+      <li class="nav-contact"><%= link_to 'SCHEDULE A DEMO', contacts_path(anchor: 'contact-section-3'), class: 'link-border hide-on-menu hvr-shutter-out-horizontal' %></li>
       <li>
         <div class="hamburgler">
           <div class="bun top"></div>
@@ -20,6 +21,7 @@
     <div class="close-menu-div">
     </div>
     <ul>
+      <%= link_to '<li>SCHEDULE A DEMO</li>'.html_safe, contacts_path(anchor: 'contact-section-3'), class: "link-border menu-nav-contact" %>
       <%= link_to '<li>WHY US</li>'.html_safe, why_us_index_path %>
       <%= link_to '<li>PRODUCTS</li>'.html_safe, products_index_path %>
       <%= link_to '<li>CASE STUDIES</li>'.html_safe, case_studies_index_path %>

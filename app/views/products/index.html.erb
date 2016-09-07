@@ -4,18 +4,18 @@
 </div>
 
 <div id="products-section-2">
-	<div class="col-md-6 col-sm-12 grey-background pull-right-sm">
-		<div class="col-xs-4 col-md-offset-1 text-center">
+	<div class="col-md-6 col-sm-12 grey-background pull-right-sm anim">
+		<div class="col-xs-4 col-md-offset-1 text-center anim">
 			<%= link_to((fa_icon 'angle-right 4x', class: ''), '#opus', class: 'smooth-scroll hvr-radial-in round-border-link') %>
 		</div>
-		<div class="col-xs-6">
+		<div class="col-xs-6 anim">
 			<p class="lead">THE PEAK OF DATA FILE SYSTEM STRUCTURE: <strong>OPUS SOFTWARE PLATFORM</strong></p>
 		</div>
 	</div>
-	<div class="col-md-6 col-sm-12 black-background">
+	<div class="col-md-6 col-sm-12 black-background anim">
 		<ul class="nav nav-tabs pull-right text-center">
 		  <li class="active">
-		  	<a data-toggle="tab" href="#tab-avalanche" class="avalanche-tab">
+		  	<a data-toggle="tab" href="#tab-avalanche" class="avalanche-tab hvr-underline-from-left">
 		  		<%= image_tag 'products-avalanche-logo-active.png' %>
 		  		<br><br>
 		  		<p>AVALANCHE</p>
@@ -73,7 +73,9 @@
 	<div class="container">
 		<div class="row marginTop100">
 			<div class="col-md-12">
-				<%= image_tag 'products-software-snapshot.png' %>
+				<%= image_tag 'products-software-snapshot.png', class: "opus-center" %>
+				<%= image_tag 'products-software-snapshot-left.png', class: "opus-left" %>
+				<%= image_tag 'products-software-snapshot-right.png', class: "opus-right" %>
 			</div>
 		</div>
 		<div class="row marginTop100 trigger-overlay-second">
