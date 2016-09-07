@@ -88,7 +88,7 @@ $(document).ready(function() {
 	}
 
 	// Switch Tab Animation
-	$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {  
+	$('#home-section-3 a[data-toggle="tab"]').on('shown.bs.tab', function (e) {  
 		var target = $(this).attr('href'); 
 		$tm.to($('.mini-overlay'), 0.1, { width: "100%" });
 		var homeTabAnim = new TimelineMax()
@@ -96,7 +96,7 @@ $(document).ready(function() {
     					.from($(".tab-pane .col-md-4"), 2, {  right: -200 }, "-=2")
     					.from($(target + ' .border-overlay'), 1, { height: 200 })
     					.staggerTo($(target + ' .mini-overlay'), 1, { width: 0 }, 0.4);
-	})
+	});
 
 	// SmoothScrolling
 	$(function() {
@@ -121,26 +121,7 @@ $(document).ready(function() {
 	}, function() {
 	  	$tm.to($(this), 0.3, { boxShadow: "0px 0px 0px" });
 	  	$tm.to($(this), 0.3, { left: 0, top: 0 });
-	});
-
-	
-
-
-
-
-
-	
-	
-
-
-	// Link Icon animation
-	// $(".animate-icon").hover(function() {
-	// 	TweenMax.to($(".animate-icon i"), 0.5, { left: 5, ease: Elastic.easeOut.config(1, 0.3) })
-	// }, function() {
-	// 	TweenMax.to($(".animate-icon i"), 0.5, { left: 0 })
-	// });
-		
-	
+	});	
 	
 	//=======================================   Carousel   =======================================//	
 	// Clients Carousel set up
@@ -205,7 +186,9 @@ $(document).ready(function() {
 	
 	//=======================================   Nav   =======================================//
 	// Nav menu animation
+	var clickCount = 0
 	function hideMenu() {
+		clickCount = 0
 		TweenMax.to($('.nav-menu'), 0.5, { right: -300, opacity: 0, zIndex: -5 });
 		TweenMax.to($('.hide-on-menu'), 0.5, { opacity: 1 });
 		TweenMax.to($('.no-hamburgler, .hamburgler'), 0.3, {  zIndex: 6, left: 15, top: 2 });
@@ -213,36 +196,64 @@ $(document).ready(function() {
 		$(".hamburgler").removeClass('no-hamburgler blue-hover');
 	}
 	function showMenu() {
+		clickCount = 1
 		$(".hamburgler").addClass('no-hamburgler blue-hover');
 		TweenMax.to($('.no-hamburgler'), 0.3, {  zIndex: 6, left: 40, top: -10 });
 		TweenMax.to($('.nav-menu'), 0.3, { right: 0, opacity: 1, zIndex: 5 });
 		TweenMax.to($('.hide-on-menu'), 0.3, { opacity: 0 });
 	}
+	function hideMenuMobile() {
+		clickCount = 0
+		TweenMax.to($('.nav-menu'), 0.5, { right: -300, opacity: 0, zIndex: -5 });
+		TweenMax.to($('.hide-on-menu'), 0.5, { opacity: 1 });
+		TweenMax.to($('.no-hamburgler, .hamburgler'), 0.3, {  zIndex: 6, left: 10});
+		TweenMax.to($('.bun, .meat'), 0.3, {  clearProps:"all" });
+		$(".hamburgler").removeClass('no-hamburgler blue-hover');
+	}
+	function showMenuMobile() {
+		clickCount = 1
+		$(".hamburgler").addClass('no-hamburgler blue-hover');
+		TweenMax.to($('.no-hamburgler'), 0.3, {  zIndex: 6, left: 40 });
+		TweenMax.to($('.nav-menu'), 0.3, { right: 0, opacity: 1, zIndex: 5 });
+		TweenMax.to($('.hide-on-menu'), 0.3, { opacity: 0 });
+	}
 	if ($(window).width() > 850) {
 		$(".hamburgler").clicktoggle(function() {
-			showMenu();
+			if (clickCount == 0) {
+				showMenu();
+			} else {
+				hideMenu();
+			}
 		}, function() {
-			hideMenu();
+			if (clickCount == 1) {
+				hideMenu();
+			} else {
+				showMenu();
+			}
 		});
 		$(window).scroll(function() {
 			hideMenu();
 		});
 	} else {
 		$(".hamburgler").clicktoggle(function() {
-			$(this).addClass('no-hamburgler blue-hover');
-			TweenMax.to($('.no-hamburgler'), 0.3, {  zIndex: 6, left: 40 });
-			TweenMax.to($('.nav-menu'), 0.3, { right: 0, opacity: 1, zIndex: 5 });
-			TweenMax.to($('.hide-on-menu'), 0.3, { opacity: 0 });
+			if (clickCount == 0) {
+				showMenuMobile();
+			} else {
+				hideMenuMobile();
+			}
 		}, function() {
-			TweenMax.to($('.nav-menu'), 0.5, { right: -300, opacity: 0, zIndex: -5 });
-			TweenMax.to($('.hide-on-menu'), 0.5, { opacity: 1 });
-			TweenMax.to($('.no-hamburgler, .hamburgler'), 0.3, {  zIndex: 6, left: 10});
-			TweenMax.to($('.bun, .meat'), 0.3, {  clearProps:"all" });
-			$(".hamburgler").removeClass('no-hamburgler blue-hover');
+			if (clickCount == 1) {
+				hideMenuMobile();
+			} else {
+				showMenuMobile();
+			}
+		});
+		$(window).scroll(function() {
+			hideMenuMobile();
 		});
 	}
 	
-	// Nav Logo
+	// Nav Logo Animation on Scroll
 	$(window).scroll(function() {
 		if ($(window).scrollTop() >= 70) {
 			$(".hide-on-scroll").hide();
@@ -302,12 +313,28 @@ $(document).ready(function() {
 			$tm.to(($(this).find('img, p')), 2, { opacity: 0.3 });
 		}
 	});
+	$(".nav-tabs li").click(function() {
+		$tm.to(($(".nav-tabs li").find('img, p')), 2, { opacity: 0.3 });
+		$tm.to(($(this).find('img, p')), 2, { opacity: 1 });
+	});
+
+	// Switch Tab Animation
+	$('#products-section-2 a[data-toggle="tab"]').on('shown.bs.tab', function (e) {  
+		var target = $(this).attr('href'); 
+		$tm.to($('.tab-pane .mini-overlay'), 0.1, { width: "100%" });
+		$tm.to($('.hr-anim-product-tab'), 0.1, { width: "200px" });
+		$tm.from($('#products-section-2 .tab-content .bigdrive2-img'), 2, { opacity: 0, scale: 0 });
+		$tm.from($('#products-section-2 .tab-content'), 2, { opacity: 0, left: -200 });
+		var productsTabAnim = $tm.staggerTo($(target + ' .mini-overlay'), 1, { width: 0 }, 0.4);
+		var hrTweenProductTab = $tm.to($('.hr-anim-product-tab'), 5, { width: "70%" });
+		var productsTabScene1 = new ScrollMagic.Scene({ triggerElement: ".tab-content", duration: 500 })
+												.setTween(hrTweenProductTab)
+												.addTo(productsController);
+		var productsTabScene2 = new ScrollMagic.Scene({ triggerElement: ".tab-content", offset: 500 })
+												.setTween(productsTabAnim)
+												.addTo(productsController);
+	})
 	
-	// $(".nav-tabs li").click(function() {
-	// 	if (!$(".nav-tabs li").hasClass('active')) {
-	// 		$tm.to(($(this).find('img, p')), 2, { opacity: 0.3 });
-	// 	}
-	// });
 	//=======================================   Resources   =======================================//
 	// Stop Videos on modal close
 	$("#modal-house-cards").on('hidden.bs.modal', function (e) {
@@ -317,6 +344,21 @@ $(document).ready(function() {
 	    $("#modal-deadpool iframe").attr("src", $("#modal-deadpool iframe").attr("src"));
 	});
 
+	// Switch Tab Animation
+	$('#resources-section-5 a[data-toggle="tab"]').on('shown.bs.tab', function (e) {  
+		var target = $(this).attr('href'); 
+		$tm.to($('.tab-pane .mini-overlay'), 0.1, { width: "100%" });
+		$tm.to($('.hr-anim-resources-section-6'), 0.1, { width: "200px" });
+		$tm.from($('#resources-section-6 .tab-content'), 2, { opacity: 0, left: -200, ease: Power1.easeIn });
+		var resourcesTabAnim = $tm.staggerTo($(target + ' .mini-overlay'), 1, { width: 0 }, 0.4);
+		var hrTweenResourcesTab = $tm.to($('.hr-anim-resources-section-6'), 5, { width: "80%" });
+		var resourcesTabScene1 = new ScrollMagic.Scene({ triggerElement: "#resources-section-6 .tab-content", duration: 500 })
+												.setTween(hrTweenResourcesTab)
+												.addTo(resourcesController);
+		var resourcesTabScene2 = new ScrollMagic.Scene({ triggerElement: "#resources-section-6 .tab-content", offset: 150 })
+												.setTween(resourcesTabAnim)
+												.addTo(resourcesController);
+	})
 
 	//=======================================   Contact   =======================================//
 	// Boostrap Datepicker options
@@ -406,18 +448,18 @@ $(document).ready(function() {
 		var navTweenLogo = $tm.to($(".logo-nav"), 0.5, { scale: 0.7, top: 5 })
 	}
 	var partnersAnimation = new TimelineMax()
-										.staggerFrom($(".partners-animation-right"), 1, { opacity: 0, right: -2000 }, 0.5)
-										.staggerFrom($(".partners-animation-left"), 1, { opacity: 0, left: -2000 }, 0.5, "-=0.5");
+										.staggerFrom($(".partners-animation-right"), 1, { opacity: 0, right: -200 }, 0.5)
+										.staggerFrom($(".partners-animation-left"), 1, { opacity: 0, left: -200 }, -0.5, "-=1");
 	var navTween = $tm.to($('nav'), 1, { backgroundColor: '#000', ease: Power4.easeOut });
 	var fromLeftTop = $tm.from($(".from-left-top"), 4, { left: -50, top: -50,  opacity: 0, ease: Power4.easeOut });
 	var fromRightBottom = $tm.from($(".from-right-bottom"), 4, { right: -50, top: 50, opacity: 0, ease: Power4.easeOut });
 	var fromLeft = $tm.staggerFrom($(".from-left"), 2, { left: -50,  opacity: 0, ease: Power4.easeOut }, 0.5);
 	var titleFromRight = $tm.staggerFrom($(".line-from-right"), 1, { right: -50, opacity: 0, ease: Power2.easeOut }, 0.5);
-	var smallToBig = new TimelineMax()
+	var homeIntroAnim = new TimelineMax()
 										.from($(".catchphrase"), 4, { scale: 0, delay: 0.5 })
 										.from($(".catchphrase2"), 4, { scale: 0, ease: Power4.easeIn }, "-=4")
 										.to($(".catchphrase2"), 2, { scale: 1.2, ease: Elastic.easeOut.config(2, 0.5) })
-										.from(downArrow, 2, { opacity: 0, bottom: '7%', ease: Elastic.easeOut.config(2.5, 1.5), repeat: -1 }, "+=0.5");
+										.from(downArrow, 2, { opacity: 0, bottom: '7%', yoyo:true, repeat: -1 }, "+=0.5");
 	var cloudAnimation1 = $tm.to($(".clouds_one"), 400, { repeat: -1, right: widthScreen + 500 });
 	var cloudAnimation2 =	$tm.from($(".clouds_two"), 175, { repeat: -1, right: widthScreen - 100 })
 	var cloudAnimation3 = $tm.to($(".clouds_three"), 400, { repeat: -1, left: widthScreen + 700 })
@@ -425,6 +467,7 @@ $(document).ready(function() {
 	var staggerFromLeft = $tm.staggerFrom($(".stagger-from-left"), 1, { left: -500, opacity: 0 }, 0.5);
 	var check = $tm.staggerTo($('.mini-overlay'), 1, { width: 0 }, 0.4);
 	var checkProd = $tm.staggerTo($('.mini-overlay-prod'), 1, { width: 0 }, 0.4);
+	var checkCareerJob = $tm.staggerTo($('.mini-overlay-career-job'), 1, { width: 0 }, 0.4);
 	var hrTween = $tm.to($('.hr-anim'), 1, { width: "100%" });
 	var hrTween600 = $tm.to($('.hr-anim-600'), 5, { width: "78%" });
 	var hrTween550 = $tm.to($('.hr-anim-550'), 5, { width: "96%" });
@@ -442,31 +485,57 @@ $(document).ready(function() {
 	var hrTweenResourcesSection2 = $tm.to($('.hr-anim-resources-section-2'), 5, { width: "80%" });
 	var hrTweenResourcesForm = $tm.to($('.hr-anim-resources-form'), 5, { width: "95%" });
 	var hrTweenResourcesSection4 = $tm.to($('.hr-anim-resources-section-4'), 5, { width: "75%" });
-	// var hrTweenResourcesSection6 = $tm.to($('.hr-anim-resources-section-6'), 5, { width: "80%" });
+	var hrTweenResourcesSection6 = $tm.to($('.hr-anim-resources-section-6'), 5, { width: "80%" });
 	var hrTweenWhyUsSection2 = $tm.to($('.hr-anim-why-us-section-2'), 5, { width: "85%" });
 	var hrTweenWhyUsSection3 = $tm.to($('.hr-anim-why-us-section-3'), 5, { width: "70%" });
 	var hrTweenWhyUsSection4 = $tm.to($('.hr-anim-why-us-section-4'), 5, { width: "72%" });
 	var hrTweenWhyUsSection5 = $tm.to($('.hr-anim-why-us-section-5'), 5, { width: "68%" });
 	var hrTweenWhyUsSection6 = $tm.to($('.hr-anim-why-us-section-6'), 5, { width: "43%" });
+	var hrTweenCareerJobSection2 = $tm.to($('.hr-anim-career-job-section-2'), 5, { width: "30%" });
+	var hrTweenCareerJobSection3 = $tm.to($('.hr-anim-career-job-section-3'), 5, { width: "40%" });
 	var whyUsIntroAnim = new TimelineMax()
 												.staggerFrom($(".phrase"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 1)
 												.staggerFrom($(".phrase-right"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 1, "-=1");
-	var whyUsSection2 = $tm.staggerFrom($('.opacity'), 3, { opacity: 0 }, 0.5);
+	var whyUsSection2 = new TimelineMax()
+												.staggerFrom($('#why-us-section-2 .big'), 2, { opacity: 0, ease: Power4.easeIn }, 0.5)
+												.staggerFrom($('.opacity'), 3, { opacity: 0, ease: Power4.easeIn }, 0.5, "-=2")
 	var whyUsSection3BoxLeft = $tm.from($('.box-left'), 3, { opacity: 0, left: -200 });
 	var whyUsSection3BoxRight = $tm.from($('.box-right'), 3, { opacity: 0, right: -200 });
 	var whyUsSection3BoxLeft1 = $tm.from($('.box-left1'), 3, { opacity: 0, left: -200 });
 	var whyUsSection3BoxRight1 = $tm.from($('.box-right1'), 3, { opacity: 0, right: -200 });
 	var whyUsSection6 = $tm.staggerFrom($('#why-us-section-6 p'), 3, { opacity: 0, scale: 0.5, right: -300 }, 1);
+	var productsIntroAnim = new TimelineMax()
+												.staggerFrom($(".phrase-products"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 1)
+												.staggerFrom($(".phrase-products-right"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 1, "-=1");
 	var productsSection2 = new TimelineMax()
 												.from($('#products-section-2 .black-background'), 2, { left: -100, opacity: 0 })
 												.from($('#products-section-2 .grey-background'), 2, { right: -100, opacity: 0 }, "-=2")
 												.staggerFrom($('#products-section-2 .black-background li'), 2, { left: -100, opacity: 0 }, -0.5, "-=1")
 												.from($('#products-section-2 .grey-background .col-xs-6'), 2, { right: -100, opacity: 0 }, "-=2")
 												.from($('#products-section-2 .grey-background .col-xs-4'), 2, { opacity: 0, scale: 0 }, "-=2")
-												.from($('#products-section-2 .tab-content'), 2, { opacity: 0, scale: 0 })
+												.from($('#products-section-2 .tab-content .bigdrive2-img'), 2, { opacity: 0, scale: 0 })
+												.from($('#products-section-2 .tab-content'), 2, { opacity: 0, left: -200 }, "-=2")
 	var productsSection3 = new TimelineMax()
 												.from($('.opus-left'), 2, { opacity: 0, left: 200 })
 												.from($('.opus-right'), 2, { opacity: 0, right: 200 }, "-=2");
+	var productsSection4 = $tm.staggerFrom($('.products-box'), 2, { left: -200, opacity: 0 }, 0.5);
+	var caseStudiesIntroAnim = $tm.staggerFrom($(".phrase-case-studies"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 1);
+	var resourcesIntroAnim = $tm.staggerFrom($(".phrase-resources"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 1);
+	var resourcesSection2 = new TimelineMax()
+												.staggerFrom($('#resources-section-2 .big'), 2, { opacity: 0, ease: Power4.easeIn }, 0.5)
+												.staggerFrom($('.resources-opacity'), 3, { opacity: 0, ease: Power4.easeIn }, 0.5, "-=2");
+	var resourcesSection4 = new TimelineMax()
+												.from($("#resources-section-4 .quote"), 2, { right: -200, opacity: 0 })
+												.from($("#resources-section-4 small"), 2, { opacity: 0 });
+	var contactIntroAnim = $tm.staggerFrom($(".phrase-contact"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 1);
+	var contactSection2 = $tm.staggerFrom($("#contact-section-2 .col-sm-4"), 2, { opacity: 0, right: -200 }, 0.5)
+	var careerIntroAnim = $tm.staggerFrom($(".phrase-career"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 1);
+	var careerSection1 = $tm.to($(".career-section-1-overlay"), 2, { height: "0%" });
+	var careerSection1Words = new TimelineMax()
+												.staggerFrom($('#career-section-1 .big'), 2, { opacity: 0, ease: Power4.easeIn }, 0.5)
+												.staggerFrom($('.career-opacity'), 2, { opacity: 0, ease: Power4.easeIn }, 0.5, "-=2");
+	var careerJobSection1 = $tm.from($(".career-job-title"), 2, { opacity: 0, scale: 0 })
+
 
 	// Navigation Bar Scene
 	if ($(window).width() > 1050) {
@@ -486,11 +555,14 @@ $(document).ready(function() {
 	var miniOverlayAnimationProd = new ScrollMagic.Scene({triggerElement: '.trigger-overlay-second', offset: -100, reverse: false})
 													.setTween(checkProd)
 													.addTo(miniOverlayController);
+	var miniOverlayAnimationCareerJob = new ScrollMagic.Scene({triggerElement: '.trigger-overlay-career-job', offset: -100, reverse: false})
+													.setTween(checkCareerJob)
+													.addTo(miniOverlayController);
 
 
 	// Home Scene
 	var homeScene1 = new ScrollMagic.Scene({offset: -200})
-													.setTween([smallToBig, cloudAnimation1, cloudAnimation2, cloudAnimation3])
+													.setTween([homeIntroAnim, cloudAnimation1, cloudAnimation2, cloudAnimation3])
 													.addTo(homeController);
 	var homeScene2 = new ScrollMagic.Scene({triggerElement: "#home-section-2", offset: -100})
 													.setTween([fromLeftTop, fromRightBottom])
@@ -512,17 +584,29 @@ $(document).ready(function() {
 													.addTo(homeController);
 
 	// Career Scene
-	var careerScene1 = new ScrollMagic.Scene({triggerElement: ".start_agame_anim", duration: 500})
+	var careerScene1 = new ScrollMagic.Scene({triggerElement: "#career-section-1 .container", duration: 500, offset: -400})
+													.setTween(careerSection1)
+													.addTo(careerController);
+	var careerScene2 = new ScrollMagic.Scene({triggerElement: "#career-section-1 .container", offset: -200})
+													.setTween(careerSection1Words)
+													.addTo(careerController);
+	var careerScene3 = new ScrollMagic.Scene({triggerElement: ".start_agame_anim", duration: 500})
 													.setTween(normalBigNormal)
 													.addTo(careerController);
-	var careerScene2 = new ScrollMagic.Scene({triggerElement: "#career-section-2", duration: 500})
+	var careerScene4 = new ScrollMagic.Scene({triggerElement: "#career-section-2", duration: 500})
 													.setTween(hrTweenCareerSection2)
 													.addTo(careerController);
-	var careerScene3 = new ScrollMagic.Scene({triggerElement: "#career-section-3", duration: 500})
+	var careerScene5 = new ScrollMagic.Scene({triggerElement: "#career-section-3", duration: 500})
 													.setTween(hrTweenCareerSection3)
 													.addTo(careerController);
-	var careerScene3 = new ScrollMagic.Scene({triggerElement: "#career-section-3", offset: 100, reverse: false})
+	var careerScene6 = new ScrollMagic.Scene({triggerElement: "#career-section-3", offset: 100, reverse: false})
 													.setTween([rotateSmallBig, fromLeft])
+													.addTo(careerController);
+	var careerScene7 = new ScrollMagic.Scene({triggerElement: "#career-job-opening-section-2", duration: 500})
+													.setTween(hrTweenCareerJobSection2)
+													.addTo(careerController);
+	var careerScene8 = new ScrollMagic.Scene({triggerElement: "#career-job-opening-section-3", duration: 500})
+													.setTween(hrTweenCareerJobSection3)
 													.addTo(careerController);
 
 	// Case Interior Scene
@@ -543,16 +627,25 @@ $(document).ready(function() {
 													.addTo(caseInteriorController);											
 
 	// Case Studies Scene
-	var caseStudiesScene1 = new ScrollMagic.Scene({triggerElement: "#case-studies-section-3", duration: 500})
+	var caseStudiesScene1 = new ScrollMagic.Scene({triggerElement: "#case-studies-section-1", offset: 100})
+													.setTween(hrTweenCaseStudies)
+													.addTo(caseStudiesController);
+	var caseStudiesScene2 = new ScrollMagic.Scene({triggerElement: "#case-studies-section-3", duration: 500})
 													.setTween(hrTweenCaseStudies)
 													.addTo(caseStudiesController);
 
 	// Contact Scene
-	var contactScene1 = new ScrollMagic.Scene({triggerElement: "#contact-section-3", duration: 500})
-													.setTween(hrTweenContact)
+	var contactScene1 = new ScrollMagic.Scene({triggerElement: "#contact-section-2", offset: -50})
+													.setTween(contactSection2)
 													.addTo(contactController);		
+	var contactScene2 = new ScrollMagic.Scene({triggerElement: "#contact-section-3", duration: 500})
+													.setTween(hrTweenContact)
+													.addTo(contactController);	
 
 	// Products	Scene
+	var productsScene1 = new ScrollMagic.Scene({triggerElement: "#products-section-1", offset: 500})
+													.setTween(productsIntroAnim)
+													.addTo(productsController);
 	var productsScene2 = new ScrollMagic.Scene({triggerElement: "#products-section-2", offset: -50})
 													.setTween(productsSection2)
 													.addTo(productsController);
@@ -564,21 +657,30 @@ $(document).ready(function() {
 													.addTo(productsController);
 	var productsScene5 = new ScrollMagic.Scene({triggerElement: "#opus", duration: 500})
 													.setTween(hrTweenProductsOpus)
-													.addTo(productsController);									
+													.addTo(productsController);
+	var productsScene6 = new ScrollMagic.Scene({triggerElement: "#products-section-4", offset: -100})
+													.setTween(productsSection4)
+													.addTo(productsController);										
 
 	// Resources Scene				
 	var resourcesScene1 = new ScrollMagic.Scene({triggerElement: "#resources-section-2", duration: 500})
 													.setTween(hrTweenResourcesSection2)
 													.addTo(resourcesController);						
-	var resourcesScene2 = new ScrollMagic.Scene({triggerElement: "#resources-section-3", duration: 500})
+	var resourcesScene2 = new ScrollMagic.Scene({triggerElement: "#resources-section-2", offset: -100})
+													.setTween(resourcesSection2)
+													.addTo(resourcesController);
+	var resourcesScene3 = new ScrollMagic.Scene({triggerElement: "#resources-section-3", duration: 500})
 													.setTween(hrTweenResourcesForm)
 													.addTo(resourcesController);
-	var resourcesScene3 = new ScrollMagic.Scene({triggerElement: "#resources-section-4", duration: 500})
+	var resourcesScene4 = new ScrollMagic.Scene({triggerElement: "#resources-section-4", duration: 500})
 													.setTween(hrTweenResourcesSection4)
 													.addTo(resourcesController);
-	// var resourcesScene4 = new ScrollMagic.Scene({triggerElement: "#resources-section-6", duration: 500})
-	// 												.setTween(hrTweenResourcesSection6)
-	// 												.addTo(resourcesController);
+	var resourcesScene5 = new ScrollMagic.Scene({triggerElement: "#resources-section-4", offset: 50 })
+													.setTween(resourcesSection4)
+													.addTo(resourcesController);
+	var resourcesScene6 = new ScrollMagic.Scene({triggerElement: "#resources-section-6", duration: 500})
+													.setTween(hrTweenResourcesSection6)
+													.addTo(resourcesController);
 
 	// Why Us Scene	
 	var whyUsScene1 = new ScrollMagic.Scene({triggerElement: "#why-us-section-2", duration: 500})

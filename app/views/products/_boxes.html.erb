@@ -1,4 +1,4 @@
-<div class="col-sm-3 <%= color %> hide-in-sm-mobile">
+<div class="col-sm-3 <%= color %> hide-in-sm-mobile products-box">
 	<%= image_tag "products-#{img}.png" %>
 	<br><br><br class="hide-in-mobile">
 	<p class="lead"><%= title.html_safe %></p>
@@ -6,7 +6,7 @@
 	<%= link_to((fa_icon 'plus', text: 'MORE', right: true), '', data: { target: "#products-#{img}" }, class: 'to-overlay link-with-border hvr-shutter-out-horizontal') %>
 </div>
 
-<div class="col-sm-3 <%= color %> hide-in-sm-desktop">
+<div class="col-sm-3 <%= color %> hide-in-sm-desktop products-box">
 	<%= image_tag "products-#{img}.png" %>
 	<br><br><br class="hide-in-mobile">
 	<p class="lead"><%= title.html_safe %></p>
