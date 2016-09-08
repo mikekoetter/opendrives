@@ -496,7 +496,37 @@ nav {
 			margin-right: 10px;
 			float: left;
 		}
-		
+	}
+	/* Portrait and Landscape */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2) { 
+
+	}
+
+	/* Portrait */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2)
+	  and (orientation: portrait) { 
+	  	.nav-menu {
+				ul {
+					li {
+						padding: 0px 40px 0px 30px;
+					}
+				}
+			}
+	}
+
+	/* Landscape */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2)
+	  and (orientation: landscape) { 
+
 	}
 }
 
@@ -1419,6 +1449,31 @@ nav {
 	@media (max-width: 550px) { 
 		font-size: 3em;
 	}
+	/* Portrait and Landscape */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2) { 
+
+	}
+
+	/* Portrait */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2)
+	  and (orientation: portrait) { 
+	  	font-size: 3em;
+	}
+
+	/* Landscape */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2)
+	  and (orientation: landscape) { 
+
+	}
 }
 
 #case-studies-section-3 {
@@ -1656,7 +1711,7 @@ nav {
 	  and (-webkit-min-device-pixel-ratio: 2)
 	  and (orientation: portrait) { 
 	  	.schedule-demo-div {
-	  		font-size: 0.8em;
+	  		font-size: 1em;
 	  	}
 		
 	}
