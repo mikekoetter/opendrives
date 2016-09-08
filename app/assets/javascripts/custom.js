@@ -206,7 +206,7 @@ $(document).ready(function() {
 		clickCount = 0
 		TweenMax.to($('.nav-menu'), 0.5, { right: -300, opacity: 0, zIndex: -5 });
 		TweenMax.to($('.hide-on-menu'), 0.5, { opacity: 1 });
-		TweenMax.to($('.no-hamburgler, .hamburgler'), 0.3, {  zIndex: 6, left: 10});
+		TweenMax.to($('.no-hamburgler, .hamburgler'), 0.3, {  zIndex: 6, left: 30});
 		TweenMax.to($('.bun, .meat'), 0.3, {  clearProps:"all" });
 		$(".hamburgler").removeClass('no-hamburgler blue-hover');
 	}
@@ -469,9 +469,16 @@ $(document).ready(function() {
 	if ($(window).width() > 1050) {
 		var navTweenLogo = $tm.to($(".logo-nav"), 0.5, { scale: 0.7, top: 5 })
 	}
-	var partnersAnimation = new TimelineMax()
+	if ($(window).width() > 767) {
+		var partnersAnimation = new TimelineMax()
 										.staggerFrom($(".partners-animation-right"), 1, { opacity: 0, right: -200 }, 0.5)
 										.staggerFrom($(".partners-animation-left"), 1, { opacity: 0, left: -200 }, -0.5, "-=1");
+	} else {
+		var partnersAnimation = new TimelineMax()
+										.staggerFrom($(".partners-animation-right"), 1, { opacity: 0, right: -200 }, 0.5)
+										.staggerFrom($(".partners-animation-left"), 1, { opacity: 0, right: -200 }, 0.5, "-=1");
+	}
+	
 	var navTween = $tm.to($('nav'), 1, { backgroundColor: '#000', ease: Power4.easeOut });
 	var fromLeftTop = $tm.from($(".from-left-top"), 4, { left: -50, top: -50,  opacity: 0, ease: Power4.easeOut });
 	var fromRightBottom = $tm.from($(".from-right-bottom"), 4, { right: -50, top: 50, opacity: 0, ease: Power4.easeOut });

@@ -477,6 +477,7 @@ nav {
 		}
 		.hamburgler{
 			top: 10px;
+			left: 30px;
 		}
 	}
 	@media (max-width: 767px) {
@@ -681,8 +682,6 @@ nav {
 	  and (orientation: landscape) { 
 
 	}
-
-
 }
 
 #home-section-2 {
@@ -736,11 +735,11 @@ nav {
 	  and (-webkit-min-device-pixel-ratio: 2)
 	  and (orientation: portrait) { 
 	  	h3 {
-	  		margin-top: -150;
+	  		margin-top: -160;
 	  	}
 	  	img {
 				margin-top: 10px;
-				padding-top: 20px;
+				width: 40%;
 			}
 	}
 
@@ -1001,6 +1000,33 @@ nav {
 				border-bottom: 2px solid #fff;
 			}
 		}
+	}
+	/* Portrait and Landscape */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2) { 
+
+	}
+
+	/* Portrait */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2)
+	  and (orientation: portrait) { 
+	  	.container-section-5 {
+				margin-top: 50px;
+			}
+	}
+
+	/* Landscape */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2)
+	  and (orientation: landscape) { 
+
 	}
 }
  
