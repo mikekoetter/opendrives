@@ -1777,6 +1777,7 @@ form {
 			.phrase-4 {
 				bottom: 0.3%;
 				hr {
+					height: 2px;
 					width: 120px;
 				}
 			}
@@ -1993,7 +1994,7 @@ form {
 			}
 			.black-background {
 		  	.nav-tabs {
-		  		margin-top: 90px;
+		  		margin-top: 94px;
 					li {
 						a {
 							padding: 10px 20px 10px 20px;
@@ -2137,7 +2138,6 @@ form {
 			position: relative;
 			padding-top: 7%;
 			height: 400px;
-			
 			img {
 				padding-bottom: 20px;
 				width: 110px;
@@ -2153,13 +2153,13 @@ form {
 				top: 0;
 				left: 0;
 				width: 100%;
-				height: 400px;
+				min-height: 400px;
 				background-color: rgba(255, 255, 255, 0.98);
 				hr {
 					margin-top: -20px;
 				}
 				.close-overlay {
-					z-index: 6;
+					z-index: 10;
 					position: absolute;
 					top: 10px;
 					right: 20px;
