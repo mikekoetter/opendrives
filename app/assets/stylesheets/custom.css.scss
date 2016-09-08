@@ -2298,7 +2298,6 @@ form {
 			}
 		}
 	}
-
 	@media (max-width: 1050px) { 
 		font-size: 5.5em;
 		.phrase-3 {
@@ -2307,7 +2306,6 @@ form {
 			}
 		}
 	}
-
 	@media (max-width: 991px) { 
 		font-size: 5em;
 		.phrase-resources {
@@ -2329,7 +2327,6 @@ form {
 			}
 		}
 	}
-
 	@media (max-width: 767px) { 
 		font-size: 4.5em;
 		.phrase-resources {
@@ -2371,6 +2368,31 @@ form {
 				width: 240px;
 			}
 		}
+	}
+	/* Portrait and Landscape */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2) { 
+
+	}
+
+	/* Portrait */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2)
+	  and (orientation: portrait) { 
+	  	font-size: 2.5em;
+	}
+
+	/* Landscape */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2)
+	  and (orientation: landscape) { 
+
 	}
 }
 
@@ -2584,6 +2606,13 @@ form {
 			}
 			.logo-play-dead {
 				left: 46.5%;
+			}
+		}
+	}
+	@media (max-width: 550px) {
+		.video-thumb-anchor {
+			.video-thumb {
+				width: 300px;
 			}
 		}
 	}
