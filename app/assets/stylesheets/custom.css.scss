@@ -740,6 +740,7 @@ nav {
 	  	}
 	  	img {
 				margin-top: 10px;
+				padding-top: 20px;
 			}
 	}
 
@@ -879,7 +880,7 @@ nav {
 	  and (-webkit-min-device-pixel-ratio: 2)
 	  and (orientation: portrait) { 
 	  	.nav-justified {
-				left: 5%;
+				left: 1%;
 			}
 	}
 
@@ -980,6 +981,9 @@ nav {
 		}
 		.col-sm-4, .col-sm-6 {
 			margin-bottom: 20px;
+			p {
+				font-size: 0.8em;
+			}
 		}
 		.container-section-5 {
 			h2 {
@@ -3005,6 +3009,11 @@ footer {
 			}
 			.col-xs-4 {
 				padding-left: 0%;
+			}
+			.col-xs-8 {
+				p {
+					font-size: 0.8em;
+				}
 			}
 	}
 

@@ -400,7 +400,7 @@ $(document).ready(function() {
 	var footerTl = new TimelineMax()
 
 	$(".slider, .slider-under p").click(function() {
-		if ($(window).width > 550) {
+		if ($(window).width() > 550) {
 			footerTl.to($(".slider"), 0.3, { left: 149 })
 							.to($(".slider"), 0.3, { clip:"rect(0px 350px 100px 200px)" }, "-=0.2");
 		} else {
