@@ -1765,10 +1765,29 @@ form {
 	  and (-webkit-min-device-pixel-ratio: 2)
 	  and (orientation: portrait) { 
 	  	font-size: 1.7em;
+			.phrase-1 {
+				bottom: 20%;
+			}
+			.phrase-2 {
+				bottom: 13%;
+			}
+			.phrase-3 {
+				bottom: 6%;
+			}
 			.phrase-4 {
+				bottom: 3%;
 				hr {
 					width: 130px;
 				}
+			}
+			.phrase-5 {
+				bottom: 20%;
+			}
+			.phrase-6 {
+				bottom: 13%;
+			}
+			.phrase-7 {
+				bottom: 6%;
 			}
 	}
 
@@ -1962,15 +1981,26 @@ form {
 	  and (max-device-width: 736px) 
 	  and (-webkit-min-device-pixel-ratio: 2)
 	  and (orientation: portrait) { 
-	  	.nav-tabs {
-				li {
-					a {
-						padding: 10px 20px 10px 20px;
-						img {
-							width: 60px;
+	  	.grey-background {
+				padding-top: 50px;
+				.round-border-link {
+					padding: 15px 35px 15px 35px;
+				}
+				.col-xs-8 {
+					padding-top: 10px;
+				}
+			}
+			.black-background {
+		  	.nav-tabs {
+					li {
+						a {
+							padding: 10px 20px 10px 20px;
+							img {
+								width: 60px;
+							}
 						}
-					}
-				}	
+					}	
+				}
 			}
 	}
 
