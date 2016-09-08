@@ -485,17 +485,18 @@ nav {
 		img {
 			left: 35%;
 		}
-		ul {
+		.navbar-nav {
 			position: absolute;
 			right: 10px;
 			top: -15px;
 			padding-top: 30px;
 			padding-right: 50px;
 		}
-		ul li {
+		.navbar-nav li {
 			margin-right: 10px;
 			float: left;
 		}
+		
 	}
 }
 
@@ -1994,7 +1995,7 @@ form {
 			}
 			.black-background {
 		  	.nav-tabs {
-		  		margin-top: 94px;
+		  		margin-top: 92px;
 					li {
 						a {
 							padding: 10px 20px 10px 20px;
