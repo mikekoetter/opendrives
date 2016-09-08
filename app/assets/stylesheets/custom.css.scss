@@ -1120,6 +1120,15 @@ nav {
 	}
 	@media (max-width: 767px) { 
 		.career-anchor-section-1 {
+			.phrase-1 {
+				top: 45%;
+			}
+			.phrase-2 {
+				top: 60%;
+			}
+			.phrase-3 {
+				top: 60%;
+			}
 			font-size: 5em;
 		}
 	}
@@ -1400,6 +1409,12 @@ nav {
 
 	@media (max-width: 767px) { 
 		font-size: 3.5em;
+		.phrase-1 {
+			top: 50%;
+		}
+		.phrase-2 {
+			top: 63%;
+		}
 	}
 	@media (max-width: 550px) { 
 		font-size: 3em;
@@ -1537,6 +1552,17 @@ nav {
 			}
 		}
 	}
+	@media (max-width: 767px) {
+		.phrase-1 {
+			top: 50%;
+		}
+		.phrase-2 {
+			top: 61%;
+		}
+		.phrase-3 {
+			top: 70%;
+		}
+	}
 	@media (max-width: 700px) { 
 		font-size: 3em;
 		.phrase-3 {
@@ -1548,7 +1574,6 @@ nav {
 	@media (max-width: 550px) { 
 		font-size: 2.3em;
 		.phrase-3 {
-			top: 65%;
 			hr {
 				width: 180px;
 			}
@@ -2312,15 +2337,15 @@ form {
 			left: 20%;
 		}
 		.phrase-1 {
-			top: 40%;
+			top: 50%;
 		}
 		.phrase-2 {
 			left: 25%;
-			top: 58%;
+			top: 68%;
 		}
 		.phrase-3 {
 			left: 25%;
-			top: 74%;
+			top: 84%;
 			hr {
 				width: 280px;
 			}
@@ -2333,15 +2358,15 @@ form {
 			left: 18%;
 		}
 		.phrase-1 {
-			top: 30%;
+			/*top: 30%;*/
 		}
 		.phrase-2 {
 			left: 25%;
-			top: 50%;
+			/*top: 50%;*/
 		}
 		.phrase-3 {
 			left: 25%;
-			top: 70%;
+			/*top: 70%;*/
 			hr {
 				width: 240px;
 			}
