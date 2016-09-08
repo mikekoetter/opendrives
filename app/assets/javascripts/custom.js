@@ -540,7 +540,7 @@ $(document).ready(function() {
 												.from($('#products-section-2 .black-background'), 2, { left: -100, opacity: 0 })
 												.from($('#products-section-2 .grey-background'), 2, { right: -100, opacity: 0 }, "-=2")
 												.staggerFrom($('#products-section-2 .black-background li'), 2, { left: -100, opacity: 0 }, -0.5, "-=1")
-												.from($('#products-section-2 .grey-background .col-xs-6'), 2, { right: -100, opacity: 0 }, "-=2")
+												.from($('#products-section-2 .grey-background .col-xs-8'), 2, { right: -100, opacity: 0 }, "-=2")
 												.from($('#products-section-2 .grey-background .col-xs-4'), 2, { opacity: 0, scale: 0 }, "-=2")
 												.from($('#products-section-2 .tab-content .bigdrive2-img'), 2, { opacity: 0, scale: 0 })
 												.from($('#products-section-2 .tab-content'), 2, { opacity: 0, left: -200 }, "-=2")
@@ -701,9 +701,16 @@ $(document).ready(function() {
 													.addTo(contactController);	
 
 	// Products	Scene
-	var productsScene1 = new ScrollMagic.Scene({triggerElement: "#products-section-1", offset: 500})
+	if ($(window).width() > 767) {
+		var productsScene1 = new ScrollMagic.Scene({triggerElement: "#products-section-1", offset: 500})
 													.setTween(productsIntroAnim)
 													.addTo(productsController);
+	} else {
+		var productsScene1 = new ScrollMagic.Scene({triggerElement: "#products-section-1", offset: -100})
+													.setTween(productsIntroAnim)
+													.addTo(productsController);
+	}
+	
 	var productsScene2 = new ScrollMagic.Scene({triggerElement: "#products-section-2", offset: -50})
 													.setTween(productsSection2)
 													.addTo(productsController);

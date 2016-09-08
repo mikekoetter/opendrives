@@ -1745,11 +1745,40 @@ form {
 	@media (max-width: 620px) { 
 		font-size: 2em;
 		.phrase-4 {
-			
 			hr {
 				width: 150px;
 			}
 		}
+	}
+	/* Portrait and Landscape */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2) { 
+
+	}
+
+	/* Portrait */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2)
+	  and (orientation: portrait) { 
+	  	font-size: 1.7em;
+			.phrase-4 {
+				hr {
+					width: 130px;
+				}
+			}
+	}
+
+	/* Landscape */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2)
+	  and (orientation: landscape) { 
+
 	}
 }
 
@@ -1821,16 +1850,17 @@ form {
 			top: -5px;
 			left: 5px;
 		}
+		.col-xs-8 {
+			padding-top: 20px;
+		}
 	}
 	.tab-content {
 		.chrome-padding {
 			padding-top: 230px;
 		}
 	_::-webkit-:not(:root:root), .chrome-padding {
-
-  padding-top: 0; 
-
-}
+  	padding-top: 0; 
+	}
 		h3 {
 			line-height: 45px;
 		}
@@ -1886,9 +1916,6 @@ form {
 		.grey-background {
 			padding-top: 50px;
 			height: 200px;
-			.col-xs-6 {
-				margin-top: 30px;
-			}
 		}
 		.bigdrive2-img {
 			width: 100%;
@@ -1898,11 +1925,6 @@ form {
 		.black-background {
 			.nav-tabs {
 				margin-right: 20%;
-			}
-		}
-		.grey-background {
-			.col-xs-6 {
-				margin-top: 10px;
 			}
 		}
 		.tab-content {
@@ -1925,6 +1947,40 @@ form {
 				margin-right: auto;
 			}
 		}
+	}
+	/* Portrait and Landscape */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2) { 
+
+	}
+
+	/* Portrait */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2)
+	  and (orientation: portrait) { 
+	  	.nav-tabs {
+				li {
+					a {
+						padding: 10px 20px 10px 20px;
+						img {
+							width: 60px;
+						}
+					}
+				}	
+			}
+	}
+
+	/* Landscape */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2)
+	  and (orientation: landscape) { 
+
 	}
 }
 
@@ -2841,6 +2897,21 @@ iframe {
 					right: -35px;
 				}
 			}
+		}
+	}
+	@media (max-width: 767px) {
+		.team-background {
+			background-image: image-url('why-us-section-5-background.png');
+			background-size: 100%;
+			background-repeat: no-repeat;
+			padding-top: 50px;
+			height: 300px;
+		}
+		.why-us-section-5-background-div {
+			background-image: none;
+			background-size: 0%;
+			background-repeat: no-repeat;
+			padding-top: 0;
 		}
 	}
 }
