@@ -1987,11 +1987,13 @@ form {
 					padding: 15px 35px 15px 35px;
 				}
 				.col-xs-8 {
-					padding-top: -20px;
+					padding-top: 0px;
+					margin-top: -20px;
 				}
 			}
 			.black-background {
 		  	.nav-tabs {
+		  		margin-top: 70px;
 					li {
 						a {
 							padding: 10px 20px 10px 20px;
