@@ -1573,11 +1573,56 @@ nav {
 	}
 	@media (max-width: 550px) { 
 		font-size: 2.3em;
+		.phrase-1 {
+			top: 53%;
+		}
+		.phrase-2 {
+			top: 64%;
+		}
 		.phrase-3 {
+			top: 71%;
 			hr {
 				width: 180px;
 			}
 		}
+	}
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2) { 
+
+	}
+
+	/* Portrait */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2)
+	  and (orientation: portrait) { 
+	  	font-size: 2em;
+	  	.phrase-1 {
+				top: 54%;
+			}
+			.phrase-2 {
+				top: 65%;
+			}
+			.phrase-3 {
+				top: 71%;
+				hr {
+					height: 2px;
+					width: 140px;
+				}
+			}
+		
+	}
+
+	/* Landscape */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2)
+	  and (orientation: landscape) { 
+
 	}
 }
 
@@ -1597,6 +1642,33 @@ nav {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2) { 
+
+	}
+
+	/* Portrait */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2)
+	  and (orientation: portrait) { 
+	  	.schedule-demo-div {
+	  		font-size: 0.8em;
+	  	}
+		
+	}
+
+	/* Landscape */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2)
+	  and (orientation: landscape) { 
+
+	}
 }
 
 form {
@@ -2384,6 +2456,11 @@ form {
 	  and (-webkit-min-device-pixel-ratio: 2)
 	  and (orientation: portrait) { 
 	  	font-size: 2.5em;
+	  	.phrase-3 {
+			hr {
+				width: 150px;
+			}
+		}
 	}
 
 	/* Landscape */
