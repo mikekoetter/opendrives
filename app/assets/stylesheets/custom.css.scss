@@ -481,6 +481,7 @@ nav {
 		}
 	}
 	@media (max-width: 767px) {
+		background-color: #000;
 		img {
 			left: 35%;
 		}
@@ -2610,31 +2611,31 @@ iframe {
 			right: 5%;
 		}
 		.phrase-1 {
-			top: 25%;
+			top: 45%;
 		}
 		.phrase-2 {
-			top: 30%;
+			top: 50%;
 		}
 		.phrase-3 {
-			top: 35%;
+			top: 55%;
 		}
 		.phrase-4 {
-			top: 40%;
+			top: 60%;
 		}
 		.phrase-5 {
-			top: 45%;
+			top: 63%;
 			hr {
 				width: 100px;
 			}
 		}
 		.phrase-6 {
-			top: 25%;
+			top: 45%;
 		}
 		.phrase-7 {
-			top: 32%;
+			top: 52%;
 		}
 		.phrase-8 {
-			top: 39%;
+			top: 59%;
 		}
 	}
 	@media (max-width: 600px) {
@@ -2644,6 +2645,33 @@ iframe {
 				width: 80px;
 			}
 		}
+	}
+	/* Portrait and Landscape */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2) { 
+
+	}
+
+	/* Portrait */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2)
+	  and (orientation: portrait) { 
+	  	.phrase-right {
+				font-size: 1.2em;
+			}
+	}
+
+	/* Landscape */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2)
+	  and (orientation: landscape) { 
+
 	}
 }
 
@@ -3393,6 +3421,9 @@ footer {
 	}
 	.hide-in-sm-mobile {
 		display: none;
+	}
+	.marginTopIntro {
+		margin-top: 70px;
 	}
 	.marginTopBottom100 {
 		margin-top: 50px;
