@@ -95,7 +95,7 @@ $(document).ready(function() {
     					.from($(".tab-pane .col-md-8"), 2, {  left: -200, borderColor: "#fff" })
     					.from($(".tab-pane .col-md-4"), 2, {  right: -200 }, "-=2")
     					.from($(target + ' .border-overlay'), 1, { height: 200 })
-    					.staggerTo($(target + ' .mini-overlay'), 1, { width: 0 }, 0.4);
+    					.staggerTo($(target + ' .mini-overlay'), 1, { width: 0 }, 0.4, "-=0.5");
 	});
 
 	// SmoothScrolling
@@ -399,18 +399,35 @@ $(document).ready(function() {
 
 	var footerTl = new TimelineMax()
 
-	$(".slider-div").clicktoggle(function() {
+	$(".slider, .slider-under p").click(function() {
 		footerTl.to($(".slider"), 0.3, { left: 149 })
 						.to($(".slider"), 0.3, { clip:"rect(0px 350px 100px 200px)" }, "-=0.2");
 		$(".slider-div .hide-on-hover").hide();
 		$(".slider-div .show-on-hover").show();
 		$('input').focus()
-	}, function() {
+		$(".close-subscribe").show();
+	});
+	$("#subscribe-email").keypress(function(event) {
+    if (event.which == 13) {
+      event.preventDefault();
+      $("form").submit();
+    }
+	});
+	$(".close-subscribe").click(function() {
 		footerTl.to($(".slider"), 0.3, { clip:"rect(0px 350px 100px 0px)" })
 						.to($(".slider"), 0.3, { left: 16, delay: 0.2 }, "-=0.2");
 		$(".slider-div .hide-on-hover").show();
 		$(".slider-div .show-on-hover").hide();
+		$(".close-subscribe").hide();
 	});
+	
+
+	$(function(){
+    $(".slider a").click(function(){
+      $('#subscribe').submit();
+      return false;
+    });
+  });
 
 	//===========================================================================================//
 	//===============================   Animation Center   ======================================//
@@ -520,6 +537,20 @@ $(document).ready(function() {
 												.from($('.opus-right'), 2, { opacity: 0, right: 200 }, "-=2");
 	var productsSection4 = $tm.staggerFrom($('.products-box'), 2, { left: -200, opacity: 0 }, 0.5);
 	var caseStudiesIntroAnim = $tm.staggerFrom($(".phrase-case-studies"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 1);
+	var caseInteriorSection2 = new TimelineMax()
+												.from($(".case-interior-1"), 3, { left: -200, opacity: 0 })
+												.from($(".case-interior-img-1"),3 , { opacity: 0, right: -200}, "-=3")
+												.staggerFrom($(".case-interior-2 p"), 3, { opacity: 0, right: -200 }, 1)
+	var caseInteriorSection3 = new TimelineMax()
+												.from($(".case-interior-img-2"),3 , { opacity: 0, left: -200 })
+												.staggerFrom($(".case-interior-section3 p"), 3, { opacity: 0, right: -200 }, 1, "-=3");
+	var caseInteriorSection4 = $tm.staggerFrom($(".case-interior-section4 p"), 3, { opacity: 0, right: -200 }, 1);
+	var caseInteriorSection5 = new TimelineMax()
+												.from($(".case-interior-img-3"),3 , { opacity: 0, right: -200 })
+												.staggerFrom($(".case-interior-section5 p"), 3, { opacity: 0, left: -200 }, 1, "-=3");
+	var caseInteriorSection6 = new TimelineMax()
+												.from($("#case-interior-gone-girl-section-6 p"),3 , { opacity: 0, ease: Power2.easeIn })
+												.from($("#case-interior-gone-girl-section-6 a"), 3, { opacity: 0, ease: Power2.easeIn }, "-=2");
 	var resourcesIntroAnim = $tm.staggerFrom($(".phrase-resources"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 1);
 	var resourcesSection2 = new TimelineMax()
 												.staggerFrom($('#resources-section-2 .big'), 2, { opacity: 0, ease: Power4.easeIn }, 0.5)
@@ -624,7 +655,22 @@ $(document).ready(function() {
 													.addTo(caseInteriorController);
 	var caseInteriorScene5 = new ScrollMagic.Scene({triggerElement: ".case-interior-section5", duration: 300})
 													.setTween(hrTween450)
-													.addTo(caseInteriorController);											
+													.addTo(caseInteriorController);
+	var caseInteriorScene6 = new ScrollMagic.Scene({triggerElement: ".case-interior-section2", offset: 50})
+													.setTween(caseInteriorSection2)
+													.addTo(caseInteriorController);												
+	var caseInteriorScene7 = new ScrollMagic.Scene({triggerElement: ".case-interior-section3", offset: 50})
+													.setTween(caseInteriorSection3)
+													.addTo(caseInteriorController);
+	var caseInteriorScene8 = new ScrollMagic.Scene({triggerElement: ".case-interior-section4", offset: 50})
+													.setTween(caseInteriorSection4)
+													.addTo(caseInteriorController);
+	var caseInteriorScene9 = new ScrollMagic.Scene({triggerElement: ".case-interior-section5", offset: -50})
+													.setTween(caseInteriorSection5)
+													.addTo(caseInteriorController);
+	var caseInteriorScene10 = new ScrollMagic.Scene({triggerElement: "#case-interior-gone-girl-section-6", offset: -200})
+													.setTween(caseInteriorSection6)
+													.addTo(caseInteriorController);
 
 	// Case Studies Scene
 	var caseStudiesScene1 = new ScrollMagic.Scene({triggerElement: "#case-studies-section-1", offset: 100})

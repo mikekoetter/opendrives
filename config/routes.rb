@@ -27,6 +27,8 @@ Rails.application.routes.draw do
 
   get 'careers/index'
 
+  post 'home/subscribe' => 'homes#subscribe'
+
   root 'homes#index'
 
 end

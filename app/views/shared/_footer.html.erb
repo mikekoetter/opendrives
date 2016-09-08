@@ -6,8 +6,15 @@
 		</div>
 		<div class="slider-under">
 			<p class="hide-on-hover"><strong>SUBSCRIBE</strong></p>
-			
-			<input type="email" name="email" placeholder="EMAIL" class="footer-input show-on-hover">
+			<%= form_tag('/home/subscribe', method: 'post', id: 'subscribe', remote: true) do %>
+				<span class="close-subscribe">X</span><input type="email" name="email" placeholder="EMAIL" class="footer-input show-on-hover" value="" id="subscribe-email">
+			<% end %>
+		</div>
+		<div class="show-on-submit success">
+			<p class="lead">YOU HAVE SUCCESSFULLY SUBSCRIBED TO OUR NEWSLETTER!</p>
+		</div>
+		<div class="show-on-submit error">
+			<p class="lead">Oops! Please verify your email or try again later.</p>
 		</div>
 	</div>
 	<div class="col-md-2 col-sm-4 col-xs-4">

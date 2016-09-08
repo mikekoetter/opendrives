@@ -225,7 +225,7 @@ hr {
 	background-color: #000;
 }
 
-.show-on-hover, .show-on-scroll {
+.show-on-hover, .show-on-scroll, .show-on-submit, .close-subscribe {
 	display: none;
 }
 
@@ -947,12 +947,6 @@ nav {
 			.phrase-career {
 				left: 7%;
 			}
-			/*.phrase-1 {
-				top: 35%;
-			}
-			.phrase-2 {
-				top: 50%;
-			}*/
 			.phrase-3 {
 				left: 30%;
 			}
@@ -1618,6 +1612,7 @@ form {
 
 #products-section-2 {
 	.black-background {
+		z-index: 10; /*Chrome fix*/
 		background-color: #000;
 		height: 250px;
 		padding-right: 0;
@@ -1666,6 +1661,7 @@ form {
 		}
 	}
 	.grey-background {
+		z-index: 10; /*Chrome fix*/
 		padding-top: 70px;
 		background-color: #E5E8F1;
 		height: 250px;
@@ -1684,6 +1680,14 @@ form {
 		}
 	}
 	.tab-content {
+		.chrome-padding {
+			padding-top: 230px;
+		}
+	_::-webkit-:not(:root:root), .chrome-padding {
+
+  padding-top: 0; 
+
+}
 		h3 {
 			line-height: 45px;
 		}
@@ -2690,6 +2694,10 @@ footer {
 	background-image: image-url('footer-background.png');
 	background-size: cover;
 	background-repeat: no-repeat;
+	.show-on-submit.success, .show-on-submit.error {
+		text-align: center;
+		opacity: 0;
+	}
 	.col-md-2 img {
 		margin-left: 19%;
 		margin-top: 150px;
@@ -2763,6 +2771,16 @@ footer {
 			background-color: #fff;
 			position: absolute;
 			color: #000;
+			.close-subscribe {
+				position: absolute;
+				top: 20px;
+				left: 5px;
+				color: #8d8d8d;
+			}
+			.close-subscribe:hover {
+				color: #000;
+				cursor: pointer;
+			}
 			p {
 				padding-top: 7px;
 				text-align: right;
@@ -2778,6 +2796,9 @@ footer {
 				line-height: 30px;
 				font-size: 1.4em
 			}
+		}
+		.slider-under:hover {
+			cursor: pointer;
 		}
 	}
 	.slider-div:hover {

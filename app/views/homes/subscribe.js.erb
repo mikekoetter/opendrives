@@ -1,0 +1,25 @@
+<% if @js_email_error %>
+	var subscribeError = new TimelineMax()
+										.to($(".slider, .slider-under"), 1, { opacity: 0 })
+										.to($(".show-on-submit.error"), 0.1, { display: "inline-block" })
+										.to($(".show-on-submit.error"), 1, { opacity: 1})
+										.to($(".show-on-submit.error"), 1, { opacity: 0 }, "+=2")
+										.to($(".show-on-submit.error"), 0.1, { display: "none" })
+										.to($(".slider, .slider-under"), 1, { opacity: 1 })
+
+<% else %>
+	
+	var subscribeSuccess = new TimelineMax()
+										.to($(".slider, .slider-under"), 1, { opacity: 0 })
+										.to($(".show-on-submit.success"), 0.1, { display: "inline-block" })
+										.to($(".show-on-submit.success"), 1, { opacity: 1})
+										.to($(".show-on-submit.success"), 1, { opacity: 0 }, "+=2")
+										.to($(".show-on-submit.success"), 0.1, { display: "none" })
+										.to($(".slider, .slider-under"), 1, { opacity: 1 })
+
+	TweenMax.to($(".slider"), 0.3, { clip:"rect(0px 350px 100px 0px)", delay: 1 })
+	TweenMax.to($(".slider"), 0.3, { left: 16, delay: 1.2 }, "-=0.2");
+	$(".slider-div .hide-on-hover").show();
+	$(".slider-div .show-on-hover").hide();
+	$("#subscribe-email").val("");
+<% end %>
