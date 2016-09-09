@@ -189,7 +189,7 @@ $(document).ready(function() {
 	var clickCount = 0
 	function hideMenu() {
 		clickCount = 0
-		TweenMax.to($('.nav-menu'), 0.5, { right: -300, opacity: 0, zIndex: -5 });
+		TweenMax.to($('.nav-menu'), 0.5, { right: -500, opacity: 0, zIndex: -5 });
 		TweenMax.to($('.hide-on-menu'), 0.5, { opacity: 1 });
 		TweenMax.to($('.no-hamburgler, .hamburgler'), 0.3, {  zIndex: 6, left: 15, top: 2 });
 		TweenMax.to($('.bun, .meat'), 0.3, {  clearProps:"all" });
@@ -204,7 +204,7 @@ $(document).ready(function() {
 	}
 	function hideMenuMobile() {
 		clickCount = 0
-		TweenMax.to($('.nav-menu'), 0.5, { right: -300, opacity: 0, zIndex: -5 });
+		TweenMax.to($('.nav-menu'), 0.5, { right: -500, opacity: 0, zIndex: -5 });
 		TweenMax.to($('.hide-on-menu'), 0.5, { opacity: 1 });
 		TweenMax.to($('.no-hamburgler, .hamburgler'), 0.3, {  zIndex: 6, left: 30});
 		TweenMax.to($('.bun, .meat'), 0.3, {  clearProps:"all" });
