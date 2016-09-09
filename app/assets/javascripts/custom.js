@@ -261,6 +261,12 @@ $(document).ready(function() {
 			$(".hide-on-scroll").show();
 			$(".show-on-scroll").hide();
 		}
+		if ($(window).scrollTop() >= 30 && $(window).width() > 760 && $(window).width() < 780) {
+			TweenMax.to($('.hamburgler'), 0.3, {  zIndex: 6, left: 30, top: 10 });
+		}
+		if ($(window).scrollTop() <= 30 && $(window).width() > 760 && $(window).width() < 780) {
+			TweenMax.to($('.hamburgler'), 0.3, {  zIndex: 6, left: 30, top: -10 });
+		}
 	});
 	
 	
