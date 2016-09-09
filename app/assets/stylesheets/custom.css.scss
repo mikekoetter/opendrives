@@ -982,6 +982,9 @@ nav {
 	/* -- END -- CUSTOM BOOTSTRAP GRID 5 COLUMNS */
 	.container-section-5 {
 		margin-top: 400px;
+		.landscape-margin {
+			margin-bottom: 100px;
+		}
 		h2 {
 			font-size: 3em;
 			font-weight: 100;
@@ -2077,9 +2080,9 @@ form {
 		.chrome-padding {
 			padding-top: 230px;
 		}
-	_::-webkit-:not(:root:root), .chrome-padding {
-  	padding-top: 0; 
-	}
+		_::-webkit-:not(:root:root), .chrome-padding {
+  		padding-top: 0; 
+		}
 		h3 {
 			line-height: 45px;
 		}
@@ -3185,9 +3188,7 @@ iframe {
 		font-size: 1.3em;
 	}
 	@media (max-width: 1200px) {
-		margin-top: -150px;
-	}
-	@media (max-width: 1200px) {
+		padding-top: 100px;
 		margin-top: -200px;
 	}
 	@media (max-width: 767px) {
