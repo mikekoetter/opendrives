@@ -1110,7 +1110,16 @@ nav {
 	  and (orientation: portrait) 
 	  and (-webkit-min-device-pixel-ratio: 1) {
 	  	.container-section-5 {
-				margin-top: 250px;
+				margin-top: 50px;
+				h2 {
+					margin-top: 300px;
+					font-size: 2.5em;
+					font-weight: 100;
+					text-align: left;
+					span {
+						font-weight: 500;
+					}
+				}
 			}
 	}
 }
