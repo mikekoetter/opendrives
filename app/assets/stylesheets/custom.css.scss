@@ -1089,11 +1089,16 @@ nav {
 	  and (max-device-width: 736px) 
 	  and (-webkit-min-device-pixel-ratio: 2)
 	  and (orientation: landscape) { 
+	  	.col-md-12 a {
+	  		margin-bottom: 50px;
+	  	}
 	  	.container-section-5 {
 				margin-top: 100px;
-				margin-bottom: 50px;
 				h2 {
 					margin-top: 0px;
+				}
+				.landscape-margin {
+					margin-bottom: 50px;
 				}
 			}
 	}
@@ -3164,11 +3169,7 @@ iframe {
 	}
 	@media (max-width: 767px) {
 		.team-background {
-			background-image: image-url('why-us-section-5-background.png');
-			background-size: 100%;
-			background-repeat: no-repeat;
 			padding-top: 50px;
-			height: 300px;
 		}
 		.why-us-section-5-background-div {
 			background-image: none;
