@@ -406,7 +406,7 @@ nav {
 	.nav-menu {
 		position: absolute;
 		z-index: -5;
-		right: -300px;
+		right: -550px;
 		top: 0;
 		background-color: rgba(255, 255, 255, 0.9);
 		width: 280px;
@@ -482,6 +482,7 @@ nav {
 			float: left;
 		}
 	}
+	
 	/* Portrait and Landscape */
 	@media only screen 
 	  and (min-device-width: 375px) 
@@ -492,7 +493,7 @@ nav {
 
 	/* Portrait */
 	@media only screen 
-	  and (min-device-width: 375px) 
+	  and (min-device-width: 320px) 
 	  and (max-device-width: 736px) 
 	  and (-webkit-min-device-pixel-ratio: 2)
 	  and (orientation: portrait) { 
@@ -507,11 +508,28 @@ nav {
 
 	/* Landscape */
 	@media only screen 
-	  and (min-device-width: 375px) 
+	  and (min-device-width: 320px) 
 	  and (max-device-width: 736px) 
 	  and (-webkit-min-device-pixel-ratio: 2)
 	  and (orientation: landscape) { 
-
+	  	.nav-menu {
+				width: 500px;
+				.menu-nav-contact {
+					margin-left: 30%;
+					margin-bottom: 20px;
+				}
+				ul {
+					margin-top: 50px;
+					a {
+						float:left;
+					}
+					li {
+						width: 200px;
+						margin-right: 10px;
+						padding: 5px 5px 5px 5px;
+					}
+				}
+			}
 	}
 }
 

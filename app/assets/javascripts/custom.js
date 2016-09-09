@@ -625,7 +625,7 @@ $(document).ready(function() {
 													.setTween(staggerFromLeft)
 													.addTo(homeController);
 	} else {
-		var homeScene3 = new ScrollMagic.Scene({triggerElement: "#home-section-4-5", offset: 50})
+		var homeScene3 = new ScrollMagic.Scene({triggerElement: "#home-section-4-5", offset: -50})
 													.setTween(staggerFromLeft)
 													.addTo(homeController);
 	}
