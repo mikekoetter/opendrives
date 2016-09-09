@@ -2533,33 +2533,26 @@ form {
 }
 
 #resources-section-2 {
-	.break-700 {
+	.hide-until-1200 {
 		display: none;
 	}
 	p {
 		text-align: left;
 	}
+	.col-sm-4 {
+		padding: 0;
+	}
 	.resources-contact-div {
-		position: relative;
 		padding: 20px;
 		color: #fff;
+		width: 100%;
 		.resources-contact-logo {
-			/*position: absolute;
-			top: 12px;
-			right: 35px;*/
 			width: 40px;
-			/*padding-left: 10px;*/
 		}
 	}
 	.resources-contact-div:hover {
 		border-right: 1px solid #000;
 		border-left: 1px solid #000;
-		.hide-on-hover {
-			display: none;
-		}
-		.show-on-hover {
-			display: inline-block;
-		}
 	}
 	.black {
 		background-color: #000;
@@ -2572,12 +2565,15 @@ form {
 		border-left: 1px solid #2977F2;
 	}
 	@media (max-width: 1200px) {
-		.col-xs-4 {
+		.hide-until-1200 {
+			display: inline-block;
+		}
+		.col-sm-4 {
 			font-size: 0.9em;
 		}
 	}
 	@media (max-width: 991px) {
-		.col-xs-4 {
+		.col-sm-4 {
 			font-size: 0.8em;
 		}
 		p {
@@ -2585,10 +2581,7 @@ form {
 		}
 	}
 	@media (max-width: 700px) {
-		.break-700 {
-			display: inline-block;
-		}
-		.col-xs-4 {
+		.col-sm-4 {
 			font-size: 0.7em;
 			height: 100px;
 		}
