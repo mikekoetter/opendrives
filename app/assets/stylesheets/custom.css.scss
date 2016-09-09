@@ -711,11 +711,13 @@ nav {
 
 	/* Landscape */
 	@media only screen 
-	  and (min-device-width: 375px) 
+	  and (min-device-width: 320px) 
 	  and (max-device-width: 736px) 
 	  and (-webkit-min-device-pixel-ratio: 2)
 	  and (orientation: landscape) { 
-
+	  	.catchphrase {
+				margin-top: 100px;
+			}
 	}
 }
 
@@ -995,11 +997,15 @@ nav {
 		}
 	}
 	@media (max-width: 991px) { 
+		h4 {
+	  		margin-top: -50px;
+	  		font-size: 1.2em;
+	  	}
 		.col-sm-4, .col-sm-6 {
 			margin-bottom: 50px;
 		}
 		.container-section-5 {
-			margin-top: 200px;
+			margin-top: 300px;
 			h2 {
 				font-size: 3em;
 				font-weight: 100;
@@ -1079,11 +1085,20 @@ nav {
 
 	/* Landscape */
 	@media only screen 
-	  and (min-device-width: 375px) 
+	  and (min-device-width: 320px) 
 	  and (max-device-width: 736px) 
 	  and (-webkit-min-device-pixel-ratio: 2)
 	  and (orientation: landscape) { 
-
+	  	.container-section-5 {
+				margin-top: 100px;
+				h2 {
+					font-size: 3em;
+					font-weight: 100;
+					span {
+						font-weight: 500;
+					}
+				}
+			}
 	}
 }
  
