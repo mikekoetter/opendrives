@@ -323,7 +323,10 @@ nav {
 		width: 250px;
 		position: absolute;
 		top: 40px;
-		left: 42%;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
 	}
 	ul {
 		padding-top: 30px;
@@ -438,28 +441,13 @@ nav {
 			}
 		}
 	}
-	@media (max-width: 1200px) { 
-		img {
-			width: 200px;
-			position: absolute;
-			top: 40px;
-			left: 42%;
-		}
-	}
 	@media (max-width: 1050px) { 
 		img {
-			width: 130px;
-			position: absolute;
-			top: 25px;
-			left: 5%;
+			width: 170px;
+			top: 5px;
 		}
 	}
 	@media (max-width: 850px) {
-		img {
-			width: 130px;
-			position: absolute;
-			left: 42%;
-		}
 		.nav-contact {
 			display: none;
 		}
@@ -482,9 +470,6 @@ nav {
 	}
 	@media (max-width: 767px) {
 		background-color: #000;
-		img {
-			left: 35%;
-		}
 		.navbar-nav {
 			position: absolute;
 			right: 10px;
@@ -786,6 +771,7 @@ nav {
 }
 
 #home-section-3 {
+	position: relative;
 	.home-section-3-server {
 		width: 75%;
 	}
@@ -844,6 +830,7 @@ nav {
 	@media (max-width: 991px) { 
 		.nav-justified {
 			left: 25%;
+			right: 25%;
 		}
 		.tab-content {
 			.col-md-8 h4 {
@@ -869,8 +856,10 @@ nav {
 		}
 	}
 	@media (max-width: 767px) { 
+		margin-bottom: 200px;
 		.nav-justified {
 			left: 23%;
+			right: 23%;
 		}
 		.nav-justified > li {
 	    display: table-cell;
@@ -894,6 +883,7 @@ nav {
 	@media (max-width: 580px) { 
 		.nav-justified {
 			left: 15%;
+			right: 15%;
 		}
 	}
 	/* Portrait and Landscape */
@@ -912,6 +902,7 @@ nav {
 	  and (orientation: portrait) { 
 	  	.nav-justified {
 				left: 1%;
+				right: 1%;
 			}
 	}
 
@@ -1004,6 +995,10 @@ nav {
 	}
 	@media (max-width: 767px) { 
 		margin-top: 0;
+		.title-section-4 {
+			margin-top: -80px;
+			color: #000;
+		}
 		.row.marginTop100 {
 			margin-top: 0;
 		}
@@ -1018,6 +1013,7 @@ nav {
 		}
 		.container-section-5 {
 			h2 {
+				margin-top: 300px;
 				font-size: 2.5em;
 				font-weight: 100;
 				text-align: left;
@@ -1711,7 +1707,7 @@ nav {
 	  and (-webkit-min-device-pixel-ratio: 2)
 	  and (orientation: portrait) { 
 	  	.schedule-demo-div {
-	  		font-size: 1em;
+	  		font-size: 1.1em;
 	  	}
 		
 	}
