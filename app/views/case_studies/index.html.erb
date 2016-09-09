@@ -27,22 +27,30 @@
 		<div class="row text-center marginTop100">
 			<div class="col-sm-6 no-padding-right">
 				<%= link_to case_interior_gone_girl_path do %>
-					<div class="case-study-div pull-right-sm shadow-animation case-study-gonegirl">
+					<div class="case-study-div pull-right-sm case-study-gonegirl anim">
 						<%= image_tag 'case-studies-gonegirl.png', class: 'case-studies-img' %>
 						<h2 class="h2-gonegirl">GONE<br>GIRL</h2>
 						<br><br>
 						<p class="lead line-height">Critically acclaimed:<br> OpenDrives Avalanche gives Fox and David Fincher unprecedented 6K post-production workflow.</p>
+						<div class="hide-in-sm-desktop">
+							<br>
+							<%= link_to((fa_icon 'plus', text: 'MORE', right: true), case_interior_gone_girl_path, class: 'link-with-border hvr-shutter-out-horizontal') %>
+						</div>
 					</div>
 				<% end %>
 			</div>
 			<div class="col-sm-6 no-padding-left">
 				<%= link_to case_interior_joke_path do %>
-					<div class="case-study-div pull-left-sm shadow-animation">
+					<div class="case-study-div pull-left-sm anim">
 						<%= image_tag 'case-studies-joke.png', class: 'case-studies-img' %>
 						<br><br>
 						<%= image_tag 'case-studies-joke-logo.png', class: 'case-studies-joke-logo' %>
 						<br><br>
 						<p class="lead line-height">Increased performance:<br> OpenDrives helps Joke Productions increase editorial performance and delivers more projects in less time.</p>
+						<div class="hide-in-sm-desktop">
+							<br>
+							<%= link_to((fa_icon 'plus', text: 'MORE', right: true), case_interior_joke_path, class: 'link-with-border hvr-shutter-out-horizontal') %>
+						</div>
 					</div>
 				<% end %>
 			</div>

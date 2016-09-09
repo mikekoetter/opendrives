@@ -334,7 +334,17 @@ $(document).ready(function() {
 												.setTween(productsTabAnim)
 												.addTo(productsController);
 	})
-	
+
+	//=======================================   Case Studies   =======================================//
+	//Hover Effect
+	$(".case-study-div").hover(function() {
+		$tm.to($(".case-study-div"), 1, { opacity: 0.2 })
+		$tm.to($(this), 1, { opacity: 1, scale: 1.2, zIndex: 20 })
+	}, function() {
+		$tm.to($(".case-study-div"), 1, { opacity: 1 })
+		$tm.to($(this), 1, { scale: 1, zIndex: 0 })
+	});
+
 	//=======================================   Resources   =======================================//
 	// Stop Videos on modal close
 	$("#modal-house-cards").on('hidden.bs.modal', function (e) {

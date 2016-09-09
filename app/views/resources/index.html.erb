@@ -25,7 +25,7 @@
 			</div>
 
 			<%= link_to 'tel:+18887785491' do %>
-				<div class="col-xs-4 resources-contact-div text-center black marginTop50 hvr-sweep-to-right">
+				<div class="col-xs-4 resources-contact-div text-center black marginTop50 hvr-ripple-out">
 					+1 (888) 778-5491<br class="hide-in-desktop">
 					<%= image_tag 'contact-phone-logo.png', class: 'resources-contact-logo hide-on-hover' %>
 					<%= image_tag 'contact-phone-white-logo.png', class: 'resources-contact-logo show-on-hover' %>
@@ -33,15 +33,14 @@
 			<% end %>
 
 			<%= link_to 'mailto:support@opendrives.com' do %>
-				<div class="col-xs-4 resources-contact-div text-center blue marginTop50 hvr-sweep-to-right">
-					SUPPORT@OPENDRIVES.COM<br class="hide-in-desktop">
-					<%= image_tag 'contact-mail-white-logo.png', class: 'resources-contact-logo hide-on-hover' %>
-					<%= image_tag 'contact-mail-logo.png', class: 'resources-contact-logo show-on-hover' %>
+				<div class="col-xs-4 resources-contact-div text-center blue marginTop50 hvr-ripple-out-blue">
+					SUPPORT@<br class="break-700">OPENDRIVES.COM<br class="hide-in-desktop">
+					<%= image_tag 'contact-mail-white-logo.png', class: 'resources-contact-logo' %>
 				</div>
 			<% end %>
 
 			<%= link_to 'https://support.opendrives.com/hc/en-us', target: '_blank' do %>
-				<div class="col-xs-4 resources-contact-div text-center black marginTop50 hvr-sweep-to-right">
+				<div class="col-xs-4 resources-contact-div text-center black marginTop50 hvr-ripple-out">
 					CREATE A SUPPORT TICKET<br class="hide-in-desktop">
 					<%= image_tag 'contact-ticket-logo.png', class: 'resources-contact-logo hide-on-hover' %>
 					<%= image_tag 'contact-ticket-white-logo.png', class: 'resources-contact-logo show-on-hover' %>
