@@ -620,9 +620,16 @@ $(document).ready(function() {
 	var homeScene2 = new ScrollMagic.Scene({triggerElement: "#home-section-2", offset: -100})
 													.setTween([fromLeftTop, fromRightBottom])
 													.addTo(homeController);
-	var homeScene3 = new ScrollMagic.Scene({triggerElement: "#home-section-4-5", offset: 150})
+	if ($(window).width() > 767) {
+		var homeScene3 = new ScrollMagic.Scene({triggerElement: "#home-section-4-5", offset: 150})
 													.setTween(staggerFromLeft)
 													.addTo(homeController);
+	} else {
+		var homeScene3 = new ScrollMagic.Scene({triggerElement: "#home-section-4-5", offset: 50})
+													.setTween(staggerFromLeft)
+													.addTo(homeController);
+	}
+	
 	var homeScene4 = new ScrollMagic.Scene({triggerElement: ".container-section-5", offset: -100})
 													.setTween(titleFromRight)
 													.addTo(homeController);
@@ -637,9 +644,16 @@ $(document).ready(function() {
 													.addTo(homeController);
 
 	// Career Scene
-	var careerScene1 = new ScrollMagic.Scene({triggerElement: "#career-section-1 .container", duration: 500, offset: -400})
+	if ($(window).width() > 767) {
+		var careerScene1 = new ScrollMagic.Scene({triggerElement: "#career-section-1 .container", duration: 500, offset: -400})
 													.setTween(careerSection1)
 													.addTo(careerController);
+	} else {
+		var careerScene1 = new ScrollMagic.Scene({triggerElement: "#career-section-1 .container", offset: -100})
+													.setTween(careerSection1)
+													.addTo(careerController);
+	}
+	
 	var careerScene2 = new ScrollMagic.Scene({triggerElement: "#career-section-1 .container", offset: -200})
 													.setTween(careerSection1Words)
 													.addTo(careerController);
