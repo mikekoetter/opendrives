@@ -55,12 +55,12 @@ ul {
 	list-style-type: none;
 }
 
-img {
-	width: 100%;
-}
-
 h2 {
 	font-size: 5em;
+}
+
+img {
+	width: 100%;
 }
 
 h3 {
@@ -68,7 +68,8 @@ h3 {
 }
 
 h4 {
-	font-size: 1.9em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.5em;
 }
 
 a {
@@ -736,21 +737,26 @@ nav {
 	background-image: image-url('blueenergy.png');
 	background-size: cover;
 	background-position: center;
+	img {
+		width: 75%;
+	}
 	.container div {
 		h3 {
 			color: #2977F2;
 			span {
 				color: #000;
 				font-weight: 200;
-				font-size: 2em;
+				font-size: 1.7em;
 			}
+		}
+		p.lead {
+			font-size: 1.3em;
 		}
 	} 
 	@media (max-width: 850px) { 
 		.container div {
 			h3 {
 				span {
-					font-weight: 200;
 					font-size: 1.7em;
 				}
 			}
@@ -956,7 +962,7 @@ nav {
 		margin-top: 20px;
 	}
 	.home-reason-logo {
-		width: 100px;
+		width: 75px;
 	}
 	/* CUSTOM BOOTSTRAP GRID 5 COLUMNS */
 	.col-xs-15,
@@ -991,6 +997,10 @@ nav {
     }
 	}
 	/* -- END -- CUSTOM BOOTSTRAP GRID 5 COLUMNS */
+	h3 {
+		font-size: 2em;
+		font-family: Arial, Helvetica, sans-serif;
+	}
 	.container-section-5 {
 		margin-top: 400px;
 		.landscape-margin {
@@ -1008,6 +1018,9 @@ nav {
 			height: 20px;
 			margin-left: 15px;
 			border-bottom: 2px solid #fff;
+		}
+		p.lead {
+			font-size: 1.8em;
 		}
 	}
 	@media (max-width: 991px) { 
@@ -1038,7 +1051,7 @@ nav {
 			margin-top: 10px;
 		}
 		.home-reason-logo {
-			width: 60px;
+			width: 50px;
 		}
 		.col-sm-4, .col-sm-6 {
 			margin-bottom: 20px;
@@ -1148,7 +1161,7 @@ nav {
 	.col-sm-3 {
 		margin-bottom: 50px;
 		img {
-			width: 150px;
+			width: 120px;
 		}
 	}
 } 
@@ -3042,14 +3055,18 @@ iframe {
 	}
 	.box {
 		position: relative;
-		padding-top: 100px;
-		padding-bottom: 100px;
+		padding-top: 70px;
+		padding-bottom: 70px;
 		img {
-			padding-top: 80px;
+			padding-top: 60px;
 			width: 80px;
+		}
+		.high-line {
+			line-height: 40px;
 		}
 	}
 	.long-box {
+
 		padding-bottom: 200px;
 	}
 	.black {
@@ -3086,6 +3103,9 @@ iframe {
 	hr {
 		margin-left: 0;
 	}
+	p.lead {
+		font-size: 1.2em;
+	}
 	@media (max-width: 991px) {
 		h3, p.huge {
 			text-align: center;
@@ -3110,12 +3130,11 @@ iframe {
 }
 
 #why-us-section-5 {
-	.why-us-section-5-background-div {
+	.why-us-section-5-background-div, .col-md-12.hide-in-sm-desktop {
 		background-image: image-url('why-us-section-5-background.png');
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
-		padding-top: 700px;
 		.employee-carousel-anchor {
 			width: 100%;
 			position: relative;
@@ -3147,7 +3166,6 @@ iframe {
 	}
 	@media (max-width: 1290px) {
 		.why-us-section-5-background-div {
-			padding-top: 800px;
 			.employee-carousel-anchor {
 				.carousel-arrow {
 					width: 30px;
@@ -3207,14 +3225,12 @@ iframe {
 		}
 	}
 	@media (max-width: 767px) {
-		.team-background {
-			padding-top: 50px;
-		}
+		
 		.why-us-section-5-background-div {
-			background-image: none;
+			/*background-image: none;
 			background-size: 0%;
 			background-repeat: no-repeat;
-			padding-top: 0;
+			padding-top: 0;*/
 		}
 	}
 	/* Portrait-Tablet */
@@ -3224,9 +3240,9 @@ iframe {
 	  and (orientation: portrait) 
 	  and (-webkit-min-device-pixel-ratio: 1) {
 	  	.why-us-section-5-background-div {
-				.employee-carousel-anchor {
+				/*.employee-carousel-anchor {
 					margin-top: 200px;
-				}
+				}*/
 			}
 	}
 
@@ -3235,17 +3251,6 @@ iframe {
 #why-us-section-6 {
 	p {
 		font-size: 1.3em;
-	}
-	@media (max-width: 1200px) {
-		padding-top: 100px;
-		margin-top: -200px;
-	}
-	@media (max-width: 991px) {
-		padding-top: 100px;
-		margin-top: -400px;
-	}
-	@media (max-width: 767px) {
-		margin-top: 0px;
 	}
 }
 
