@@ -972,8 +972,14 @@ nav {
 				right: 1%;
 			}
 	}
+	@media (max-width: 320px)
+		and (orientation: portrait) {
+			ul li {
+	  		font-size: 0.8em;
+	  	}
+	}
 	/* Portrait-Mobile-xs */
-	@media only screen 
+	/*@media only screen 
 	  and (min-device-width: 320px) 
 	  and (max-device-width: 568px)
 	  and (-webkit-min-device-pixel-ratio: 2)
@@ -981,7 +987,7 @@ nav {
 	  	ul li {
 	  		font-size: 0.8em;
 	  	}
-	}
+	}*/
 	/* Landscape */
 	@media only screen 
 	  and (min-device-width: 375px) 
@@ -2151,9 +2157,17 @@ form {
 				bottom: 6%;
 			}
 	}
-
+	@media (max-width: 320px)
+		and (orientation: portrait) {
+			font-size: 1.3em;
+	  	.phrase-4 {
+				hr {
+					width: 100px;
+				}
+			}
+	}
 	/* Portrait-Mobile-xs */
-	@media only screen 
+	/*@media only screen 
 	  and (min-device-width: 320px) 
 	  and (max-device-width: 568px)
 	  and (-webkit-min-device-pixel-ratio: 2)
@@ -2164,7 +2178,7 @@ form {
 					width: 100px;
 				}
 			}
-	}
+	}*/
 
 	/* Landscape */
 	@media only screen 
@@ -2375,9 +2389,37 @@ form {
 				}
 			}
 	}
-
+	@media (max-width: 320px)
+		and (orientation: portrait) {
+			.grey-background {
+				padding-top: 50px;
+				.round-border-link {
+					padding: 10px 30px 10px 30px;
+				}
+				.col-xs-8 {
+					padding-top: 0px;
+					margin-top: -15px;
+				}
+			}
+			.black-background {
+		  	.nav-tabs {
+		  		margin-top: 101px;
+					li {
+						a {
+							padding: 5px 10px 5px 10px;
+							img {
+								width: 40px;
+							}
+							p {
+								font-size: 0.7em;
+							}
+						}
+					}	
+				}
+			}
+	}
 	/* Portrait-Mobile-xs */
-	@media only screen 
+	/*@media only screen 
 	  and (min-device-width: 320px) 
 	  and (max-device-width: 568px)
 	  and (-webkit-min-device-pixel-ratio: 2)
@@ -2408,7 +2450,7 @@ form {
 					}	
 				}
 			}
-	}
+	}*/
 
 	/* Landscape */
 	@media only screen 
@@ -3159,9 +3201,14 @@ iframe {
 				font-size: 1.2em;
 			}
 	}
-
+	@media (max-width: 320px)
+		and (orientation: portrait) {
+			.phrase-right {
+				font-size: 1em;
+			}
+	}
 	/* Portrait-Mobile-xs */
-	@media only screen 
+	/*@media only screen 
 	  and (min-device-width: 320px) 
 	  and (max-device-width: 568px)
 	  and (-webkit-min-device-pixel-ratio: 2)
@@ -3169,7 +3216,7 @@ iframe {
 	  	.phrase-right {
 				font-size: 1em;
 			}
-	}
+	}*/
 
 	/* Landscape */
 	@media only screen 
@@ -3600,8 +3647,30 @@ footer {
 				}
 			}
 	}
+	@media (max-width: 320px)
+		and (orientation: portrait) {
+			height: 300px;
+	  	.col-md-2 img {
+				margin-left: 1%;
+				padding-left: 10px;
+				width: 80px;
+			}
+	  	.col-md-6 {
+				width: 300px;
+				margin-top: 20px;
+				margin-left: 0%;
+				p {
+					font-size: 0.6em;
+				}
+			}
+			.col-xs-8 {
+				p {
+					font-size: 0.6em;
+				}
+			}
+	}
 	/* Portrait-Mobile-xs */
-	@media only screen 
+	/*@media only screen 
 	  and (min-device-width: 320px) 
 	  and (max-device-width: 568px)
 	  and (-webkit-min-device-pixel-ratio: 2)
@@ -3625,7 +3694,7 @@ footer {
 					font-size: 0.6em;
 				}
 			}
-	}
+	}*/
 
 	/* Landscape */
 	@media only screen 
