@@ -1281,6 +1281,11 @@ nav {
 			font-size: 3em;
 		}
 	}
+	@media (max-width: 360px) { 
+		.career-anchor-section-1 {
+			font-size: 2em;
+		}
+	}
 }
 
 #career-section-2 {
@@ -1829,6 +1834,17 @@ nav {
 		
 	}
 
+	/* Portrait */
+	@media only screen 
+	  and (min-device-width: 320px) 
+	  and (max-device-width: 568px)
+	  and (-webkit-min-device-pixel-ratio: 2)
+	  and (orientation: portrait) {
+	  	.schedule-demo-div {
+	  		font-size: 0.8em;
+	  	}
+	}
+
 	/* Landscape */
 	@media only screen 
 	  and (min-device-width: 375px) 
@@ -2300,7 +2316,7 @@ form {
 			}
 			.black-background {
 		  	.nav-tabs {
-		  		margin-top: 96px;
+		  		margin-top: 94px;
 					li {
 						a {
 							padding: 5px 10px 5px 10px;
