@@ -493,20 +493,6 @@ nav {
 				}
 			}
 	}
-	/* Portrait-Mobile */
-	@media only screen 
-	  and (min-device-width: 375px) 
-	  and (max-device-width: 736px) 
-	  and (-webkit-min-device-pixel-ratio: 2)
-	  and (orientation: portrait) { 
-	  	.nav-menu {
-				ul {
-					li {
-						padding: 0px 40px 0px 30px;
-					}
-				}
-			}
-	}
 	/* Portrait-Mobile-xs */
 	@media only screen 
 	  and (min-device-width: 320px) 
@@ -525,6 +511,22 @@ nav {
 				}
 			}
 	}
+	
+	/* Portrait-Mobile */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 736px) 
+	  and (-webkit-min-device-pixel-ratio: 2)
+	  and (orientation: portrait) { 
+	  	.nav-menu {
+				ul {
+					li {
+						padding: 0px 40px 0px 30px;
+					}
+				}
+			}
+	}
+	
 	/* Landscape-Mobile */
 	@media only screen 
 	  and (min-device-width: 320px) 
