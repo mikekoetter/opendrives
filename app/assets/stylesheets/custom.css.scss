@@ -504,6 +504,8 @@ nav {
 	  and (-webkit-min-device-pixel-ratio: 2)
 	  and (orientation: portrait) {
 	  	.nav-menu {
+	  		margin: 0;
+	  		padding: 0;
 				width: 320px;
 				.menu-nav-contact {
 					margin-left: 20%;
@@ -3564,13 +3566,16 @@ footer {
 				width: 80px;
 			}
 	  	.col-md-6 {
-				width: 350px;
+				width: 320px;
 				margin-top: 20px;
 				margin-left: 0%;
-				.slide-under {
-					.hide-on-hover {
-						display: none;
-					}
+				p {
+					font-size: 0.6em;
+				}
+			}
+			.col-xs-8 {
+				p {
+					font-size: 0.6em;
 				}
 			}
 	}
