@@ -483,36 +483,9 @@ nav {
 			float: left;
 		}
 	}
-
-	/* Portrait-Mobile-xs */
-	/*@media only screen 
-	  and (min-device-width: 320px) 
-	  and (max-device-width: 568px)
-	  and (-webkit-min-device-pixel-ratio: 2)
-	  and (orientation: portrait) {
-	  	.nav-menu {
-				width: 500px;
-				.menu-nav-contact {
-					margin-left: 30%;
-					margin-bottom: 20px;
-				}
-				ul {
-					margin-top: 50px;
-					a {
-						float:left;
-					}
-					li {
-						width: 200px;
-						margin-right: 10px;
-						padding: 5px 5px 5px 5px;
-					}
-				}
-			}
-	}*/
-
 	/* Portrait-Mobile */
 	@media only screen 
-	  and (min-device-width: 320px) 
+	  and (min-device-width: 321px) 
 	  and (max-device-width: 736px) 
 	  and (-webkit-min-device-pixel-ratio: 2)
 	  and (orientation: portrait) { 
@@ -524,7 +497,31 @@ nav {
 				}
 			}
 	}
-
+	/* Portrait-Mobile-xs */
+	@media only screen 
+	  and (min-device-width: 320px) 
+	  and (max-device-width: 568px)
+	  and (-webkit-min-device-pixel-ratio: 2)
+	  and (orientation: portrait) {
+	  	.nav-menu {
+				width: 320px;
+				.menu-nav-contact {
+					margin-left: 10%;
+					margin-bottom: 20px;
+				}
+				ul {
+					margin-top: 50px;
+					a {
+						float:left;
+					}
+					li {
+						width: 100px;
+						margin-right: 10px;
+						padding: 5px 5px 5px 5px;
+					}
+				}
+			}
+	}
 	/* Landscape-Mobile */
 	@media only screen 
 	  and (min-device-width: 320px) 
@@ -2319,7 +2316,7 @@ form {
 			}
 			.black-background {
 		  	.nav-tabs {
-		  		margin-top: 100px;
+		  		margin-top: 101px;
 					li {
 						a {
 							padding: 5px 10px 5px 10px;
