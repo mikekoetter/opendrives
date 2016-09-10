@@ -1944,11 +1944,15 @@ nav {
 	background-repeat: no-repeat;
 	@media (max-width: 375px)
 		and (orientation: portrait) {
-			font-size: 1.1em;
+			.schedule-demo-div {
+	  		font-size: 1.1em;
+	  	}
 	}
 	@media (max-width: 320px)
 		and (orientation: portrait) {
-			font-size: 0.8em;
+			.schedule-demo-div {
+	  		font-size: 0.8em;
+	  	}
 	}
 
 	/* Portrait */
@@ -2469,7 +2473,7 @@ form {
 			}
 			.black-background {
 		  	.nav-tabs {
-		  		margin-top: 96px;
+		  		margin-top: 94px;
 					li {
 						a {
 							padding: 10px 20px 10px 20px;
