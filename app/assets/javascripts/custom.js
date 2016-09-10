@@ -86,13 +86,13 @@ $(document).ready(function() {
 		window.location.hash = '';
 	}
 
-	// Switch Tab Animation
+	// Switch Tab Animation - HOME
 	$('#home-section-3 a[data-toggle="tab"]').on('shown.bs.tab', function (e) {  
 		var target = $(this).attr('href'); 
 		$tm.to($('.mini-overlay'), 0.1, { width: "100%" });
 		var homeTabAnim = new TimelineMax()
-    					.from($(".tab-pane .col-md-8"), 2, {  left: -200, borderColor: "#fff" })
-    					.from($(".tab-pane .col-md-4"), 2, {  right: -200 }, "-=2")
+    					.from($(".tab-pane .col-md-8"), 2, {  opacity: 0, left: -200, borderColor: "#fff", ease: Power1.easeIn  })
+    					.from($(".tab-pane .col-md-4"), 2, {  opacity: 0, right: -200 , ease: Power1.easeIn }, "-=2")
     					.from($(target + ' .border-overlay'), 1, { height: 200 })
     					.staggerTo($(target + ' .mini-overlay'), 1, { width: 0 }, 0.4, "-=0.5");
 	});
