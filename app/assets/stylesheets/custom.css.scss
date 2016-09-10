@@ -940,14 +940,7 @@ nav {
 			right: 15%;
 		}
 	}
-	/* Portrait and Landscape */
-	@media only screen 
-	  and (min-device-width: 375px) 
-	  and (max-device-width: 736px) 
-	  and (-webkit-min-device-pixel-ratio: 2) { 
-
-	}
-	/* Portrait */
+	/* Portrait-Mobile */
 	@media only screen 
 	  and (min-device-width: 320px) 
 	  and (max-device-width: 736px) 
@@ -957,6 +950,16 @@ nav {
 				left: 1%;
 				right: 1%;
 			}
+	}
+	/* Portrait-Mobile-xs */
+	@media only screen 
+	  and (min-device-width: 320px) 
+	  and (max-device-width: 568px)
+	  and (-webkit-min-device-pixel-ratio: 2)
+	  and (orientation: portrait) {
+	  	ul li {
+	  		font-size: 0.8em;
+	  	}
 	}
 	/* Landscape */
 	@media only screen 
@@ -2282,7 +2285,7 @@ form {
 			}
 			.black-background {
 		  	.nav-tabs {
-		  		margin-top: 92px;
+		  		margin-top: 96px;
 					li {
 						a {
 							padding: 10px 20px 10px 20px;
