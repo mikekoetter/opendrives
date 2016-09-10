@@ -561,6 +561,32 @@ nav {
 			}
 	}
 
+	/* Portrait-Mobile-xs */
+	@media only screen 
+	  and (min-device-width: 320px) 
+	  and (max-device-width: 568px)
+	  and (-webkit-min-device-pixel-ratio: 2)
+	  and (orientation: portrait) {
+	  	.nav-menu {
+				width: 500px;
+				.menu-nav-contact {
+					margin-left: 30%;
+					margin-bottom: 20px;
+				}
+				ul {
+					margin-top: 50px;
+					a {
+						float:left;
+					}
+					li {
+						width: 200px;
+						margin-right: 10px;
+						padding: 5px 5px 5px 5px;
+					}
+				}
+			}
+	}
+
 }
 
 /*-------------------------  Home   -------------------------*/
