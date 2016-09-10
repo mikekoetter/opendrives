@@ -2064,7 +2064,12 @@ form {
 	  and (max-device-width: 568px)
 	  and (-webkit-min-device-pixel-ratio: 2)
 	  and (orientation: portrait) {
-	  	font-size: 1.2em;
+	  	font-size: 1.3em;
+	  	.phrase-4 {
+				hr {
+					width: 80px;
+				}
+			}
 	}
 
 	/* Landscape */
@@ -2243,15 +2248,7 @@ form {
 			}
 		}
 	}
-	/* Portrait and Landscape */
-	@media only screen 
-	  and (min-device-width: 375px) 
-	  and (max-device-width: 736px) 
-	  and (-webkit-min-device-pixel-ratio: 2) { 
-
-	}
-
-	/* Portrait */
+	/* Portrait-Mobile */
 	@media only screen 
 	  and (min-device-width: 320px) 
 	  and (max-device-width: 736px) 
@@ -2278,6 +2275,40 @@ form {
 							}
 							p {
 								font-size: 0.8em;
+							}
+						}
+					}	
+				}
+			}
+	}
+
+	/* Portrait-Mobile-xs */
+	@media only screen 
+	  and (min-device-width: 320px) 
+	  and (max-device-width: 568px)
+	  and (-webkit-min-device-pixel-ratio: 2)
+	  and (orientation: portrait) {
+	  	.grey-background {
+				padding-top: 20px;
+				.round-border-link {
+					padding: 10px 30px 10px 30px;
+				}
+				.col-xs-8 {
+					padding-top: 0px;
+					margin-top: -15px;
+				}
+			}
+			.black-background {
+		  	.nav-tabs {
+		  		margin-top: 92px;
+					li {
+						a {
+							padding: 5px 10px 5px 10px;
+							img {
+								width: 40px;
+							}
+							p {
+								font-size: 0.7em;
 							}
 						}
 					}	
