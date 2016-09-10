@@ -15,7 +15,7 @@ class ContactsController < ApplicationController
     		format.json
     	else
     		format.html { render :index }
-        fomrat.json
+        format.json
     	end
     end
   end

@@ -16,47 +16,17 @@ $.fn.clicktoggle = function(a, b) {
 
 $(document).ready(function() {
 
-	$(window).load(function(){
-    $('.preloader').delay(200).fadeOut(250);
-  })
-
-	 
-	// For sticky images
-	// var stickyTop = $(".sticky").offset().top + 450;
-	// $(window).scroll(function() {
- //    var windowTop = $(window).scrollTop();
- //    if (stickyTop < windowTop && $("#case-interior-gone-girl-section-3").height() - 100 + $("#case-interior-gone-girl-section-3").offset().top - $(".sticky").height() > windowTop) {
- //      $('.sticky').css({position: 'fixed', top: '150px', width: '200px', left: '8%'});
- //    } else {
- //      $('.sticky').css({position: 'relative'});
- //    }
- //  });
-	
-
-
-	// $(function() {
-	//   var body = $('#home-section-4-5');
-	//   var backgrounds = ['url(http://static.jsbin.com/images/jsbin_static.png)', 'url(http://static.jsbin.com/images/popout.png)'];
-	// 	var current = 0;
-
-	// 	function nextBackground() {
-	// 	  body.css(
-	// 	   'background',
-	// 	    backgrounds[current = ++current % backgrounds.length]
-	// 	 	);
- // 			setTimeout(nextBackground, 5000);
- // 		}
-
- // 		setTimeout(nextBackground, 500);
- //   	body.css('background', backgrounds[0]);
- // 	});
-
-
-
 
 	//=======================================   Generals   =======================================//
 	$(".full-height").css("min-height", $(window).height());
 	$(".full-height-twice").css("min-height", ($(window).height() * 2));
+	// Preloader
+	$(window).load(function(){
+    $('.preloader').delay(200).fadeOut(250);
+  });
+
+	// Reload page on orientation change
+	window.onorientationchange = function() { window.location.reload(); };
 
 	// Tab to Page to Tab 
 	var hash = window.location.hash;
@@ -181,8 +151,6 @@ $(document).ready(function() {
 	});
 
 
-	
-	
 	//=======================================   Nav   =======================================//
 	// Nav menu animation
 	var clickCount = 0
@@ -421,8 +389,6 @@ $(document).ready(function() {
 	var footerTl = new TimelineMax()
 
 	$(".slider, .slider-under p").click(function() {
-		// footerTl.to($(".slider"), 0.3, { left: 134 })
-		// 					.to($(".slider"), 0.3, { clip:"rect(0px 350px 100px 200px)" }, "-=0.2");
 		if ($(window).width() > 450) {
 			footerTl.to($(".slider"), 0.3, { left: 134 })
 							.to($(".slider"), 0.3, { clip:"rect(0px 350px 100px 200px)" }, "-=0.2");
@@ -443,7 +409,7 @@ $(document).ready(function() {
 	$("#subscribe-email").keypress(function(event) {
     if (event.which == 13) {
       event.preventDefault();
-      $("form").submit();
+      $("#subscribe").submit();
     }
 	});
 	$(".close-subscribe").click(function() {
@@ -455,7 +421,6 @@ $(document).ready(function() {
 		$(".close-subscribe").hide();
 	});
 	
-
 	$(function(){
     $(".slider a").click(function(){
       $('#subscribe').submit();
