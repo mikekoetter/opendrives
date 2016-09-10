@@ -493,8 +493,22 @@ nav {
 				}
 			}
 	}
+	@media (max-width: 320px)
+		and (orientation: portrait) {
+			.nav-menu {
+	  		margin: 0;
+	  		padding: 0;
+				width: 320px;
+				ul {
+					margin-top: 0px;
+					li {
+						padding: 0px 40px 0px 30px;
+					}
+				}
+			}
+	}
 	/* Portrait-Mobile-xs */
-	@media only screen 
+	/*@media only screen 
 	  and (min-device-width: 320px) 
 	  and (max-device-width: 568px)
 	  and (-webkit-min-device-pixel-ratio: 2)
@@ -510,8 +524,8 @@ nav {
 					}
 				}
 			}
-	}
-	
+	}*/
+
 	/* Portrait-Mobile */
 	/*@media only screen 
 	  and (min-device-width: 375px) 
