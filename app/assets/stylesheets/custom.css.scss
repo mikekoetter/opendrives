@@ -484,12 +484,30 @@ nav {
 		}
 	}
 
-	/* Portrait and Landscape */
+	/* Portrait-Mobile-xs */
 	@media only screen 
-	  and (min-device-width: 375px) 
-	  and (max-device-width: 736px) 
-	  and (-webkit-min-device-pixel-ratio: 2) { 
-
+	  and (min-device-width: 320px) 
+	  and (max-device-width: 568px)
+	  and (-webkit-min-device-pixel-ratio: 2)
+	  and (orientation: portrait) {
+	  	.nav-menu {
+				width: 500px;
+				.menu-nav-contact {
+					margin-left: 30%;
+					margin-bottom: 20px;
+				}
+				ul {
+					margin-top: 50px;
+					a {
+						float:left;
+					}
+					li {
+						width: 200px;
+						margin-right: 10px;
+						padding: 5px 5px 5px 5px;
+					}
+				}
+			}
 	}
 
 	/* Portrait-Mobile */
@@ -774,14 +792,6 @@ nav {
 			margin-top: 200px;
 		}
 	}
-	/* Portrait and Landscape */
-	@media only screen 
-	  and (min-device-width: 375px) 
-	  and (max-device-width: 736px) 
-	  and (-webkit-min-device-pixel-ratio: 2) { 
-
-	}
-
 	/* Portrait */
 	@media only screen 
 	  and (min-device-width: 320px) 
@@ -796,7 +806,6 @@ nav {
 				width: 40%;
 			}
 	}
-
 	/* Landscape */
 	@media only screen 
 	  and (min-device-width: 375px) 
