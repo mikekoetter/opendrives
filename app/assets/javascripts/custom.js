@@ -421,12 +421,19 @@ $(document).ready(function() {
 	var footerTl = new TimelineMax()
 
 	$(".slider, .slider-under p").click(function() {
-		if ($(window).width() > 550) {
-			footerTl.to($(".slider"), 0.3, { left: 149 })
+		// footerTl.to($(".slider"), 0.3, { left: 134 })
+		// 					.to($(".slider"), 0.3, { clip:"rect(0px 350px 100px 200px)" }, "-=0.2");
+		if ($(window).width() > 450) {
+			footerTl.to($(".slider"), 0.3, { left: 134 })
 							.to($(".slider"), 0.3, { clip:"rect(0px 350px 100px 200px)" }, "-=0.2");
+		} else if($(window).width() > 350) {
+			footerTl.to($(".slider"), 0.3, { left: 103 })
+							.to($(".slider-under"), 0.1, {paddingBottom: '6px'}, "-=0.3")
+							.to($(".slider"), 0.3, { clip:"rect(0px 300px 100px 150px)" }, "-=0.2");
 		} else {
-			footerTl.to($(".slider"), 0.3, { left: 149 })
-							.to($(".slider"), 0.3, { clip:"rect(0px 300px 200px 150px)" }, "-=0.2");
+			footerTl.to($(".slider"), 0.3, { left: 89 })
+							.to($(".slider-under"), 0.1, { paddingBottom: '2px' }, "-=0.3")
+							.to($(".slider"), 0.3, { clip:"rect(0px 300px 100px 130px)" }, "-=0.2");
 		}
 		$(".slider-div .hide-on-hover").hide();
 		$(".slider-div .show-on-hover").show();
@@ -441,7 +448,8 @@ $(document).ready(function() {
 	});
 	$(".close-subscribe").click(function() {
 		footerTl.to($(".slider"), 0.3, { clip:"rect(0px 350px 100px 0px)" })
-						.to($(".slider"), 0.3, { left: 16, delay: 0.2 }, "-=0.2");
+						.to($(".slider-under"), 0.1, {paddingBottom: '11px'}, "-=0.3")
+						.to($(".slider"), 0.3, { left: 1, delay: 0.2 }, "-=0.2");
 		$(".slider-div .hide-on-hover").show();
 		$(".slider-div .show-on-hover").hide();
 		$(".close-subscribe").hide();

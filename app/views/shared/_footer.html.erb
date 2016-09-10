@@ -1,20 +1,23 @@
 <footer>
-	<div class="col-md-6 col-sm-12 col-xs-12 pull-right-sm slider-div">
-		<div class="slider">
-			<p class="hide-on-hover">SIGNUP FOR OUR NEWSLETTER</p>
-			<a href=" "><p style="text-align:right;color:#fff;" class="show-on-hover">SUBSCRIBE</p></a>
-		</div>
-		<div class="slider-under">
-			<p class="hide-on-hover"><strong>SUBSCRIBE</strong></p>
-			<%= form_tag('/home/subscribe', method: 'post', id: 'subscribe', remote: true) do %>
-				<span class="close-subscribe">X</span><input type="email" name="email" placeholder="EMAIL" class="footer-input show-on-hover" value="" id="subscribe-email">
-			<% end %>
-		</div>
-		<div class="show-on-submit success">
-			<p class="lead">YOU HAVE SUCCESSFULLY SUBSCRIBED TO OUR NEWSLETTER!</p>
-		</div>
-		<div class="show-on-submit error">
-			<p class="lead">Oops! Please verify your email or try again later.</p>
+	<div class="col-md-6 col-sm-12 pull-right-sm slider-div">
+		<div class="anchor-box">
+			<div class="slider">
+				<p class="hide-on-hover">SIGNUP FOR OUR NEWSLETTER</p>
+				<a href=" "><p style="text-align:right;color:#fff;" class="show-on-hover">SUBSCRIBE</p></a>
+			</div>
+			<div class="slider-under">
+				<p class="hide-on-hover"><strong>SUBSCRIBE</strong></p>
+				<%= form_tag('/home/subscribe', method: 'post', id: 'subscribe', remote: true) do %>
+					<span class="close-subscribe">X</span><input type="email" name="email" placeholder="EMAIL" class="footer-input show-on-hover" value="" id="subscribe-email">
+				<% end %>
+			</div>
+
+			<div class="show-on-submit success">
+				<p class="lead">YOU HAVE SUCCESSFULLY SUBSCRIBED TO OUR NEWSLETTER!</p>
+			</div>
+			<div class="show-on-submit error">
+				<p class="lead">Oops! Please verify your email or try again later.</p>
+			</div>
 		</div>
 	</div>
 	<div class="col-md-2 col-sm-4 col-xs-4">
