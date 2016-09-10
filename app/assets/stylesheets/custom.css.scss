@@ -485,7 +485,7 @@ nav {
 	}
 
 	/* Portrait-Mobile-xs */
-	@media only screen 
+	/*@media only screen 
 	  and (min-device-width: 320px) 
 	  and (max-device-width: 568px)
 	  and (-webkit-min-device-pixel-ratio: 2)
@@ -508,7 +508,7 @@ nav {
 					}
 				}
 			}
-	}
+	}*/
 
 	/* Portrait-Mobile */
 	@media only screen 
@@ -910,7 +910,7 @@ nav {
 		}
 	}
 	@media (max-width: 767px) { 
-		margin-bottom: 200px;
+		margin-bottom: 100px;
 		.nav-justified {
 			left: 23%;
 			right: 23%;
@@ -2056,6 +2056,15 @@ form {
 			.phrase-7 {
 				bottom: 6%;
 			}
+	}
+
+	/* Portrait-Mobile-xs */
+	@media only screen 
+	  and (min-device-width: 320px) 
+	  and (max-device-width: 568px)
+	  and (-webkit-min-device-pixel-ratio: 2)
+	  and (orientation: portrait) {
+	  	font-size: 1.2em;
 	}
 
 	/* Landscape */
