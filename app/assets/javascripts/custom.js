@@ -463,7 +463,7 @@ $(document).ready(function() {
 
 	var $tm = TweenMax;
 	var widthScreen = $(window).width();
-	var downArrow = $('#home-section-1 i');
+	var downArrow = $('#home-section-1 a');
 
 
 	// Init ScrollMagic Home Controller
@@ -509,7 +509,7 @@ $(document).ready(function() {
 										.from($(".catchphrase"), 4, { scale: 0, delay: 0.5 })
 										.from($(".catchphrase2"), 4, { scale: 0, ease: Power4.easeIn }, "-=4")
 										.to($(".catchphrase2"), 2, { scale: 1.2, ease: Elastic.easeOut.config(2, 0.5) })
-										.from(downArrow, 2, { opacity: 0, bottom: '7%', yoyo:true, repeat: -1 }, "+=0.5");
+										.from(downArrow, 2, { opacity: 0, top: '80%', yoyo:true, repeat: -1 }, "+=0.5");
 	var cloudAnimation1 = $tm.to($(".clouds_one"), 400, { repeat: -1, right: widthScreen + 500 });
 	var cloudAnimation2 =	$tm.from($(".clouds_two"), 175, { repeat: -1, right: widthScreen - 100 })
 	var cloudAnimation3 = $tm.to($(".clouds_three"), 400, { repeat: -1, left: widthScreen + 700 })
