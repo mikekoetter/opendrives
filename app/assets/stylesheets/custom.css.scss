@@ -494,7 +494,7 @@ nav {
 			}
 	}
 	/* Portrait-Mobile-xs */
-	/*@media only screen 
+	@media only screen 
 	  and (min-device-width: 320px) 
 	  and (max-device-width: 568px)
 	  and (-webkit-min-device-pixel-ratio: 2)
@@ -510,10 +510,10 @@ nav {
 					}
 				}
 			}
-	}*/
+	}
 	
 	/* Portrait-Mobile */
-	@media only screen 
+	/*@media only screen 
 	  and (min-device-width: 375px) 
 	  and (max-device-width: 736px) 
 	  and (-webkit-min-device-pixel-ratio: 2)
@@ -525,7 +525,7 @@ nav {
 					}
 				}
 			}
-	}
+	}*/
 	
 	/* Landscape-Mobile */
 	@media only screen 
