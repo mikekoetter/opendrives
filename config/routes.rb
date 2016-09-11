@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   get 'why_us/index'
 
-  get 'resources/index'
+  resources :resources, only: [:index, :create]
 
   get 'products/index'
 

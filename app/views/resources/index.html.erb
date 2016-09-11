@@ -62,45 +62,8 @@
 				<br>
 				<p>*During standard business hours.</p>
 			</div>
-			<div class="col-md-12 marginTop50">
-				<%= simple_form_for(@contact, html: { class: "form-horizontal" }) do |f| %>
-          <fieldset>
-
-            <div class="form-group">
-              <div class="col-sm-4">
-                <%= f.input :first_name, label: false, placeholder: '*FIRST NAME', required: true, input_html: { class: 'form-control' } %>
-              </div>
-              <div class="col-sm-4">
-                 <%= f.input :last_name, label: false, placeholder: '*LAST NAME', required: true, input_html: { class: 'form-control' } %>
-              </div>
-              <div class="col-sm-4">
-                <%= f.input :company_name, label: false, placeholder: '*COMPANY NAME', required: true, input_html: { class: 'form-control' } %>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <div class="col-sm-6">
-                <%= f.input :email, label: false, placeholder: '*WORK EMAIL', required: true, input_html: { class: 'form-control' } %>
-              </div>
-              <div class="col-sm-6">
-                <%= f.input :phone, label: false, placeholder: 'PHONE NUMBER', required: false, input_html: { class: 'form-control' } %>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <div class="col-sm-12">
-                <%= f.input :message, as: :text, rows: 10, label: false, placeholder: 'QUESTION', required: false, input_html: { class: 'form-control' } %>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <div class="col-md-12 marginTop20 text-center">
-              	<%= button_tag((fa_icon 'angle-right', text: 'SUBMIT', right: true), type: 'submit', class: 'link-with-border hvr-shutter-out-horizontal') %>
-                
-              </div>
-            </div>
-          </fieldset>
-         <% end %>
+			<div class="col-md-12 marginTop50" id="resource-form">
+				<%= render 'resources_form' %>
 			</div>
 		</div>
 	</div>

@@ -1,0 +1,9 @@
+$("#resource-form").html("<%= escape_javascript(render :partial => 'resources_form') %>");
+var resourceFormAnimation = new TimelineMax()
+									.to($(".resource-form-group-1, .resource-form-group-3"), 2, { left: '200px', opacity: 0 })
+									.to($(".resource-form-group-2"), 2, { right: '200px', opacity: 0 }, "-=2")
+									.to($(".resource-form-success"), 2, { opacity: 1, scale: 1.2 })
+									.to($(".resource-form-success"), 2, { opacity: 0, scale: 1 }, "+=2")
+									.to($(".resource-form-group-1, .resource-form-group-3"), 2, { left: 0, opacity: 1 })
+									.to($(".resource-form-group-2"), 2, { right: 0, opacity: 1 }, "-=2")
+$(".form-control").val("");

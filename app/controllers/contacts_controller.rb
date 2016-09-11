@@ -12,10 +12,9 @@ class ContactsController < ApplicationController
   	@contact.request = request
     respond_to do |format|
     	if @contact.deliver
-    		format.json
+    		format.js
     	else
-    		format.html { render :index }
-        format.json
+        format.js { render 'form_errors' }
     	end
     end
   end

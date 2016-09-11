@@ -62,7 +62,7 @@ $(document).ready(function() {
 		$tm.to($('.mini-overlay'), 0.1, { width: "100%" });
 		var homeTabAnim = new TimelineMax()
     					.from($(".tab-pane .col-md-8"), 2, {  opacity: 0, left: -200, borderColor: "#fff", ease: Power1.easeIn  })
-    					.from($(".tab-pane .col-md-4"), 2, {  opacity: 0, right: -200 , ease: Power1.easeIn }, "-=2")
+    					.from($(".tab-pane .col-md-4"), 2, {  opacity: 0, right: -200, ease: Power1.easeIn }, "-=2")
     					.from($(target + ' .border-overlay'), 1, { height: 200 })
     					.staggerTo($(target + ' .mini-overlay'), 1, { width: 0 }, 0.4, "-=0.5");
 	});
@@ -91,6 +91,19 @@ $(document).ready(function() {
 	  	$tm.to($(this), 0.3, { boxShadow: "0px 0px 0px" });
 	  	$tm.to($(this), 0.3, { left: 0, top: 0 });
 	});	
+
+	$(".loader").hide();
+	// show spinner on AJAX start
+	$(document).ajaxStart(function(){
+		$(".loader").show();
+		$(".submit-button").hide();
+		
+	});
+	// hide spinner on AJAX stop
+	$(document).ajaxStop(function(){
+		$(".loader").hide();
+		$(".submit-button").show();
+	});
 	
 	//=======================================   Carousel   =======================================//	
 	// Clients Carousel set up
@@ -296,7 +309,7 @@ $(document).ready(function() {
 		var target = $(this).attr('href'); 
 		$tm.to($('.tab-pane .mini-overlay'), 0.1, { width: "100%" });
 		$tm.to($('.hr-anim-product-tab'), 0.1, { width: "200px" });
-		$tm.from($('#products-section-2 .tab-content .bigdrive2-img'), 2, { opacity: 0, scale: 0 });
+		$tm.from($('#products-section-2 .tab-content .bigdrive2-img'), 2, { opacity: 0, scale: 0, ease: Power1.easeIn });
 		$tm.from($('#products-section-2 .tab-content'), 2, { opacity: 0, left: -200 });
 		var productsTabAnim = $tm.staggerTo($(target + ' .mini-overlay'), 1, { width: 0 }, 0.4);
 		var hrTweenProductTab = $tm.to($('.hr-anim-product-tab'), 5, { width: "70%" });
@@ -458,7 +471,7 @@ $(document).ready(function() {
 	// Init ScrollMagic MiniOverlay Controller
 	var miniOverlayController = new ScrollMagic.Controller();
 
-
+	// Setting up animatin for Scenes
 	var rotateSmallBig = $tm.staggerFrom($(".rotate-small-big"), 1, { scale: 0, rotation: 1080 }, 0.5);
 	if ($(window).width() > 1050) {
 		var navTweenLogo = $tm.to($(".logo-nav"), 0.5, { scale: 0.7, top: 5 })
@@ -572,6 +585,10 @@ $(document).ready(function() {
 												.staggerFrom($('#career-section-1 .big'), 2, { opacity: 0, ease: Power4.easeIn }, 0.5)
 												.staggerFrom($('.career-opacity'), 2, { opacity: 0, ease: Power4.easeIn }, 0.5, "-=2");
 	var careerJobSection1 = $tm.from($(".career-job-title"), 2, { opacity: 0, scale: 0 })
+
+
+
+	//SCENES//
 
 
 	// Navigation Bar Scene

@@ -1,0 +1,59 @@
+<%= simple_form_for(@contact, html: { class: "form-horizontal" }, remote: true) do |f| %>
+  <fieldset>
+    <div class="form-group">
+      <div class="col-sm-6 anim input-left">
+        <%= f.input :first_name, label: false, placeholder: '*FIRST NAME', required: true, input_html: { class: 'form-control' } %>
+      </div>
+      <div class="col-sm-6 anim input-right">
+        <%= f.input :last_name, label: false, placeholder: '*LAST NAME', required: true, input_html: { class: 'form-control' } %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-6 anim input-left">
+        <%= f.input :email, label: false, placeholder: '*WORK EMAIL', required: true, input_html: { class: 'form-control' } %>
+      </div>
+      <div class="col-sm-6 anim input-right">
+        <%= f.input :company_name, label: false, placeholder: '*COMPANY NAME', required: true, input_html: { class: 'form-control' } %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-6 anim input-left">
+        <%= f.input :job_title, label: false, placeholder: 'Job Title', required: false, input_html: { class: 'form-control' } %>
+      </div>
+      <div class="col-sm-6 anim input-right">
+         <%= f.input :phone, label: false, placeholder: 'PHONE NUMBER', required: false, input_html: { class: 'form-control' } %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-6 anim input-left">
+        <%= f.input :country, label: false, placeholder: 'COUNTRY', required: false, input_html: { class: 'form-control' } %>
+      </div>
+      <div class="col-sm-6 demo-div anim input-right">
+        <%= f.input :date, label: false, placeholder: 'MM/DD/YYYY', required: false, input_html: { class: 'form-control datepicker' }, wrapper_html: { class: 'schedule-demo-input' } %>
+        <div class="schedule-demo-div form-control hvr-sweep-to-right">
+          WANT TO SCHEDULE A DEMO?
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-12">
+        <%= f.input :message, as: :text, rows: 10, label: false, placeholder: 'QUESTION', required: false, input_html: { class: 'form-control' } %>
+      </div>
+    </div>
+
+    <div class="contact-form-success">
+      <p class="lead">YOUR CONTACT REQUEST WAS SENT SUCCESSFULLY!<br> OPENDRIVES WILL CONTACT YOU SOON!</p>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-12 marginTop20">
+      	<%= button_tag((fa_icon 'angle-right', text: 'SUBMIT', right: true), type: 'submit', class: 'link-with-border hvr-shutter-out-horizontal submit-button') %>
+        <div class="loader"></div>
+      </div>
+    </div>
+  </fieldset>
+<% end %>

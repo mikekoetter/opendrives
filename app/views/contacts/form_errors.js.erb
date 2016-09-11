@@ -1,0 +1,9 @@
+$("#contact-form").html("<%= escape_javascript(render :partial => 'contacts_form') %>");
+// Schedule a demo show/hide
+$(".schedule-demo-input").hide();
+$(".schedule-demo-div").click(function() {
+	$(".schedule-demo-input").show();
+	$(".demo-div").removeClass('demo-div');
+	$(".schedule-demo-div").hide();
+	$('.datepicker').datepicker('show');
+});

@@ -1,12 +1,9 @@
-class Contact < MailForm::Base
+class Resource < MailForm::Base
   attribute :first_name,      :validate => true
   attribute :last_name,      	:validate => true
   attribute :email,     			:validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
   attribute :company_name, 		:validate => true
-  attribute :job_title
   attribute :phone
-  attribute :country
-  attribute :date
   attribute :message
   attribute :nickname,  			:captcha  => true
 
@@ -14,9 +11,9 @@ class Contact < MailForm::Base
   # in ActionMailer accepts.
   def headers
     {
-      :subject => "Contact Request from opendrives.com",
-      :to => "channe@channedesign.com",
-      :from => "channe@channedesign.com"
+      :subject => "Support Request from opendrives.com",
+      :to => "channebertrand@gmail.com",
+      :from => "channebertrand@gmail.com"
     }
   end
 
