@@ -61,8 +61,8 @@ $(document).ready(function() {
 		var target = $(this).attr('href'); 
 		$tm.to($('.mini-overlay'), 0.1, { width: "100%" });
 		var homeTabAnim = new TimelineMax()
-    					.from($(".tab-pane .col-md-8"), 2, {  opacity: 0, left: -200, borderColor: "#fff", ease: Power1.easeIn  })
-    					.from($(".tab-pane .col-md-4"), 2, {  opacity: 0, right: -200, ease: Power1.easeIn }, "-=2")
+    					.from($(target + ' .col-md-8'), 2, {  opacity: 0, left: -200, borderColor: "#fff", ease: Power1.easeIn  })
+    					.from($(target + ' .col-md-4'), 2, {  opacity: 0, right: -200, ease: Power1.easeIn }, "-=2")
     					.from($(target + ' .border-overlay'), 1, { height: 200 })
     					.staggerTo($(target + ' .mini-overlay'), 1, { width: 0 }, 0.4, "-=0.5");
 	});
@@ -309,7 +309,7 @@ $(document).ready(function() {
 		var target = $(this).attr('href'); 
 		$tm.to($('.tab-pane .mini-overlay'), 0.1, { width: "100%" });
 		$tm.to($('.hr-anim-product-tab'), 0.1, { width: "200px" });
-		$tm.from($('#products-section-2 .tab-content .bigdrive2-img'), 2, { opacity: 0, scale: 0, ease: Power1.easeIn });
+		$tm.from($('#products-section-2 '+ target +' .bigdrive2-img'), 2, { opacity: 0, scale: 0, ease: Power1.easeIn });
 		$tm.from($('#products-section-2 .tab-content'), 2, { opacity: 0, left: -200 });
 		var productsTabAnim = $tm.staggerTo($(target + ' .mini-overlay'), 1, { width: 0 }, 0.4);
 		var hrTweenProductTab = $tm.to($('.hr-anim-product-tab'), 5, { width: "70%" });
@@ -496,9 +496,23 @@ $(document).ready(function() {
 										.from($(".catchphrase2"), 4, { scale: 0, ease: Power4.easeIn }, "-=4")
 										.to($(".catchphrase2"), 2, { scale: 1.2, ease: Elastic.easeOut.config(2, 0.5) })
 										.from(downArrow, 2, { opacity: 0, top: '80%', yoyo:true, repeat: -1 }, "+=0.5");
-	var cloudAnimation1 = $tm.to($(".clouds_one"), 400, { repeat: -1, right: widthScreen + 500 });
-	var cloudAnimation2 =	$tm.from($(".clouds_two"), 175, { repeat: -1, right: widthScreen - 100 })
-	var cloudAnimation3 = $tm.to($(".clouds_three"), 400, { repeat: -1, left: widthScreen + 700 })
+	// var homeIntroAnim = new TimelineMax()
+	// 										.from($(".intro-1"), 2, { opacity: 0, scale: 0, ease: Power4.easeOut })
+	// 										.to($(".intro-1"), 1, { top: "60%", right: "30%", left: 0, bottom: 0, ease: Power3.easeOut })
+	// 										.from($(".intro-2"), 2, { opacity: 0, scale: 0, ease: Power4.easeOut }, "-=1")
+	// 										.to($(".intro-2"), 1, { top: "60%", right: 0, left: "30%", bottom: 0, ease: Power3.easeOut })
+	// 										.from($(".intro-3"), 2, { opacity: 0, scale: 0 }, "-=1")
+	// 										.to($(".intro-3"), 1, { top: "70%", right: "31%", left: 0, bottom: 0 , ease: Power3.easeOut})
+	// 										.from($(".intro-4"), 2, { opacity: 0, scale: 0 }, "-=1")
+	// 										.to($(".intro-4"), 1, { top: "70%", right: 0, left: "34%", bottom: 0, ease: Power3.easeOut })
+	// 										.from($(".intro-5"), 2, { opacity: 0, scale: 0 }, "-=1")
+	// 										.to($(".intro-5"), 1, { top: "80%", right: 0, left: 0, bottom: 0, ease: Power3.easeOut })
+	// 										// .from($(".catchphrase2"), 3, { opacity: 0, scale: 0, ease: Power1.easeIn }, "-=1.5")
+	// 										// .to($(".catchphrase2"), 2, { scale: 1.2, ease: Elastic.easeOut.config(2, 0.5) })
+	// 										.from(downArrow, 2, { opacity: 0, top: '80%', yoyo:true, repeat: -1 }, "+=0.5");
+	var cloudAnimation1 = $tm.to($(".clouds_one"), 400, { repeat: -1, right: widthScreen });
+	var cloudAnimation2 =	$tm.to($(".clouds_two"), 200, { repeat: -1, left: widthScreen - 100 })
+	var cloudAnimation3 = $tm.to($(".clouds_three"), 1000, { repeat: -1, left: widthScreen + 700 })
 	var normalBigNormal = $tm.to($(".normal-big-normal"), 2, { fontSize: "2em" });
 	var staggerFromLeft = $tm.staggerFrom($(".stagger-from-left"), 1, { left: -500, opacity: 0 }, 0.5);
 	var check = $tm.staggerTo($('.mini-overlay'), 1, { width: 0 }, 0.4);
