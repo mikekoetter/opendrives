@@ -1,49 +1,51 @@
-<div id="tab-<%= id %>" class="tab-pane fade anim <%= 'in active' if id == 'avalanche' %>">
-	<div class="row chrome-padding">
-    <div class="col-sm-8 col-xs-12">
-    	<h3><span class="light"><%= h3_title.html_safe %></h3>
-    	<hr class="hr-anim-product-tab">
-    	<br><br>
-    	<p class="lead"><%= body.html_safe %></p>
+<div id="tab-<%= id %>" class="tab-pane fade <%= 'in active' if id == 'avalanche' %>">
+  <div class="products-tab anim">
+  	<div class="row chrome-padding">
+      <div class="col-sm-8 col-xs-12">
+      	<h3><span class="light"><%= h3_title.html_safe %></h3>
+      	<hr class="hr-anim-product-tab">
+      	<br><br>
+      	<p class="lead"><%= body.html_safe %></p>
+      </div>
+      <div class="col-sm-4 col-xs-12 marginTop50">
+      	<%= image_tag 'bigdrive2.png', class: 'bigdrive2-img' %>
+      </div>
     </div>
-    <div class="col-sm-4 col-xs-12 marginTop50">
-    	<%= image_tag 'bigdrive2.png', class: 'bigdrive2-img' %>
+    <div class="row">
+      <div class="col-sm-4 pull-left">
+      	<h2><%= h2_title.html_safe %></h2>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-4 pull-left">
-    	<h2><%= h2_title.html_safe %></h2>
+    <div class="row marginTop50 trigger-overlay">
+    	<div class="col-sm-6">
+    		<% features1.each do |feature| %>
+  	  		<div class="col-xs-2">
+  	  			<%= image_tag 'check.png', class: 'check-image' %>
+            <div class="mini-overlay"></div>
+  	  		</div>
+  	  		<div class="col-xs-10">
+  	  			<%= feature %>
+  	  		</div>
+  	  		<br><br>
+    		<% end %>
+    	</div>
+    	<div class="col-sm-6">
+    		<% features2.each do |feature| %>
+    			<div class="col-xs-2">
+  	  			<%= image_tag 'check.png', class: 'check-image' %>
+            <div class="mini-overlay"></div>
+  	  		</div>
+  	  		<div class="col-xs-10">
+  	  			<%= feature %>
+  	  		</div>
+  	  		<br><br>
+  	  	<% end %>
+    	</div>
     </div>
-  </div>
-  <div class="row marginTop50 trigger-overlay">
-  	<div class="col-sm-6">
-  		<% features1.each do |feature| %>
-	  		<div class="col-xs-2">
-	  			<%= image_tag 'check.png', class: 'check-image' %>
-          <div class="mini-overlay"></div>
-	  		</div>
-	  		<div class="col-xs-10">
-	  			<%= feature %>
-	  		</div>
-	  		<br><br>
-  		<% end %>
-  	</div>
-  	<div class="col-sm-6">
-  		<% features2.each do |feature| %>
-  			<div class="col-xs-2">
-	  			<%= image_tag 'check.png', class: 'check-image' %>
-          <div class="mini-overlay"></div>
-	  		</div>
-	  		<div class="col-xs-10">
-	  			<%= feature %>
-	  		</div>
-	  		<br><br>
-	  	<% end %>
-  	</div>
-  </div>
-  <div class="row">
-  	<div class="col-sm-12 marginTop100 text-center">
-  		<%= link_to 'SCHEDULE A DEMO', link, class: "link-with-border hvr-shutter-out-horizontal" %>
-  	</div>
+    <div class="row">
+    	<div class="col-sm-12 marginTop100 text-center">
+    		<%= link_to 'SCHEDULE A DEMO', link, class: "link-with-border hvr-shutter-out-horizontal" %>
+    	</div>
+    </div>
   </div>
 </div>

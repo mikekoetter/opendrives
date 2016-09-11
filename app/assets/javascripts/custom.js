@@ -310,7 +310,7 @@ $(document).ready(function() {
 		$tm.to($('.tab-pane .mini-overlay'), 0.1, { width: "100%" });
 		$tm.to($('.hr-anim-product-tab'), 0.1, { width: "200px" });
 		$tm.from($('#products-section-2 '+ target +' .bigdrive2-img'), 2, { opacity: 0, scale: 0, ease: Power1.easeIn });
-		$tm.from($('#products-section-2 .tab-content'), 2, { opacity: 0, left: -200 });
+		$tm.from($(target + ' .products-tab'), 2, { opacity: 0, left: -200 });
 		var productsTabAnim = $tm.staggerTo($(target + ' .mini-overlay'), 1, { width: 0 }, 0.4);
 		var hrTweenProductTab = $tm.to($('.hr-anim-product-tab'), 5, { width: "70%" });
 		var productsTabScene1 = new ScrollMagic.Scene({ triggerElement: ".tab-content", duration: 500 })
@@ -351,7 +351,7 @@ $(document).ready(function() {
 		var target = $(this).attr('href'); 
 		$tm.to($('.tab-pane .mini-overlay'), 0.1, { width: "100%" });
 		$tm.to($('.hr-anim-resources-section-6'), 0.1, { width: "200px" });
-		$tm.from($('#resources-section-6 .tab-content'), 2, { opacity: 0, left: -200, ease: Power1.easeIn });
+		$tm.from($(target + ' .resources-tab'), 2, { opacity: 0, left: -200, ease: Power1.easeIn });
 		var resourcesTabAnim = $tm.staggerTo($(target + ' .mini-overlay'), 1, { width: 0 }, 0.4);
 		var hrTweenResourcesTab = $tm.to($('.hr-anim-resources-section-6'), 5, { width: "80%" });
 		var resourcesTabScene1 = new ScrollMagic.Scene({ triggerElement: "#resources-section-6 .tab-content", duration: 500 })
