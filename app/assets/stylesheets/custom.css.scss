@@ -633,16 +633,39 @@ nav {
 	background-size: cover;
 	background-position: center;
 	.catchphrase {
-		font-family: Arial, Helvetica, sans-serif;
-		margin-top: 250px;
-		/*.intro-phrase {
+		margin-top: 300px;
+		.intro-phrase {
 			position: absolute;
 			display: inline-block;
 			top: 40%;
 			left: 0;
 			right: 0;
 			bottom: 0;
-		}*/
+		}
+		.intro-1, .intro-2, .intro-3, .intro-4 {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		.intro-1 {
+			top: 70%;
+			right: 30%;
+		}
+		.intro-2 {
+			color: #000;
+			top: 70%;
+			left: 30%;
+		}
+		.intro-3 {
+			color: #000;
+			top: 85%;
+			right: 31%;
+		}
+		.intro-4 {
+			top: 85%;
+			left: 34%;
+		}
+		.intro-5 {
+			top: 100%;
+		}
 	}
 	h1 {
 		font-size: 3em;
@@ -688,8 +711,29 @@ nav {
 				font-size: 2em;
 			}
 		} 
+		.catchphrase {
+			.intro-1 {
+				top: 70%;
+				right: 36%;
+			}
+			.intro-2 {
+				top: 70%;
+				left: 36%;
+			}
+			.intro-3 {
+				top: 85%;
+				right: 37%;
+			}
+			.intro-4 {
+				top: 85%;
+				left: 40%;
+			}
+		}
 	}
-	@media (max-width: 767px) { 
+	@media (max-width: 767px) {
+		.catchphrase {
+			font-family: Arial, Helvetica, sans-serif;
+		} 
 		h1 {
 			font-size: 1.9em;
 			.down {
@@ -720,12 +764,24 @@ nav {
 	@media (max-width: 450px)
 		and (orientation: portrait) {
 			.catchphrase {
-				margin-top: 150px;
+				margin-top: 250px;
 			}
 			h1 {
 				font-size: 1.2em;
 				.down {
 					font-size: 1.4em;
+				}
+			} 
+	}
+	@media (max-width: 350px)
+		and (orientation: portrait) {
+			.catchphrase {
+				margin-top: 200px;
+			}
+			h1 {
+				font-size: 1em;
+				.down {
+					font-size: 1.2em;
 				}
 			} 
 	}

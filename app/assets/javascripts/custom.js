@@ -491,25 +491,37 @@ $(document).ready(function() {
 	var fromRightBottom = $tm.from($(".from-right-bottom"), 4, { right: -50, top: 50, opacity: 0, ease: Power4.easeOut });
 	var fromLeft = $tm.staggerFrom($(".from-left"), 2, { left: -50,  opacity: 0, ease: Power4.easeOut }, 0.5);
 	var titleFromRight = $tm.staggerFrom($(".line-from-right"), 1, { right: -50, opacity: 0, ease: Power2.easeOut }, 0.5);
-	var homeIntroAnim = new TimelineMax()
+	
+	// var homeIntroAnim = new TimelineMax()
+	// 										.from($(".intro-1"), 2, { opacity: 0, scale: 0, ease: Power1.easeIn })
+	// 										.to($(".intro-1"), 2, { top: "60%", right: "30%", left: 0, bottom: 0, ease: Power3.easeOut })
+	// 										.from($(".intro-2"), 2, { opacity: 0, scale: 0, ease: Power1.easeIn }, "-=2")
+	// 										.to($(".intro-2"), 2, { top: "60%", right: 0, left: "30%", bottom: 0, ease: Power3.easeOut })
+	// 										.from($(".intro-3"), 2, { opacity: 0, scale: 0, ease: Power1.easeIn }, "-=2")
+	// 										.to($(".intro-3"), 2, { top: "75%", right: "31%", left: 0, bottom: 0 , ease: Power3.easeOut})
+	// 										.from($(".intro-4"), 2, { opacity: 0, scale: 0, ease: Power1.easeIn }, "-=2")
+	// 										.to($(".intro-4"), 2, { top: "75%", right: 0, left: "34%", bottom: 0, ease: Power3.easeOut })
+	// 										.from($(".intro-5"), 2, { opacity: 0, scale: 0 , ease: Power4.easeIn}, "-=2")
+	// 										.to($(".intro-5"), 2, { top: "90%", right: 0, left: 0, bottom: 0, ease: Power3.easeOut })
+	// 										// .from($(".catchphrase2"), 3, { opacity: 0, scale: 0, ease: Power1.easeIn }, "-=1.5")
+	// 										// .to($(".catchphrase2"), 2, { scale: 1.2, ease: Elastic.easeOut.config(2, 0.5) })
+	// 										.from(downArrow, 2, { opacity: 0, top: '80%', yoyo:true, repeat: -1 }, "+=0.5");
+	if ($(window).width() > 767) {
+		var homeIntroAnim = new TimelineMax()
+											.from($(".intro-1"), 4, { opacity: 0, scale: 0.5, top: "50%", left: -100, ease: Power2.easeInOut })
+											.from($(".intro-2"), 4, { opacity: 0, scale: 0.5, top: "50%", right: -100, ease: Power2.easeInOut }, "-=3")
+											.from($(".intro-3"), 4, { opacity: 0, scale: 0.5, top: "85%", left: -100, ease: Power2.easeInOut }, "-=3")
+											.from($(".intro-4"), 4, { opacity: 0, scale: 0.5, top: "85%", right: -100, ease: Power2.easeInOut }, "-=3")
+											.from($(".intro-5"), 4, { opacity: 0, ease: Power2.easeInOut }, "-=2")
+											.from(downArrow, 2, { opacity: 0, top: '80%', yoyo:true, repeat: -1 });
+	} else {
+		var homeIntroAnim = new TimelineMax()
 										.from($(".catchphrase"), 4, { scale: 0, delay: 0.5 })
 										.from($(".catchphrase2"), 4, { scale: 0, ease: Power4.easeIn }, "-=4")
 										.to($(".catchphrase2"), 2, { scale: 1.2, ease: Elastic.easeOut.config(2, 0.5) })
 										.from(downArrow, 2, { opacity: 0, top: '80%', yoyo:true, repeat: -1 }, "+=0.5");
-	// var homeIntroAnim = new TimelineMax()
-	// 										.from($(".intro-1"), 2, { opacity: 0, scale: 0, ease: Power4.easeOut })
-	// 										.to($(".intro-1"), 1, { top: "60%", right: "30%", left: 0, bottom: 0, ease: Power3.easeOut })
-	// 										.from($(".intro-2"), 2, { opacity: 0, scale: 0, ease: Power4.easeOut }, "-=1")
-	// 										.to($(".intro-2"), 1, { top: "60%", right: 0, left: "30%", bottom: 0, ease: Power3.easeOut })
-	// 										.from($(".intro-3"), 2, { opacity: 0, scale: 0 }, "-=1")
-	// 										.to($(".intro-3"), 1, { top: "70%", right: "31%", left: 0, bottom: 0 , ease: Power3.easeOut})
-	// 										.from($(".intro-4"), 2, { opacity: 0, scale: 0 }, "-=1")
-	// 										.to($(".intro-4"), 1, { top: "70%", right: 0, left: "34%", bottom: 0, ease: Power3.easeOut })
-	// 										.from($(".intro-5"), 2, { opacity: 0, scale: 0 }, "-=1")
-	// 										.to($(".intro-5"), 1, { top: "80%", right: 0, left: 0, bottom: 0, ease: Power3.easeOut })
-	// 										// .from($(".catchphrase2"), 3, { opacity: 0, scale: 0, ease: Power1.easeIn }, "-=1.5")
-	// 										// .to($(".catchphrase2"), 2, { scale: 1.2, ease: Elastic.easeOut.config(2, 0.5) })
-	// 										.from(downArrow, 2, { opacity: 0, top: '80%', yoyo:true, repeat: -1 }, "+=0.5");
+	}
+	
 	var cloudAnimation1 = $tm.to($(".clouds_one"), 400, { repeat: -1, right: widthScreen });
 	var cloudAnimation2 =	$tm.to($(".clouds_two"), 200, { repeat: -1, left: widthScreen - 100 })
 	var cloudAnimation3 = $tm.to($(".clouds_three"), 1000, { repeat: -1, left: widthScreen + 700 })
@@ -632,6 +644,7 @@ $(document).ready(function() {
 	var homeScene1 = new ScrollMagic.Scene({offset: -200})
 													.setTween([homeIntroAnim, cloudAnimation1, cloudAnimation2, cloudAnimation3])
 													.addTo(homeController);
+	
 	var homeScene2 = new ScrollMagic.Scene({triggerElement: "#home-section-2", offset: -100})
 													.setTween([fromLeftTop, fromRightBottom])
 													.addTo(homeController);
