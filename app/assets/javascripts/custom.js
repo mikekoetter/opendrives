@@ -22,7 +22,8 @@ $(document).ready(function() {
 	$(".full-height-twice").css("min-height", ($(window).height() * 2));
 	// Preloader
 	$(window).load(function(){
-    $('.preloader').delay(100).fadeOut(500);
+    // $('.preloader').delay(50).fadeOut(2000);
+    TweenMax.to($('.preloader'), 2, { opacity: 0, zIndex: -9999 });
   });
 
 	// Reload page on orientation change
