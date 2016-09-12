@@ -639,6 +639,7 @@ nav {
 	background-image: image-url('home-top.png');
 	background-size: cover;
 	background-position: center;
+	letter-spacing: 2px;
 	.catchphrase {
 		margin-top: 300px;
 		.intro-phrase {
@@ -3305,6 +3306,9 @@ iframe {
 }
 
 #why-us-section-2 {
+	h2 {
+		font-size: 3em;
+	}
 	hr {
 		background-color: #000;
 		width: 200px;
@@ -3312,6 +3316,9 @@ iframe {
 }
 
 #why-us-section-3 {
+	h2 {
+		font-size: 3em;
+	}
 	hr {
 		background-color: #000;
 		width: 200px;
@@ -4109,12 +4116,12 @@ footer {
 
 @media (max-width: 1200px) {
 	h2 {
-		font-size: 4em;
+		font-size: 3em;
 	}
 	h3 {
-		font-size: 2.3em;
+		font-size: 1.8em;
 	}
-	.lead {
+	p.lead {
 		font-size: 1.2em;
 	}
 	.huge {
@@ -4125,6 +4132,9 @@ footer {
 	}
 	.marginTop200 {
 		margin-top: 150px;
+	}
+	.hide-in-1200 {
+		display: none;
 	}
 }
 
@@ -4141,13 +4151,13 @@ footer {
 		display: none;
 	}
 	h2 {
-		font-size: 3em;
+		font-size: 2.5em;
 	}
 	h3 {
-		font-size: 1.6em;
+		font-size: 1.4em;
 	}
 	h4 {
-		font-size: 1.5em;
+		font-size: 1.2em;
 	}
 	.marginTop100 {
 		margin-top: 50px;
@@ -4182,8 +4192,8 @@ footer {
 	.marginTop50 {
 		margin-top: 25px;
 	}
-	.lead {
-		font-size: 1.2em;
+	p.lead {
+		font-size: 1.1em;
 	}
 	.huge {
 		font-size: 2.5em;
@@ -4223,7 +4233,7 @@ footer {
     z-index: 99999;
 }
  
-.preloader .preloader-gif{
+/*.preloader .preloader-gif{
     display: block;
     width: 80px;
     height: 80px;
@@ -4232,7 +4242,7 @@ footer {
     left: 50%;
     margin: -40px 0 0 -40px;
     background: url('preloader.gif') no-repeat;   
-}
+}*/
 
 .loader:before,
 .loader:after,

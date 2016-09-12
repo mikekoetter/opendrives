@@ -1,7 +1,7 @@
 <div id="tab-<%= id %>" class="trigger-overlay tab-pane fade <%= 'in active' if id == 'avalanche' %>">
 	<div class="col-md-6 col-md-offset-1 marginTop50">
 		<h4><%= title.html_safe %></h4>
-		<br><br>
+		<br class="hide-in-1200">
 		<p class="border-left lead">
 			<%= body %>
 			<span class="border-overlay"></span>
@@ -9,7 +9,7 @@
 	</div>
 	<div class="col-md-4 col-xs-12 marginTop50">
 		<h4>SPECS:</h4>
-		<br><br>
+		<br><br class="hide-in-desktop"><br class="hide-in-desktop">
 		<div class="row pull-up">
 			<div class="col-sm-2 col-xs-2">
 				<%= image_tag 'check.png', class: 'check-image' %>
