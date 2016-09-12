@@ -22,7 +22,7 @@ $(document).ready(function() {
 	$(".full-height-twice").css("min-height", ($(window).height() * 2));
 	// Preloader
 	$(window).load(function(){
-    $('.preloader').delay(200).fadeOut(250);
+    $('.preloader').delay(100).fadeOut(250);
   });
 
 	// Reload page on orientation change
@@ -61,7 +61,7 @@ $(document).ready(function() {
 		var target = $(this).attr('href'); 
 		$tm.to($('.mini-overlay'), 0.1, { width: "100%" });
 		var homeTabAnim = new TimelineMax()
-    					.from($(target + ' .col-md-8'), 2, {  opacity: 0, left: -200, borderColor: "#fff", ease: Power1.easeIn  })
+    					.from($(target + ' .col-md-6'), 2, {  opacity: 0, left: -200, borderColor: "#fff", ease: Power1.easeIn  })
     					.from($(target + ' .col-md-4'), 2, {  opacity: 0, right: -200, ease: Power1.easeIn }, "-=2")
     					.from($(target + ' .border-overlay'), 1, { height: 200 })
     					.staggerTo($(target + ' .mini-overlay'), 1, { width: 0 }, 0.4, "-=0.5");
