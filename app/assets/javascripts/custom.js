@@ -508,7 +508,7 @@ $(document).ready(function() {
 	// 										.from(downArrow, 2, { opacity: 0, top: '80%', yoyo:true, repeat: -1 }, "+=0.5");
 	if ($(window).width() > 767) {
 		var homeIntroAnim = new TimelineMax()
-											.from($(".intro-1"), 4, { opacity: 0, scale: 0.5, top: "50%", left: -100, ease: Power2.easeInOut })
+											.from($(".intro-1"), 4, { opacity: 0, scale: 0.5, top: "50%", delay: 1, left: -100, ease: Power2.easeInOut })
 											.from($(".intro-2"), 4, { opacity: 0, scale: 0.5, top: "50%", right: -100, ease: Power2.easeInOut }, "-=3")
 											.from($(".intro-3"), 4, { opacity: 0, scale: 0.5, top: "85%", left: -100, ease: Power2.easeInOut }, "-=3")
 											.from($(".intro-4"), 4, { opacity: 0, scale: 0.5, top: "85%", right: -100, ease: Power2.easeInOut }, "-=3")
