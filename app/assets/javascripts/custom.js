@@ -23,7 +23,7 @@ $(document).on('turbolinks:load',function() {
 	// Preloader
 	// $(window).load(function(){
     // $('.preloader').delay(100).fadeOut(200);
-    TweenMax.to($('.preloader'), 1, { opacity: 0, zIndex: -9999 });
+    TweenMax.to($('.preloader'), 2, { opacity: 0, zIndex: -9999, ease: Power4.easeOut  });
   // });
 
 	// Reload page on orientation change
