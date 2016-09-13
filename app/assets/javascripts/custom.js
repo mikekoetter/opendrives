@@ -21,10 +21,10 @@ $(document).on('turbolinks:load',function() {
 	$(".full-height").css("min-height", $(window).height());
 	$(".full-height-twice").css("min-height", ($(window).height() * 2));
 	// Preloader
-	$(window).load(function(){
-    $('.preloader').delay(50).fadeOut(200);
-    // TweenMax.to($('.preloader'), 2, { opacity: 0, zIndex: -9999 });
-  });
+	// $(window).load(function(){
+    // $('.preloader').delay(100).fadeOut(200);
+    TweenMax.to($('.preloader'), 1, { opacity: 0, zIndex: -9999 });
+  // });
 
 	// Reload page on orientation change
 	window.onorientationchange = function() { window.location.reload(); };
@@ -488,8 +488,8 @@ $(document).on('turbolinks:load',function() {
 	}
 	
 	var navTween = $tm.to($('nav'), 1, { backgroundColor: '#000', ease: Power4.easeOut });
-	var fromLeftTop = $tm.from($(".from-left-top"), 4, { left: -50, top: -50,  opacity: 0, ease: Power4.easeOut });
-	var fromRightBottom = $tm.from($(".from-right-bottom"), 4, { right: -50, top: 50, opacity: 0, ease: Power4.easeOut });
+	var fromLeftTop = $tm.from($(".from-left-top"), 3, { left: -50, top: -50,  opacity: 0, ease: Power4.easeOut });
+	var fromRightBottom = $tm.from($(".from-right-bottom"), 3, { right: -50, top: 50, opacity: 0, ease: Power4.easeOut });
 	var fromLeft = $tm.staggerFrom($(".from-left"), 2, { left: -50,  opacity: 0, ease: Power4.easeOut }, 0.5);
 	var titleFromRight = $tm.staggerFrom($(".line-from-right"), 1, { right: -50, opacity: 0, ease: Power2.easeOut }, 0.5);
 	
@@ -509,16 +509,16 @@ $(document).on('turbolinks:load',function() {
 	// 										.from(downArrow, 2, { opacity: 0, top: '80%', yoyo:true, repeat: -1 }, "+=0.5");
 	if ($(window).width() > 767) {
 		var homeIntroAnim = new TimelineMax()
-											.from($(".intro-1"), 4, { opacity: 0, scale: 0.5, top: "50%", delay: 1, left: -100, ease: Power2.easeInOut })
-											.from($(".intro-2"), 4, { opacity: 0, scale: 0.5, top: "50%", right: -100, ease: Power2.easeInOut }, "-=3")
-											.from($(".intro-3"), 4, { opacity: 0, scale: 0.5, top: "85%", left: -100, ease: Power2.easeInOut }, "-=3")
-											.from($(".intro-4"), 4, { opacity: 0, scale: 0.5, top: "85%", right: -100, ease: Power2.easeInOut }, "-=3")
-											.from($(".intro-5"), 4, { opacity: 0, ease: Power2.easeInOut }, "-=2")
+											.from($(".intro-1"), 3, { opacity: 0, scale: 0.5, top: "50%", delay: 0.5, left: -100, ease: Power2.easeInOut })
+											.from($(".intro-2"), 3, { opacity: 0, scale: 0.5, top: "50%", right: -100, ease: Power2.easeInOut }, "-=2")
+											.from($(".intro-3"), 3, { opacity: 0, scale: 0.5, top: "85%", left: -100, ease: Power2.easeInOut }, "-=2")
+											.from($(".intro-4"), 3, { opacity: 0, scale: 0.5, top: "85%", right: -100, ease: Power2.easeInOut }, "-=2")
+											.from($(".intro-5"), 3, { opacity: 0, ease: Power2.easeInOut }, "-=1")
 											.from(downArrow, 2, { opacity: 0, top: '80%', yoyo:true, repeat: -1 });
 	} else {
 		var homeIntroAnim = new TimelineMax()
-										.from($(".catchphrase"), 4, { scale: 0, delay: 0.5 })
-										.from($(".catchphrase2"), 4, { scale: 0, ease: Power4.easeIn }, "-=4")
+										.from($(".catchphrase"), 3, { scale: 0, delay: 0.5 })
+										.from($(".catchphrase2"), 3, { scale: 0, ease: Power4.easeIn }, "-=3")
 										.to($(".catchphrase2"), 2, { scale: 1.2, ease: Elastic.easeOut.config(2, 0.5) })
 										.from(downArrow, 2, { opacity: 0, top: '80%', yoyo:true, repeat: -1 }, "+=0.5");
 	}
@@ -557,23 +557,23 @@ $(document).on('turbolinks:load',function() {
 	var hrTweenCareerJobSection2 = $tm.to($('.hr-anim-career-job-section-2'), 5, { width: "30%" });
 	var hrTweenCareerJobSection3 = $tm.to($('.hr-anim-career-job-section-3'), 5, { width: "40%" });
 	var whyUsIntroAnim = new TimelineMax()
-												.staggerFrom($(".phrase"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 1)
-												.staggerFrom($(".phrase-right"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 1, "-=1");
+												.staggerFrom($(".phrase"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 0.5)
+												.staggerFrom($(".phrase-right"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 0.5, "-=1.5");
 	var whyUsSection2 = new TimelineMax()
-												.staggerFrom($('#why-us-section-2 .big'), 2, { opacity: 0, ease: Power4.easeIn }, 0.5)
-												.staggerFrom($('.opacity'), 3, { opacity: 0, ease: Power4.easeIn }, 0.5, "-=2")
-	var whyUsSection3BoxLeft = $tm.from($('.box-left'), 3, { opacity: 0, left: -200 });
-	var whyUsSection3BoxRight = $tm.from($('.box-right'), 3, { opacity: 0, right: -200 });
-	var whyUsSection3BoxLeft1 = $tm.from($('.box-left1'), 3, { opacity: 0, left: -200 });
-	var whyUsSection3BoxRight1 = $tm.from($('.box-right1'), 3, { opacity: 0, right: -200 });
-	var whyUsSection6 = $tm.staggerFrom($('#why-us-section-6 p'), 3, { opacity: 0, scale: 0.5, right: -300 }, 1);
+												.staggerFrom($('#why-us-section-2 .big'), 1, { opacity: 0, ease: Power4.easeIn }, 0.5)
+												.staggerFrom($('.opacity'), 2, { opacity: 0, ease: Power4.easeIn }, 0.5, "-=1")
+	var whyUsSection3BoxLeft = $tm.from($('.box-left'), 2, { opacity: 0, left: -200 });
+	var whyUsSection3BoxRight = $tm.from($('.box-right'), 2, { opacity: 0, right: -200 });
+	var whyUsSection3BoxLeft1 = $tm.from($('.box-left1'), 2, { opacity: 0, left: -200 });
+	var whyUsSection3BoxRight1 = $tm.from($('.box-right1'), 2, { opacity: 0, right: -200 });
+	var whyUsSection6 = $tm.staggerFrom($('#why-us-section-6 p'), 2, { opacity: 0, scale: 0.5, right: -300 }, 1);
 	var productsIntroAnim = new TimelineMax()
-												.staggerFrom($(".phrase-products"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 1)
-												.staggerFrom($(".phrase-products-right"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 1, "-=1");
+												.staggerFrom($(".phrase-products"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 0.5)
+												.staggerFrom($(".phrase-products-right"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 0.5, "-=1.5");
 	var productsSection2 = new TimelineMax()
 												.from($('#products-section-2 .black-background'), 2, { left: -100, opacity: 0 })
 												.from($('#products-section-2 .grey-background'), 2, { right: -100, opacity: 0 }, "-=2")
-												.staggerFrom($('#products-section-2 .black-background li'), 2, { left: -100, opacity: 0 }, -0.5, "-=1")
+												.staggerFrom($('#products-section-2 .black-background li'), 2, { left: -100, opacity: 0 }, -0.5, "-=2")
 												.from($('#products-section-2 .grey-background .col-xs-8'), 2, { right: -100, opacity: 0 }, "-=2")
 												.from($('#products-section-2 .grey-background .col-xs-4'), 2, { opacity: 0, scale: 0.5 }, "-=2")
 												.from($('#products-section-2 .tab-content .bigdrive2-img'), 1, { opacity: 0, scale: 0.5 })
@@ -582,35 +582,35 @@ $(document).on('turbolinks:load',function() {
 												.from($('.opus-left'), 2, { opacity: 0, left: 200 })
 												.from($('.opus-right'), 2, { opacity: 0, right: 200 }, "-=2");
 	var productsSection4 = $tm.staggerFrom($('.products-box'), 2, { left: -200, opacity: 0 }, 0.3);
-	var caseStudiesIntroAnim = $tm.staggerFrom($(".phrase-case-studies"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 1);
+	var caseStudiesIntroAnim = $tm.staggerFrom($(".phrase-case-studies"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 0.5);
 	var caseInteriorSection2 = new TimelineMax()
-												.from($(".case-interior-1"), 3, { left: -200, opacity: 0 })
-												.from($(".case-interior-img-1"),3 , { opacity: 0, right: -200}, "-=3")
-												.staggerFrom($(".case-interior-2 p"), 3, { opacity: 0, right: -200 }, 1)
+												.from($(".case-interior-1"), 2, { left: -200, opacity: 0 })
+												.from($(".case-interior-img-1"),2 , { opacity: 0, right: -200}, "-=2")
+												.staggerFrom($(".case-interior-2 p"), 2, { opacity: 0, right: -200 }, 0.5)
 	var caseInteriorSection3 = new TimelineMax()
-												.from($(".case-interior-img-2"),3 , { opacity: 0, left: -200 })
-												.staggerFrom($(".case-interior-section3 p"), 3, { opacity: 0, right: -200 }, 1, "-=3");
-	var caseInteriorSection4 = $tm.staggerFrom($(".case-interior-section4 p"), 3, { opacity: 0, right: -200 }, 1);
+												.from($(".case-interior-img-2"), 2, { opacity: 0, left: -200 })
+												.staggerFrom($(".case-interior-section3 p"), 2, { opacity: 0, right: -200 }, 1, "-=2");
+	var caseInteriorSection4 = $tm.staggerFrom($(".case-interior-section4 p"), 2, { opacity: 0, right: -200 }, 0.5);
 	var caseInteriorSection5 = new TimelineMax()
-												.from($(".case-interior-img-3"),3 , { opacity: 0, right: -200 })
-												.staggerFrom($(".case-interior-section5 p"), 3, { opacity: 0, left: -200 }, 1, "-=3");
+												.from($(".case-interior-img-3"), 2, { opacity: 0, right: -200 })
+												.staggerFrom($(".case-interior-section5 p"), 2, { opacity: 0, left: -200 }, 0.5, "-=2");
 	var caseInteriorSection6 = new TimelineMax()
-												.from($("#case-interior-gone-girl-section-6 p"),3 , { opacity: 0, ease: Power2.easeIn })
-												.from($("#case-interior-gone-girl-section-6 a"), 3, { opacity: 0, ease: Power2.easeIn }, "-=2");
-	var resourcesIntroAnim = $tm.staggerFrom($(".phrase-resources"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 1);
+												.from($("#case-interior-gone-girl-section-6 p"), 2, { opacity: 0, ease: Power2.easeIn })
+												.from($("#case-interior-gone-girl-section-6 a"), 2, { opacity: 0, ease: Power2.easeIn }, "-=2");
+	var resourcesIntroAnim = $tm.staggerFrom($(".phrase-resources"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 0.5);
 	var resourcesSection2 = new TimelineMax()
-												.staggerFrom($('#resources-section-2 .big'), 2, { opacity: 0, ease: Power4.easeIn }, 0.5)
-												.staggerFrom($('.resources-opacity'), 3, { opacity: 0, ease: Power4.easeIn }, 0.5, "-=2");
+												.staggerFrom($('#resources-section-2 .big'), 1, { opacity: 0, ease: Power4.easeIn }, 0.5)
+												.staggerFrom($('.resources-opacity'), 2, { opacity: 0, ease: Power4.easeIn }, 0.5, "-=1");
 	var resourcesSection4 = new TimelineMax()
 												.from($("#resources-section-4 .quote"), 2, { right: -200, opacity: 0 })
 												.from($("#resources-section-4 small"), 2, { opacity: 0 });
-	var contactIntroAnim = $tm.staggerFrom($(".phrase-contact"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 1);
+	var contactIntroAnim = $tm.staggerFrom($(".phrase-contact"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 0.5);
 	var contactSection2 = $tm.staggerFrom($("#contact-section-2 .col-sm-4"), 2, { opacity: 0, right: -200 }, 0.5)
-	var careerIntroAnim = $tm.staggerFrom($(".phrase-career"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 1);
+	var careerIntroAnim = $tm.staggerFrom($(".phrase-career"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 0.5);
 	var careerSection1 = $tm.to($(".career-section-1-overlay"), 2, { height: "0%" });
 	var careerSection1Words = new TimelineMax()
-												.staggerFrom($('#career-section-1 .big'), 2, { opacity: 0, ease: Power4.easeIn }, 0.5)
-												.staggerFrom($('.career-opacity'), 2, { opacity: 0, ease: Power4.easeIn }, 0.5, "-=2");
+												.staggerFrom($('#career-section-1 .big'), 1, { opacity: 0, ease: Power4.easeIn }, 0.5)
+												.staggerFrom($('.career-opacity'), 2, { opacity: 0, ease: Power4.easeIn }, 0.5, "-=1");
 	var careerJobSection1 = $tm.from($(".career-job-title"), 2, { opacity: 0, scale: 0 })
 
 
