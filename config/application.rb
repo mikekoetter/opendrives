@@ -47,5 +47,11 @@ module Opendrives
           :max_age => 0
       end
     end
+    config.assets.paths << Rails.root.join("app", "assets")
+    config.assets.precompile += %w( .svg .eot .woff .ttf )
+    config.assets.header_rules = {
+      :global => {'Cache-Control' => 'public, max-age=31536000'},
+      :fonts  => {'Access-Control-Allow-Origin' => '*'}
+    }
   end
 end
