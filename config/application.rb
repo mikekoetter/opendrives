@@ -33,8 +33,8 @@ module Opendrives
     config.active_record.raise_in_transactional_callbacks = true
     config.middleware.insert_before ActionDispatch::Static, Rack::Cors do
         allow do
-          origins ''
-          resource '',
+          origins: '',
+          resource: '',
           headers: :any,
           methods: [:get, :options]
         end
