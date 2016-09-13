@@ -14,7 +14,7 @@ $.fn.clicktoggle = function(a, b) {
     });
 };
 
-$(document).ready(function() {
+$(document).on('turbolinks:load',function() {
 
 
 	//=======================================   Generals   =======================================//
@@ -22,8 +22,8 @@ $(document).ready(function() {
 	$(".full-height-twice").css("min-height", ($(window).height() * 2));
 	// Preloader
 	$(window).load(function(){
-    // $('.preloader').delay(50).fadeOut(2000);
-    TweenMax.to($('.preloader'), 2, { opacity: 0, zIndex: -9999 });
+    $('.preloader').delay(50).fadeOut(200);
+    // TweenMax.to($('.preloader'), 2, { opacity: 0, zIndex: -9999 });
   });
 
 	// Reload page on orientation change
@@ -310,8 +310,8 @@ $(document).ready(function() {
 		var target = $(this).attr('href'); 
 		$tm.to($('.tab-pane .mini-overlay'), 0.1, { width: "100%" });
 		$tm.to($('.hr-anim-product-tab'), 0.1, { width: "200px" });
-		$tm.from($('#products-section-2 '+ target +' .bigdrive2-img'), 2, { opacity: 0, scale: 0, ease: Power1.easeIn });
-		$tm.from($(target + ' .products-tab'), 2, { opacity: 0, left: -200 });
+		$tm.from($('#products-section-2 '+ target +' .bigdrive2-img'), 1, { opacity: 0, scale: 0.5, delay: 0.5, ease: Power1.easeIn });
+		$tm.from($(target + ' .products-tab'), 1, { opacity: 0, left: -200 });
 		var productsTabAnim = $tm.staggerTo($(target + ' .mini-overlay'), 1, { width: 0 }, 0.4);
 		var hrTweenProductTab = $tm.to($('.hr-anim-product-tab'), 5, { width: "70%" });
 		var productsTabScene1 = new ScrollMagic.Scene({ triggerElement: ".tab-content", duration: 500 })
@@ -575,13 +575,13 @@ $(document).ready(function() {
 												.from($('#products-section-2 .grey-background'), 2, { right: -100, opacity: 0 }, "-=2")
 												.staggerFrom($('#products-section-2 .black-background li'), 2, { left: -100, opacity: 0 }, -0.5, "-=1")
 												.from($('#products-section-2 .grey-background .col-xs-8'), 2, { right: -100, opacity: 0 }, "-=2")
-												.from($('#products-section-2 .grey-background .col-xs-4'), 2, { opacity: 0, scale: 0 }, "-=2")
-												.from($('#products-section-2 .tab-content .bigdrive2-img'), 2, { opacity: 0, scale: 0 })
-												.from($('#products-section-2 .tab-content'), 2, { opacity: 0, left: -200 }, "-=2")
+												.from($('#products-section-2 .grey-background .col-xs-4'), 2, { opacity: 0, scale: 0.5 }, "-=2")
+												.from($('#products-section-2 .tab-content .bigdrive2-img'), 1, { opacity: 0, scale: 0.5 })
+												.from($('#products-section-2 .tab-content'), 1, { opacity: 0, left: -200 }, "-=1.5")
 	var productsSection3 = new TimelineMax()
 												.from($('.opus-left'), 2, { opacity: 0, left: 200 })
 												.from($('.opus-right'), 2, { opacity: 0, right: 200 }, "-=2");
-	var productsSection4 = $tm.staggerFrom($('.products-box'), 2, { left: -200, opacity: 0 }, 0.5);
+	var productsSection4 = $tm.staggerFrom($('.products-box'), 2, { left: -200, opacity: 0 }, 0.3);
 	var caseStudiesIntroAnim = $tm.staggerFrom($(".phrase-case-studies"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 1);
 	var caseInteriorSection2 = new TimelineMax()
 												.from($(".case-interior-1"), 3, { left: -200, opacity: 0 })
