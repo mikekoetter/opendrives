@@ -15,8 +15,8 @@ class Contact < MailForm::Base
   def headers
     {
       :subject => "Contact Request from opendrives.com",
-      :to => "channe@channedesign.com",
-      :from => "channe@channedesign.com"
+      :to => "sales@opendrives.com",
+      :from => "sales@opendrives.com"
     }
   end
 

@@ -12,8 +12,8 @@ class Resource < MailForm::Base
   def headers
     {
       :subject => "Support Request from opendrives.com",
-      :to => "channebertrand@gmail.com",
-      :from => "channebertrand@gmail.com"
+      :to => "support@opendrives.com",
+      :from => "support@opendrives.com"
     }
   end
 
