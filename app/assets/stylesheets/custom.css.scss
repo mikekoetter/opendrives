@@ -154,23 +154,56 @@ hr {
 }
 
 .link-with-border {
+	position: relative;
+	width: 200px;
 	background-color: #fff;
 	font-weight: 500;
-	padding: 10px 20px 10px 30px;
+	padding: 7px 60px 7px 60px;
 	border: 2px solid #000;
-	border-radius: 20px;
+	border-radius: 40px;
 	i {
 		padding-left: 15px;
 		color: #2977F2;
 	}
 }
 
+.plus-icon, .plus-icon-blue, .plus-circle-icon, .angle-right-icon {
+	font-size: 1.7em;
+	font-weight: 900;
+	position: absolute;
+	right: 10%;
+	top: -10%;
+}
+
+.plus-icon-blue {
+	color: #2977F2;
+}
+
+.angle-right-icon {
+	font-weight: 400;
+}
+
+.plus-circle-icon {
+	border: 1px solid black;
+	height: 23px;
+	width: 23px;
+	color: #fff;
+	background-color: #000;
+	border-radius: 100%;
+	top: 16%;
+	.plus-adjust {
+		position: relative;
+		top: -9px;
+	}
+}
+
 .link-no-border {
+	width: 20%;
 	background-color: #fff;
 	font-weight: 500;
-	padding: 6px 20px 10px 30px;
+	padding: 7px 20px 7px 30px;
 	border: 2px solid rgba(0,0,0,0);
-	border-radius: 20px;
+	border-radius: 40px;
 	i {
 		position: relative;
 		top: 3px;
@@ -185,6 +218,18 @@ hr {
 	border: 2px solid #000;
 	i {
 		color: #fff;
+	}
+	.plus-icon-blue {
+		color: #fff;
+	}
+	.plus-circle-icon {
+		border: 1px solid #fff;
+		height: 23px;
+		width: 23px;
+		color: #2977F2;
+		background-color: #fff;
+		border-radius: 100%;
+		top: 16%;
 	}
 }
 
@@ -297,6 +342,9 @@ hr {
 /*-------------------------  Shared_partials   -------------------------*/
 
 .faq_support_doc_div {
+	.link-with-border {
+		width: 90%;
+	}
 	hr {
 		background-color: #000;
 	}
@@ -894,6 +942,9 @@ nav {
 		left: 36%;
 	}
 	.tab-content {
+		.link-with-border {
+			width: 50%;
+		}
 		.border-left {
 			position: relative;
 			border-right: 1px solid #000;
@@ -1078,6 +1129,12 @@ nav {
 	}
 	.container-section-5 {
 		margin-top: 400px;
+		.plus-circle-icon {
+			.plus-adjust {
+				top: -9px;
+				left: 3px;
+			}
+		}
 		.landscape-margin {
 			margin-bottom: 100px;
 		}
@@ -1493,6 +1550,9 @@ nav {
 }
 
 #career-job-opening-section-3 {
+	.angle-right-icon {
+		top: -4px;
+	}
 	ul {
 		list-style-type: disc;
 		li {
@@ -2327,15 +2387,21 @@ form {
 		padding-top: 70px;
 		background-color: #E5E8F1;
 		height: 250px;
+		.col-xs-4 {
+			margin-top: 25px;
+		}
 		.round-border-link {
 			border: 4px solid #000;
-			border-radius: 50%;
-			padding: 25px 45px 25px 45px;
+			border-radius: 100%;
+			padding: 47px 45px 32px 45px;
 		}
 		.round-border-link:hover {
 			color: #fff;
+			background-color: #2977F2;
 		}
-		i {
+		.angle-right-icon {
+			font-weight: 900;
+			font-size: 2em;
 			position: relative;
 			top: -5px;
 			left: 5px;
@@ -2366,6 +2432,11 @@ form {
 		}
 		.col-xs-2, .col-xs-10 {
 			margin-bottom: 10px;
+		}
+		.link-with-border {
+			padding-left: 10px;
+			padding-right: 10px;
+			width: 250px;
 		}
 	}
 	@media (max-width: 1200px) { 
@@ -4302,4 +4373,10 @@ footer {
     box-shadow: 0 2.5em 0 0;
   }
 }
+
+
+
+
+
+
 

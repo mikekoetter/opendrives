@@ -40,7 +40,7 @@ gem 'simple_form'
 gem 'mail_form'
 gem 'gibbon'
 gem 'heroku-deflater', :group => :production
-gem 'rack-cors', :require => 'rack/cors'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
