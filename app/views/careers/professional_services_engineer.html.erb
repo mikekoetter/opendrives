@@ -32,7 +32,7 @@
 					<p>The essential responsibilities of the Professional Services Engineer are to collaborate with Open Drives customers through on-site support and consulting services including:</p>
 					<br>
 					<% @duties[0].each do |duty| %>
-						<div class="col-xs-2">
+						<div class="check-anchor-div">
 							<%= image_tag 'check.png', class: 'check-image' %>
 							<div class="mini-overlay-career-job"></div>
 						</div>
@@ -45,7 +45,7 @@
 					<p>It is critical for this individual to understand the customer’s technical environment in order to be able to deliver effective solutions. Typical customer technical environments include:</p>
 					<br>
 					<% @duties[1].each do |duty| %>
-						<div class="col-xs-2">
+						<div class="check-anchor-div">
 							<%= image_tag 'check.png', class: 'check-image' %>
 							<div class="mini-overlay-career-job"></div>
 						</div>
@@ -61,7 +61,7 @@
 					<% 2.times do |t| %>
 						<div class="col-md-6">
 							<% @duties[t + 2].each do |duty| %>
-								<div class="col-xs-2">
+								<div class="check-anchor-div">
 									<%= image_tag 'check.png', class: 'check-image' %>
 									<div class="mini-overlay-career-job"></div>
 								</div>

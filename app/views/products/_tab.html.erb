@@ -23,26 +23,24 @@
     <div class="row marginTop20 trigger-overlay">
     	<div class="col-sm-6">
     		<% features1.each do |feature| %>
-  	  		<div class="col-xs-2">
+  	  		<div class="check-anchor-div">
   	  			<%= image_tag 'check.png', class: 'check-image' %>
             <div class="mini-overlay"></div>
   	  		</div>
   	  		<div class="col-xs-10">
   	  			<%= feature %>
   	  		</div>
-  	  		<br><br>
     		<% end %>
     	</div>
     	<div class="col-sm-6">
     		<% features2.each do |feature| %>
-    			<div class="col-xs-2">
+    			<div class="check-anchor-div">
   	  			<%= image_tag 'check.png', class: 'check-image' %>
             <div class="mini-overlay"></div>
   	  		</div>
   	  		<div class="col-xs-10">
   	  			<%= feature %>
   	  		</div>
-  	  		<br><br>
   	  	<% end %>
     	</div>
     </div>

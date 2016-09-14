@@ -172,7 +172,7 @@ $(document).on('turbolinks:load',function() {
 		clickCount = 0
 		TweenMax.to($('.nav-menu'), 0.5, { right: -500, opacity: 0, zIndex: -5 });
 		TweenMax.to($('.hide-on-menu'), 0.5, { opacity: 1 });
-		TweenMax.to($('.no-hamburgler, .hamburgler'), 0.3, {  zIndex: 6, left: 15, top: 2 });
+		TweenMax.to($('.no-hamburgler, .hamburgler'), 0.3, {  zIndex: 6, left: 15, top: 5 });
 		TweenMax.to($('.bun, .meat'), 0.3, {  clearProps:"all" });
 		$(".hamburgler").removeClass('no-hamburgler blue-hover');
 	}

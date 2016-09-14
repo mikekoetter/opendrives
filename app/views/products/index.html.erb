@@ -106,14 +106,13 @@
 			<% @products.each do |product|%>
 				<div class="col-sm-4">
 					<% product.each do |p| %>
-						<div class="col-xs-2">
+						<div class="check-anchor-div">
 							<%= image_tag 'check.png', class: 'check-image' %>
 							<div class="mini-overlay-prod mini-overlay-black"></div>
 						</div>
 						<div class="col-xs-10">
 							<%= p %>
 						</div>
-						<br><br><br>
 					<% end %>
 				</div>
 			<% end %>
