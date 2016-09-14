@@ -33,7 +33,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 gem 'bootstrap-sass', '~> 3.3.6'
-gem "font-awesome-rails"
 gem "passenger"
 gem 'bootstrap-datepicker-rails'
 gem 'simple_form'

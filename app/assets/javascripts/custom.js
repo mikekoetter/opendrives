@@ -373,13 +373,13 @@ $(document).on('turbolinks:load',function() {
 	});
 
 	// Schedule a demo show/hide
-	$(".schedule-demo-input").hide();
-	$(".schedule-demo-div").click(function() {
-		$(".schedule-demo-input").show();
-		$(".demo-div").removeClass('demo-div');
-		$(".schedule-demo-div").hide();
-		$('.datepicker').datepicker('show');
-	});
+	// $(".schedule-demo-input").hide();
+	// $(".schedule-demo-div").click(function() {
+	// 	$(".schedule-demo-input").show();
+	// 	$(".demo-div").removeClass('demo-div');
+	// 	$(".schedule-demo-div").hide();
+	// 	$('.datepicker').datepicker('show');
+	// });
 
 	// Contact Logo Animations
 	$(".logo-address-div").hover(function() {

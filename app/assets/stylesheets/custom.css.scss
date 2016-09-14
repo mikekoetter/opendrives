@@ -1,6 +1,5 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "font-awesome";
 
 /*
 blue: #2977F2;
@@ -1827,6 +1826,9 @@ nav {
 		width: 30%;
 	}
 	.case-study-div {
+		-webkit-box-shadow: 3px -5px 10px -5px rgba(0,0,0,0.94);
+		-moz-box-shadow: 3px -5px 10px -5px rgba(0,0,0,0.94);
+		box-shadow: 3px -5px 10px -5px rgba(0,0,0,0.94);
 		margin-top: 10px;
 		background-color: #fff;
 		width: 400px;
@@ -1842,7 +1844,7 @@ nav {
 		letter-spacing: 2px;
 		}
 		.case-studies-img {
-			/*margin-top: 10px;*/
+			margin-top: 10px;
 		}
 		.case-studies-joke-logo {
 			width: 200px;
@@ -1865,6 +1867,7 @@ nav {
 	.link-with-border {
 		background-color: rgba(255, 255, 255, 0);
 		font-size: 1.5em;
+		padding-right: 30px;
 	}
 	.link-with-border:hover {
 		background-color: #2977F2;
@@ -2082,15 +2085,43 @@ nav {
 	background-repeat: no-repeat;
 	#contact-form {
 		position: relative;
-		.demo-div {
+		.schedule-demo-input .form-control {
+			border-color: #2977F2;
+			width: 250px;
+			float: right;
+		}
+		.contact-demo {
+			position: absolute;
+			top: 25px;
+			left: 50px;
+			color: #2977F2;
+			font-family: Arial, Helvetica, sans-serif;
+			letter-spacing: 2px;
+			font-size: 1.5em;
+		}
+		.schedule-demo-input .form-control::-webkit-input-placeholder { /* WebKit browsers */
+ 			color: #2977F2;
+ 			font-size: 1.4em;
+ 			text-align: right;
+		}
+		.schedule-demo-input .form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		  color: #2977F2;
+		}
+		.schedule-demo-input .form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
+		  color: #2977F2;
+		}
+		.schedule-demo-input .form-control:-ms-input-placeholder { /* Internet Explorer 10+ */
+		  color: #2977F2;
+		}
+		/*.demo-div {
 			padding-left: 5px;
 			padding-right: 5px;
-		}
-		.schedule-demo-div.form-control {
+		}*/
+		/*.schedule-demo-div.form-control {
 			font-weight: 300;
 			padding-top: 10px !important;
 			cursor: pointer;
-		}
+		}*/
 		.contact-form-success {
 			position: absolute;
 			z-index: -1;
@@ -3228,6 +3259,11 @@ form {
 
 #resources-section-6 {
 	background-color: #F7F7F7;
+	#support-document {
+		.col-xs-10 {
+			margin-left: 0px;
+		}
+	}
 	p {
 		font-family: Arial, Helvetica, sans-serif;
 		font-weight: 500;
@@ -4128,7 +4164,7 @@ footer {
   left: 0;
   right: 0;
   background: #2977F2;
-  border-radius: 17px;
+  border-radius: 30px;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 50%;
