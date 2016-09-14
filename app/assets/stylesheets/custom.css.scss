@@ -45,9 +45,8 @@ blue: #2977F2;
 /*-------------------------  Generals   -------------------------*/
 
 html, body {
-	/*font-family: Arial, Helvetica, sans-serif;*/
-	/*font-family: 'proxima_novaregular';*/
-	/*letter-spacing: 2px;*/
+	/*font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 2px;*/
 	overflow-x: hidden;
 }
 
@@ -89,7 +88,7 @@ a:hover {
 }
 
 hr {
-	height: 4px;
+	height: 6px;
 	border-width: 0;
 	background-color: #2977F2;
 	width: 200px;
@@ -136,7 +135,7 @@ hr {
 }
 
 .big {
-	font-size: 1.5em;
+	font-size: 1.7em;
 }
 
 .huge {
@@ -159,12 +158,12 @@ hr {
 	background-color: #fff;
 	font-weight: 500;
 	padding: 7px 60px 7px 60px;
-	border: 2px solid #000;
+	border: 3px solid #000;
 	border-radius: 40px;
-	i {
+	/*i {
 		padding-left: 15px;
 		color: #2977F2;
-	}
+	}*/
 }
 
 .plus-icon, .plus-icon-blue, .plus-circle-icon, .angle-right-icon {
@@ -202,23 +201,23 @@ hr {
 	background-color: #fff;
 	font-weight: 500;
 	padding: 7px 20px 7px 30px;
-	border: 2px solid rgba(0,0,0,0);
+	border: 3px solid rgba(0,0,0,0);
 	border-radius: 40px;
-	i {
+	/*i {
 		position: relative;
 		top: 3px;
 		font-size: 1.7em;
 		padding-left: 15px;
-	}
+	}*/
 }
 
 .link-with-border:hover, .link-no-border:hover {
 	background-color: #2977F2;
 	color: #fff;
-	border: 2px solid #000;
-	i {
+	border: 3px solid #000;
+	/*i {
 		color: #fff;
-	}
+	}*/
 	.plus-icon-blue {
 		color: #fff;
 	}
@@ -362,6 +361,8 @@ hr {
 /*-------------------------  Navigation   -------------------------*/
 
 nav {
+	letter-spacing: 2px;
+	font-family: Arial, Helvetica, sans-serif;
 	position: relative;
 	z-index: 99999;
 	height: 100px;
@@ -389,6 +390,8 @@ nav {
 		padding-right: 50px;
 	}
 	ul li {
+		font-size: 0.8em;
+		font-weight: 700;
 		margin-right: 10px;
 	}
 	a:hover {
@@ -396,11 +399,11 @@ nav {
 		color: #e5e5e5;
 	}
 	.link-border {
-		border: 1px solid #fff;
+		border: 2px solid #fff;
 		border-radius: 20px;
 	}
 	.link-border:hover {
-		border: 1px solid #000;
+		border: 2px solid #000;
 	}
 	.hamburgler{
 		cursor: pointer;
@@ -641,7 +644,7 @@ nav {
 	.sky {
 		width:100%;
 	  height: 240px!important;
-	  top:45%;
+	  top:10%;
 	  position: absolute;
 	  overflow: hidden;
 	}
@@ -738,10 +741,10 @@ nav {
 		right: 0%;
 		margin: auto;
 	}
-	i {
+	/*i {
 		color: #fff;
 		
-	}
+	}*/
 	i:hover {
 		color: #2977F2;
 	}
@@ -942,12 +945,16 @@ nav {
 		left: 36%;
 	}
 	.tab-content {
+		.col-md-4, .col-md-6.col-md-offset-1 {
+			font-family: Arial, Helvetica, sans-serif;
+		}
 		.link-with-border {
 			width: 50%;
 		}
 		.border-left {
 			position: relative;
-			border-right: 1px solid #000;
+			border-right: 1px solid rgba(0,0,0,0.3);
+			padding-right: 30px;
 			.border-overlay {
 				position: absolute;
 				width: 5px;
@@ -1149,7 +1156,7 @@ nav {
 			width: 200px;
 			height: 20px;
 			margin-left: 15px;
-			border-bottom: 2px solid #fff;
+			border-bottom: 6px solid #fff;
 		}
 		p.lead {
 			font-size: 1.8em;
@@ -1368,6 +1375,7 @@ nav {
 /*-------------------------  Careers   -------------------------*/
 
 #career-section-1 {
+	letter-spacing: 2px;
 	.career-anchor-section-1 {
 		position: relative;
 		font-size: 7.7em;
@@ -1377,14 +1385,19 @@ nav {
 			left: 8%;
 		}
 		.phrase-1 {
-			top: 35%;
+			top: 40%;
 		}
 		.phrase-2 {
-			top: 50%;
+			top: 53%;
 		}
 		.phrase-3 {
 			left: 30%;
-			top: 50%;
+			top: 53%;
+		}
+		p {
+			font-family: Arial, Helvetica, sans-serif;
+			line-height: 20px;
+			font-weight: 500;
 		}
 		.career-section-1-overlay {
 			position: absolute;
@@ -1398,6 +1411,9 @@ nav {
 	.agame {
 		font-weight: 900;
 		font-size: 2em;
+		.blue {
+			font-size: 30px;
+		}
 	}
 	@media (max-width: 1300px) { 
 		.career-anchor-section-1 {
@@ -1791,6 +1807,9 @@ nav {
 	.huge {
 		font-size: 2.5em;
 	}
+	.link-with-border {
+		width: 30%;
+	}
 	.case-study-div {
 		margin-top: 10px;
 		background-color: #fff;
@@ -1801,6 +1820,10 @@ nav {
 		h2 {
 			font-size: 5em;
 			font-family: Arial, Helvetica, sans-serif;
+		}
+		p {
+			font-family: Arial, Helvetica, sans-serif;
+		letter-spacing: 2px;
 		}
 		.case-studies-img {
 			/*margin-top: 10px;*/
@@ -2000,6 +2023,10 @@ nav {
 	.contact-logo {
 		width: 100px;
 	}
+	p {
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: 900;
+	}
 	@media (max-width: 767px) {
 		.col-sm-4 {
 			margin-bottom: 50px;
@@ -2008,8 +2035,12 @@ nav {
 }
 
 #contact-section-3 {
+	.container {
+		margin-bottom: 200px;
+	}
+	
 	background-image: image-url('contact-form-background.png');
-	background-size: cover;
+	background-size: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
 	#contact-form {
@@ -2070,6 +2101,9 @@ nav {
 }
 
 form {
+	.form-group {
+		margin-bottom: 7px;
+	}
 	.col-sm-6, .col-sm-4 {
 		padding-left: 20px;
 		padding-right: 20px;
@@ -2079,9 +2113,9 @@ form {
 		font-size: 1.7em;
 		color: #2977F2;
 		line-height: 40px;
-		height: 60px;
+		height: 80px;
 		border-radius: 0;
-		border: 1px solid #000;
+		border: 2px solid #000;
 		background-color: rgba(255, 255, 255, 0);
 	}
 	.form-control:focus {
@@ -2090,26 +2124,40 @@ form {
 	  box-shadow: 0 0 5px #2977F2;
 	}
 	textarea.form-control {
-		height: 200px;
+		height: 300px;
+		margin: auto;
+		width: 99%;
 	}
 	.link-with-border {
 		background-color: rgba(255, 255, 255, 0);
 	}
-	::-webkit-input-placeholder { /* WebKit browsers */
-    font-size: 0.6em;
-    font-weight: 500;
+	.form-control::-webkit-input-placeholder { /* WebKit browsers */
+    font-family: Arial, Helvetica, sans-serif;
+		letter-spacing: 2px;
+    font-size: 0.5em;
+    color: #000;
+    font-weight: 900;
 	}
-	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-	  font-size: 0.6em;
-	  font-weight: 500;
+	.form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	  font-family: Arial, Helvetica, sans-serif;
+		letter-spacing: 2px;
+    font-size: 0.5em;
+    color: #000;
+    font-weight: 900;
 	}
-	::-moz-placeholder { /* Mozilla Firefox 19+ */
-	  font-size: 0.6em;
-	  font-weight: 500;
+	.form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
+	  font-family: Arial, Helvetica, sans-serif;
+		letter-spacing: 2px;
+    font-size: 0.5em;
+    color: #000;
+    font-weight: 900;
 	}
-	:-ms-input-placeholder { /* Internet Explorer 10+ */
-	  font-size: 0.6em;
-	  font-weight: 500;
+	.form-control:-ms-input-placeholder { /* Internet Explorer 10+ */
+	  font-family: Arial, Helvetica, sans-serif;
+		letter-spacing: 2px;
+    font-size: 0.5em;
+    color: #000;
+    font-weight: 900;
 	}
 	@media (max-width: 767px) {
 		.form-group {
@@ -2384,16 +2432,16 @@ form {
 	}
 	.grey-background {
 		z-index: 10; /*Chrome fix*/
-		padding-top: 70px;
+		padding-top: 50px;
 		background-color: #E5E8F1;
 		height: 250px;
 		.col-xs-4 {
-			margin-top: 25px;
+			margin-top: 45px;
 		}
 		.round-border-link {
-			border: 4px solid #000;
+			border: 6px solid #000;
 			border-radius: 100%;
-			padding: 47px 45px 32px 45px;
+			padding: 37px 33px 22px 30px;
 		}
 		.round-border-link:hover {
 			color: #fff;
@@ -2418,11 +2466,15 @@ form {
   		padding-top: 0; 
 		}
 		p.lead {
-			font-size: 1.5em;
+			font-family: Arial, Helvetica, sans-serif;
+			/*font-size: 1.5em;*/
 		}
 		h3 {
 			font-size: 2.5em;
 			line-height: 45px;
+		}
+		h2 {
+			margin-top: -50px;
 		}
 		.bigdrive2-img {
 			width: 110%;
@@ -2568,6 +2620,9 @@ form {
 }
 
 #products-section-3 {
+	hr {
+		margin-top: -30px;
+	}
 	.col-md-12 {
 		position: relative;
 		img {
@@ -2784,15 +2839,15 @@ form {
 		left: 33%;
 	}
 	.phrase-1 {
-		top: 40%;
+		top: 45%;
 	}
 	.phrase-2 {
 		left: 37%;
-		top: 53%;
+		top: 58%;
 	}
 	.phrase-3 {
 		left: 37%;
-		top: 70%;
+		top: 75%;
 		hr {
 			background-color: #fff;
 			width: 380px;
@@ -2928,7 +2983,10 @@ form {
 		display: none;
 	}
 	p {
+		font-family: Arial, Helvetica, sans-serif;
 		text-align: left;
+		line-height: 30px;
+		font-size: 1.2em;
 	}
 	.col-sm-4 {
 		padding: 0;
@@ -2986,6 +3044,7 @@ form {
 	background-repeat: no-repeat;
 	#resource-form {
 		position: relative;
+		margin-bottom: 50px;
 		.resource-form-success {
 			position: absolute;
 			z-index: -1;
@@ -3026,6 +3085,15 @@ form {
 	h2 {
 		font-size: 3.2em;
 	}
+	p {
+		font-family: Arial, Helvetica, sans-serif;
+		letter-spacing: 2px;
+		font-size: 1.5em;
+	}
+	small {
+		font-size: 0.7em;
+		opacity: 0.7;
+	}
 }
 
 #resources-section-5 {
@@ -3043,10 +3111,10 @@ form {
 				background-color: #68B3FC !important;
 				border-radius: 0 !important;
 				p {
-					opacity: 0.3;
+					opacity: 0.9;
 				}
 				img {
-					opacity: 0.3;
+					opacity: 0.9;
 					width: 50px;
 				}
 			}
@@ -3085,6 +3153,11 @@ form {
 }
 
 #resources-section-6 {
+	p {
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: 700;
+		font-size: 1.2em;
+	}
 	.extrem-left {
 		margin-left: -100px;
 	}
@@ -3398,6 +3471,10 @@ iframe {
 		width: 100%;
 	}
 	.box {
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: 200;
+		font-size: 0.9em;
+		letter-spacing: 2px;
 		position: relative;
 		padding-top: 70px;
 		padding-bottom: 70px;
@@ -3406,11 +3483,10 @@ iframe {
 			width: 80px;
 		}
 		.high-line {
-			line-height: 40px;
+			line-height: 30px;
 		}
 	}
 	.long-box {
-
 		padding-bottom: 200px;
 	}
 	.black {
@@ -3438,12 +3514,16 @@ iframe {
 }
 
 #why-us-section-4 {
+	position: relative;
+	z-index: 10;
+	padding-top: 100px;
 	margin-top: -100px;
 	background-image: image-url('why-us-section-4-background.png');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	color: #fff;
+	
 	h3 {
 		font-size: 2.5em;
 	}
@@ -3453,6 +3533,9 @@ iframe {
 	p.lead {
 		font-size: 1.2em;
 	}
+	/*.trigger-overlay {
+		margin-top: 0px;
+	}*/
 	@media (max-width: 991px) {
 		h3, p.huge {
 			text-align: center;
@@ -3482,6 +3565,7 @@ iframe {
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
+		margin-top: -200px;
 		.employee-carousel-anchor {
 			width: 100%;
 			position: relative;
@@ -3596,8 +3680,11 @@ iframe {
 }
 
 #why-us-section-6 {
+	font-family: Arial, Helvetica, sans-serif;
+	/*letter-spacing: 2px;*/
 	p {
-		font-size: 1.3em;
+		font-weight: 500;
+		font-size: 1em;
 	}
 }
 
@@ -3656,6 +3743,8 @@ footer {
 		}
 	}
 	.col-md-6 {
+		font-family: Arial, Helvetica, sans-serif;
+		letter-spacing: 2px;
 		position: relative;
 		width: 450px;
 		margin-top: 160px;
@@ -3713,6 +3802,7 @@ footer {
 				}
 				p {
 					padding-top: 7px;
+					padding-right: 10px;
 					text-align: right;
 				}
 				.show-on-hover {
@@ -3893,6 +3983,8 @@ footer {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
+
+
 
 /* Sweep To Right */
 .hvr-sweep-to-right {

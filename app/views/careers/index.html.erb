@@ -16,7 +16,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 marginTop100 start_agame_anim">
-				<p class="lead high-line"><span class="career-opacity">Open Drives is all about</span> <strong class="big">people</strong><span class="career-opacity">. We believe in</span> <strong class="big">results</strong><span class="career-opacity">,</span> <strong class="big">responsibility</strong> <span class="career-opacity">and</span> <strong class="big">high-performance</strong><span class="career-opacity">. In other words, we’re winners. And if you’re a winner,</span> <strong class="big">we want you too</strong><span class="career-opacity">. <br>
+				<p ><span class="career-opacity">Open Drives is all about</span> <strong class="big">people</strong><span class="career-opacity">. We believe in</span> <strong class="big">results</strong><span class="career-opacity">,</span> <strong class="big">responsibility</strong> <span class="career-opacity">and</span> <strong class="big">high-performance</strong><span class="career-opacity">. In other words, we’re winners. And if you’re a winner,</span> <strong class="big">we want you too</strong><span class="career-opacity">. <br>
 				We know that</span> <strong class="big">individuality matters</strong><span class="career-opacity">, and that everyone’s situation is different. That’s why we encourage our team members to be themselves. We don’t care how you look, what you eat, or who your favorite baseball team is (as long as it’s not the Giants). We just want you to bring your A-game. <br> We’re all about providing the</span> <strong class="big">best possible work environment</strong><span class="career-opacity">, so everyone can reach their full potential and meet their goals. Communication is important to us, and we encourage everyone to share their thoughts and opinions. Because that’s how</span> <strong class="big">you get great results</strong><span class="career-opacity">.</span></p>
 			</div>
 			<div class="col-md-12 text-center marginTop50">
@@ -75,6 +75,16 @@
 			</div>
 			<div class="col-sm-3 col-xs-6 text-center">
 				<div class="career-logo-div rotate-small-big hvr-radial-out">
+					<%= link_to careers_sales_path do %>
+						<%= image_tag 'career-sales.png', class: 'career-logo hide-on-hover' %>
+						<%= image_tag 'career-sales-white.png', class: 'career-logo show-on-hover' %>
+					<% end %>
+				</div>
+				<br><br>
+				<p class="anim from-left"><strong>SALES</strong></p>
+			</div>
+			<div class="col-sm-3 col-xs-6 text-center">
+				<div class="career-logo-div rotate-small-big hvr-radial-out">
 					<%= link_to careers_professional_services_engineer_path do %>
 						<%= image_tag 'career-pro-engineer.png', class: 'career-logo hide-on-hover' %>
 						<%= image_tag 'career-pro-engineer-white.png', class: 'career-logo show-on-hover' %>
@@ -92,16 +102,6 @@
 				</div>
 				<br><br>
 				<p class="anim from-left"><strong>VP ENGINEERING</strong></p>
-			</div>
-			<div class="col-sm-3 col-xs-6 text-center">
-				<div class="career-logo-div rotate-small-big hvr-radial-out">
-					<%= link_to careers_sales_path do %>
-						<%= image_tag 'career-sales.png', class: 'career-logo hide-on-hover' %>
-						<%= image_tag 'career-sales-white.png', class: 'career-logo show-on-hover' %>
-					<% end %>
-				</div>
-				<br><br>
-				<p class="anim from-left"><strong>SALES</strong></p>
 			</div>
 		</div>
 	</div>

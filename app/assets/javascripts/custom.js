@@ -291,7 +291,7 @@ $(document).on('turbolinks:load',function() {
 	}
 
 	// Products section 2 Hover tabs
-	$(".nav-tabs li").hover(function() {
+	$("#products-section-2 .nav-tabs li").hover(function() {
 		if (!$(this).hasClass('active')) {
 			$tm.to(($(this).find('a img, a p')), 2, { opacity: 1 });
 		}
@@ -300,7 +300,7 @@ $(document).on('turbolinks:load',function() {
 			$tm.to(($(this).find('img, p')), 2, { opacity: 0.3 });
 		}
 	});
-	$(".nav-tabs li").click(function() {
+	$("#products-section-2 .nav-tabs li").click(function() {
 		$tm.to(($(".nav-tabs li").find('img, p')), 2, { opacity: 0.3 });
 		$tm.to(($(this).find('img, p')), 2, { opacity: 1 });
 	});
