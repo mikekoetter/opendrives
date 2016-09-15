@@ -170,18 +170,18 @@ $(document).on('turbolinks:load',function() {
 	var clickCount = 0
 	function hideMenu() {
 		clickCount = 0
-		TweenMax.to($('.nav-menu'), 0.5, { right: -500, opacity: 0, zIndex: -5 });
-		TweenMax.to($('.hide-on-menu'), 0.5, { opacity: 1 });
+		TweenMax.to($('.nav-menu'), 1, { right: -500, opacity: 0, zIndex: -5 });
+		TweenMax.to($('.hide-on-menu'), 1, { opacity: 1 });
 		TweenMax.to($('.no-hamburgler, .hamburgler'), 0.3, {  zIndex: 6, left: 15, top: 5 });
-		TweenMax.to($('.bun, .meat'), 0.3, {  clearProps:"all" });
+		TweenMax.to($('.bun, .meat'), 1, {  clearProps:"all" });
 		$(".hamburgler").removeClass('no-hamburgler blue-hover');
 	}
 	function showMenu() {
 		clickCount = 1
 		$(".hamburgler").addClass('no-hamburgler blue-hover');
-		TweenMax.to($('.no-hamburgler'), 0.3, {  zIndex: 6, left: 40, top: -10 });
-		TweenMax.to($('.nav-menu'), 0.3, { right: 0, opacity: 1, zIndex: 5 });
-		TweenMax.to($('.hide-on-menu'), 0.3, { opacity: 0 });
+		TweenMax.to($('.no-hamburgler'), 1, {  zIndex: 6, left: 40, top: -10 });
+		TweenMax.to($('.nav-menu'), 1, { right: 0, opacity: 1, zIndex: 5 });
+		TweenMax.to($('.hide-on-menu'), 1, { opacity: 0 });
 	}
 	function hideMenuMobile() {
 		clickCount = 0
