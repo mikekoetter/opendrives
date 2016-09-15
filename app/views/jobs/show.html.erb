@@ -1,0 +1,82 @@
+<div id="career-job-opening-section-1">
+	<div class="container">
+		<div class="row marginTopBottom100">
+			<div class="col-md-12 text-center">
+				<div class="col-md-8 col-md-offset-2 job-title">
+					<h3 class="career-job-title"><%= @job.job_title %></h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="career-job-opening-section-2">
+	<div class="container">
+		<div class="row marginTop50">
+			<div class="col-md-12">
+				<h3 class="text-center"><span class="light">JOB</span> DESCRIPTION</h3>
+				<hr class="hr-anim-career-job-section-2">
+				<br><br>
+				<p><%= @job.job_description%></p>
+				<br><br>
+				<h4 class="text-center"><span class="light">WHAT YOU'LL BE</span> DOING IN THIS JOB...</h4>
+				<br><br>
+				<p><%= @job.job_description_second %></p>
+				<br><br>
+				<% if @job.essentials %>
+					<h4 class="text-center high-line trigger-overlay-career-job"><%= @job.essentials_title %></h4>
+					<br><br>
+					<% @jobs.essentials.split(",").each do |essential| %>
+						<div class="col-md-4">
+							<div class="check-anchor-div">
+								<%= image_tag 'check.png', class: 'check-image' %>
+								<div class="mini-overlay-career-job"></div>
+							</div>
+							<div class="col-xs-10">
+								<%= essential %>
+							</div>
+						</div>
+						<% end %>
+				<% end %>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 text-center job-opening-big-border marginTop100">
+				<p class="lead">IF THIS SOUNDS LIKE YOU, THEN WE HOPE TO MEET WITH YOU SOON!</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="career-job-opening-section-3">
+	<div class="container">
+		<div class="row marginTopBottom100">
+			<div class="col-md-12">
+				<h3 class="text-center"><span class="light">SKILLS &AMP;</span> REQUIREMENTS</h3>
+				<hr class="hr-anim-career-job-section-3">
+				<br><br>
+				<h4 class="text-center high-line"><span class="light">EXPERIENCE, TECHNICAL KNOWLEDGE</span><br> AND OTHER QUALITIES WE'RE LOOKING FOR...</h4>
+				<br><br>
+				<ul>
+					<% @job.requirements.split(',').each do |requirement| %>
+						<li><%= requirement %></li>
+					<% end %>
+				</ul>
+				<br><br>
+				<% if @job.qualities %>
+					<h4 class="text-center high-line"><%= @job.qualities_title %></h4>
+					<br><br>
+					<ul>
+						<% @job.qualities.split(',').each do |quality| %>
+							<li><%= quality %></li>
+						<% end %>
+					</ul>
+					<br><br>
+				<% end %>
+			</div>
+			<div class="col-md-12 text-center">
+				<%= link_to('SUBMIT RESUME <span class="angle-right-icon">&gt;</span>'.html_safe, "mailto:careers@opendrives.com?subject=#{@job.title}", class: 'link-with-border') %>
+			</div>
+		</div>
+	</div>
+</div>

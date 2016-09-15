@@ -23,7 +23,7 @@ $(document).ready(function() {
 	// Preloader
 	$(window).load(function(){
     // $('.preloader').delay(100).fadeOut(200);
-    TweenMax.to($('.preloader, .pace'), 2, { opacity: 0, display: 'none', ease: Power4.easeInOut });
+    TweenMax.to($('.preloader'), 1, { opacity: 0, display: 'none', ease: Power4.easeInOut });
   });
 
 	// Reload page on orientation change

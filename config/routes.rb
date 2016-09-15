@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
   
+  
+
+  resources :jobs
+  get "admins/jobs"
+  get "admins/sign_up", to: "admins#index"
+  get "admins", to: "admins#index"
+  devise_for :admins
   get 'why_us/index'
 
   resources :resources, only: [:index, :create]

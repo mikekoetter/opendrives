@@ -1,0 +1,15 @@
+<% @jobs.each do |job| %>
+<div class="col-sm-3 col-xs-6 text-center">
+	<div class="">
+		<%= link_to job_path(job.id) do %>
+			<%= image_tag 'career-nodejs.png', class: 'hide-on-hover' %>
+			<%= image_tag 'career-nodejs-white.png', class: 'show-on-hover' %>
+		<% end %>
+	</div>
+	<br><br>
+	<p><strong><%= job.job_title %></strong></p>
+</div>
+<%= link_to 'DELETE', { controller: 'jobs', action: 'destroy', id: job.id }, method: :delete, class: 'btn btn-danger' %>
+<% end %>
+
+<%= link_to 'add new job', new_job_path %>
