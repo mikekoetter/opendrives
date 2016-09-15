@@ -14,17 +14,17 @@ $.fn.clicktoggle = function(a, b) {
     });
 };
 
-$(document).on('turbolinks:load',function() {
+// $(document).on('turbolinks:load',function() {
 
-
+$(document).ready(function() {
 	//=======================================   Generals   =======================================//
 	$(".full-height").css("min-height", $(window).height());
 	$(".full-height-twice").css("min-height", ($(window).height() * 2));
 	// Preloader
-	// $(window).load(function(){
+	$(window).load(function(){
     // $('.preloader').delay(100).fadeOut(200);
-    TweenMax.to($('.preloader'), 2, { opacity: 0, zIndex: -9999 });
-  // });
+    TweenMax.to($('.preloader, .pace'), 2, { opacity: 0, display: 'none', ease: Power4.easeInOut });
+  });
 
 	// Reload page on orientation change
 	window.onorientationchange = function() { window.location.reload(); };

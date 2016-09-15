@@ -14,7 +14,7 @@
 //= require bootstrap-sprockets
 //= require bootstrap-datepicker
 //= require jquery_ujs
-//= require turbolinks
+
 //= require tween_max.min
 //= require scroll_magic.min
 //= require animation.gsap.min
