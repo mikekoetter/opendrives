@@ -1388,12 +1388,7 @@ nav {
 			left: 30%;
 			top: 53%;
 		}
-		p {
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 1.2em;
-			line-height: 35px;
-			font-weight: 500;
-		}
+		
 		.career-section-1-overlay {
 			position: absolute;
 			bottom: 7%;
@@ -1403,6 +1398,12 @@ nav {
 			background-color: #fff;
 		}
 	}
+	p {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 1.1em;
+			line-height: 30px;
+			font-weight: 500;
+		}
 	.agame {
 		font-weight: 900;
 		font-size: 2em;
