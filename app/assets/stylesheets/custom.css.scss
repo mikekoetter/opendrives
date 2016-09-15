@@ -3736,10 +3736,11 @@ iframe {
 	}
 	p.lead {
 		font-size: 1.2em;
+		margin-bottom: 0px;
 	}
-	/*.trigger-overlay {
-		margin-top: 0px;
-	}*/
+	.trigger-overlay {
+		margin-top: 50px;
+	}
 	@media (max-width: 991px) {
 		h3, p.huge {
 			text-align: center;
@@ -3929,7 +3930,7 @@ iframe {
 }
 
 #why-us-section-6 {
-	margin-top: -100px;
+	margin-top: -150px;
 	font-family: Arial, Helvetica, sans-serif;
 	p {
 		font-weight: 500;
