@@ -2579,6 +2579,10 @@ form {
 		}
 	}
 	.tab-pane {
+		.trigger_overlay {
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: 900;
+		}
 		.chrome-padding {
 			padding-top: 230px;
 		}
@@ -2603,7 +2607,9 @@ form {
 			margin-left: 0;
 		}
 		.col-xs-10 {
-			margin-bottom: 10px;
+			margin-bottom: 0px;
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: 600;
 		}
 		.link-with-border {
 			padding-left: 10px;
