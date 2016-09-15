@@ -21,9 +21,17 @@ class JobsController < ApplicationController
   end
 
   def edit
+    @job = Job.find(params[:id])
   end
 
   def update
+    @job = Job.find(params[:id])
+    if @job.update(job_params)
+      redirect_to admins_jobs_path, notice: "Job Updated Successfully"
+    else
+      flash.now[:alert] = 'Job was not updated'
+      render :edit
+    end
   end
 
   def destroy

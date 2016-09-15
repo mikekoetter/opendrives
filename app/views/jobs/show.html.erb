@@ -3,7 +3,7 @@
 		<div class="row marginTopBottom100">
 			<div class="col-md-12 text-center">
 				<div class="col-md-8 col-md-offset-2 job-title">
-					<h3 class="career-job-title"><%= @job.job_title %></h3>
+					<%= title_format(@job.job_title) %>
 				</div>
 			</div>
 		</div>
@@ -26,7 +26,7 @@
 				<% if @job.essentials %>
 					<h4 class="text-center high-line trigger-overlay-career-job"><%= @job.essentials_title %></h4>
 					<br><br>
-					<% @jobs.essentials.split(",").each do |essential| %>
+					<% @job.essentials.split(';').each do |essential| %>
 						<div class="col-md-4">
 							<div class="check-anchor-div">
 								<%= image_tag 'check.png', class: 'check-image' %>
@@ -58,7 +58,7 @@
 				<h4 class="text-center high-line"><span class="light">EXPERIENCE, TECHNICAL KNOWLEDGE</span><br> AND OTHER QUALITIES WE'RE LOOKING FOR...</h4>
 				<br><br>
 				<ul>
-					<% @job.requirements.split(',').each do |requirement| %>
+					<% to_array(@job.requirements).each do |requirement| %>
 						<li><%= requirement %></li>
 					<% end %>
 				</ul>
@@ -67,15 +67,15 @@
 					<h4 class="text-center high-line"><%= @job.qualities_title %></h4>
 					<br><br>
 					<ul>
-						<% @job.qualities.split(',').each do |quality| %>
-							<li><%= quality %></li>
+						<% @job.qualities.split(';').each do |quality| %>
+							<li><%= quality %>.</li>
 						<% end %>
 					</ul>
 					<br><br>
 				<% end %>
 			</div>
 			<div class="col-md-12 text-center">
-				<%= link_to('SUBMIT RESUME <span class="angle-right-icon">&gt;</span>'.html_safe, "mailto:careers@opendrives.com?subject=#{@job.title}", class: 'link-with-border') %>
+				<%= link_to('SUBMIT RESUME <span class="angle-right-icon">&gt;</span>'.html_safe, "mailto:careers@opendrives.com?subject=#{@job.job_title}", class: 'link-with-border') %>
 			</div>
 		</div>
 	</div>
