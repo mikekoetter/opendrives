@@ -4733,7 +4733,23 @@ footer {
 }
  
 
+/*-------------------------  Admin   -------------------------*/
 
+.login-admin {
+	background-color: black;
+	color: #fff;
+	img {
+		width: 30%;
+	}
+	input {
+		border-color: white;
+		color: white;
+		font-weight: 500;
+	}
+	.submit {
+		color: #000;
+	}
+}
 
 .nav-admin {
 	background-color: #000;
@@ -4796,30 +4812,36 @@ footer {
 	.form-control::-webkit-input-placeholder { 
     font-family: Arial, Helvetica, sans-serif;
 		letter-spacing: 2px;
-    font-size: 0.5em;
-    color: #000;
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.5);
     font-weight: 900;
 	}
 	.form-control:-moz-placeholder { 
 	  font-family: Arial, Helvetica, sans-serif;
 		letter-spacing: 2px;
-    font-size: 0.5em;
-    color: #000;
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.5);
     font-weight: 900;
 	}
 	.form-control::-moz-placeholder { 
 	  font-family: Arial, Helvetica, sans-serif;
 		letter-spacing: 2px;
-    font-size: 0.5em;
-    color: #000;
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.5);
     font-weight: 900;
 	}
 	.form-control:-ms-input-placeholder {
 	  font-family: Arial, Helvetica, sans-serif;
 		letter-spacing: 2px;
-    font-size: 0.5em;
-    color: #000;
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.5);
     font-weight: 900;
+	}
+	.job-input-title {
+		height: 80px;
+		text-align: center;
+		width: 70%;
+		margin: auto;
 	}
 }
 

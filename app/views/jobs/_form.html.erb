@@ -1,53 +1,79 @@
 <div class="form-admin container">
   <%= simple_form_for(@job, multipart: true,  html: { class: "form-horizontal" }, remote: false) do |f| %>
     <fieldset>
-
-      <div class="form-group">
-        <div class="col-sm-12">
-          <%= f.input :job_title, label: false, placeholder: 'Job Title', input_html: { class: 'form-control' } %>
-        </div>
-        <div class="col-sm-6">
-           <%= f.input :job_description, as: :text, rows: 10,  label: false, placeholder: 'Job description 1', input_html: { class: 'form-control' } %>
-        </div>
-        <div class="col-sm-6">
-          <%= f.input :job_description_second, as: :text, rows: 10, label: false, placeholder: 'Job Description 2', input_html: { class: 'form-control' } %>
-        </div>
-     
-        <div class="col-sm-12">
-          <%= f.input :essentials_title, label: false, placeholder: 'Essentials Title',  input_html: { class: 'form-control' } %>
-        </div>
-        <div class="col-sm-12">
-          <%= f.input :essentials, as: :text, rows: 10, label: false, placeholder: 'Essentials',  input_html: { class: 'form-control' } %>
-        </div>
-      
-        <div class="col-sm-12">
-          <%= f.input :requirements, as: :text, rows: 10, label: false, placeholder: 'Requirements',  input_html: { class: 'form-control' } %>
-        </div>
-      
-        <div class="col-sm-12">
-          <%= f.input :qualities_title, label: false, placeholder: 'Qualities Title',  input_html: { class: 'form-control' } %>
-        </div>
-        <div class="col-sm-12">
-          <%= f.input :qualities, as: :text, rows: 10, label: false, placeholder: 'Qualities',  input_html: { class: 'form-control' } %>
+      <div id="career-job-opening-section-1">
+        <div class="container">
+          <div class="row marginTopBottom100">
+            <div class="col-md-12 text-center">
+              <div class="col-md-8 col-md-offset-2 job-title">
+                <h3 class="career-job-title"><%= f.input :job_title, label: false, placeholder: 'Job Title', input_html: { class: 'form-control job-input-title' } %></h3>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="form-group">
-        <div class="col-sm-6">
-         choose existing one:
-
-        </div>
-        <div class="col-sm-6">
-          <%= f.file_field :image, label: false,  input_html: { class: 'form-control' } %>
+      <div id="career-job-opening-section-2">
+        <div class="container">
+          <div class="row marginTop50">
+            <div class="col-md-12">
+              <h3 class="text-center"><span class="light">JOB</span> DESCRIPTION</h3>
+              <hr class="hr-anim-career-job-section-2">
+              <br><br>
+              <p><%= f.input :job_description, as: :text, rows: 10,  label: false, placeholder: 'Job description 1', input_html: { class: 'form-control' } %></p>
+              <br><br>
+              <h4 class="text-center"><span class="light">WHAT YOU'LL BE</span> DOING IN THIS JOB...</h4>
+              <br><br>
+              <p><%= f.input :job_description_second, as: :text, rows: 10, label: false, placeholder: 'Job Description 2', input_html: { class: 'form-control' } %></p>
+              <br><br>
+              <h4 class="text-center high-line trigger-overlay-career-job"><%= f.input :essentials_title, label: false, placeholder: 'Essentials Title',  input_html: { class: 'form-control job-input-title' } %></h4>
+              <br><br>
+              <%= f.input :essentials, as: :text, rows: 10, label: false, placeholder: 'Essentials',  input_html: { class: 'form-control' } %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 text-center job-opening-big-border marginTop100">
+              <p class="lead">IF THIS SOUNDS LIKE YOU, THEN WE HOPE TO MEET WITH YOU SOON!</p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="form-group">
-        <div class="col-md-12 marginTop20 text-center">
-        	<%= button_tag('SUBMIT <span class="angle-right-icon">&gt;</span>'.html_safe, type: 'submit', class: 'link-with-border hvr-shutter-out-horizontal') %>
-          <div class="loader"></div>
+      <div id="career-job-opening-section-3">
+        <div class="container">
+          <div class="row marginTopBottom100">
+            <div class="col-md-12">
+              <h3 class="text-center"><span class="light">SKILLS &AMP;</span> REQUIREMENTS</h3>
+              <hr class="hr-anim-career-job-section-3">
+              <br><br>
+              <h4 class="text-center high-line"><span class="light">EXPERIENCE, TECHNICAL KNOWLEDGE</span><br> AND OTHER QUALITIES WE'RE LOOKING FOR...</h4>
+              <br><br>
+              
+                <%= f.input :requirements, as: :text, rows: 10, label: false, placeholder: 'Requirements',  input_html: { class: 'form-control' } %>
+              
+              <br><br>
+              <h4 class="text-center high-line"><%= f.input :qualities_title, label: false, placeholder: 'Qualities Title',  input_html: { class: 'form-control job-input-title' } %></h4>
+              <br><br>
+              
+                <%= f.input :qualities, as: :text, rows: 10, label: false, placeholder: 'Qualities',  input_html: { class: 'form-control' } %>
+              
+              <br><br>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="form-group">
+        <% if @job.new_record? %>
+          <div class="col-md-12 marginBottom100 text-center">
+            <%= button_tag('Add Job <span class="angle-right-icon">&gt;</span>'.html_safe, type: 'submit', class: 'link-with-border hvr-shutter-out-horizontal') %>
+          </div>
+          <% else %>
+            <div class="col-md-12 marginBottom100 text-center">
+            <%= button_tag('Save Job <span class="angle-right-icon">&gt;</span>'.html_safe, type: 'submit', class: 'link-with-border hvr-shutter-out-horizontal') %>
+          </div>
+          <% end %>
       </div>
     </fieldset>
   <% end %>
 </div>
+
