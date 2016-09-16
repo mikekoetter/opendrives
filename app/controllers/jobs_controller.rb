@@ -51,7 +51,8 @@ class JobsController < ApplicationController
                                     :essentials,
                                     :requirements,
                                     :qualities_title,
-                                    :qualities
+                                    :qualities,
+                                    :image
                                   )
     end
 end

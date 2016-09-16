@@ -3,7 +3,7 @@ module JobsHelper
 	def title_format(string)
 		array = string.split(' ')
 		if array.size == 1 
-			string
+			content_tag(:h3, string,  class: 'career-job-title')
 		else
 			first_word = array.shift
 			words_left = array.join(" ")

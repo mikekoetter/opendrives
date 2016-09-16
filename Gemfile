@@ -40,6 +40,8 @@ gem 'mail_form'
 gem 'gibbon'
 gem 'heroku-deflater', :group => :production
 gem 'devise'
+gem 'paperclip'
+gem 'aws-sdk', '~> 2.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

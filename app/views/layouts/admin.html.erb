@@ -2,17 +2,41 @@
 <html>
 <head>
   <%= favicon_link_tag 'favicon.png' %>
-  <title>Opendrives Admin Section</title>
+  <title>OpenDrives Admin Section</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application'%>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	
+	<!-- <div class="container-fluid">
+    
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-		<%= yield %>
-	
+  </div> -->
+
+
+  <nav class="navbar navbar-default navbar-fixed-top nav-admin">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <%= image_tag 'logo-blue.png', class: 'logo-admin' %>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to 'Website', root_path %></li>
+        <li><%= link_to 'Sign Out', destroy_admin_session_path, :method => :delete %></li>
+      </ul>
+    </div><!-- /.container-fluid -->
+  </nav>
+  <div class="admin-panel full-height">
+    <ul class=" marginTop200">
+      <li><%= link_to 'Manage Job Listing', admins_jobs_path, class: 'btn btn-default' %></li>
+      <li><%= link_to 'Manage Clients Logo', admins_jobs_path, class: 'btn btn-default' %></li>
+      <li><%= link_to 'Manage Case studies', admins_jobs_path, class: 'btn btn-default' %></li>
+      <li><%= link_to 'Manage Support Docs', admins_jobs_path, class: 'btn btn-default' %></li>
+    </ul>
+  </div>
+  <div class="custom-container">
+		  <%= yield %>
+	</div>
 </body>
 </html>

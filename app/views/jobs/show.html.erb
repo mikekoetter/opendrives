@@ -17,23 +17,23 @@
 				<h3 class="text-center"><span class="light">JOB</span> DESCRIPTION</h3>
 				<hr class="hr-anim-career-job-section-2">
 				<br><br>
-				<p><%= @job.job_description%></p>
+				<p><%= @job.job_description.html_safe %></p>
 				<br><br>
 				<h4 class="text-center"><span class="light">WHAT YOU'LL BE</span> DOING IN THIS JOB...</h4>
 				<br><br>
-				<p><%= @job.job_description_second %></p>
+				<p><%= @job.job_description_second.html_safe %></p>
 				<br><br>
-				<% if @job.essentials %>
-					<h4 class="text-center high-line trigger-overlay-career-job"><%= @job.essentials_title %></h4>
+				<% if @job.essentials.html_safe %>
+					<h4 class="text-center high-line trigger-overlay-career-job"><%= @job.essentials_title.html_safe %></h4>
 					<br><br>
-					<% @job.essentials.split(';').each do |essential| %>
+					<% to_array(@job.essentials).each do |essential| %>
 						<div class="col-md-4">
 							<div class="check-anchor-div">
 								<%= image_tag 'check.png', class: 'check-image' %>
 								<div class="mini-overlay-career-job"></div>
 							</div>
 							<div class="col-xs-10">
-								<%= essential %>
+								<%= essential.html_safe %>
 							</div>
 						</div>
 						<% end %>
@@ -59,7 +59,7 @@
 				<br><br>
 				<ul>
 					<% to_array(@job.requirements).each do |requirement| %>
-						<li><%= requirement %></li>
+						<li><%= requirement.html_safe %></li>
 					<% end %>
 				</ul>
 				<br><br>
@@ -67,8 +67,8 @@
 					<h4 class="text-center high-line"><%= @job.qualities_title %></h4>
 					<br><br>
 					<ul>
-						<% @job.qualities.split(';').each do |quality| %>
-							<li><%= quality %>.</li>
+						<% to_array(@job.qualities).each do |quality| %>
+							<li><%= quality.html_safe %>.</li>
 						<% end %>
 					</ul>
 					<br><br>
