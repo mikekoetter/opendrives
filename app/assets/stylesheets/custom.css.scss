@@ -1838,8 +1838,8 @@ nav {
 			top: -10px;
 		}
 	}
-	.show-on-touch.marginTop50 {
-		margin-top: 56px;
+	.show-on-touch.extra-margin {
+		margin-top: 27px;
 	}
 	.case-study-div {
 		-webkit-box-shadow: 3px -5px 10px -5px rgba(0,0,0,0.94);
@@ -1898,9 +1898,9 @@ nav {
 		}
 	}
 	@media (max-width: 991px) { 
-		.h2-gonegirl {
+		/*.h2-gonegirl {
 			margin-bottom: 50px;
-		}
+		}*/
 	}
 
 	@media (max-width: 767px) { 
