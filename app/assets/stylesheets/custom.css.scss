@@ -4845,13 +4845,16 @@ footer {
 	}
 }
 
-.custom-container {
-	padding-left: 10;
-	padding-right: 20px;
-	margin-top: 150px;
-	width: 85%;
-	float: right;
+.admin-section {
+	.custom-container {
+		padding-left: 10;
+		padding-right: 20px;
+		margin-top: 150px;
+		width: 85%;
+		float: right;
+	}
 }
+	
 
 .career-logo-div {
 	position: relative;
