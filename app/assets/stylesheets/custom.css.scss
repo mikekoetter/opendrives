@@ -992,31 +992,15 @@ nav {
 				right: -2px;
 			}
 		}
-		/*.col-sm-2.col-xs-2 {
-			position: relative;
-		}*/
-		/*.col-md-4 {
-			.col-sm-2 {
-				padding: 0;
-				padding-left: 10px;
-				padding-right: 10px;
-				margin: 0;
-			}
-			.col-sm-2, .col-sm-10 {
-				margin-bottom: 10px;
-			}
-			p {
-				margin-left: -20px;
-			}
-		}*/
 		.col-md-4 {
 			.check-anchor-div {
 				margin-left: 35px;
-				top: 17px;
+				top: 21px;
 			}
 			p {
 				margin-left: 30px;
 				margin-bottom: -3px;
+				font-size: 1.2em;
 			}
 		}
 	}
@@ -1434,18 +1418,13 @@ nav {
 	hr {
 		width: 130px;
 	}
-	.col-sm-3, .col-xs-12 {
+	.col-sm-3, .col-sm-2 {
 		margin-bottom: 50px;
 		img {
 			width: 120px;
 		}
 	}
-	.col-xs-12 {
-		margin-bottom: 50px;
-		img {
-			width: 160px;
-		}
-	}
+	
 } 
 
 /*-------------------------  Careers   -------------------------*/
