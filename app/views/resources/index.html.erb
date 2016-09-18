@@ -186,9 +186,36 @@
 		  			<h3><span class="light">find answers to common questions in our</span><br> frequently asked questions</h3>
 		  			<hr class="hr-anim-resources-section-6">
 		  			<br><br>
-		  			<a href="/support_documents/Frequently_Answered_Questions.pdf" class="link-download bold" target="_blank">
+		  			<!-- <a href="/support_documents/Frequently_Answered_Questions.pdf" class="link-download bold" target="_blank">
 			  			<%= image_tag 'resources-support-document-logo-black.png', class: 'logo-tab-content' %>&nbsp;&nbsp;&nbsp;frequently answered questions
-			  		</a>
+			  		</a> -->
+
+			  		<div class="panel-group" id="accordion">
+
+
+			  			<% @faqs.each_with_index do |faq, i| %>
+						  	<div class="panel panel-default text-left">
+							  	<a data-toggle="collapse" data-parent="#accordion" href="#collapse<%= i %>">
+								    <div class="panel-heading">
+								      <h4 class="panel-title">
+								        <p class="question">Q: <%= faq[0] %></p>
+								        <span class="panel-minus">-</span>
+								        <span class="panel-plus">+</span>
+								      </h4>
+								    </div>
+							    </a>
+							    <div id="collapse<%= i %>" class="panel-collapse collapse">
+							      <div class="panel-body">
+							      	<p class="lead">A: <%= faq[1].html_safe %></p>
+							    	</div>
+							    </div>
+							  </div>
+
+						  <% end %>
+
+
+						</div>
+
 		  		</div>
 		  	</div>
 		  </div>

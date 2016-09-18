@@ -58,9 +58,6 @@ blue: #2977F2;
 
 }
 
-/*@import 'https://fonts.googleapis.com/css?family=Open+Sans:300';*/
-/*@import 'https://fonts.googleapis.com/css?family=Lato:100';*/
-* {-webkit-font-smoothing: antialiased;}
 /*-------------------------  Generals   -------------------------*/
 
 html, body {
@@ -3382,7 +3379,6 @@ form {
 		border: none !important;
 		li {
 			a {
-				/*height: 150px;*/
 				margin: 0;
 				padding: 15px 40px 10px 40px;
 				color: #fff;
@@ -3431,6 +3427,16 @@ form {
 			opacity: 1;
 		}
 	}
+	@media (max-width: 991px) {
+		.nav-tabs {
+			border: none !important;
+			li {
+				a {
+					height: 150px;
+				}
+			}
+		}
+	}
 }
 
 #resources-section-6 {
@@ -3439,6 +3445,43 @@ form {
 		.col-xs-10 {
 			margin-left: 0px;
 		}
+	}
+	.panel {
+		border: none;
+		box-shadow: none;
+		border-radius: 0px;
+		background-color: rgba(0,0,0,0);
+	}
+	.panel-heading {
+		position: relative;
+		background-color: #000;
+		color: #fff;
+		border-radius: 0px;
+		min-height: 50px;
+		padding-top: 12px !important;
+		.panel-title {
+			p {
+				font-family: 'novecento_sans_widedemibold';
+				font-size: 1.2em;
+				width: 90%;
+			}
+		}
+		.panel-minus {
+			position: absolute;
+			top: 10px;
+			right: 20px;
+			font-size: 1.6em;
+		}
+		.panel-plus {
+			position: absolute;
+			top: 10px;
+			right: 20px;
+			font-size: 1.6em;
+			color: #2977F2;
+		}
+	}
+	.panel-heading.active {
+		background-color: #2977F2;
 	}
 	p {
 		font-family: Arial, Helvetica, sans-serif;
@@ -3480,12 +3523,46 @@ form {
 		#videos .col-md-6 {
 			margin-bottom: 100px;
 		}
+		.panel-heading {
+			padding-top: 15px !important;
+			.panel-title {
+				font-size: 1.2em;
+			}
+		}
 	}
 	@media (max-width: 767px) {
 		.col-xs-2, .col-xs-10 {
 			margin-bottom: 20px;
 		}
+		.panel-heading {
+			padding-top: 17px !important;
+			.panel-title {
+				font-size: 1em;
+			}
+		}
 	}
+	/*@media (max-width: 620px) {
+		.panel-heading {
+			position: relative;
+			min-height: 70px;
+			padding-top: 20px !important;
+			.panel-minus {
+				position: absolute;
+				font-size: 1.3em;
+				right: 20px;
+				top: 30px;
+			}
+			.panel-plus {
+				position: absolute;
+				font-size: 1.3em;
+				right: 20px;
+				top: 30px;
+			}
+			.question {
+				width: 70%;
+			}
+		}
+	}*/
 	@media (max-width: 550px) {
 		.video-thumb-anchor {
 			.video-thumb {

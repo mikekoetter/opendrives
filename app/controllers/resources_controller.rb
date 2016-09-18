@@ -1,6 +1,7 @@
 class ResourcesController < ApplicationController
   def index
   	@resource = Resource.new
+    @faqs = @resource.faqs
   end
 
   def create

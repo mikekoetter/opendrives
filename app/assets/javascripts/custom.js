@@ -215,6 +215,9 @@ $(document).ready(function() {
 		$(window).scroll(function() {
 			hideMenu();
 		});
+		$("html").click(function() {
+			hideMenu();
+		});
 	} else {
 		$(".hamburgler").clicktoggle(function() {
 			if (clickCount == 0) {
@@ -232,7 +235,13 @@ $(document).ready(function() {
 		$(window).scroll(function() {
 			hideMenuMobile();
 		});
+		$("html").click(function() {
+			hideMenuMobile();
+		});
 	}
+	$(".nav-menu, .hamburgler").click(function(e) {
+		e.stopPropagation();
+	});
 	
 	// Nav Logo Animation on Scroll
 	$(window).scroll(function() {
@@ -362,6 +371,19 @@ $(document).ready(function() {
 												.setTween(resourcesTabAnim)
 												.addTo(resourcesController);
 	})
+
+	// Faqs
+	$(".panel-minus").hide();
+	$(".collapse").on('show.bs.collapse',function(){
+    $(this).parent().find('.panel-heading').addClass('active');
+    $(this).parent().find(".panel-plus").hide();
+    $(this).parent().find(".panel-minus").show();
+	});
+	$(".collapse").on('hide.bs.collapse',function(){
+    $(this).parent().find('.panel-heading').removeClass('active');
+    $(this).parent().find(".panel-plus").show();
+    $(this).parent().find(".panel-minus").hide();
+	});
 
 	//=======================================   Contact   =======================================//
 	// Boostrap Datepicker options

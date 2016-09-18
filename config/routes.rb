@@ -24,13 +24,13 @@ Rails.application.routes.draw do
 
   get 'case_interior/joke'
 
-  get 'careers/vp_engineering'
+  # get 'careers/vp_engineering'
 
-  get 'careers/professional_services_engineer'
+  # get 'careers/professional_services_engineer'
 
-  get 'careers/sales'
+  # get 'careers/sales'
 
-  get 'careers/node_js_developer'
+  # get 'careers/node_js_developer'
 
   get 'careers/index'
 
