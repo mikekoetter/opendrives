@@ -597,7 +597,7 @@ $(document).ready(function() {
 	var caseInteriorSection6 = new TimelineMax()
 												.from($("#case-interior-gone-girl-section-6 p"), 2, { opacity: 0, ease: Power2.easeIn })
 												.from($("#case-interior-gone-girl-section-6 a"), 2, { opacity: 0, ease: Power2.easeIn }, "-=2");
-	var resourcesIntroAnim = $tm.staggerFrom($(".phrase-resources"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 0.5);
+	// var resourcesIntroAnim = $tm.staggerFrom($(".phrase-resources"), 2, { opacity: 0, ease: Power1.easeOut, scale: 0 }, 0.5);
 	var resourcesSection2 = new TimelineMax()
 												.staggerFrom($('#resources-section-2 .big'), 1, { opacity: 0, ease: Power4.easeIn }, 0.5)
 												.staggerFrom($('.resources-opacity'), 2, { opacity: 0, ease: Power4.easeIn }, 0.5, "-=1");
