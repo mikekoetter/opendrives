@@ -1434,10 +1434,16 @@ nav {
 	hr {
 		width: 130px;
 	}
-	.col-sm-3 {
+	.col-sm-3, .col-xs-12 {
 		margin-bottom: 50px;
 		img {
 			width: 120px;
+		}
+	}
+	.col-xs-12 {
+		margin-bottom: 50px;
+		img {
+			width: 160px;
 		}
 	}
 } 
