@@ -8,12 +8,12 @@ blue: #2977F2;
 
 @font-face {
     font-family: 'novecento_sans_widelight';
-    src: url('Novecentosanswide-Light-webfont.eot');
-    src: url('Novecentosanswide-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Novecentosanswide-Light-webfont.woff2') format('woff2'),
-         url('Novecentosanswide-Light-webfont.woff') format('woff'),
-         url('Novecentosanswide-Light-webfont.ttf') format('truetype'),
-         url('Novecentosanswide-Light-webfont.svg#novecento_sans_widelight') format('svg');
+    src: font-url('/assets/Novecentosanswide-Light-webfont.eot');
+    src: font-url('/assets/Novecentosanswide-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('/assets/Novecentosanswide-Light-webfont.woff2') format('woff2'),
+         font-url('/assets/Novecentosanswide-Light-webfont.woff') format('woff'),
+         font-url('/assets/Novecentosanswide-Light-webfont.ttf') format('truetype'),
+         font-url('/assets/Novecentosanswide-Light-webfont.svg#novecento_sans_widelight') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -21,12 +21,12 @@ blue: #2977F2;
 
 @font-face {
     font-family: 'novecento_sans_widebook';
-    src: url('Novecentosanswide-Book-webfont.eot');
-    src: url('Novecentosanswide-Book-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Novecentosanswide-Book-webfont.woff2') format('woff2'),
-         url('Novecentosanswide-Book-webfont.woff') format('woff'),
-         url('Novecentosanswide-Book-webfont.ttf') format('truetype'),
-         url('Novecentosanswide-Book-webfont.svg#novecento_sans_widebook') format('svg');
+    src: font-url('/assets/Novecentosanswide-Book-webfont.eot');
+    src: font-url('/assets/Novecentosanswide-Book-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('/assets/Novecentosanswide-Book-webfont.woff2') format('woff2'),
+         font-url('/assets/Novecentosanswide-Book-webfont.woff') format('woff'),
+         font-url('/assets/Novecentosanswide-Book-webfont.ttf') format('truetype'),
+         font-url('/assets/Novecentosanswide-Book-webfont.svg#novecento_sans_widebook') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -34,12 +34,12 @@ blue: #2977F2;
 
 @font-face {
     font-family: 'novecento_sans_widemedium';
-    src: url('Novecentosanswide-Medium-webfont.eot');
-    src: url('Novecentosanswide-Medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Novecentosanswide-Medium-webfont.woff2') format('woff2'),
-         url('Novecentosanswide-Medium-webfont.woff') format('woff'),
-         url('Novecentosanswide-Medium-webfont.ttf') format('truetype'),
-         url('Novecentosanswide-Medium-webfont.svg#novecento_sans_widemedium') format('svg');
+    src: font-url('/assets/Novecentosanswide-Medium-webfont.eot');
+    src: font-url('/assets/Novecentosanswide-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('/assets/Novecentosanswide-Medium-webfont.woff2') format('woff2'),
+         font-url('/assets/Novecentosanswide-Medium-webfont.woff') format('woff'),
+         font-url('/assets/Novecentosanswide-Medium-webfont.ttf') format('truetype'),
+         font-url('/assets/Novecentosanswide-Medium-webfont.svg#novecento_sans_widemedium') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -47,12 +47,12 @@ blue: #2977F2;
 
 @font-face {
     font-family: 'novecento_sans_widedemibold';
-    src: url('Novecentosanswide-DemiBold-webfont.eot');
-    src: url('Novecentosanswide-DemiBold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Novecentosanswide-DemiBold-webfont.woff2') format('woff2'),
-         url('Novecentosanswide-DemiBold-webfont.woff') format('woff'),
-         url('Novecentosanswide-DemiBold-webfont.ttf') format('truetype'),
-         url('Novecentosanswide-DemiBold-webfont.svg#novecento_sans_widedemibold') format('svg');
+    src: font-url('/assets/Novecentosanswide-DemiBold-webfont.eot');
+    src: font-url('/assets/Novecentosanswide-DemiBold-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('/assets/Novecentosanswide-DemiBold-webfont.woff2') format('woff2'),
+         font-url('/assets/Novecentosanswide-DemiBold-webfont.woff') format('woff'),
+         font-url('/assets/Novecentosanswide-DemiBold-webfont.ttf') format('truetype'),
+         font-url('/assets/Novecentosanswide-DemiBold-webfont.svg#novecento_sans_widedemibold') format('svg');
     font-weight: normal;
     font-style: normal;
 
