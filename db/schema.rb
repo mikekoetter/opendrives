@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160915190730) do
+ActiveRecord::Schema.define(version: 20160920210407) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,32 @@ ActiveRecord::Schema.define(version: 20160915190730) do
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
 
+  create_table "clients", force: :cascade do |t|
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  create_table "icons", force: :cascade do |t|
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  create_table "icons_jobs", force: :cascade do |t|
+    t.integer "icon_id"
+    t.integer "job_id"
+  end
+
+  add_index "icons_jobs", ["icon_id"], name: "index_icons_jobs_on_icon_id", using: :btree
+  add_index "icons_jobs", ["job_id"], name: "index_icons_jobs_on_job_id", using: :btree
+
   create_table "jobs", force: :cascade do |t|
     t.string   "job_title"
     t.text     "job_description"
@@ -51,4 +77,15 @@ ActiveRecord::Schema.define(version: 20160915190730) do
     t.datetime "image_updated_at"
   end
 
+  create_table "partners", force: :cascade do |t|
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  add_foreign_key "icons_jobs", "icons"
+  add_foreign_key "icons_jobs", "jobs"
 end

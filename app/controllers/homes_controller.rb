@@ -1,5 +1,7 @@
 class HomesController < ApplicationController
   def index
+  	@clients = Client.all
+    @partners = Partner.all
   end
 
   def subscribe

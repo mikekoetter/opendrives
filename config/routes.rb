@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   
-  
-
+  resources :partners
+  # resources :case_interiors
+  resources :clients
+  resources :icons
   resources :jobs
-  get "admins/jobs"
   get "admins/sign_up", to: "admins#index"
   get "admins", to: "admins#index"
   devise_for :admins

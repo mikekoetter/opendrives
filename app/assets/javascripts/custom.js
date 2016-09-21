@@ -15,7 +15,7 @@ $.fn.clicktoggle = function(a, b) {
 };
 
 // $(document).on('turbolinks:load',function() {
-
+Dropzone.autoDiscover = false;
 $(document).ready(function() {
 	//=======================================   Generals   =======================================//
 	$(".full-height").css("min-height", $(window).height());
@@ -105,6 +105,109 @@ $(document).ready(function() {
 		$(".loader").hide();
 		$(".submit-button").show();
 	});
+
+
+
+
+
+	// $(".icon-select").click(function(e) {
+	// 	e.preventDefault;
+	// 	alert($(this).attr('id'));
+	// 	// $.ajax({
+	// 	// 	type: 'PUT',
+	// 	// 	url: '/icons/' + $(this).att
+	// 	// })
+	// });
+
+
+	(function() {
+		// grap our upload form by its id
+		$("#new_client").dropzone({
+			maxFilesize: 1,
+			paramName: "client[image]",
+			addRemoveLinks: false,
+			success: function(file, response){
+				// find the remove button link of the uploaded file and give it an id
+				// based of the fileID response from the server
+				$(file.previewTemplate).find('.dz-remove').attr('id', response.fileID);
+				// add the dz-success class (the green tick sign)
+				$(file.previewElement).addClass("dz-success");
+			},
+			//when the remove button is clicked
+			removedfile: function(file){
+				// grap the id of the uploaded file we set earlier
+				var id = $(file.previewTemplate).find('.dz-remove').attr('id'); 
+
+				// make a DELETE ajax request to delete the file
+				$.ajax({
+					type: 'DELETE',
+					url: '/clients/' + id,
+					success: function(data){
+						console.log(data.message);
+					}
+				});
+			},
+			queuecomplete: function() { window.location.href = "/clients"; }
+		});	
+
+		$("#new_icon").dropzone({
+			maxFilesize: 1,
+			paramName: "icon[image]",
+			addRemoveLinks: false,
+			success: function(file, response){
+				// find the remove button link of the uploaded file and give it an id
+				// based of the fileID response from the server
+				$(file.previewTemplate).find('.dz-remove').attr('id', response.fileID);
+				// add the dz-success class (the green tick sign)
+				$(file.previewElement).addClass("dz-success");
+			},
+			//when the remove button is clicked
+			removedfile: function(file){
+				// grap the id of the uploaded file we set earlier
+				var id = $(file.previewTemplate).find('.dz-remove').attr('id'); 
+
+				// make a DELETE ajax request to delete the file
+				$.ajax({
+					type: 'DELETE',
+					url: '/icons/' + id,
+					success: function(data){
+						console.log(data.message);
+					}
+				});
+			},
+			queuecomplete: function() { window.location.href = "/icons"; }
+		});	
+
+		$("#new_partner").dropzone({
+			maxFilesize: 1,
+			paramName: "partner[image]",
+			addRemoveLinks: false,
+			success: function(file, response){
+				// find the remove button link of the uploaded file and give it an id
+				// based of the fileID response from the server
+				$(file.previewTemplate).find('.dz-remove').attr('id', response.fileID);
+				// add the dz-success class (the green tick sign)
+				$(file.previewElement).addClass("dz-success");
+			},
+			//when the remove button is clicked
+			removedfile: function(file){
+				// grap the id of the uploaded file we set earlier
+				var id = $(file.previewTemplate).find('.dz-remove').attr('id'); 
+
+				// make a DELETE ajax request to delete the file
+				$.ajax({
+					type: 'DELETE',
+					url: '/partners/' + id,
+					success: function(data){
+						console.log(data.message);
+					}
+				});
+			},
+			queuecomplete: function() { window.location.href = "/partners"; }
+		});	
+	})()
+
+	
 	
 	//=======================================   Carousel   =======================================//	
 	// Clients Carousel set up

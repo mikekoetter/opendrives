@@ -27,12 +27,14 @@
       </ul>
     </div><!-- /.container-fluid -->
   </nav>
-  <div class="admin-panel full-height">
+  <div class="admin-panel">
     <ul class=" marginTop200">
-      <li><%= link_to 'Manage Job Listing', admins_jobs_path, class: 'btn btn-default' %></li>
-      <li><%= link_to 'Manage Clients Logo', admins_jobs_path, class: 'btn btn-default' %></li>
-      <li><%= link_to 'Manage Case studies', admins_jobs_path, class: 'btn btn-default' %></li>
-      <li><%= link_to 'Manage Support Docs', admins_jobs_path, class: 'btn btn-default' %></li>
+      <li><%= link_to 'Manage Job Listing', jobs_path, class: 'btn btn-default' %></li>
+      <li><%= link_to 'Manage Clients Logo', clients_path, class: 'btn btn-default' %></li>
+      <li><%= link_to 'Manage Case studies', admins_path, class: 'btn btn-default' %></li>
+      <li><%= link_to 'Manage Support Docs', admins_path, class: 'btn btn-default' %></li>
+      <li><%= link_to 'Manage Partners', partners_path, class: 'btn btn-default' %></li>
+      <li><%= link_to 'Manage Icons', icons_path, class: 'btn btn-default' %></li>
     </ul>
   </div>
   <div class="custom-container">

@@ -1,0 +1,8 @@
+$(document).ready(function() {
+	var image = <%= escape_javascript(render 'icons/icons', icons: @icons) %>
+	// Init bootstrap tooltip
+	$('[data-toggle="popover"]').popover({
+		content: image
+	}); 
+})
+	

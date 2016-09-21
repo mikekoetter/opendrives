@@ -1,0 +1,7 @@
+<div class="row">
+	<% icons.each do |icon| %>
+		<div class="col-md-3 text-center">
+			<%= link_to(image_tag(icon.image.url(:thumb), class: 'admin-icons'), '', class: "icon-select" ) %>
+		</div>
+	<% end %>
+</div>

@@ -1,0 +1,11 @@
+<%= render 'admins/back', add: 'Partners', link: new_partner_path %>
+<div id="admin-partners-index">
+	<div class="container">
+			<% @partners.each do |partner| %>
+				<div class="col-md-3">
+					<%= image_tag partner.image.url(:square) %>
+					<%= link_to 'DELETE', partner, data: { confirm: "Are You Sure?" }, method: :delete, remote: true %>
+				</div>
+			<% end %>
+	</div>
+</div>

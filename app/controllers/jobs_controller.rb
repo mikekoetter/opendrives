@@ -2,6 +2,11 @@ class JobsController < ApplicationController
   layout 'admin'
   before_action :authenticate_admin!
 
+  def index
+    @jobs =  Job.all
+    @icons = Icon.all
+  end
+
   def show
     @job = Job.find(params[:id])
   end
@@ -22,6 +27,7 @@ class JobsController < ApplicationController
 
   def edit
     @job = Job.find(params[:id])
+    
   end
 
   def update

@@ -1,0 +1,17 @@
+<div class="col-md-12 text-center marginBottom50">
+	<%= link_to "< ", admins_path, class: 'btn btn-default' %>
+	<%= link_to 'ADD A NEW ICONS', new_icon_path, class: 'btn btn-success' %>
+</div>
+<div id="admin-icons-index">
+	<div class="container">
+		<div class="row">
+			<% @icons.each do |icon| %>
+				<div class="col-md-3">
+					<img src='<%= icon.image.url(:square) %>'>
+					<%= link_to 'DELETE', icon, data: { confirm: "Are You Sure?" }, method: :delete, remote: true %>
+				</div>
+			<% end %>
+		</div>
+	</div>	
+</div>
+	<%= render('icons/icons', icons: @icons) %>

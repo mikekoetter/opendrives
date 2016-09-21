@@ -7,8 +7,9 @@ class AdminsController < ApplicationController
 		
 	end
 
-	def jobs
-		@jobs = Job.all
-	end
+	# def jobs
+	# 	@jobs = Job.all
+	# 	@icons = Icon.all
+	# end
 
 end

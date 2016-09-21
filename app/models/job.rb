@@ -1,4 +1,5 @@
 class Job < ActiveRecord::Base
+	has_and_belongs_to_many :icons
 	has_attached_file :image, styles: {
     thumb: '100x100>',
     square: '200x200#',

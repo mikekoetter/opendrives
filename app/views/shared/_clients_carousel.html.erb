@@ -1,39 +1,19 @@
 <div class="container hr-carousel-trigger">
-		<div class="row text-center marginTop100">
-			<div class="col-md-6 col-md-offset-3">
-				<h2><span class="light">our</span> clients</h2>
-				<hr class="carousel-hr hr-anim-carousel">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-10 col-md-offset-1 marginTop50 carousel-anchor">
-				<div class="clients-carousel">
-					<div><%= image_tag 'clients-Annapurna.png' %></div>
-					<div><%= image_tag 'clients-Bad Robot.png' %></div>
-					<div><%= image_tag 'clients-Blur.png' %></div>
-					<div><%= image_tag 'clients-Corgan Media Lab.png' %></div>
-					<div><%= image_tag 'clients-DirecTV.png' %></div>
-					<div><%= image_tag 'clients-Dreamworks.png' %></div>
-					<div><%= image_tag 'clients-Exile.png' %></div>
-					<div><%= image_tag 'clients-FotoKem.png' %></div>
-					<div><%= image_tag 'clients-Fox.png' %></div>
-					<div><%= image_tag 'clients-Iron Mountain.png' %></div>
-					<div><%= image_tag 'clients-Joke.png' %></div>
-					<div><%= image_tag 'clients-Legendary.png' %></div>
-					<div><%= image_tag 'clients-Locktix.png' %></div>
-					<div><%= image_tag 'clients-NBC Universal.png' %></div>
-					<div><%= image_tag 'clients-Nerdist.png' %></div>
-					<div><%= image_tag 'clients-PopTV.png' %></div>
-					<div><%= image_tag 'clients-Regency.png' %></div>
-					<div><%= image_tag 'clients-Riot Games.png' %></div>
-					<div><%= image_tag 'clients-Rocket Jump.png' %></div>
-					<div><%= image_tag 'clients-Shed.png' %></div>
-					<div><%= image_tag 'clients-Turner.png' %></div>
-					<div><%= image_tag 'clients-WB.png' %></div>
-					<div><%= image_tag 'clients-YouTube.png' %></div>
-				</div>
-				<%= image_tag 'carousel-left-arrow.png', class: "carousel-arrow carousel-left-arrow" %>
-				<%= image_tag 'carousel-right-arrow.png', class: "carousel-arrow carousel-right-arrow" %>
-			</div>
+	<div class="row text-center marginTop100">
+		<div class="col-md-6 col-md-offset-3">
+			<h2><span class="light">our</span> clients</h2>
+			<hr class="carousel-hr hr-anim-carousel">
 		</div>
 	</div>
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1 marginTop50 carousel-anchor">
+			<div class="clients-carousel">
+				<% clients.each do |client| %>
+					<div><%= image_tag client.image.url(:square) %></div>
+				<% end %>
+			</div>
+			<%= image_tag 'carousel-left-arrow.png', class: "carousel-arrow carousel-left-arrow" %>
+			<%= image_tag 'carousel-right-arrow.png', class: "carousel-arrow carousel-right-arrow" %>
+		</div>
+	</div>
+</div>

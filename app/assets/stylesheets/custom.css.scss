@@ -325,6 +325,39 @@ hr {
     position: relative;
     left: 0;
 }
+/* CUSTOM BOOTSTRAP GRID 5 COLUMNS */
+	.col-xs-15,
+	.col-sm-15,
+	.col-md-15,
+	.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+	}
+	.col-xs-15 {
+    width: 20%;
+    float: left;
+	}
+	@media (min-width: 768px) {
+		.col-sm-15 {
+      width: 20%;
+      float: left;
+    }
+	}
+	@media (min-width: 991px) {
+    .col-md-15 {
+      width: 20%;
+      float: left;
+    }
+	}
+	@media (min-width: 1200px) {
+    .col-lg-15 {
+      width: 20%;
+      float: left;
+    }
+	}
+	/* -- END -- CUSTOM BOOTSTRAP GRID 5 COLUMNS */
 
 /*-------------------------  Shared Carousel   -------------------------*/
 
@@ -1148,39 +1181,7 @@ nav {
 	.home-reason-logo {
 		width: 75px;
 	}
-	/* CUSTOM BOOTSTRAP GRID 5 COLUMNS */
-	.col-xs-15,
-	.col-sm-15,
-	.col-md-15,
-	.col-lg-15 {
-    position: relative;
-    min-height: 1px;
-    padding-right: 10px;
-    padding-left: 10px;
-	}
-	.col-xs-15 {
-    width: 20%;
-    float: left;
-	}
-	@media (min-width: 768px) {
-		.col-sm-15 {
-      width: 20%;
-      float: left;
-    }
-	}
-	@media (min-width: 991px) {
-    .col-md-15 {
-      width: 20%;
-      float: left;
-    }
-	}
-	@media (min-width: 1200px) {
-    .col-lg-15 {
-      width: 20%;
-      float: left;
-    }
-	}
-	/* -- END -- CUSTOM BOOTSTRAP GRID 5 COLUMNS */
+	
 	h3 {
 		font-size: 3em;
 	}
@@ -1418,7 +1419,7 @@ nav {
 	hr {
 		width: 130px;
 	}
-	.col-sm-3, .col-sm-2 {
+	.col-xs-6 {
 		margin-bottom: 50px;
 		img {
 			width: 120px;
@@ -4949,6 +4950,7 @@ footer {
 	width: 15%;
 	background-color: #2977F2;
 	position: fixed;
+	height: 100%;
 	ul li {
 		margin-bottom: 50px;
 	}
@@ -5031,6 +5033,32 @@ footer {
 	}
 }
 	
+#admin-jobs-index {
+	.btn.btn-warning {
+		width: 80%;
+	}
+	.modal-content {
+		height: 200px;
+	}
+}
+
+#admin-clients-index, #admin-icons-index, #admin-partners-index {
+	.col-md-3 {
+		border: 1px solid black;
+	}
+	img {
+		width: 100%;
+	}
+}
+
+
+.admin-icons {
+	width: 100px;
+	height: 100px;
+	margin-top: 20px;
+	padding: 5px;
+}
+
 
 .career-logo-div {
 	position: relative;

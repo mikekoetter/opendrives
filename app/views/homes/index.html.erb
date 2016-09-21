@@ -142,7 +142,7 @@
 </div>
 
 <div id="home-section-6">
-	<%= render 'shared/clients_carousel' %>
+	<%= render 'shared/clients_carousel', clients: @clients %>
 </div>
 
 
@@ -159,33 +159,12 @@
 			</div>
 		</div>
 		<div class="row text-center marginTop50  marginBottom100">
-			<div class="col-sm-3 col-xs-6">
-				<%= image_tag 'partners-micron.png', class: 'anim partners-animation-right' %>
-			</div>
-			<div class="col-sm-3 col-xs-6">
-				<%= image_tag 'partners-nvidia.png', class: 'anim partners-animation-right' %>
-			</div>
-			<div class="col-sm-3 col-xs-6">
-				<%= image_tag 'partners-HGST.png', class: 'anim partners-animation-right' %>
-			</div>
-			<div class="col-sm-3 col-xs-6">
-				<%= image_tag 'partners-adobe.png', class: 'anim partners-animation-right' %>
-			</div>
-			<div class="col-sm-2 col-sm-offset-1 col-xs-6">
-				<%= image_tag 'partners-mellanox.png', class: 'anim partners-animation-left' %>
-			</div>
-			<div class="col-sm-2 col-xs-6">
-				<%= image_tag 'partners-hp.png', class: 'anim partners-animation-left' %>
-			</div>
-			<div class="col-sm-2 col-xs-6">
-				<%= image_tag 'partners-intel.png', class: 'anim partners-animation-left' %>
-			</div>
-			<div class="col-sm-2 col-xs-6">
-				<%= image_tag 'partners-solarflare.png', class: 'anim partners-animation-left' %>
-			</div>
-			<div class="col-sm-2 col-xs-6">
-				<%= image_tag 'partners-chelsio.png', class: 'anim partners-animation-left' %>
-			</div>
+			<% @partners.each do |partner| %>
+				<div class="col-sm-<%= column(@partners.size) %> col-xs-6">
+					<%= image_tag partner.image.url(:square), class: 'anim partners-animation-right' %>
+				</div>
+			<% end %>
+			
 		</div>
 	</div>
 </div>
