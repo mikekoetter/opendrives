@@ -1310,11 +1310,19 @@ nav {
 			}
 	}
 }
- 
+
 #home-section-7 {
 	background-image: image-url('section-7-background.png');
 	background-size: 100%;
 	background-repeat: no-repeat;
+	.faq_support_doc_div {
+		.chrome-padding-top {
+			padding-top: 0px;
+		}
+		_::-webkit-:not(:root:root), .chrome-padding-top {
+	  		padding-top: 0; 
+		}
+	}
 } 
  
 #home-section-8 {
