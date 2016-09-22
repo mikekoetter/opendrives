@@ -652,7 +652,7 @@ $(document).ready(function() {
 													.addTo(productsController);
 	}
 	
-	var productsScene2 = new ScrollMagic.Scene({triggerElement: "#products-section-2", offset: -250})
+	var productsScene2 = new ScrollMagic.Scene({triggerElement: "#products-section-2", duration: 300, offset: -200})
 													.setTween(productsSection2)
 													.addTo(productsController);
 	
