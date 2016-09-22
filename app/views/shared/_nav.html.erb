@@ -1,8 +1,7 @@
 <nav class="navbar navbar-fixed-top" >
   <div class="container-fluid">
     <div class="navbar-header">
-      <%= link_to(image_tag('logo.png', class: "logo-nav hide-on-scroll"), root_path, class: '') %>
-      <%= link_to(image_tag('logo-blue.png', class: "logo-nav show-on-scroll"), root_path, class: "") %>
+      <%= link_to(image_tag('logo-blue.png', class: "logo-nav"), root_path, class: "") %>
     </div>
 
     <ul class="nav navbar-nav navbar-right">
@@ -23,10 +22,10 @@
     <ul>
       <%= link_to '<li>SCHEDULE A DEMO</li>'.html_safe, contacts_path(anchor: 'contact-section-3'), class: "link-border menu-nav-contact" %>
       <br>
-      <%= link_to '<li>WHY US</li>'.html_safe, why_us_index_path %>
+      <%= link_to '<li>WHY OPENDRIVES</li>'.html_safe, why_us_index_path %>
       <%= link_to '<li>PRODUCTS</li>'.html_safe, products_index_path %>
       <%= link_to '<li>CASE STUDIES</li>'.html_safe, case_studies_index_path %>
-      <%= link_to '<li>RESOURCES</li>'.html_safe, resources_path %>
+      <%= link_to '<li>SUPPORT</li>'.html_safe, resources_path %>
       <%= link_to '<li>CAREERS</li>'.html_safe, careers_index_path %>
       <%= link_to '<li>CONTACT</li>'.html_safe, contacts_path %>
     </ul>

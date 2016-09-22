@@ -17,39 +17,31 @@
 <div id="resources-section-2">
 	<div class="container">
 		<div class="row marginTop100">
-			<div class="col-md-8 col-md-offset-2 text-center">
-				<h3 class="huge"><span class="light">you're our</span> #1 priority</h3>
-				<hr class="hr-anim-resources-section-2">
-			</div>
-			<div class="col-md-12 text-center">
-				<br><br>
-				<p><span class="resources-opacity">OpenDrives delivers</span> <strong class="big">advanced technical support</strong><span class="resources-opacity"> from industry professionals with</span> <strong class="big">decades</strong> <span class="resources-opacity">of hands-on experience building</span> <strong class="big">facilities</strong><span class="resources-opacity"> and designing workflows. Every member of the OpenDrives support team has years of industry experience and the expertise you need to diagnose and resolve issues in a </span><strong class="big">timely and efficient manner</strong><span class="resources-opacity">. From post-production to VFX to motion picture and television production, our team of support engineers has been at the </span><strong class="big">forefront of media &amp; entertainment technology</strong><span class="resources-opacity"> for decades. And they’re at your disposal. Because we know when it’s your data, standard isn’t good enough.</span></p>
-			</div>
 			<div class='col-md-12'>
 				<div class="col-sm-4">
-				<%= link_to 'tel:+18887785491' do %>
-					<div class=" resources-contact-div text-center black marginTop50 hvr-ripple-out regular">
+					<%= link_to 'tel:+18887785491' do %>
+						<div class=" resources-contact-div text-center black marginTop50 hvr-ripple-out regular">
 						+1 (888) 778-5491&nbsp;&nbsp;&nbsp;<br class="hide-until-1200">
 						<%= image_tag 'contact-phone-logo.png', class: 'resources-contact-logo' %>	
-					</div>
-				<% end %>
-			</div>
-			<div class="col-sm-4">
-				<%= link_to 'mailto:support@opendrives.com' do %>
-					<div class="resources-contact-div text-center blue marginTop50 hvr-ripple-out-blue regular">
+						</div>
+					<% end %>
+				</div>
+				<div class="col-sm-4">
+					<%= link_to 'mailto:support@opendrives.com' do %>
+						<div class="resources-contact-div text-center blue marginTop50 hvr-ripple-out-blue regular">
 						support@opendrives.com&nbsp;&nbsp;&nbsp;<br class="hide-until-1200">
-						<%= image_tag 'contact-mail-white-logo.png', class: 'resources-contact-logo' %>
-					</div>
-				<% end %>
-</div>
-<div class="col-sm-4">
-				<%= link_to 'https://support.opendrives.com/hc/en-us', target: '_blank' do %>
-					<div class=" resources-contact-div text-center black marginTop50 hvr-ripple-out regular">
+							<%= image_tag 'contact-mail-white-logo.png', class: 'resources-contact-logo' %>
+						</div>
+					<% end %>
+				</div>
+				<div class="col-sm-4">
+					<%= link_to 'https://support.opendrives.com/hc/en-us', target: '_blank' do %>
+						<div class=" resources-contact-div text-center black marginTop50 hvr-ripple-out regular">
 						create a support ticket&nbsp;&nbsp;&nbsp;<br class="hide-until-1200">
-						<%= image_tag 'contact-ticket-logo.png', class: 'resources-contact-logo' %>
-					</div>
-				<% end %>
-			</div>
+							<%= image_tag 'contact-ticket-logo.png', class: 'resources-contact-logo' %>
+						</div>
+					<% end %>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -59,27 +51,11 @@
 	<div class="container">
 		<div class="row marginTopBottom100">
 			<div class="col-md-12 text-center">
-				<h3><span class="light">contact us or fill out the support request form and one of our</span> specialists will contact you to resolve your issue as soon as possible.*</h3>
+				<h3><span class="light">contact us or fill out the support request form and one of our</span> specialists will contact you to resolve your issue as soon as possible.</h3>
 				<hr class="hr-anim-resources-form">
-				<br>
-				<p>*During standard business hours.</p>
 			</div>
 			<div class="col-md-12 marginTop50" id="resource-form">
 				<%= render 'resources_form' %>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div id="resources-section-4">
-	<div class="container">
-		<div class="row marginTopBottom100">
-			<div class="col-md-12 text-center">
-				<h2><span class="light">superior support and</span> faster resolution</h2>
-				<hr class="hr-anim-resources-section-4">
-				<br><br>
-				<p class="quote anim">“Out of all of the hardware and software vendors we use, OpenDrives hands down has the best support. OpenDrives has continually helped support our endeavors and what really sets them apart from the competition is their response time and knowledge. As a business owner, I feel confident with them on my team and taking care of those critical infrastructure issues so I can focus on what matters most, running my business."</p>
-				<p><small>Gresham Lochner, Locktix</small></p>
 			</div>
 		</div>
 	</div>
@@ -106,7 +82,7 @@
 		  	<a data-toggle="tab" href="#support-document" class="support-document-tab">
 		  		<%= image_tag 'resources-support-document-logo.png' %>
 		  		<br><br>
-		  		<p class="regular">support documents</p>
+		  		<p class="regular">documentation</p>
 		  	</a>
 		  </li>
 		  <li>
@@ -226,55 +202,73 @@
 		  			<hr class="hr-anim-resources-section-6">
 		  			<br><br>
 		  		</div>
-		  		<div class="col-md-4 marginTop50">
-		  			<a href="/support_documents/Open_Drives_Ghost_Mounts.pdf" class="link-download" target="_blank">
-			  			<div class="col-xs-2">
-			  				<%= image_tag 'resources-support-document-logo-black.png', class: 'logo-tab-content' %>
-			  			</div>
-			  			<div class="col-xs-10">
-			  				<p class="bold">am i ghost mounting my automount on my mac?</p>
-			  			</div>
-			  		</a>
-		  		</div>
-		  		<div class="col-md-4 marginTop50">
-		  			<a href="/support_documents/Open_Drives_NFS_8.1_Setup.pdf" class="link-download" target="_blank">
-			  			<div class="col-xs-2">
-			  				<%= image_tag 'resources-support-document-logo-black.png', class: 'logo-tab-content' %>
-			  			</div>
-			  			<div class="col-xs-10">
-			  				<p class="bold">getting nfs setup and connected to windows 8.1E</p>
-			  			</div>
-			  		</a>
-		  		</div>
-		  		<div class="col-md-4 marginTop50">
-		  			<a href="/support_documents/Configuring_Managed_Snapshot.pdf" class="link-download" target="_blank">
-			  			<div class="col-xs-2">
-			  				<%= image_tag 'resources-support-document-logo-black.png', class: 'logo-tab-content' %>
-			  			</div>
-			  			<div class="col-xs-10">
-			  				<p class="bold">configuring managed snapshots</p>
-			  			</div>
-			  		</a>
-		  		</div>
-		  		<div class="col-md-4 col-md-offset-2 marginTop50">
-		  			<a href="/support_documents/Compatability_Matrices.pdf" class="link-download" target="_blank">
-			  			<div class="col-xs-2">
-			  				<%= image_tag 'resources-support-document-logo-black.png', class: 'logo-tab-content' %>
-			  			</div>
-			  			<div class="col-xs-10">
-			  				<p class="bold">compatibility <br class="hide-in-mobile">matrices</p>
-			  			</div>
-			  		</a>
-		  		</div>
-		  		<div class="col-md-4 marginTop50">
-		  			<a href="/support_documents/Best_Practices_One_Sheet.pdf" class="link-download" target="_blank">
-			  			<div class="col-xs-2">
-			  				<%= image_tag 'resources-support-document-logo-black.png', class: 'logo-tab-content' %>
-			  			</div>
-			  			<div class="col-xs-10">
-			  				<p class="bold">best practices <br class="hide-in-mobile">one sheet</p>
-			  			</div>
-			  		</a>
+		  		<div class="col-md-6 col-md-offset-3">
+		  			<table class="table table-hover text-right">
+					    <tbody>
+					    	
+						      <tr>
+						        <td>
+						        	<a href="/support_documents/Open_Drives_Ghost_Mounts.pdf" class="link-download" target="_blank">
+						        		<%= image_tag 'resources-support-document-logo-black.png', class: 'logo-tab-content' %>
+						        	</a>
+						        </td>
+						        <td class="bold">
+						        	<a href="/support_documents/Open_Drives_Ghost_Mounts.pdf" class="link-download" target="_blank">
+						        		am i ghost mounting my automount on my mac?
+						        	</a>
+						        </td>
+						      </tr>
+					    	
+					      <tr>
+					        <td>
+					        	<a href="/support_documents/Open_Drives_NFS_8.1_Setup.pdf" class="link-download" target="_blank">
+						        		<%= image_tag 'resources-support-document-logo-black.png', class: 'logo-tab-content' %>
+						        	</a>
+					        </td>
+					        <td class="bold">
+					        	<a href="/support_documents/Open_Drives_NFS_8.1_Setup.pdf" class="link-download" target="_blank">
+					        		getting nfs setup and connected to windows 8.1E
+					        	</a>
+					        </td>
+					      </tr>
+					      <tr>
+					        <td>
+					        	<a href="/support_documents/Configuring_Managed_Snapshot.pdf" class="link-download" target="_blank">
+					        		<%= image_tag 'resources-support-document-logo-black.png', class: 'logo-tab-content' %>
+					        	</a>
+					        </td>
+					        <td class="bold">
+					        	<a href="/support_documents/Configuring_Managed_Snapshot.pdf" class="link-download" target="_blank">
+					        		configuring managed snapshots
+					        	</a>
+					        </td>
+					      </tr>
+					      <tr>
+					        <td>
+					        	<a href="/support_documents/Compatability_Matrices.pdf" class="link-download" target="_blank">
+					        		<%= image_tag 'resources-support-document-logo-black.png', class: 'logo-tab-content' %>
+					        	</a>
+					        </td>
+					        <td class="bold">
+					        	<a href="/support_documents/Compatability_Matrices.pdf" class="link-download" target="_blank">
+					        		compatibility matrices
+					        	</a>
+					        </td>
+					      </tr>
+					      <tr>
+					        <td>
+					        	<a href="/support_documents/Best_Practices_One_Sheet.pdf" class="link-download" target="_blank">
+					        		<%= image_tag 'resources-support-document-logo-black.png', class: 'logo-tab-content' %>
+					        	</a>
+					        </td>
+					        <td class="bold">
+					        	<a href="/support_documents/Best_Practices_One_Sheet.pdf" class="link-download" target="_blank">
+					        		best practices one sheet
+					        	</a>
+					        </td>
+					      </tr>
+					    </tbody>
+					  </table>
 		  		</div>
 		  	</div>
 		  </div>

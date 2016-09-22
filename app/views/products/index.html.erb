@@ -27,7 +27,10 @@
 <div id="products-section-2">
 	<div class="col-md-6 col-sm-12 grey-background pull-right-sm anim">
 		<div class="col-xs-4  col-md-offset-1 text-center anim">
-			<%= link_to('<span class="angle-right-icon">&gt;</span>'.html_safe, '#opus', class: 'smooth-scroll round-border-link') %>
+			<%= link_to '#opus', class: "smooth-scroll round-border-link" do %>
+			<%= image_tag 'angle-down-icon-black.png', class: "hide-on-hover" %>
+			<%= image_tag 'angle-down-icon.png', class: "show-on-hover" %>
+			<% end %>
 		</div>
 		<div class="col-xs-8 col-md-4 anim">
 			<p class="lead regular"><span class="bold">OPUS Software Platform:</span> The Pinnacle of OS Integration</p>
@@ -93,10 +96,10 @@
 <div id="products-section-3">
 	<div class="container">
 		<div class="row marginTop100">
-			<div class="col-md-12">
-				<%= image_tag 'products-software-snapshot.png', class: "opus-center" %>
-				<%= image_tag 'products-software-snapshot-left.png', class: "opus-left" %>
-				<%= image_tag 'products-software-snapshot-right.png', class: "opus-right" %>
+			<div class="col-md-12 opus-carousel">
+				<div><%= image_tag 'products-software-snapshot.png', class: "" %></div>
+				<div><%= image_tag 'products-software-snapshot-left.png', class: "" %></div>
+				<div><%= image_tag 'products-software-snapshot-right.png', class: "" %></div>
 			</div>
 		</div>
 		<div class="row marginTop100 trigger-overlay-second">

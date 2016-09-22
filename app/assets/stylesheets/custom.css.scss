@@ -8,12 +8,12 @@ blue: #2977F2;
 
 @font-face {
     font-family: 'novecento_sans_widelight';
-    src: font-url(asset-path('Novecentosanswide-Light-webfont.eot'));
-    src: font-url(asset-path('Novecentosanswide-Light-webfont.eot?#iefix')) format('embedded-opentype'),
-         font-url(asset-path('Novecentosanswide-Light-webfont.woff2')) format('woff2'),
-         font-url(asset-path('Novecentosanswide-Light-webfont.woff')) format('woff'),
-         font-url(asset-path('Novecentosanswide-Light-webfont.ttf')) format('truetype'),
-         font-url(asset-path('Novecentosanswide-Light-webfont.svg#novecento_sans_widelight')) format('svg');
+    src: font-url(asset-path('ODNovecentosanswide-Light-webfont.eot'));
+    src: font-url(asset-path('ODNovecentosanswide-Light-webfont.eot?#iefix')) format('embedded-opentype'),
+         font-url(asset-path('ODNovecentosanswide-Light-webfont.woff2')) format('woff2'),
+         font-url(asset-path('ODNovecentosanswide-Light-webfont.woff')) format('woff'),
+         font-url(asset-path('ODNovecentosanswide-Light-webfont.ttf')) format('truetype'),
+         font-url(asset-path('ODNovecentosanswide-Light-webfont.svg#novecento_sans_widelight')) format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -21,12 +21,12 @@ blue: #2977F2;
 
 @font-face {
     font-family: 'novecento_sans_widebook';
-    src: font-url(asset-path('Novecentosanswide-Book-webfont.eot'));
-    src: font-url(asset-path('Novecentosanswide-Book-webfont.eot?#iefix')) format('embedded-opentype'),
-         font-url(asset-path('Novecentosanswide-Book-webfont.woff2')) format('woff2'),
-         font-url(asset-path('Novecentosanswide-Book-webfont.woff')) format('woff'),
-         font-url(asset-path('Novecentosanswide-Book-webfont.ttf')) format('truetype'),
-         font-url(asset-path('Novecentosanswide-Book-webfont.svg#novecento_sans_widebook')) format('svg');
+    src: font-url(asset-path('ODNovecentosanswide-Book-webfont.eot'));
+    src: font-url(asset-path('ODNovecentosanswide-Book-webfont.eot?#iefix')) format('embedded-opentype'),
+         font-url(asset-path('ODNovecentosanswide-Book-webfont.woff2')) format('woff2'),
+         font-url(asset-path('ODNovecentosanswide-Book-webfont.woff')) format('woff'),
+         font-url(asset-path('ODNovecentosanswide-Book-webfont.ttf')) format('truetype'),
+         font-url(asset-path('ODNovecentosanswide-Book-webfont.svg#novecento_sans_widebook')) format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -34,12 +34,12 @@ blue: #2977F2;
 
 @font-face {
     font-family: 'novecento_sans_widemedium';
-    src: font-url(asset-path('Novecentosanswide-Medium-webfont.eot'));
-    src: font-url(asset-path('Novecentosanswide-Medium-webfont.eot?#iefix')) format('embedded-opentype'),
-         font-url(asset-path('Novecentosanswide-Medium-webfont.woff2')) format('woff2'),
-         font-url(asset-path('Novecentosanswide-Medium-webfont.woff')) format('woff'),
-         font-url(asset-path('Novecentosanswide-Medium-webfont.ttf')) format('truetype'),
-         font-url(asset-path('Novecentosanswide-Medium-webfont.svg#novecento_sans_widemedium')) format('svg');
+    src: font-url(asset-path('ODNovecentosanswide-Medium-webfont.eot'));
+    src: font-url(asset-path('ODNovecentosanswide-Medium-webfont.eot?#iefix')) format('embedded-opentype'),
+         font-url(asset-path('ODNovecentosanswide-Medium-webfont.woff2')) format('woff2'),
+         font-url(asset-path('ODNovecentosanswide-Medium-webfont.woff')) format('woff'),
+         font-url(asset-path('ODNovecentosanswide-Medium-webfont.ttf')) format('truetype'),
+         font-url(asset-path('ODNovecentosanswide-Medium-webfont.svg#novecento_sans_widemedium')) format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -47,12 +47,12 @@ blue: #2977F2;
 
 @font-face {
     font-family: 'novecento_sans_widedemibold';
-    src: font-url(asset-path('Novecentosanswide-DemiBold-webfont.eot'));
-    src: font-url(asset-path('Novecentosanswide-DemiBold-webfont.eot?#iefix')) format('embedded-opentype'),
-         font-url(asset-path('Novecentosanswide-DemiBold-webfont.woff2')) format('woff2'),
-         font-url(asset-path('Novecentosanswide-DemiBold-webfont.woff')) format('woff'),
-         font-url(asset-path('Novecentosanswide-DemiBold-webfont.ttf')) format('truetype'),
-         font-url(asset-path('Novecentosanswide-DemiBold-webfont.svg#novecento_sans_widedemibold')) format('svg');
+    src: font-url(asset-path('ODNovecentosanswide-DemiBold-webfont.eot'));
+    src: font-url(asset-path('ODNovecentosanswide-DemiBold-webfont.eot?#iefix')) format('embedded-opentype'),
+         font-url(asset-path('ODNovecentosanswide-DemiBold-webfont.woff2')) format('woff2'),
+         font-url(asset-path('ODNovecentosanswide-DemiBold-webfont.woff')) format('woff'),
+         font-url(asset-path('ODNovecentosanswide-DemiBold-webfont.ttf')) format('truetype'),
+         font-url(asset-path('ODNovecentosanswide-DemiBold-webfont.svg#novecento_sans_widedemibold')) format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -108,7 +108,7 @@ a:hover {
 hr {
 	height: 6px;
 	border-width: 0;
-	background-color: #2977F2;
+	background-color: #000;
 	width: 200px;
 }
 
@@ -286,6 +286,10 @@ hr {
 	color: #2977F2;
 }
 
+.heavy {
+	font-weight: 900;
+}
+
 .hide-in-desktop, .hide-in-sm-desktop {
 	display: none;
 }
@@ -381,31 +385,72 @@ hr {
 /*-------------------------  Shared_partials   -------------------------*/
 
 .faq_support_doc_div {
-	.link-with-border {
-		width: 90%;
+	/*border-bottom: 10px solid #000;*/
+	.nav-tabs {
+		border: none !important;
+		li {
+			a {
+				margin: 0;
+				padding: 15px 40px 10px 40px;
+				color: #fff;
+				border: none !important;
+				border-left: 1px solid #fff !important;
+				background-color: #68B3FC !important;
+				border-radius: 0 !important;
+				p {
+					font-size: 1.2em;
+					opacity: 0.9;
+				}
+				img {
+					opacity: 0.9;
+					width: 50px;
+				}
+			}
+			.faqs-tab {
+				background-color: #53a1fb !important;
+			}
+			.support-document-tab {
+				background-color: #3A93FC !important;
+			}
+			.videos-tab {
+				background-color: #337ADC !important;
+			}
+			p {
+				text-align: center;
+			}
+		}	
 	}
-	hr {
-		background-color: #000;
+	.nav-tabs > li > a:hover{
+		p {
+			opacity: 1;
+		}
+		img {
+			opacity: 1;
+		}
 	}
-	.hr1 {
-		width: 40px;
-	}
-	.hr2 {
-		width: 150px;
-	}
-	.hr3 {
-		width: 60px;
+	.nav-tabs > li.active > a,
+	.nav-tabs > li.active > a:focus,
+	.nav-tabs > li.active > a:hover{
+		font-weight: 900; 
+		border-radius: 0px;
+		background-color: #000 !important;
+		p {
+			opacity: 1;
+		}
+		img {
+			opacity: 1;
+		}
 	}
 	@media (max-width: 991px) {
-		.link-with-border {
-			width: 290px;
+		.nav-tabs {
+			border: none !important;
+			li {
+				a {
+					height: 150px;
+				}
+			}
 		}
 	}
-	/*@media (max-width: 350px) {
-		.link-with-border {
-			width: 270px;
-		}
-	}*/
 }
 
 /*-------------------------  Navigation   -------------------------*/
@@ -659,62 +704,15 @@ nav {
 /*-------------------------  Home   -------------------------*/
 
 #home-section-1 {
-	.sky {
-		width:100%;
-	  height: 240px!important;
-	  top:10%;
-	  position: absolute;
-	  overflow: hidden;
+	img {
+		position: absolute;
 	}
-	.clouds_one {
-	  background: image-url("cloud1.png");
-	  position: absolute;
-	  right: -2000px;
-	  top: 0;
-	  height: 100%;
-	  width: 300%;
-		-webkit-transform: translate3d(0, 0, 0);
-		-moz-transform: translate3d(0, 0, 0);
-		-o-transform: translate3d(0, 0, 0);
-	  -webkit-filter: blur(7px);
-	  filter: blur(7px);
-	}
-	.clouds_two {
-	  background: image-url("cloud2.png");
-	  position: absolute;
-	  left: -1000px;
-	  top: 0;
-	  height: 100%;
-	  width: 300%;
-	  -webkit-transform: translate3d(0, 0, 0);
-		-moz-transform: translate3d(0, 0, 0);
-		-o-transform: translate3d(0, 0, 0);
-	  -webkit-filter: blur(4px);
-	  filter: blur(4px);
-	}
-	.clouds_three {
-	  background: image-url("cloud3.png");
-	  position: absolute;
-	  left: -900px;
-	  top: 0;
-	  height: 100%;
-	  width: 300%;
-	  -webkit-transform: translate3d(0, 0, 0);
-		-moz-transform: translate3d(0, 0, 0);
-		-o-transform: translate3d(0, 0, 0);
-	  -webkit-filter: blur(4px);
-	  filter: blur(4px);
-	}
-	background-image: image-url('home-top.png');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center bottom;
 	letter-spacing: 2px;
 	h1.catchphrase.hide-in-sm-desktop {
 		font-family: 'novecento_sans_widemedium';
 	}
 	.catchphrase {
-		margin-top: 300px;
+		margin-top: 200px;
 		.intro-phrase {
 			position: absolute;
 			display: inline-block;
@@ -759,7 +757,7 @@ nav {
 	a {
 		position: absolute;
 		width: 50px;
-		top: 85%;
+		top: 95%;
 		bottom: 0%;
 		left: 0%;
 		right: 0%;
@@ -775,7 +773,7 @@ nav {
 	}
 	@media (min-width: 1900px) {
 		.catchphrase {
-			margin-top: 400px;
+			margin-top: 300px;
 		}
 	}
 	@media (max-width: 1200px) { 
@@ -822,15 +820,7 @@ nav {
 				font-size: 1.8em;
 			}
 		} 
-		.clouds_one {
-		  right: -2000px;
-		}
-		.clouds_two {
-		  left: -700px;
-		}
-		.clouds_three {
-		  left: -800px;
-		}
+		
 	}
 	@media (max-width: 550px) { 
 		.catchphrase {
@@ -884,7 +874,8 @@ nav {
 	background-size: cover;
 	background-position: center;
 	img {
-		width: 75%;
+		margin-top: 50px;
+		width: 100%;
 	}
 	.container div {
 		h3 {
@@ -928,20 +919,6 @@ nav {
 				width: 40%;
 			}
 	}
-	/* Portrait */
-	/*@media only screen 
-	  and (min-device-width: 320px) 
-	  and (max-device-width: 736px) 
-	  and (-webkit-min-device-pixel-ratio: 2)
-	  and (orientation: portrait) { 
-	  	h3 {
-	  		margin-top: -160;
-	  	}
-	  	img {
-				margin-top: 10px;
-				width: 40%;
-			}
-	}*/
 }
 
 #home-section-3 {
@@ -951,10 +928,11 @@ nav {
 	}
 	.nav-tabs > li > a{
 		border: 0px solid #fff !important;
+		font-size: 1.5em;
 	}
 	.nav-tabs > li > a:hover{
 		background-color: #fff !important;
-		color:#000;
+		color:#2977F2;
 	}
 	.nav-tabs > li.active > a,
 	.nav-tabs > li.active > a:focus,
@@ -1408,7 +1386,6 @@ nav {
 }
  
 #home-section-7 {
-	min-height: 500px;
 	background-image: image-url('section-7-background.png');
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -1560,6 +1537,9 @@ nav {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	hr {
+		background-color: #fff;
+	}
 	.col-sm-4 {
 		margin-bottom: 10px;
 	}
@@ -1703,6 +1683,9 @@ nav {
 	background-position: center;
 	background-repeat: no-repeat;
 	color: #fff;
+	hr {
+		background-color: #fff;
+	}
 }
 
 #case-interior-gone-girl-section-5 {
@@ -1793,6 +1776,9 @@ nav {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	hr {
+		background-color: #fff;
+	}
 }
 
 #case-interior-joke-productions-section-5 {
@@ -1917,7 +1903,7 @@ nav {
 		width: 400px;
 		min-height: 850px;
 		max-height: 900px;
-		border-bottom: 4px solid #2977F2;
+		border-bottom: 4px solid #000;
 		h2 {
 			font-size: 5em;
 			font-family: Arial, Helvetica, sans-serif;
@@ -1939,7 +1925,7 @@ nav {
 		}
 	}
 	.case-study-div:hover {
-		border-bottom: 4px solid #000;
+		border-bottom: 4px solid #2977F2;
 	}
 	.no-padding-left {
 		padding-left: 0;
@@ -2685,15 +2671,23 @@ form {
 		background-color: #E5E8F1;
 		height: 250px;
 		.col-xs-4 {
-			margin-top: 45px;
+			margin-top: 55px;
 		}
 		.round-border-link {
 			border: 6px solid #000;
 			border-radius: 100%;
-			padding: 37px 33px 22px 30px;
+			padding: 30px 25px;
+			img {
+				width: 25px;
+			}
 		}
 		.round-border-link:hover {
-			color: #fff;
+			.show-on-hover {
+				display: inline-block;
+			}
+			.hide-on-hover {
+				display: none;
+			}
 			background-color: #2977F2;
 		}
 		.angle-right-icon {
@@ -2878,29 +2872,14 @@ form {
 
 #products-section-3 {
 	hr {
+		background-color: #fff;
 		margin-top: -30px;
 	}
 	.col-md-12 {
 		position: relative;
 		img {
 			width: 65%;
-		}
-		.opus-center {
-			position: relative;
-			z-index: 5;
-			left: 20%;
-		}
-		.opus-left, .opus-right {
-			position: absolute;
-			z-index: 3;
-			top: 50px;
-			width: 50%;
-		}
-		.opus-left {
-			left: 20px;
-		}
-		.opus-right {
-			right: 0;
+			margin: auto;
 		}
 	}
 	.col-xs-2, .col-xs-10 {
@@ -2926,7 +2905,7 @@ form {
 	position: relative;
 	z-index: 3;
 	.col-sm-3 {
-		padding-top: 5%;
+		padding-top: 7%;
 		height: 400px;
 		img {
 			width: 90px;
@@ -2940,7 +2919,10 @@ form {
 	}
 	.col-sm-3.black {
 		background-color: #000;
-		color: #fff;
+		a {
+			color: #fff;
+		}
+		
 		.link-with-border {
 			background-color: #000;
 			color: #fff;
@@ -3868,8 +3850,7 @@ iframe {
 		width: 100%;
 	}
 	.box {
-		font-family: Arial, Helvetica, sans-serif;
-		font-weight: 200;
+		font-weight: 100;
 		font-size: 0.9em;
 		letter-spacing: 2px;
 		position: relative;
@@ -3930,6 +3911,7 @@ iframe {
 	}
 	hr {
 		margin-left: 0;
+		background-color: #fff;
 	}
 	p.lead {
 		font-size: 1.2em;

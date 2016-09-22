@@ -1,9 +1,9 @@
 <div class="col-sm-3 <%= color %> hide-in-sm-mobile products-box">
-	<%= image_tag "products-#{img}.png" %>
+	<%= link_to '', data: { target: "#products-#{img}" }, class: 'to-overlay hvr-underline-from-center' do %>
+		<%= image_tag "products-#{img}.png" %>
 	<br><br><br class="hide-in-mobile">
 	<p class="lead"><%= title.html_safe %></p>
-	<br><br class="hide-in-mobile"><%= '<br>'.html_safe if on_liner?(line) %>
-	<%= link_to('more &nbsp;&nbsp;<span class="plus-icon-blue">+</span>'.html_safe, '', data: { target: "#products-#{img}" }, class: 'to-overlay link-with-border hvr-shutter-out-horizontal') %>
+	<% end %>
 </div>
 
 <div class="col-sm-3 <%= color %> hide-in-sm-desktop products-box">

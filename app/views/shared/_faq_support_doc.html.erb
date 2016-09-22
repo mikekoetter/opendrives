@@ -1,47 +1,33 @@
 <div class="container faq_support_doc_div">
-	<div class="row text-center marginBottom100 ">
-		<div class="col-md-12 marginTop100">
-			<div class="col-md-4">
-				<h3>faqs</h3>
-				<hr class="hr1">
-				<br>
-				<p class="lead bold">have questions? <span class="regular">find<br> answers in our frequently<br> ask questions.</span></p>
-				<br>
-				<div class="hide-in-desktop">
-					<%= link_to('read more &nbsp;&nbsp;<span class="plus-icon-blue">+</span>'.html_safe, '/resources/#resources-section-6#faqs', class: 'link-with-border hvr-shutter-out-horizontal marginBottom50') %>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<h3>support docs</h3>
-				<hr class="hr2">
-				<br>
-				<p class="lead regular">we don't just say we're the<br> best.<span class="bold"> we have the facts</span> to <br>back it up.</p>
-				<br>
-				<div class="hide-in-desktop">
-					<%= link_to('see what we mean &nbsp;&nbsp;<span class="plus-icon-blue">+</span>'.html_safe, '/resources/#resources-section-6#support-document', class: 'link-with-border hvr-shutter-out-horizontal marginBottom50') %>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<h3>videos</h3>
-				<hr class="hr3">
-				<br>
-				<p class="lead regular">just getting started with<br> OpenDrives?<span class="bold">  see us in <br>action</span>.</p>
-				<br>
-				<div class="hide-in-desktop">
-					<%= link_to('watch them now &nbsp;&nbsp;<span class="plus-icon-blue">+</span>'.html_safe, '/resources/#resources-section-6#videos', class: 'link-with-border hvr-shutter-out-horizontal marginBottom50') %>
-				</div>
-			</div>
-			<div class="col-md-12 hide-in-mobile">
-				<div class="col-md-4">
-					<%= link_to('read more &nbsp;&nbsp;<span class="plus-icon-blue">+</span>'.html_safe, '/resources/#resources-section-6#faqs', class: 'link-with-border hvr-shutter-out-horizontal') %>
-				</div>
-				<div class="col-md-4">
-					<%= link_to('see what we mean &nbsp;&nbsp;<span class="plus-icon-blue">+</span>'.html_safe, '/resources/#resources-section-6#support-document', class: 'link-with-border hvr-shutter-out-horizontal') %>
-				</div>
-				<div class="col-md-4">
-					<%= link_to('watch them now &nbsp;&nbsp;<span class="plus-icon-blue">+</span>'.html_safe, '/resources/#resources-section-6#videos', class: 'link-with-border hvr-shutter-out-horizontal') %>
-				</div>
-			</div>
-		</div>
+	<div class="container marginTopBottom100">
+		<ul class="nav nav-tabs nav-justified">
+		  <li>
+		  	<p class="lead bold">have questions? <span class="regular">find<br> answers in our frequently<br> ask questions.</span></p>
+		  	<br>
+		  	<a  href="/resources/#resources-section-6#faqs" class="faqs-tab">
+		  		<%= image_tag 'resources-faqs-logo.png' %>
+		  		<br><br>
+		  		<p class="regular">faqs</p>
+		  	</a>
+		  </li>
+		  <li>
+		  	<p class="lead regular">we don't just say we're the<br> best.<span class="bold"> we have the facts</span> to <br>back it up.</p>
+		  	<br>
+		  	<a href="/resources/#resources-section-6#support-document" class="support-document-tab">
+		  		<%= image_tag 'resources-support-document-logo.png' %>
+		  		<br><br>
+		  		<p class="regular">documentation</p>
+		  	</a>
+		  </li>
+		  <li>
+		  	<p class="lead regular">just getting started with<br> OpenDrives?<span class="bold">  see us in <br>action</span>.</p>
+		  	<br>
+		  	<a href="/resources/#resources-section-6#videos" class="videos-tab">
+		  		<%= image_tag 'resources-videos-logo.png' %>
+		  		<br><br>
+		  		<p class="regular">videos</p>
+		  	</a>
+		  </li>
+		</ul>
 	</div>
 </div>
