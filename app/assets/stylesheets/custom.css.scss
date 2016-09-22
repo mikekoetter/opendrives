@@ -6,7 +6,7 @@ blue: #2977F2;
 */
 
 
-@font-face {
+/*@font-face {
     font-family: 'novecento_sans_widelight';
     src: font-url(asset-path('ODNovecentosanswide-Light-webfont.eot'));
     src: font-url(asset-path('ODNovecentosanswide-Light-webfont.eot?#iefix')) format('embedded-opentype'),
@@ -56,7 +56,9 @@ blue: #2977F2;
     font-weight: normal;
     font-style: normal;
 
-}
+}*/
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700';
 
 /*-------------------------  Generals   -------------------------*/
 
@@ -70,7 +72,10 @@ ul {
 
 h2 {
 	font-size: 4em;
-	font-family: 'novecento_sans_widemedium';
+	/*font-family: 'novecento_sans_widemedium';*/
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	font-variant: small-caps;
 }
 
 img {
@@ -80,11 +85,16 @@ img {
 h3 {
 	font-size: 2.2em;
 	letter-spacing: 2px;
-	font-family: 'novecento_sans_widemedium';
+	/*font-family: 'novecento_sans_widemedium';*/
+	font-family: 'Open Sans', sans-serif;
+	font-variant: small-caps;
 }
 
 h4 {
-	font-family: 'novecento_sans_widemedium';
+	/*font-family: 'novecento_sans_widemedium';*/
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	font-variant: small-caps;
 	font-size: 1.6em;
 }
 
@@ -157,20 +167,32 @@ hr {
 }
 
 .light {
-	font-weight: 100;
-	font-family: 'novecento_sans_widelight';
+	/*font-weight: 100;*/
+	/*font-family: 'novecento_sans_widelight';*/
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-variant: small-caps;
 }
 
 .regular {
-	font-family: 'novecento_sans_widebook';
+	/*font-family: 'novecento_sans_widebook';*/
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-variant: small-caps;
 }
 
 .medium {
-	font-family: 'novecento_sans_widemedium';
+	/*font-family: 'novecento_sans_widemedium';*/
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	font-variant: small-caps;
 }
 
 .bold {
-	font-family: 'novecento_sans_widedemibold';
+	/*font-family: 'novecento_sans_widedemibold';*/
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-variant: small-caps;
 }
 
 .quote {
@@ -187,16 +209,20 @@ hr {
 	padding: 5px 60px 7px 30px;
 	border: 3px solid #000;
 	border-radius: 40px;
-	font-family: 'novecento_sans_widemedium';
-	font-size: 1.2em;
+	/*font-family: 'novecento_sans_widemedium';*/
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	font-variant: small-caps;
+	font-size: 1.4em;
 }
 
 .plus-icon, .plus-icon-blue, .plus-circle-icon, .angle-right-icon {
 	font-size: 1.7em;
-	font-weight: 900;
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
 	position: absolute;
 	right: 10%;
-	top: -7px;
+	top: -5px;
 }
 
 .plus-icon-blue {
@@ -217,18 +243,22 @@ hr {
 	top: 16%;
 	.plus-adjust {
 		position: relative;
-		top: -9px;
+		top: -12px;
 	}
 }
 
 .link-no-border {
 	width: 230px;
 	background-color: #fff;
-	font-weight: 700;
-	padding: 7px 60px 7px 30px;
+	/*font-weight: 700;*/
+	padding: 5px 60px 7px 30px;
 	border: 3px solid rgba(0,0,0,0);
 	border-radius: 40px;
-	font-family: 'novecento_sans_widemedium';
+	/*font-family: 'novecento_sans_widemedium';*/
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	font-variant: small-caps;
+	font-size: 1.3em;
 }
 
 .link-with-border:hover, .link-no-border:hover {
@@ -715,7 +745,9 @@ nav {
 	}
 	letter-spacing: 2px;
 	h1.catchphrase.hide-in-sm-desktop {
-		font-family: 'novecento_sans_widemedium';
+		/*font-family: 'novecento_sans_widemedium';*/
+		font-family: 'Open Sans', sans-serif;
+		font-variant: small-caps;
 	}
 	.catchphrase {
 		margin-top: 200px;
@@ -728,8 +760,10 @@ nav {
 			bottom: 0;
 		}
 		.intro-1, .intro-2, .intro-3, .intro-4 {
-			font-family: 'novecento_sans_widemedium';
-			font-size: 1.2em;
+			/*font-family: 'novecento_sans_widemedium';*/
+			font-family: 'Open Sans', sans-serif;
+		font-variant: small-caps;
+			font-size: 1.5em;
 		}
 		.intro-1 {
 			top: 70%;
@@ -754,10 +788,12 @@ nav {
 	h1 {
 		font-size: 3em;
 		color: white;
-		font-family: 'novecento_sans_widelight';
+		/*font-family: 'novecento_sans_widelight';*/
+		font-family: 'Open Sans', sans-serif;
+		font-variant: small-caps;
 		.down {
 			font-weight: 100;
-			font-size: 2em;
+			font-size: 2.6em;
 		}
 	} 
 	a {
@@ -891,7 +927,10 @@ nav {
 				color: #000;
 				font-weight: 200;
 				font-size: 1.7em;
-				font-family: 'novecento_sans_widelight';
+				/*font-family: 'novecento_sans_widelight';*/
+				font-family: 'Open Sans', sans-serif;
+				font-weight: 300;
+				font-variant: small-caps;
 			}
 		}
 	} 
@@ -936,7 +975,10 @@ nav {
 		width: 100px;
 		position: relative;
 		left: 36%;
-		font-family: 'novecento_sans_widemedium';
+		/*font-family: 'novecento_sans_widemedium';*/
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 400;
+		font-variant: small-caps;
 	}
 	.tab-content {
 		.col-md-4, .col-md-6.col-md-offset-1 {
@@ -967,7 +1009,7 @@ nav {
 			p {
 				margin-left: 30px;
 				margin-bottom: -3px;
-				font-size: 1.2em;
+				font-size: 1em;
 			}
 		}
 	}
@@ -1140,7 +1182,10 @@ nav {
 		font-size: 3em;
 	}
 	p {
-		font-family: 'novecento_sans_widemedium';
+		/*font-family: 'novecento_sans_widemedium';*/
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 600;
+		font-variant: small-caps;
 		font-size: 1.2em;
 	}
 	p.lead {
@@ -1150,7 +1195,7 @@ nav {
 		margin-top: 400px;
 		.plus-circle-icon {
 			.plus-adjust {
-				top: -9px;
+				top: -12px;
 				left: 2px;
 			}
 		}
@@ -3257,7 +3302,10 @@ form {
 			margin-left: 0px;
 		}
 		p {
-			font-family: 'novecento_sans_widedemibold';
+			/*font-family: 'novecento_sans_widedemibold';*/
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 700;
+			font-variant: small-caps;
 		}
 	}
 	.panel {
@@ -3275,7 +3323,10 @@ form {
 		padding-top: 12px !important;
 		.panel-title {
 			p {
-				font-family: 'novecento_sans_widedemibold';
+				/*font-family: 'novecento_sans_widedemibold';*/
+				font-family: 'Open Sans', sans-serif;
+				font-weight: 700;
+				font-variant: small-caps;
 				font-size: 1.2em;
 				width: 90%;
 			}
