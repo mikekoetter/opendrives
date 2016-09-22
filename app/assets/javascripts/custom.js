@@ -18,7 +18,7 @@ $.fn.clicktoggle = function(a, b) {
 
 $(document).ready(function() {
 	//=======================================   Generals   =======================================//
-	if ($(window).width() > 767) {
+	if ($(window).width() > 768) {
 		$(".full-height-home").css("min-height", $(window).height());
 	}
 	$(".full-height").css("min-height", $(window).height());
