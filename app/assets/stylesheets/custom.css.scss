@@ -1,64 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700';
 
 /*
 blue: #2977F2;
 */
 
 
-/*@font-face {
-    font-family: 'novecento_sans_widelight';
-    src: font-url(asset-path('ODNovecentosanswide-Light-webfont.eot'));
-    src: font-url(asset-path('ODNovecentosanswide-Light-webfont.eot?#iefix')) format('embedded-opentype'),
-         font-url(asset-path('ODNovecentosanswide-Light-webfont.woff2')) format('woff2'),
-         font-url(asset-path('ODNovecentosanswide-Light-webfont.woff')) format('woff'),
-         font-url(asset-path('ODNovecentosanswide-Light-webfont.ttf')) format('truetype'),
-         font-url(asset-path('ODNovecentosanswide-Light-webfont.svg#novecento_sans_widelight')) format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'novecento_sans_widebook';
-    src: font-url(asset-path('ODNovecentosanswide-Book-webfont.eot'));
-    src: font-url(asset-path('ODNovecentosanswide-Book-webfont.eot?#iefix')) format('embedded-opentype'),
-         font-url(asset-path('ODNovecentosanswide-Book-webfont.woff2')) format('woff2'),
-         font-url(asset-path('ODNovecentosanswide-Book-webfont.woff')) format('woff'),
-         font-url(asset-path('ODNovecentosanswide-Book-webfont.ttf')) format('truetype'),
-         font-url(asset-path('ODNovecentosanswide-Book-webfont.svg#novecento_sans_widebook')) format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'novecento_sans_widemedium';
-    src: font-url(asset-path('ODNovecentosanswide-Medium-webfont.eot'));
-    src: font-url(asset-path('ODNovecentosanswide-Medium-webfont.eot?#iefix')) format('embedded-opentype'),
-         font-url(asset-path('ODNovecentosanswide-Medium-webfont.woff2')) format('woff2'),
-         font-url(asset-path('ODNovecentosanswide-Medium-webfont.woff')) format('woff'),
-         font-url(asset-path('ODNovecentosanswide-Medium-webfont.ttf')) format('truetype'),
-         font-url(asset-path('ODNovecentosanswide-Medium-webfont.svg#novecento_sans_widemedium')) format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'novecento_sans_widedemibold';
-    src: font-url(asset-path('ODNovecentosanswide-DemiBold-webfont.eot'));
-    src: font-url(asset-path('ODNovecentosanswide-DemiBold-webfont.eot?#iefix')) format('embedded-opentype'),
-         font-url(asset-path('ODNovecentosanswide-DemiBold-webfont.woff2')) format('woff2'),
-         font-url(asset-path('ODNovecentosanswide-DemiBold-webfont.woff')) format('woff'),
-         font-url(asset-path('ODNovecentosanswide-DemiBold-webfont.ttf')) format('truetype'),
-         font-url(asset-path('ODNovecentosanswide-DemiBold-webfont.svg#novecento_sans_widedemibold')) format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}*/
-
-@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700';
 
 /*-------------------------  Generals   -------------------------*/
 
@@ -72,7 +20,6 @@ ul {
 
 h2 {
 	font-size: 4em;
-	/*font-family: 'novecento_sans_widemedium';*/
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 600;
 	font-variant: small-caps;
@@ -85,13 +32,11 @@ img {
 h3 {
 	font-size: 2.2em;
 	letter-spacing: 2px;
-	/*font-family: 'novecento_sans_widemedium';*/
 	font-family: 'Open Sans', sans-serif;
 	font-variant: small-caps;
 }
 
 h4 {
-	/*font-family: 'novecento_sans_widemedium';*/
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 600;
 	font-variant: small-caps;
@@ -167,29 +112,24 @@ hr {
 }
 
 .light {
-	/*font-weight: 100;*/
-	/*font-family: 'novecento_sans_widelight';*/
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 	font-variant: small-caps;
 }
 
 .regular {
-	/*font-family: 'novecento_sans_widebook';*/
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 	font-variant: small-caps;
 }
 
 .medium {
-	/*font-family: 'novecento_sans_widemedium';*/
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 600;
 	font-variant: small-caps;
 }
 
 .bold {
-	/*font-family: 'novecento_sans_widedemibold';*/
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 700;
 	font-variant: small-caps;
@@ -209,7 +149,6 @@ hr {
 	padding: 5px 60px 7px 30px;
 	border: 3px solid #000;
 	border-radius: 40px;
-	/*font-family: 'novecento_sans_widemedium';*/
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 600;
 	font-variant: small-caps;
@@ -250,11 +189,9 @@ hr {
 .link-no-border {
 	width: 230px;
 	background-color: #fff;
-	/*font-weight: 700;*/
 	padding: 5px 60px 7px 30px;
 	border: 3px solid rgba(0,0,0,0);
 	border-radius: 40px;
-	/*font-family: 'novecento_sans_widemedium';*/
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 600;
 	font-variant: small-caps;
@@ -745,7 +682,6 @@ nav {
 	}
 	letter-spacing: 2px;
 	h1.catchphrase.hide-in-sm-desktop {
-		/*font-family: 'novecento_sans_widemedium';*/
 		font-family: 'Open Sans', sans-serif;
 		font-variant: small-caps;
 	}
@@ -760,9 +696,8 @@ nav {
 			bottom: 0;
 		}
 		.intro-1, .intro-2, .intro-3, .intro-4 {
-			/*font-family: 'novecento_sans_widemedium';*/
 			font-family: 'Open Sans', sans-serif;
-		font-variant: small-caps;
+			font-variant: small-caps;
 			font-size: 1.5em;
 		}
 		.intro-1 {
@@ -788,7 +723,6 @@ nav {
 	h1 {
 		font-size: 3em;
 		color: white;
-		/*font-family: 'novecento_sans_widelight';*/
 		font-family: 'Open Sans', sans-serif;
 		font-variant: small-caps;
 		.down {
@@ -927,7 +861,6 @@ nav {
 				color: #000;
 				font-weight: 200;
 				font-size: 1.7em;
-				/*font-family: 'novecento_sans_widelight';*/
 				font-family: 'Open Sans', sans-serif;
 				font-weight: 300;
 				font-variant: small-caps;
@@ -975,7 +908,6 @@ nav {
 		width: 100px;
 		position: relative;
 		left: 36%;
-		/*font-family: 'novecento_sans_widemedium';*/
 		font-family: 'Open Sans', sans-serif;
 		font-weight: 400;
 		font-variant: small-caps;
@@ -1041,7 +973,7 @@ nav {
 	@media (max-width: 767px) { 
 		margin-bottom: 100px;
 		.nav-tabs > li > a{
-		border: 0px solid #fff !important;
+			border: 0px solid #fff !important;
 			font-size: 1.3em;
 		}
 		.nav-justified {
@@ -1121,14 +1053,6 @@ nav {
 			ul li {
 	  		font-size: 0.8em;
 	  	}
-	}
-	/* Landscape */
-	@media only screen 
-	  and (min-device-width: 375px) 
-	  and (max-device-width: 736px) 
-	  and (-webkit-min-device-pixel-ratio: 2)
-	  and (orientation: landscape) { 
-
 	}
 }
 
@@ -1557,7 +1481,6 @@ nav {
 	background-image: image-url('blueenergylight.png');
 	background-size: 100%;
 	background-repeat: no-repeat;
-	
 	.link-with-border {
 		width: 250px;
 	}
@@ -1843,13 +1766,6 @@ nav {
 	@media (max-width: 550px) { 
 		font-size: 5em;
 	}
-	/* Portrait and Landscape */
-	@media only screen 
-	  and (min-device-width: 375px) 
-	  and (max-device-width: 736px) 
-	  and (-webkit-min-device-pixel-ratio: 2) { 
-
-	}
 	@media (max-width: 450px)
 		and (orientation: portrait) {
 			font-size: 4em;
@@ -1935,7 +1851,6 @@ nav {
 			margin-top: 50px;
 		}
 	}
-
 	@media (max-width: 767px) { 
 		.case-study-div {
 			width: 300px;
@@ -2117,16 +2032,6 @@ nav {
 					width: 100px;
 				}
 			}
-		
-	}
-
-	/* Landscape */
-	@media only screen 
-	  and (min-device-width: 375px) 
-	  and (max-device-width: 736px) 
-	  and (-webkit-min-device-pixel-ratio: 2)
-	  and (orientation: landscape) { 
-
 	}
 }
 
@@ -2486,7 +2391,6 @@ form {
 				bottom: 6%;
 			}
 	}
-	
 	@media (max-width: 320px)
 		and (orientation: portrait) {
 			font-size: 1.3em;
@@ -2496,7 +2400,6 @@ form {
 				}
 			}
 	}
-	
 }
 
 #products-section-2 {
@@ -2594,7 +2497,6 @@ form {
 		}
 		p.lead {
 			font-family: Arial, Helvetica, sans-serif;
-			/*font-size: 1.5em;*/
 		}
 		h3 {
 			font-size: 2.5em;
@@ -2808,7 +2710,6 @@ form {
 		a {
 			color: #fff;
 		}
-		
 		.link-with-border {
 			background-color: #000;
 			color: #fff;
@@ -2828,6 +2729,9 @@ form {
 		width: 100%;
 		height: 800px;
 		background-color: rgba(255, 255, 255, 0.97);
+		.huge {
+			font-size: 2em;
+		}
 		.close-overlay {
 			position: absolute;
 			top: 20px;
@@ -2934,7 +2838,6 @@ form {
 
 #products-section-5 {
 	position: relative;
-	
 	.product-section-5-img {
 		position: absolute;
 		top: 800px;
@@ -3058,7 +2961,6 @@ form {
 	@media (max-width: 767px) { 
 		font-size: 4.5em;
 		.resource-intro-anchor {
-			
 			.phrase-3 {
 				hr {
 					width: 200px;
@@ -3299,7 +3201,6 @@ form {
 			margin-left: 0px;
 		}
 		p {
-			/*font-family: 'novecento_sans_widedemibold';*/
 			font-family: 'Open Sans', sans-serif;
 			font-weight: 700;
 			font-variant: small-caps;
@@ -3320,7 +3221,6 @@ form {
 		padding-top: 12px !important;
 		.panel-title {
 			p {
-				/*font-family: 'novecento_sans_widedemibold';*/
 				font-family: 'Open Sans', sans-serif;
 				font-weight: 700;
 				font-variant: small-caps;
@@ -3403,28 +3303,6 @@ form {
 			}
 		}
 	}
-	/*@media (max-width: 620px) {
-		.panel-heading {
-			position: relative;
-			min-height: 70px;
-			padding-top: 20px !important;
-			.panel-minus {
-				position: absolute;
-				font-size: 1.3em;
-				right: 20px;
-				top: 30px;
-			}
-			.panel-plus {
-				position: absolute;
-				font-size: 1.3em;
-				right: 20px;
-				top: 30px;
-			}
-			.question {
-				width: 70%;
-			}
-		}
-	}*/
 	@media (max-width: 550px) {
 		.video-thumb-anchor {
 			.video-thumb {
@@ -3664,53 +3542,17 @@ iframe {
 			}
 		}
 	}
-	/* Portrait and Landscape */
-	@media only screen 
-	  and (min-device-width: 375px) 
-	  and (max-device-width: 736px) 
-	  and (-webkit-min-device-pixel-ratio: 2) { 
-
-	}
 	@media (max-width: 450px)
 		and (orientation: portrait) {
 			.phrase-right {
 				font-size: 1.2em;
 			}
 	}
-	/* Portrait-Mobile */
-	/*@media only screen 
-	  and (min-device-width: 340px) 
-	  and (max-device-width: 736px) 
-	  and (-webkit-min-device-pixel-ratio: 2)
-	  and (orientation: portrait) { 
-	  	.phrase-right {
-				font-size: 1.2em;
-			}
-	}*/
 	@media (max-width: 320px)
 		and (orientation: portrait) {
 			.phrase-right {
 				font-size: 1em;
 			}
-	}
-	/* Portrait-Mobile-xs */
-	/*@media only screen 
-	  and (min-device-width: 320px) 
-	  and (max-device-width: 568px)
-	  and (-webkit-min-device-pixel-ratio: 2)
-	  and (orientation: portrait) {
-	  	.phrase-right {
-				font-size: 1em;
-			}
-	}*/
-
-	/* Landscape */
-	@media only screen 
-	  and (min-device-width: 375px) 
-	  and (max-device-width: 736px) 
-	  and (-webkit-min-device-pixel-ratio: 2)
-	  and (orientation: landscape) { 
-
 	}
 }
 
@@ -3846,7 +3688,6 @@ iframe {
 		background-position: center;
 		background-repeat: no-repeat;
 		margin-top: -94px;
-
 		.employee-carousel-anchor {
 			width: 100%;
 			position: relative;
@@ -4227,7 +4068,6 @@ footer {
 	} 
 	@media (max-width: 350px)
 		and (orientation: portrait) {
-			/*height: 300px;*/
 	  	.col-md-2 img {
 				margin-left: 1%;
 				padding-left: 10px;

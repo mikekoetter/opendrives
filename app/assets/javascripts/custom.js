@@ -269,8 +269,8 @@ $(document).ready(function() {
 	//=======================================   Products   =======================================//
 	// Products Overlay Animation
 	var toOverlayAnim = function(e) {
-		$tm.from($(e.data("target")), 1, { scale: 0  });
-		$tm.to($(e.data("target")), 1, { opacity: 1, zIndex: 9 });
+		$tm.from($(e.data("target")), 0.5, { scale: 0  });
+		$tm.to($(e.data("target")), 0.5, { opacity: 1, zIndex: 9 });
 	}
 	function closeOverlay(e) {
 		$tm.to($(e), 0.3, { opacity: 0, zIndex: -1 });
