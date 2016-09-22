@@ -1,5 +1,5 @@
-<div class="full-height" id="home-section-1">
-	<%= image_tag 'home-top.png' %>
+<div class="full-height-home" id="home-section-1">
+	<%= image_tag 'home-top.png', class: '' %>
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 text-center">
@@ -107,9 +107,9 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-12 marginTop50">
+			<div class="col-md-12 marginTop50 customMargin">
 				<p class="lead">and that's just the beginning</p>
-				<br>
+				<br class="hide-in-sm-mobile">
 				<%= link_to('learn more &nbsp;&nbsp;<span class="plus-circle-icon"><span class="plus-adjust">+</span></span>'.html_safe, products_index_path(anchor: "opus"), class: 'link-no-border hvr-shutter-in-horizontal') %>
 			</div>
 		</div>

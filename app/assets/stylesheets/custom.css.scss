@@ -386,6 +386,7 @@ hr {
 		
 		border: none !important;
 		li {
+
 			a {
 				margin: 0;
 				padding: 15px 40px 10px 40px;
@@ -445,6 +446,14 @@ hr {
 				a {
 					height: 150px;
 				}
+			}
+		}
+	}
+	@media (max-width: 767px) {
+		.nav-tabs {
+			border: none !important;
+			li {
+				margin-bottom: 30px;
 			}
 		}
 	}
@@ -820,8 +829,9 @@ nav {
 		
 	}
 	@media (max-width: 550px) { 
+		margin-top: 100px;
 		.catchphrase {
-			margin-top: 300px;
+			margin-top: 100px;
 		}
 		h1 {
 			font-size: 1.5em;
@@ -833,7 +843,7 @@ nav {
 	@media (max-width: 450px)
 		and (orientation: portrait) {
 			.catchphrase {
-				margin-top: 250px;
+				margin-top: 50px;
 			}
 			h1 {
 				font-size: 1.2em;
@@ -895,6 +905,7 @@ nav {
 		} 
 	}
 	@media (max-width: 767px) { 
+		margin-top: 40%;
 		img {
 			margin-top: -70px;
 			width: 50%;
@@ -1006,6 +1017,10 @@ nav {
 	}
 	@media (max-width: 767px) { 
 		margin-bottom: 100px;
+		.nav-tabs > li > a{
+		border: 0px solid #fff !important;
+			font-size: 1.3em;
+		}
 		.nav-justified {
 			left: 23%;
 			right: 23%;
@@ -1289,6 +1304,9 @@ nav {
 			h4 {
 	  		margin-top: -20px;
 	  		font-size: 0.9em;
+	  	}
+	  	.customMargin {
+	  		margin-top: -30px;
 	  	}
 	  	.container-section-5 {
 				margin-top: 50px;
