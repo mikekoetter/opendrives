@@ -2779,7 +2779,8 @@ form {
 	@media (max-width: 767px) {
 		.col-sm-3 {
 			position: relative;
-			padding-top: 7%;
+			font-size: 1.5em;
+			padding-top: 15%;
 			height: 400px;
 			img {
 				padding-bottom: 20px;
@@ -2798,6 +2799,9 @@ form {
 				width: 100%;
 				min-height: 400px;
 				background-color: rgba(255, 255, 255, 0.98);
+				.huge {
+					font-size: 2em;
+				}
 				hr {
 					margin-top: -20px;
 				}
@@ -2814,11 +2818,17 @@ form {
 				img {
 					width: 80px;
 				}
+				.close-overlay {
+					color: #000;
+				}
 			}
 		}
 		.col-sm-3.white-in-mobile {
 			background-color: #fff;
 			color: #000;
+			a {
+				color: #000;
+			}
 			.link-with-border {
 				background-color: #fff;
 				color: #000;
@@ -2832,6 +2842,9 @@ form {
 		.col-sm-3.black-in-mobile {
 			background-color: #000;
 			color: #fff;
+			a {
+				color: #fff;
+			}
 			.link-with-border {
 				background-color: #000;
 				color: #fff;
