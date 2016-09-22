@@ -2670,8 +2670,11 @@ form {
 			}
 		}
 		.grey-background {
-			padding-top: 50px;
+			padding-top: 60px;
 			height: 200px;
+			.col-xs-4 {
+				margin-top: 30px;
+			}
 		}
 		.bigdrive2-img {
 			width: 100%;
