@@ -1868,6 +1868,9 @@ nav {
 		background-color: rgba(255, 255, 255, 0);
 		font-size: 1.5em;
 		padding-right: 30px;
+		.plus-icon {
+			top: -2px;
+		}
 	}
 	.link-with-border:hover {
 		background-color: #2977F2;
@@ -3479,7 +3482,7 @@ iframe {
 		top: 40%;
 	}
 	.phrase-4 {
-		top: 45%;
+		top: 46%;
 	}
 	.phrase-5 {
 		top: 50%;
@@ -3497,7 +3500,7 @@ iframe {
 		top: 30%;
 	}
 	.phrase-7 {
-		top: 37%;
+		top: 35.5%;
 	}
 	.phrase-8 {
 		top: 44%;
@@ -3535,7 +3538,7 @@ iframe {
 			top: 40%;
 		}
 		.phrase-4 {
-			top: 45%;
+			top: 46%;
 		}
 		.phrase-5 {
 			top: 52%;
@@ -3553,7 +3556,7 @@ iframe {
 			top: 30%;
 		}
 		.phrase-7 {
-			top: 37%;
+			top: 35.5%;
 		}
 		.phrase-8 {
 			top: 44%;
@@ -3577,12 +3580,12 @@ iframe {
 			top: 35%;
 		}
 		.phrase-4 {
-			top: 40%;
+			top: 41%;
 		}
 		.phrase-5 {
 			top: 47%;
 			hr {
-				width: 150px;
+				width: 170px;
 			}
 		}
 		.phrase-6 {
@@ -3592,7 +3595,7 @@ iframe {
 			top: 32%;
 		}
 		.phrase-8 {
-			top: 39%;
+			top: 42%;
 		}
 	}
 	@media (max-width: 991px) { 
@@ -3621,7 +3624,7 @@ iframe {
 			top: 45%;
 		}
 		.phrase-4 {
-			top: 50%;
+			top: 51%;
 		}
 		.phrase-5 {
 			top: 53%;
@@ -3633,7 +3636,7 @@ iframe {
 			top: 35%;
 		}
 		.phrase-7 {
-			top: 42%;
+			top: 40.5%;
 		}
 		.phrase-8 {
 			top: 49%;
@@ -3658,7 +3661,34 @@ iframe {
 			.phrase-right {
 				font-size: 1em;
 			}
-	}
+			.phrase-1 {
+				top: 37%;
+			}
+			.phrase-2 {
+				top: 42%;
+			}
+			.phrase-3 {
+				top: 47%;
+			}
+			.phrase-4 {
+				top: 53%;
+			}
+			.phrase-5 {
+				top: 54%;
+				hr {
+					width: 80px;
+				}
+			}
+			.phrase-6 {
+				top: 37%;
+			}
+			.phrase-7 {
+				top: 42.5%;
+			}
+			.phrase-8 {
+				top: 51%;
+			}
+		}
 }
 
 #why-us-section-2 {
