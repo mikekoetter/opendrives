@@ -649,15 +649,16 @@ $(document).ready(function() {
 		var productsScene1 = new ScrollMagic.Scene({triggerElement: "#products-section-1", offset: 500})
 													.setTween(productsIntroAnim)
 													.addTo(productsController);
+		var productsScene2 = new ScrollMagic.Scene({triggerElement: "#products-section-2", duration: 300, offset: -200})
+													.setTween(productsSection2)
+													.addTo(productsController);
 	} else {
 		var productsScene1 = new ScrollMagic.Scene({triggerElement: "#products-section-1", offset: -100})
 													.setTween(productsIntroAnim)
 													.addTo(productsController);
 	}
 	
-	var productsScene2 = new ScrollMagic.Scene({triggerElement: "#products-section-2", duration: 300, offset: -200})
-													.setTween(productsSection2)
-													.addTo(productsController);
+	
 	
 
 	
