@@ -504,20 +504,6 @@ $(document).ready(function() {
 	var fromLeft = $tm.staggerFrom($(".from-left"), 2, { left: -50,  opacity: 0, ease: Power4.easeOut }, 0.5);
 	var titleFromRight = $tm.staggerFrom($(".line-from-right"), 0.5, { right: -50, opacity: 0, ease: Power2.easeOut }, 0.25);
 	
-	// var homeIntroAnim = new TimelineMax()
-	// 										.from($(".intro-1"), 2, { opacity: 0, scale: 0, ease: Power1.easeIn })
-	// 										.to($(".intro-1"), 2, { top: "60%", right: "30%", left: 0, bottom: 0, ease: Power3.easeOut })
-	// 										.from($(".intro-2"), 2, { opacity: 0, scale: 0, ease: Power1.easeIn }, "-=2")
-	// 										.to($(".intro-2"), 2, { top: "60%", right: 0, left: "30%", bottom: 0, ease: Power3.easeOut })
-	// 										.from($(".intro-3"), 2, { opacity: 0, scale: 0, ease: Power1.easeIn }, "-=2")
-	// 										.to($(".intro-3"), 2, { top: "75%", right: "31%", left: 0, bottom: 0 , ease: Power3.easeOut})
-	// 										.from($(".intro-4"), 2, { opacity: 0, scale: 0, ease: Power1.easeIn }, "-=2")
-	// 										.to($(".intro-4"), 2, { top: "75%", right: 0, left: "34%", bottom: 0, ease: Power3.easeOut })
-	// 										.from($(".intro-5"), 2, { opacity: 0, scale: 0 , ease: Power4.easeIn}, "-=2")
-	// 										.to($(".intro-5"), 2, { top: "90%", right: 0, left: 0, bottom: 0, ease: Power3.easeOut })
-	// 										// .from($(".catchphrase2"), 3, { opacity: 0, scale: 0, ease: Power1.easeIn }, "-=1.5")
-	// 										// .to($(".catchphrase2"), 2, { scale: 1.2, ease: Elastic.easeOut.config(2, 0.5) })
-	// 										.from(downArrow, 2, { opacity: 0, top: '80%', yoyo:true, repeat: -1 }, "+=0.5");
 	if ($(window).width() > 767) {
 		var homeIntroAnim = new TimelineMax()
 											.from($(".intro-1"), 1, { opacity: 0, scale: 0.5, top: "50%", delay: 0.5, left: -100, ease: Power2.easeInOut })
@@ -557,7 +543,7 @@ $(document).ready(function() {
 	var productsSection2 = new TimelineMax()
 												.from($('#products-section-2 .black-background'), 1, { left: -100, opacity: 0 })
 												.from($('#products-section-2 .grey-background'), 1, { right: -100, opacity: 0 }, "-=1")
-												.staggerFrom($('#products-section-2 .black-background li'), 1, { left: -100, opacity: 0 }, -0.2, "-=1")
+												.staggerFrom($('#products-section-2 .black-background li'), 0.5, { left: -100, opacity: 0 }, -0.2)
 												.from($('#products-section-2 .grey-background .col-xs-8'), 1, { right: -100, opacity: 0 }, "-=1")
 												.from($('#products-section-2 .grey-background .col-xs-4'), 1, { opacity: 0, scale: 0.5 }, "-=1")
 												.from($('#products-section-2 .tab-content .bigdrive2-img'), 1, { opacity: 0, scale: 0.5 }, "-=2.5")
