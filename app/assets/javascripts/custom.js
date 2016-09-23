@@ -140,9 +140,9 @@ $(document).ready(function() {
 		loop: true,
 		autoplay:true,
     autoplayTimeout:2000,
-    autoplayHoverPause:true,
     margin: 100,
     items: 1,
+    smartSpeed: 2000,
 	});
 	// Employee Carousel set up
 	var owlEmployee = $(".employee-carousel");
@@ -646,10 +646,10 @@ $(document).ready(function() {
 
 	// Products	Scene
 	if ($(window).width() > 767) {
-		var productsScene1 = new ScrollMagic.Scene({triggerElement: "#products-section-1", offset: 500})
+		var productsScene1 = new ScrollMagic.Scene({triggerElement: "#products-section-1", offset: 0})
 													.setTween(productsIntroAnim)
 													.addTo(productsController);
-		var productsScene2 = new ScrollMagic.Scene({triggerElement: "#products-section-2", duration: 300, offset: -200})
+		var productsScene2 = new ScrollMagic.Scene({triggerElement: "#products-section-2", offset: -200})
 													.setTween(productsSection2)
 													.addTo(productsController);
 	} else {
