@@ -8,27 +8,23 @@ blue: #2977F2;
 
 @font-face {
     font-family: 'NovaProximaThin';
-    src: url('/assets/Proxima Nova S W01SC Thin.otf');
+    src: font-url(asset-path('Proxima Nova S W01SC Thin.otf'));
 }
-
 @font-face {
     font-family: 'NovaProximaRegular';
-    src: url('/assets/ProximaNova-Regular_0.otf');
+    src: font-url(asset-path('ProximaNova-Regular_0.otf'));
 }
-
 @font-face {
     font-family: 'NovaProximaSemiBold';
-    src: url('/assets/ProximaNova-Semibold_0.otf');
+    src: font-url(asset-path('ProximaNova-Semibold_0.otf'));
 }
-
 @font-face {
     font-family: 'NovaProximaBold';
-    src: url('/assets/ProximaNova-Bold_0.otf');
+    src: font-url(asset-path('ProximaNova-Bold_0.otf'));
 }
-
 @font-face {
     font-family: 'NovaProximaBlack';
-    src: url('/assets/ProximaNova-Black_0.otf');
+    src: font-url(asset-path('ProximaNova-Black_0.otf'));
 }
 
 /*-------------------------  Generals   -------------------------*/
