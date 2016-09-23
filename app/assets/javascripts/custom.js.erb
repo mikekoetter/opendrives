@@ -380,6 +380,26 @@ $(document).ready(function() {
 		weekStart: 1
 	});
 
+	// Init Google Map
+	var map;
+  window.initMap = function() {
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 34.0265604, lng: -118.3808185},
+      zoom: 12,
+      scrollwheel: false
+    });
+    var icon = {
+	    url: "<%= image_path 'contact-map-icon.png' %>",
+	    scaledSize: new google.maps.Size(100, 100),
+		};
+
+    var marker = new google.maps.Marker({
+	    position: map.getCenter(),
+	    icon: icon,
+	    map: map
+	  });
+  }
+  
 
 	// Contact Logo Animations
 	$(".logo-address-div").hover(function() {
