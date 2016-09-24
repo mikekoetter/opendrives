@@ -3003,10 +3003,6 @@ form {
 }
 
 #products-section-3 {
-	hr {
-		background-color: #fff;
-		margin-top: -30px;
-	}
 	.col-md-12 {
 		position: relative;
 		img {
@@ -3024,6 +3020,7 @@ form {
 		line-height: 45px;
 	}
 	hr {
+		background-color: #fff;
 		margin-top: 30px;
 		width: 25%;
 	}
@@ -4053,6 +4050,7 @@ iframe {
 	hr {
 		margin-left: 0;
 		background-color: #fff;
+		width: 30%;
 	}
 	p.huge {
 		font-size: 4.7em;
