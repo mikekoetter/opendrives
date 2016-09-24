@@ -102,7 +102,7 @@
 		  <div id="support-service" class="tab-pane fade in active">
 		  	<div class="row resources-tab anim">
 		  		<div class="col-md-8 col-md-offset-2 text-center">
-				    <h3 class="huge"><span class="light">our support</span> promise</h3>
+				    <h3 class="huge bold"><span class="light">our support</span> promise</h3>
 				    <hr class="hr-anim-resources-section-6">
 				  </div>
 				  <div class="col-md-12 text-center">
@@ -159,16 +159,10 @@
 		  <div id="faqs" class="tab-pane fade">
 		  	<div class="row resources-tab anim">
 		  		<div class="col-md-12 text-center">
-		  			<h3><span class="light">find answers to common questions in our</span><br> frequently asked questions</h3>
+		  			<h3 class="bold"><span class="light">find answers to common questions in our</span><br> frequently asked questions</h3>
 		  			<hr class="hr-anim-resources-section-6">
 		  			<br><br>
-		  			<!-- <a href="/support_documents/Frequently_Answered_Questions.pdf" class="link-download bold" target="_blank">
-			  			<%= image_tag 'resources-support-document-logo-black.png', class: 'logo-tab-content' %>&nbsp;&nbsp;&nbsp;frequently answered questions
-			  		</a> -->
-
 			  		<div class="panel-group" id="accordion">
-
-
 			  			<% @faqs.each_with_index do |faq, i| %>
 						  	<div class="panel panel-default text-left">
 							  	<a data-toggle="collapse" data-parent="#accordion" href="#collapse<%= i %>">
@@ -186,19 +180,15 @@
 							    	</div>
 							    </div>
 							  </div>
-
 						  <% end %>
-
-
 						</div>
-
 		  		</div>
 		  	</div>
 		  </div>
 		  <div id="support-document" class="tab-pane fade">
 		  	<div class="row resources-tab anim">
 		  		<div class="col-md-12 text-center">
-		  			<h3>having trouble with opendrives? <span class="light">the following documents provide step-by-step guidance for resolving common issues.</span></h3>
+		  			<h3 class="bold">having trouble with opendrives? <span class="light">the following documents provide step-by-step guidance for resolving common issues.</span></h3>
 		  			<hr class="hr-anim-resources-section-6">
 		  			<br><br>
 		  		</div>

@@ -14,7 +14,6 @@ $.fn.clicktoggle = function(a, b) {
     });
 };
 
-// $(document).on('turbolinks:load',function() {
 
 $(document).ready(function() {
 	//=======================================   Generals   =======================================//
@@ -382,132 +381,136 @@ $(document).ready(function() {
 
 	// Init Google Map
 	var map;
-  window.initMap = function() {
-    map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: 34.0265604, lng: -118.3808185},
-      zoom: 12,
-      scrollwheel: false,
-      styles: [
-              {elementType: 'geometry', stylers: [{color: '#ebe3cd'}]},
-              {elementType: 'labels.text.fill', stylers: [{color: '#523735'}]},
-              {elementType: 'labels.text.stroke', stylers: [{color: '#f5f1e6'}]},
-              {
-                featureType: 'administrative',
-                elementType: 'geometry.stroke',
-                stylers: [{color: '#c9b2a6'}]
-              },
-              {
-                featureType: 'administrative.land_parcel',
-                elementType: 'geometry.stroke',
-                stylers: [{color: '#dcd2be'}]
-              },
-              {
-                featureType: 'administrative.land_parcel',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#ae9e90'}]
-              },
-              {
-                featureType: 'landscape.natural',
-                elementType: 'geometry',
-                stylers: [{color: '#dfd2ae'}]
-              },
-              {
-                featureType: 'poi',
-                elementType: 'geometry',
-                stylers: [{color: '#dfd2ae'}]
-              },
-              {
-                featureType: 'poi',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#93817c'}]
-              },
-              {
-                featureType: 'poi.park',
-                elementType: 'geometry.fill',
-                stylers: [{color: '#a5b076'}]
-              },
-              {
-                featureType: 'poi.park',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#447530'}]
-              },
-              {
-                featureType: 'road',
-                elementType: 'geometry',
-                stylers: [{color: '#f5f1e6'}]
-              },
-              {
-                featureType: 'road.arterial',
-                elementType: 'geometry',
-                stylers: [{color: '#fdfcf8'}]
-              },
-              {
-                featureType: 'road.highway',
-                elementType: 'geometry',
-                stylers: [{color: '#f8c967'}]
-              },
-              {
-                featureType: 'road.highway',
-                elementType: 'geometry.stroke',
-                stylers: [{color: '#e9bc62'}]
-              },
-              {
-                featureType: 'road.highway.controlled_access',
-                elementType: 'geometry',
-                stylers: [{color: '#e98d58'}]
-              },
-              {
-                featureType: 'road.highway.controlled_access',
-                elementType: 'geometry.stroke',
-                stylers: [{color: '#db8555'}]
-              },
-              {
-                featureType: 'road.local',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#806b63'}]
-              },
-              {
-                featureType: 'transit.line',
-                elementType: 'geometry',
-                stylers: [{color: '#dfd2ae'}]
-              },
-              {
-                featureType: 'transit.line',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#8f7d77'}]
-              },
-              {
-                featureType: 'transit.line',
-                elementType: 'labels.text.stroke',
-                stylers: [{color: '#ebe3cd'}]
-              },
-              {
-                featureType: 'transit.station',
-                elementType: 'geometry',
-                stylers: [{color: '#dfd2ae'}]
-              },
-              {
-                featureType: 'water',
-                elementType: 'geometry.fill',
-                stylers: [{color: '#b9d3c2'}]
-              },
-              {
-                featureType: 'water',
-                elementType: 'labels.text.fill',
-                stylers: [{color: '#92998d'}]
-              }
-            ]
-    });
-    var icon = {
-	    url: "<%= image_path 'contact-map-icon.png' %>",
-	    scaledSize: new google.maps.Size(100, 100),
-		};
+	var mapId = document.getElementById('map');
 
-    var marker = new google.maps.Marker({
-	    position: map.getCenter(),
-	    icon: icon,
-	    map: map
-	  });
+  window.initMap = function() {
+  	if (mapId !== null) {
+	    map = new google.maps.Map(mapId, {
+	      center: {lat: 34.0265604, lng: -118.3808185},
+	      zoom: 12,
+	      scrollwheel: false,
+	      styles: [
+	              {elementType: 'geometry', stylers: [{color: '#ebe3cd'}]},
+	              {elementType: 'labels.text.fill', stylers: [{color: '#523735'}]},
+	              {elementType: 'labels.text.stroke', stylers: [{color: '#f5f1e6'}]},
+	              {
+	                featureType: 'administrative',
+	                elementType: 'geometry.stroke',
+	                stylers: [{color: '#c9b2a6'}]
+	              },
+	              {
+	                featureType: 'administrative.land_parcel',
+	                elementType: 'geometry.stroke',
+	                stylers: [{color: '#dcd2be'}]
+	              },
+	              {
+	                featureType: 'administrative.land_parcel',
+	                elementType: 'labels.text.fill',
+	                stylers: [{color: '#ae9e90'}]
+	              },
+	              {
+	                featureType: 'landscape.natural',
+	                elementType: 'geometry',
+	                stylers: [{color: '#dfd2ae'}]
+	              },
+	              {
+	                featureType: 'poi',
+	                elementType: 'geometry',
+	                stylers: [{color: '#dfd2ae'}]
+	              },
+	              {
+	                featureType: 'poi',
+	                elementType: 'labels.text.fill',
+	                stylers: [{color: '#93817c'}]
+	              },
+	              {
+	                featureType: 'poi.park',
+	                elementType: 'geometry.fill',
+	                stylers: [{color: '#a5b076'}]
+	              },
+	              {
+	                featureType: 'poi.park',
+	                elementType: 'labels.text.fill',
+	                stylers: [{color: '#447530'}]
+	              },
+	              {
+	                featureType: 'road',
+	                elementType: 'geometry',
+	                stylers: [{color: '#f5f1e6'}]
+	              },
+	              {
+	                featureType: 'road.arterial',
+	                elementType: 'geometry',
+	                stylers: [{color: '#fdfcf8'}]
+	              },
+	              {
+	                featureType: 'road.highway',
+	                elementType: 'geometry',
+	                stylers: [{color: '#f8c967'}]
+	              },
+	              {
+	                featureType: 'road.highway',
+	                elementType: 'geometry.stroke',
+	                stylers: [{color: '#e9bc62'}]
+	              },
+	              {
+	                featureType: 'road.highway.controlled_access',
+	                elementType: 'geometry',
+	                stylers: [{color: '#e98d58'}]
+	              },
+	              {
+	                featureType: 'road.highway.controlled_access',
+	                elementType: 'geometry.stroke',
+	                stylers: [{color: '#db8555'}]
+	              },
+	              {
+	                featureType: 'road.local',
+	                elementType: 'labels.text.fill',
+	                stylers: [{color: '#806b63'}]
+	              },
+	              {
+	                featureType: 'transit.line',
+	                elementType: 'geometry',
+	                stylers: [{color: '#dfd2ae'}]
+	              },
+	              {
+	                featureType: 'transit.line',
+	                elementType: 'labels.text.fill',
+	                stylers: [{color: '#8f7d77'}]
+	              },
+	              {
+	                featureType: 'transit.line',
+	                elementType: 'labels.text.stroke',
+	                stylers: [{color: '#ebe3cd'}]
+	              },
+	              {
+	                featureType: 'transit.station',
+	                elementType: 'geometry',
+	                stylers: [{color: '#dfd2ae'}]
+	              },
+	              {
+	                featureType: 'water',
+	                elementType: 'geometry.fill',
+	                stylers: [{color: '#b9d3c2'}]
+	              },
+	              {
+	                featureType: 'water',
+	                elementType: 'labels.text.fill',
+	                stylers: [{color: '#92998d'}]
+	              }
+	            ]
+	    });
+	    var icon = {
+		    url: "<%= image_path 'contact-map-icon.png' %>",
+		    scaledSize: new google.maps.Size(100, 100),
+			};
+
+	    var marker = new google.maps.Marker({
+		    position: map.getCenter(),
+		    icon: icon,
+		    map: map
+		  });
+	  }
   }
   
 
@@ -707,33 +710,33 @@ $(document).ready(function() {
 
 
 	// Home Scene
-	var homeScene1 = new ScrollMagic.Scene({offset: -200})
+	var homeScene1 = new ScrollMagic.Scene({offset: -200, reverse: false})
 													.setTween([homeIntroAnim])
 													.addTo(homeController);
 	
 	
 	if ($(window).width() > 767) {
-		var homeScene3 = new ScrollMagic.Scene({triggerElement: "#home-section-4-5", offset: -80})
+		var homeScene3 = new ScrollMagic.Scene({triggerElement: "#home-section-4-5", offset: -80, reverse: false})
 													.setTween(staggerFromLeft)
 													.addTo(homeController);
 	} else {
-		var homeScene3 = new ScrollMagic.Scene({triggerElement: "#home-section-4-5", offset: -50})
+		var homeScene3 = new ScrollMagic.Scene({triggerElement: "#home-section-4-5", offset: -50, reverse: false})
 													.setTween(staggerFromLeft)
 													.addTo(homeController);
 	}
 	
-	var homeScene4 = new ScrollMagic.Scene({triggerElement: ".container-section-5", offset: -100})
+	var homeScene4 = new ScrollMagic.Scene({triggerElement: ".container-section-5", offset: -100, reverse: false})
 													.setTween(titleFromRight)
 													.addTo(homeController);
 	
-	var homeScene7 = new ScrollMagic.Scene({triggerElement: "#home-section-8", offset: -100})
+	var homeScene7 = new ScrollMagic.Scene({triggerElement: "#home-section-8", offset: -100, reverse: false})
 													.setTween(partnersAnimation)
 													.addTo(homeController);
 
 	// Career Scene
 	
 	
-	var careerScene2 = new ScrollMagic.Scene({triggerElement: "#career-section-1 .container", offset: -200})
+	var careerScene2 = new ScrollMagic.Scene({triggerElement: "#career-section-1 .container", offset: -200, reverse: false})
 													.setTween(careerSection1Words)
 													.addTo(careerController);
 	
@@ -745,10 +748,10 @@ $(document).ready(function() {
 
 	// Case Interior Scene
 	
-	var caseInteriorScene6 = new ScrollMagic.Scene({triggerElement: ".case-interior-section2", offset: 50})
+	var caseInteriorScene6 = new ScrollMagic.Scene({triggerElement: ".case-interior-section2", offset: 50, reverse: false})
 													.setTween(caseInteriorSection2)
 													.addTo(caseInteriorController);												
-	var caseInteriorScene7 = new ScrollMagic.Scene({triggerElement: ".case-interior-section3", offset: -100})
+	var caseInteriorScene7 = new ScrollMagic.Scene({triggerElement: ".case-interior-section3", offset: -100, reverse: false})
 													.setTween(caseInteriorSection3)
 													.addTo(caseInteriorController);
 	
@@ -762,14 +765,14 @@ $(document).ready(function() {
 
 	// Products	Scene
 	if ($(window).width() > 767) {
-		var productsScene1 = new ScrollMagic.Scene({triggerElement: "#products-section-1", offset: 0})
+		var productsScene1 = new ScrollMagic.Scene({triggerElement: "#products-section-1", offset: 0, reverse: false})
 													.setTween(productsIntroAnim)
 													.addTo(productsController);
-		var productsScene2 = new ScrollMagic.Scene({triggerElement: "#products-section-2", offset: -200})
+		var productsScene2 = new ScrollMagic.Scene({triggerElement: "#products-section-2", offset: -200, reverse: false})
 													.setTween(productsSection2)
 													.addTo(productsController);
 	} else {
-		var productsScene1 = new ScrollMagic.Scene({triggerElement: "#products-section-1", offset: -100})
+		var productsScene1 = new ScrollMagic.Scene({triggerElement: "#products-section-1", offset: -100, reverse: false})
 													.setTween(productsIntroAnim)
 													.addTo(productsController);
 	}
@@ -782,29 +785,29 @@ $(document).ready(function() {
 
 	// Resources Scene				
 					
-	var resourcesScene2 = new ScrollMagic.Scene({triggerElement: "#resources-section-2", offset: -100})
+	var resourcesScene2 = new ScrollMagic.Scene({triggerElement: "#resources-section-2", offset: -100, reverse: false})
 													.setTween(resourcesSection2)
 													.addTo(resourcesController);
 	
-	var resourcesScene5 = new ScrollMagic.Scene({triggerElement: "#resources-section-4", offset: 50 })
+	var resourcesScene5 = new ScrollMagic.Scene({triggerElement: "#resources-section-4", offset: 50, reverse: false })
 													.setTween(resourcesSection4)
 													.addTo(resourcesController);
 	
 
 	// Why Us Scene	
 	
-	var whyUsScene2 = new ScrollMagic.Scene({triggerElement: "#why-us-section-2", offset: -100})
+	var whyUsScene2 = new ScrollMagic.Scene({triggerElement: "#why-us-section-2", offset: -100, reverse: false})
 													.setTween(whyUsSection2)
 													.addTo(whyUsController);										
 	
-	var whyUsScene4 = new ScrollMagic.Scene({triggerElement: "#why-us-section-3", offset: 0})
+	var whyUsScene4 = new ScrollMagic.Scene({triggerElement: "#why-us-section-3", offset: 0, reverse: false})
 													.setTween([whyUsSection3BoxLeft, whyUsSection3BoxRight])
 													.addTo(whyUsController);
-	var whyUsScene5 = new ScrollMagic.Scene({triggerElement: "#why-us-section-3", offset: 600})
+	var whyUsScene5 = new ScrollMagic.Scene({triggerElement: "#why-us-section-3", offset: 400, reverse: false})
 													.setTween([whyUsSection3BoxLeft1, whyUsSection3BoxRight1])
 													.addTo(whyUsController);
 	
-	var whyUsScene9 = new ScrollMagic.Scene({triggerElement: "#why-us-section-6", offset: 100})
+	var whyUsScene9 = new ScrollMagic.Scene({triggerElement: "#why-us-section-6", offset: 100, reverse: false})
 													.setTween(whyUsSection6)
 													.addTo(whyUsController);
 

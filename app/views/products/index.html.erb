@@ -91,14 +91,14 @@
 	<div class="container">
 		<div class="row marginTop100">
 			<div class="col-md-12 opus-carousel">
-				<div><%= image_tag 'products-software-snapshot.png', class: "" %></div>
-				<div><%= image_tag 'products-software-snapshot-left.png', class: "" %></div>
-				<div><%= image_tag 'products-software-snapshot-right.png', class: "" %></div>
+				<div><%= image_tag 'products-software-snapshot.png' %></div>
+				<div><%= image_tag 'products-software-snapshot-left.png' %></div>
+				<div><%= image_tag 'products-software-snapshot-right.png' %></div>
 			</div>
 		</div>
 		<div class="row marginTop100 trigger-overlay-second">
 			<div class="col-md-12 text-center">
-				<p class="lead huge regular">All <span class="bold">OpenDrives</span><br>products include:</p>
+				<p class="lead light">All <span class="bold">OpenDrives</span><br>products include:</p>
 			</div>
 			<% @products.each do |product|%>
 				<div class="col-sm-4">
@@ -118,10 +118,10 @@
 	<div class="container">
 		<div class="row marginTopBottom100" id="opus">
 			<div class="col-md-12 text-center">
-                <p class="lead huge bold">OPUS Software Platform:<br><span class="light">The Pinnacle of OS Integration</span></p>
+          <h2 class="lead huge bold">OPUS Software Platform:<br><span class="light">The Pinnacle of OS Integration</span></h2>
 				<hr class="hr-anim-product-opus">
-				<br><br>
-				<div class="col-md-8 col-md-offset-2">
+				<br>
+				<div class="col-md-10 col-md-offset-1">
 					<p class="lead">Enterprise-grade software platform incorporating an extensible data file system.  Provides efficient data striping, resilient data protection, and an integrated web user interface. OPUS is the simplist way to configure, optimize, and manage storage.</p>
 				</div>
 			</div>
@@ -178,7 +178,6 @@
 											line: 2, 
 											title_overlay: '<span class="light">variable</span> <strong class="bold">block size</strong>', 
 											body_overlay: "OpenDrives uses either dynamic or policy-based variable block sizes for writing data. By not using fixed block sizes, OPUS optimizes data reads and writes, increasing speed and eliminating wasted blocks common to traditional storage." %>
-
 
 
 	
