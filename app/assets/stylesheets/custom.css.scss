@@ -179,7 +179,7 @@ hr {
 	font-weight: 400;
 	position: absolute;
 	right: 10%;
-	top: -5.5px;
+	top: -6.5px;
 }
 
 .plus-icon-blue {
@@ -1104,6 +1104,11 @@ nav {
 	color: #fff;
 	p {
 		margin-top: 20px;
+	}
+	.customMargin {
+		p.lead {
+			letter-spacing: 2px;
+		}
 	}
 	.home-reason-logo {
 		width: 75px;
