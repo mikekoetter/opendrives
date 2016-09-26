@@ -821,34 +821,36 @@ nav {
 		} 
 		.catchphrase {
 			.intro-1 {
-				top: 70%;
-				right: 36%;
+				top: 60%;
+				right: 25%;
 			}
 			.intro-2 {
-				top: 70%;
-				left: 36%;
+				top: 60%;
+				left: 26%;
 			}
 			.intro-3 {
-				top: 85%;
-				right: 37%;
+				top: 73%;
+				right: 26%;
 			}
 			.intro-4 {
-				top: 85%;
-				left: 40%;
+				top: 73%;
+				left: 28%;
+			}
+			.intro-5 {
+				top: 80%;
 			}
 		}
 	}
 	@media (max-width: 767px) {
-		.catchphrase {
-			/*font-family: Arial, Helvetica, sans-serif;*/
-		} 
 		h1 {
 			font-size: 1.9em;
 			.down {
 				font-size: 1.8em;
 			}
 		} 
-		
+		.catchphrase {
+			margin-top: 130px;
+		}
 	}
 	@media (max-width: 550px) { 
 		margin-top: 100px;
@@ -927,7 +929,7 @@ nav {
 		} 
 	}
 	@media (max-width: 768px) { 
-		margin-top: 30px;
+		margin-top: 70px;
 	}
 }
 
