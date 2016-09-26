@@ -1,5 +1,7 @@
 class HomesController < ApplicationController
   def index
+  	@resource = Resource.new
+  	@faqs = @resource.faqs
   end
 
   def subscribe

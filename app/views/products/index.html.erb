@@ -13,21 +13,18 @@
 	<div class="phrase-4 phrase-products">
 		<hr>
 	</div>
-	<div class="phrase-5 phrase-products-right light">
-		the
-	</div>
-	<div class="phrase-6 phrase-products-right bold">
-		right
-	</div>
-	<div class="phrase-7 phrase-products-right bold">
-		tools
+	<div class="phrase-5 phrase-products light">
+		the <span class="bold">right tools</span>
 	</div>
 </div>
 
 <div id="products-section-2">
 	<div class="col-md-6 col-sm-12 grey-background pull-right-sm anim">
 		<div class="col-xs-4  col-md-offset-1 text-center anim">
-			<%= link_to('<span class="angle-right-icon">&gt;</span>'.html_safe, '#opus', class: 'smooth-scroll round-border-link') %>
+			<%= link_to '#opus', class: "smooth-scroll round-border-link" do %>
+			<%= image_tag 'angle-down-icon-black.png', class: "hide-on-hover" %>
+			<%= image_tag 'angle-down-icon.png', class: "show-on-hover" %>
+			<% end %>
 		</div>
 		<div class="col-xs-8 col-md-4 anim">
 			<p class="lead regular"><span class="bold">OPUS Software Platform:</span> The Pinnacle of OS Integration</p>
@@ -93,15 +90,15 @@
 <div id="products-section-3">
 	<div class="container">
 		<div class="row marginTop100">
-			<div class="col-md-12">
-				<%= image_tag 'products-software-snapshot.png', class: "opus-center" %>
-				<%= image_tag 'products-software-snapshot-left.png', class: "opus-left" %>
-				<%= image_tag 'products-software-snapshot-right.png', class: "opus-right" %>
+			<div class="col-md-12 opus-carousel">
+				<div><%= image_tag 'products-software-snapshot.png' %></div>
+				<div><%= image_tag 'products-software-snapshot-left.png' %></div>
+				<div><%= image_tag 'products-software-snapshot-right.png' %></div>
 			</div>
 		</div>
 		<div class="row marginTop100 trigger-overlay-second">
 			<div class="col-md-12 text-center">
-				<p class="lead huge regular">All <span class="bold">OpenDrives</span><br>products include:</p>
+				<p class="lead light">All <span class="bold">OpenDrives</span><br>products include:</p>
 			</div>
 			<% @products.each do |product|%>
 				<div class="col-sm-4">
@@ -121,10 +118,10 @@
 	<div class="container">
 		<div class="row marginTopBottom100" id="opus">
 			<div class="col-md-12 text-center">
-                <p class="lead huge bold">OPUS Software Platform:</p><span class="light">The Pinnacle of OS Integration</span></p>
+          <h2 class="lead huge bold">OPUS Software Platform:<br><span class="light">The Pinnacle of OS Integration</span></h2>
 				<hr class="hr-anim-product-opus">
-				<br><br>
-				<div class="col-md-8 col-md-offset-2">
+				<br>
+				<div class="col-md-10 col-md-offset-1">
 					<p class="lead">Enterprise-grade software platform incorporating an extensible data file system.  Provides efficient data striping, resilient data protection, and an integrated web user interface. OPUS is the simplist way to configure, optimize, and manage storage.</p>
 				</div>
 			</div>
@@ -181,7 +178,6 @@
 											line: 2, 
 											title_overlay: '<span class="light">variable</span> <strong class="bold">block size</strong>', 
 											body_overlay: "OpenDrives uses either dynamic or policy-based variable block sizes for writing data. By not using fixed block sizes, OPUS optimizes data reads and writes, increasing speed and eliminating wasted blocks common to traditional storage." %>
-
 
 
 	
