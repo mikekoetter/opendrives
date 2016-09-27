@@ -459,6 +459,11 @@ hr {
 			}
 		}
 	}
+	@media (max-width: 768px) {
+		.nav-tabs {
+			width: 96%;
+		}
+	}
 	@media (max-width: 767px) {
 		.chrome-padding-top {
 			padding-top: 0px;
@@ -467,6 +472,7 @@ hr {
 			padding-top: 0; 
 		}
 		.nav-tabs {
+			width: 100%;
 			border: none !important;
 			li {
 				margin-bottom: 30px;
@@ -3003,9 +3009,11 @@ form {
 	}
 	@media (max-width: 375px)
 		and (orientation: portrait) {
-			.nav-tabs {
-		  	width: 83%;
-		  }
+			.black-background {
+				.nav-tabs {
+			  	width: 83%;
+			  }
+			}
 	}
 	@media (max-width: 320px)
 		and (orientation: portrait) {
@@ -3327,6 +3335,7 @@ form {
 		font-size: 12em;
 		.resource-intro-anchor {
 			top: 25%;
+			width: 85%;
 			.phrase-1 {
 				margin-bottom: -100px;
 			}
@@ -3377,7 +3386,7 @@ form {
 	@media (max-width: 767px) { 
 		font-size: 6em;
 		.resource-intro-anchor {
-			top: 15%;
+			top: 20%;
 			.phrase-1 {
 				margin-bottom: -50px;
 			}
@@ -3404,7 +3413,6 @@ form {
 	@media (max-width: 550px) { 
 		font-size: 4em;
 		.resource-intro-anchor {
-			top: 12%;
 			.phrase-3 {
 				hr {
 					width: 200px;
@@ -3415,7 +3423,7 @@ form {
 	@media (max-width: 450px) {
 		font-size: 3em;
   	.resource-intro-anchor {
-  		top: 11%;
+  		
 			.phrase-1 {
 				margin-bottom: -20px;
 			}
@@ -4117,14 +4125,15 @@ iframe {
 			width: 100%;
 			position: relative;
 			z-index: 20;
-			img {
-				position: relative;
-				width: 100%;
-				opacity: 0.5;
-			}
 			.padding-top {
+				position: relative;
 				padding-top: 250px;
 				padding-bottom: 250px;
+				img {
+					position: relative;
+					width: 100%;
+					opacity: 0.5;
+				}
 			}
 			.carousel-arrow {
 				width: 40px;
