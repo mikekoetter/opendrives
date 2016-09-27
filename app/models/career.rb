@@ -3,7 +3,7 @@ class Career
 	def self.benefits
 		[
 			"Medical, Dental, and Vision",
-			"Flexible Spending account",
+			"Flexible Spending Account",
 			"Employee Assistance Program",
 			"Flexible Vacation Days",
 			"Maternity Leave",
