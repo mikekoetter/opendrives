@@ -379,11 +379,12 @@ $(document).ready(function() {
 		weekStart: 1
 	});
 
-	// Init Google Map
-	var map;
-	var mapId = document.getElementById('map');
+	
 
   window.initMap = function() {
+  	// Init Google Map
+		var map;
+		var mapId = document.getElementById('map');
   	if (mapId !== null) {
 	    map = new google.maps.Map(mapId, {
 	      center: {lat: 34.0265604, lng: -118.3808185},
