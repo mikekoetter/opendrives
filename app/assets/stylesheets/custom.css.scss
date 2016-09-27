@@ -637,16 +637,7 @@ nav {
 			display: none;
 		}
 		.menu-nav-contact {
-			display: inline-block;
-			text-align: center;
-			border: 0px solid #000;
-			color: #2977F2 !important;
-		}
-		.menu-nav-contact:hover {
-			border: 0px solid #000;
-			color: #fff !important;
-			padding-left: 0 !important;
-			padding-right: 0 !important;
+			display: inline;
 		}
 		.hamburgler{
 			top: 10px;
@@ -700,10 +691,6 @@ nav {
 	  and (orientation: landscape) { 
 	  	.nav-menu {
 				width: 500px;
-				.menu-nav-contact {
-					margin-left: 30%;
-					margin-bottom: 20px;
-				}
 				ul {
 					margin-top: 50px;
 					a {
@@ -2357,25 +2344,25 @@ nav {
 		.schedule-demo-input .form-control::-webkit-input-placeholder { /* WebKit browsers */
  			color: #2977F2;
  			font-size: 1.4em;
- 			text-align: right;
+ 			text-align: center;
  			font-weight: 100;
 		}
 		.schedule-demo-input .form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
 		  color: #2977F2;
  			font-size: 1.4em;
- 			text-align: right;
+ 			text-align: center;
  			font-weight: 100;
 		}
 		.schedule-demo-input .form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
 		  color: #2977F2;
  			font-size: 1.4em;
- 			text-align: right;
+ 			text-align: center;
  			font-weight: 100;
 		}
 		.schedule-demo-input .form-control:-ms-input-placeholder { /* Internet Explorer 10+ */
 		  color: #2977F2;
  			font-size: 1.4em;
- 			text-align: right;
+ 			text-align: center;
  			font-weight: 100;
 		}
 		.contact-form-success {
