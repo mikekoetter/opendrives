@@ -898,6 +898,7 @@ nav {
 }
 
 #home-section-2 {
+	margin-top: 100px;
 	background-image: image-url('blueenergy.png');
 	background-size: cover;
 	background-position: center;
@@ -934,6 +935,7 @@ nav {
 }
 
 #home-section-3 {
+	margin-top: 100px;
 	position: relative;
 	.home-section-3-server {
 		width: 55%;
@@ -1389,7 +1391,7 @@ nav {
 	hr {
 		width: 130px;
 	}
-	.col-sm-3, .col-sm-2 {
+	.col-sm-4, .col-sm-2 {
 		margin-bottom: 50px;
 		img {
 			width: 120px;
@@ -2963,7 +2965,7 @@ form {
 			}
 			.black-background {
 		  	.nav-tabs {
-		  		width: 350px;
+		  		width: 75%;
 					top: 92px;
 					li {
 						a {
@@ -2999,6 +3001,12 @@ form {
 				}
 			}
 	}
+	@media (max-width: 375px)
+		and (orientation: portrait) {
+			.nav-tabs {
+		  	width: 83%;
+		  }
+	}
 	@media (max-width: 320px)
 		and (orientation: portrait) {
 			.grey-background {
@@ -3009,7 +3017,7 @@ form {
 			}
 			.black-background {
 		  	.nav-tabs {
-		  		width: 270px;
+		  		width: 70%;
 					top: 117px;
 					li {
 						a {
