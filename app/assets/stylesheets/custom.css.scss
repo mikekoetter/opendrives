@@ -896,7 +896,8 @@ nav {
 	background-size: cover;
 	background-position: center;
 	img {
-		width: 65%;
+		width: 70%;
+		padding-right: 5%;
 	}
 	.container div {
 		h3 {
@@ -927,6 +928,7 @@ nav {
 }
 
 #home-section-3 {
+	margin-top: 40px;
 	position: relative;
 	.home-section-3-server {
 		width: 55%;
