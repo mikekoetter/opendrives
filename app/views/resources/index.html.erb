@@ -18,7 +18,7 @@
 	<div class="container">
 		<div class="row marginTop100">
 			<div class='col-md-12'>
-				<div class="col-sm-4">
+				<div class="col-sm-6">
 					<%= link_to 'tel:+18887785491' do %>
 						<div class=" resources-contact-div text-center black marginTop50 hvr-ripple-out regular">
 						+1 (888) 778-5491&nbsp;&nbsp;&nbsp;<br class="hide-until-1200">
@@ -26,19 +26,11 @@
 						</div>
 					<% end %>
 				</div>
-				<div class="col-sm-4">
+				<div class="col-sm-6">
 					<%= link_to 'mailto:support@opendrives.com' do %>
 						<div class="resources-contact-div text-center blue marginTop50 hvr-ripple-out-blue regular">
 						support@opendrives.com&nbsp;&nbsp;&nbsp;<br class="hide-until-1200">
 							<%= image_tag 'contact-mail-white-logo.png', class: 'resources-contact-logo' %>
-						</div>
-					<% end %>
-				</div>
-				<div class="col-sm-4">
-					<%= link_to 'https://support.opendrives.com/hc/en-us', target: '_blank' do %>
-						<div class=" resources-contact-div text-center black marginTop50 hvr-ripple-out regular">
-						create a support ticket&nbsp;&nbsp;&nbsp;<br class="hide-until-1200">
-							<%= image_tag 'contact-ticket-logo.png', class: 'resources-contact-logo' %>
 						</div>
 					<% end %>
 				</div>
@@ -64,13 +56,6 @@
 <div id="resources-section-5">
 	<div class="container marginTop100">
 		<ul class="nav nav-tabs nav-justified">
-		  <li class="active">
-		  	<a data-toggle="tab" href="#support-service">
-		  		<%= image_tag 'resources-support-service-logo.png' %>
-		  		<br><br>
-		  		<p class="regular">support service</p>
-		  	</a>
-		  </li>
 		  <li>
 		  	<a data-toggle="tab" href="#faqs" class="faqs-tab">
 		  		<%= image_tag 'resources-faqs-logo.png' %>
@@ -85,13 +70,6 @@
 		  		<p class="regular">documentation</p>
 		  	</a>
 		  </li>
-		  <li>
-		  	<a data-toggle="tab" href="#videos" class="videos-tab">
-		  		<%= image_tag 'resources-videos-logo.png' %>
-		  		<br><br>
-		  		<p class="regular">videos</p>
-		  	</a>
-		  </li>
 		</ul>
 	</div>
 </div>
@@ -99,62 +77,7 @@
 <div id="resources-section-6">
 	<div class="container">
 		<div class="tab-content marginBottom100">
-		  <div id="support-service" class="tab-pane fade in active">
-		  	<div class="row resources-tab anim">
-		  		<div class="col-md-8 col-md-offset-2 text-center">
-				    <h3 class="huge bold"><span class="light">our support</span> promise</h3>
-				    <hr class="hr-anim-resources-section-6">
-				  </div>
-				  <div class="col-md-12 text-center">
-				    <br>
-				    <p>OpenDrives Support coverage delivers hardware and software support including technical support, onsite response, remote monitoring and resolution, and the installation of non-customer replaceable units. <br> OpenDrives Support includes:</p>
-				  </div>
-				  <div class="col-sm-6 marginTop50 trigger-overlay">
-				  	<div class="check-anchor-div">
-				  		<%= image_tag 'check.png', class: 'check-image' %>
-				  		<div class="mini-overlay mini-overlay-grey"></div>
-				  	</div>
-				  	<div class="col-xs-10">
-				  		<p><strong>Access to support tools</strong></p>
-				  		<p><span class="blue"> - </span>Initiate support requests via multiple channels, including: web, telephone, or email</p>
-				  		<p><span class="blue"> - </span>Search OpenDrives’ technical and support knowledge repository to quickly access critical information</p>
-				    </div>
-				  </div>
-				  <div class="col-sm-6 marginTop50">
-				  	<div class="check-anchor-div">
-				  		<%= image_tag 'check.png', class: 'check-image' %>
-				  		<div class="mini-overlay mini-overlay-grey"></div>
-				  	</div>
-				  	<div class="col-xs-10">
-				  		<p><strong>Replacement parts</strong> – Components deemed to be customer replaceable will be shipped to the customer.</p>
-				  	</div>
-				  	<div class="check-anchor-div">
-				  		<%= image_tag 'check.png', class: 'check-image' %>
-				  		<div class="mini-overlay mini-overlay-grey"></div>
-				  	</div>
-				  	<div class="col-xs-10">
-				  		<p><strong>Onsite response with replacement parts installation</strong> – Onsite dispatch and installation for parts deemed non-customer replaceable.</p>
-				  	</div>
-				  	<div class="check-anchor-div">
-				  		<%= image_tag 'check.png', class: 'check-image' %>
-				  		<div class="mini-overlay mini-overlay-grey"></div>
-				  	</div>
-				  	<div class="col-xs-10">
-				  		<p><strong>Rights to new releases of software</strong> – Access to new software releases with improved features and critical bug fixes to address evolving business needs.</p>
-				  	</div>
-				  </div>
-				  <div class="col-sm-12 marginTop50">
-				  	<div class="check-anchor-div">
-				  		<%= image_tag 'check.png', class: 'check-image' %>
-				  		<div class="mini-overlay mini-overlay-grey"></div>
-				  	</div>
-				  	<div class="col-xs-10">
-				  		<p><strong>Remote monitoring</strong> – Sophisticated remote support technology securely monitors your OpenDrives systems and notifies of potential issues before business is impacted.</p>
-				  	</div>
-				  </div>
-			  </div>
-		  </div>
-		  <div id="faqs" class="tab-pane fade">
+		  <div id="faqs" class="tab-pane fade in active">
 		  	<div class="row resources-tab anim">
 		  		<div class="col-md-12 text-center">
 		  			<h3 class="bold">frequently asked questions</h3>
@@ -260,60 +183,11 @@
 		  		</div>
 		  	</div>
 		  </div>
-		  <div id="videos" class="tab-pane fade">
-		  	<div class="row text-center resources-tab anim">
-					<div class="col-md-6">
-						<h4 class="house-cards-div">OpenDrives,<br><span class="light">powered by intel</span></h4>
-						<br><br>
-						<div class="video-thumb-anchor">
-							<%= link_to '', data: { toggle: 'modal', target: '#modal-house-cards' } do %>
-								<%= image_tag 'resources-houseofcards.png', class: 'video-thumb' %>
-								<%= image_tag 'resources-videos-logo.png', class: 'logo-play' %>
-							<% end %>
-						</div>
-						<br><br><br class="hide-in-mobile"><br class="hide-in-mobile">
-						<%= link_to('watch now <span class="plus-icon">+</span>'.html_safe, '', data: { toggle: 'modal', target: '#modal-house-cards' }, class: 'link-with-border hvr-shutter-out-horizontal') %>
-					</div>
-					<div class="col-md-6">
-						<h4>OpenDrives delivers<br><span class="light">high performance on deadpool</span></h4>
-						<br><br>
-						<div class="video-thumb-anchor">
-							<%= link_to '', data: { toggle: 'modal', target: '#modal-deadpool' } do %>
-								<%= image_tag 'resources-deadpool.png', class: 'video-thumb' %>
-								<%= image_tag 'resources-videos-logo.png', class: 'logo-play logo-play-dead' %>
-							<% end %>
-						</div>
-						<br><br><br class="hide-in-mobile"><br class="hide-in-mobile">
-						<%= link_to('watch now  <span class="plus-icon">+</span>'.html_safe, '', data: { toggle: 'modal', target: '#modal-deadpool' }, class: 'link-with-border hvr-shutter-out-horizontal') %>
-					</div>
-				</div>
-		  </div>
 		</div>
 	</div>
 </div>
 
 
-<div id="modal-house-cards" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/p5RNOK5NuSM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="modal-deadpool" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/BELaZoVldwI?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 

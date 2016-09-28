@@ -1,3 +1,9 @@
 <div class="col-xs-12 marginTop50">
-	<%= image_tag "#{img}.png" %>		
+	<%= image_tag "#{img}.png" %>	
+	<span class="employee-bio <%= 'marginTop100' if short == true %>">
+		<h6><%= title %></h6>
+		<h5><%= name %></h5>
+		<p class="lead"><%= job_title %></p>
+		<p><%= bio %></p>
+	</span>	
 </div>

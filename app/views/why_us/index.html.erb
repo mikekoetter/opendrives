@@ -164,7 +164,6 @@
 				<h2><span class="light">our</span> team</h2>
 				<hr class="hr-anim-why-us-section-5">
 			</div>
-			<%= image_tag 'why-us-section-5-background-mobile.png', class: 'employee-group' %>
 		</div>
 	</div>
 	<div class="why-us-section-5-background-div">
@@ -172,25 +171,116 @@
 			<div class="row">
 				<div class="col-md-12 employee-carousel-anchor hide-in-sm-mobile">
 					<div class="employee-carousel">
-						<div class="padding-top"><%= image_tag 'why-us-employee-chad.png' %></div>
-						<div class="padding-top"><%= image_tag 'why-us-employee-sean.png' %></div>
-						<div class="padding-top"><%= image_tag 'why-us-employee-michael.png' %></div>
-						<div class="padding-top"><%= image_tag 'why-us-employee-paul.png' %></div>
-						<div class="padding-top"><%= image_tag 'why-us-employee-nate.png' %></div>
-						<div class="padding-top"><%= image_tag 'why-us-employee-scot.png' %></div>
-						<div class="padding-top"><%= image_tag 'why-us-employee-mark.png' %></div>
+						<div class="padding-top">
+							<%= image_tag 'why-us-employee-chad.png' %>
+							<span class="employee-bio marginTop100">
+								<h6>Our fearless leader</h6>
+								<h5>Chad Knowles</h5>
+								<p class="lead">CEO</p>
+								<p>A 20-year veteran of the media and technology industry, Chad has held executive positions with EMC and Blue Chip media companies. A successful entrepreneur, he co-founded, built and profitably sold both an internet company and a adigital media software company.</p>
+							</span>
+						</div>
+						<div class="padding-top">
+							<%= image_tag 'why-us-employee-sean.png' %>
+							<span class="employee-bio marginTop100">
+								<h6>The glue</h6>
+								<h5>Sean Lee</h5>
+								<p class="lead">CTO</p>
+								<p>An entertainment industry veteran with 20 years experience, Sean came to OpenDrives with decades of Production IT leadership including having held various executive positons at motion picture studios, production companies, post-production facilities and advertising agencies (where he was a client of OpenDrives). Sean has a unique understanding of the challenges clients are facing.</p>
+							</span>
+						</div>
+						<div class="padding-top">
+							<%= image_tag 'why-us-employee-michael.png' %>
+							<span class="employee-bio marginTop100">
+								<h6>The foundation</h6>
+								<h5>Michael Wilsker</h5>
+								<p class="lead">Platform Development</p>
+								<p>With over 20 years’ experience designing and managing mission critical systems and networks, Michael has also worked to author and implement new technologies in the digital cinema world. He has provided guidance to the entertainment industry’s largest content owners and distributors as they develop and streamline digital workflows.</p>
+							</span>
+						</div>
+						<div class="padding-top">
+							<%= image_tag 'why-us-employee-paul.png' %>
+							<span class="employee-bio marginTop100">
+								<h6>The face man</h6>
+								<h5>Paul Swanson</h5>
+								<p class="lead">Regional Sales Director</p>
+								<p>A veteran sales professional, Paul came to OpenDrives from Isilon, where he started with client accounts in the Pacific Northwest before rising through the ranks to join the Enterprise Sales Team in Southern California, focusing on media and entertainment. He is currently responsible for working with new prospective clients in determining the best ways for OpenDrives to create business value.</p>
+							</span>
+						</div>
+						<div class="padding-top">
+							<%= image_tag 'why-us-employee-nate.png' %>
+							<span class="employee-bio marginTop100">
+								<h6>The problem-solver</h6>
+								<h5>Nate Carle</h5>
+								<p class="lead">Head of Support</p>
+								<p>Prior to joining OpenDrives, Nate was the head systems engineer for a large advertising agency. Coming from the media entertainment industry and having served in creative, marketing and management positions, he understands complex workflows. Before that, Nate was an undercover agent and had nearly every job known to man: from TV repairman to comic book writer. Nate has also held roles at ABC, Activision, IGN and even served as a firefighter and EMT; rest assured, you’re in good hands.</p>
+							</span>
+					</div>
+						<div class="padding-top">
+							<%= image_tag 'why-us-employee-scot.png' %>
+							<span class="employee-bio marginTop100">
+								<h6>The tech wiz</h6>
+								<h5>Scot Gray</h5>
+								<p class="lead">Principal Product Manager</p>
+								<p>A technology architecture and product development veteran, with over 20 years’ experience, Scot hails from the large scale enterprise world of global finance with a focus on designing large scale, highly-available, highest-performance systems handling big data and real time analytics, often employing custom hardware and software solutions. Scot brings a proven approach to providing the best product experience for customers expecting superior quality, reliability and performance.</p>
+							</span>
+					</div>
+						<div class="padding-top">
+							<%= image_tag 'why-us-employee-mark.png' %>
+							<span class="employee-bio marginTop100">
+								<h6>The connector</h6>
+								<h5>Mark Caswell</h5>
+								<p class="lead">Regional Sales Director</p>
+								<p>A veteran sales professional, Mark came to OpenDrives from Isilon, where he started with client accounts in the Pacific Northwest before rising through the ranks to join the Enterprise Sales Team in Southern California, focusing on media and entertainment. He is currently responsible for working with new prospective clients in determining the best ways for OpenDrives to create business value.</p>
+							</span>
+					</div>
 					</div>
 					<%= image_tag 'carousel-left-arrow.png', class: "carousel-arrow carousel-left-arrow hide-in-sm-mobile" %>
 					<%= image_tag 'carousel-right-arrow.png', class: "carousel-arrow carousel-right-arrow hide-in-sm-mobile" %>
 				</div>
 				<div class="col-md-12 hide-in-sm-desktop">
-					<%= render 'mobile_employee_pic', img: 'why-us-employee-chad' %>
-					<%= render 'mobile_employee_pic', img: 'why-us-employee-sean' %>
-					<%= render 'mobile_employee_pic', img: 'why-us-employee-michael' %>
-					<%= render 'mobile_employee_pic', img: 'why-us-employee-paul' %>
-					<%= render 'mobile_employee_pic', img: 'why-us-employee-nate' %>
-					<%= render 'mobile_employee_pic', img: 'why-us-employee-scot' %>
-					<%= render 'mobile_employee_pic', img: 'why-us-employee-mark' %>
+					<%= render 'mobile_employee_pic', img: 'why-us-employee-chad', 
+																					 title: 'Our fearless leader',
+																					 name: 'Chad Knowles', 
+																					 job_title: 'CEO',
+																					 bio: 'A 20-year veteran of the media and technology industry, Chad has held executive positions with EMC and Blue Chip media companies. A successful entrepreneur, he co-founded, built and profitably sold both an internet company and a adigital media software company.', 
+																					 short: true %>
+					<%= render 'mobile_employee_pic', img: 'why-us-employee-sean', 
+																					 title: 'The glue',
+																					 name: 'Sean Lee', 
+																					 job_title: 'CTO',
+																					 bio: 'An entertainment industry veteran with 20 years experience, Sean came to OpenDrives with decades of Production IT leadership including having held various executive positons at motion picture studios, production companies, post-production facilities and advertising agencies (where he was a client of OpenDrives). Sean has a unique understanding of the challenges clients are facing.', 
+																					 short: true %>
+					<%= render 'mobile_employee_pic', img: 'why-us-employee-michael', 
+																					 title: 'The foundation',
+																					 name: 'Michael Wilsker', 
+																					 job_title: 'Platform Development',
+																					 bio: 'With over 20 years’ experience designing and managing mission critical systems and networks, Michael has also worked to author and implement new technologies in the digital cinema world. He has provided guidance to the entertainment industry’s largest content owners and distributors as they develop and streamline digital workflows.', 
+																					 short: true %>
+					<%= render 'mobile_employee_pic', img: 'why-us-employee-paul', 
+																					 title: 'The face man',
+																					 name: 'Paul Swanson', 
+																					 job_title: 'Regional Sales Director',
+																					 bio: 'A veteran sales professional, Paul came to OpenDrives from Isilon, where he started with client accounts in the Pacific Northwest before rising through the ranks to join the Enterprise Sales Team in Southern California, focusing on media and entertainment. He is currently responsible for working with new prospective clients in determining the best ways for OpenDrives to create business value.', 
+																					 short: true %>
+					<%= render 'mobile_employee_pic', img: 'why-us-employee-nate', 
+																					 title: 'The problem-solver',
+																					 name: 'Nate Carle', 
+																					 job_title: 'Head of Support',
+																					 bio: 'Prior to joining OpenDrives, Nate was the head systems engineer for a large advertising agency. Coming from the media entertainment industry and having served in creative, marketing and management positions, he understands complex workflows. Before that, Nate was an undercover agent and had nearly every job known to man: from TV repairman to comic book writer. Nate has also held roles at ABC, Activision, IGN and even served as a firefighter and EMT; rest assured, you’re in good hands.', 
+																					 short: false %>
+					<%= render 'mobile_employee_pic', img: 'why-us-employee-scot', 
+																					 title: 'The tech wiz',
+																					 name: 'Scot Gray', 
+																					 job_title: 'Principal Product Manager',
+																					 bio: 'A technology architecture and product development veteran, with over 20 years’ experience, Scot hails from the large scale enterprise world of global finance with a focus on designing large scale, highly-available, highest-performance systems handling big data and real time analytics, often employing custom hardware and software solutions. Scot brings a proven approach to providing the best product experience for customers expecting superior quality, reliability and performance.', 
+																					 short: false %>
+					<%= render 'mobile_employee_pic', img: 'why-us-employee-mark', 
+																					 title: 'The connector',
+																					 name: 'Mark Caswell', 
+																					 job_title: 'Regional Sales Director',
+																					 bio: 'A veteran sales professional, Mark came to OpenDrives from Isilon, where he started with client accounts in the Pacific Northwest before rising through the ranks to join the Enterprise Sales Team in Southern California, focusing on media and entertainment. He is currently responsible for working with new prospective clients in determining the best ways for OpenDrives to create business value.', 
+																					 short: true %>
 				</div>
 			</div>
 		</div>
