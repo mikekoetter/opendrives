@@ -1101,7 +1101,14 @@ nav {
 	@media (max-width: 450px)
 		and (orientation: portrait) {
 			.nav-justified {
-				left: 1%;
+				left: 13%;
+				right: 1%;
+			}
+	}
+	@media (max-width: 375px)
+		and (orientation: portrait) {
+			.nav-justified {
+				left: 10%;
 				right: 1%;
 			}
 	}
