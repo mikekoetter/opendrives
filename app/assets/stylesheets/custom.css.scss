@@ -925,6 +925,16 @@ nav {
 	@media (max-width: 768px) { 
 		margin-top: 70px;
 	}
+	@media (max-width: 767px) {
+		h3 {
+			text-align: center;
+		}
+		img {
+			margin: auto;
+			padding: 0;
+
+		}
+	}
 }
 
 #home-section-3 {
@@ -1077,14 +1087,14 @@ nav {
 	@media (max-width: 375px) { 
 		.tab-content {
 			.check-anchor-div {
-				left: 5%;
+				left: 0%;
 			}
 		}
 	}
 	@media (max-width: 325px) { 
 		.tab-content {
 			.check-anchor-div {
-				left: 0%;
+				left: -5%;
 			}
 		}
 	}
@@ -1309,6 +1319,9 @@ nav {
 			h4 {
 	  		margin-top: -20px;
 	  		font-size: 0.9em;
+	  	}
+	  	.col-md-12 a {
+	  		margin-bottom: 50px;
 	  	}
 	  	.customMargin {
 	  		margin-top: -30px;
@@ -1578,11 +1591,10 @@ nav {
 	.col-xs-10 {
 		font-size: 1.3em;
 	}
-	@media (min-width: 1900px) {
-		/*font-size: 1.5em;*/
-	}
-	@media (min-width: 1650px) {
-		/*font-size: 1.3em;*/
+	@media (max-width: 450px) {
+		h2 {
+			font-size: 3em;
+		}
 	}
 }
 
@@ -1718,7 +1730,9 @@ nav {
 		hr {
 			margin-left: auto;
 		}
-		
+	}
+	@media (max-width: 450px) { 
+		margin-top: -150px;
 	}
 }
 
@@ -1759,6 +1773,9 @@ nav {
 		hr {
 			margin-left: auto;
 		}
+	}
+	@media (max-width: 450px) { 
+		margin-top: -200px;
 	}
 }
 
@@ -2149,7 +2166,7 @@ nav {
 		font-size: 1.5em;
 		padding-right: 30px;
 		.plus-icon {
-			top: -2px;
+			top: -6px;
 		}
 	}
 	.link-with-border:hover {
@@ -3944,7 +3961,7 @@ iframe {
 		}
 	}
 	@media (max-width: 600px) {
-		font-size: 1.3em;
+		font-size: 1.5em;
 		.phrase-5 {
 			hr {
 				width: 70px;
@@ -3954,7 +3971,7 @@ iframe {
 	@media (max-width: 450px)
 		and (orientation: portrait) {
 			.phrase-right {
-				font-size: 1.2em;
+				font-size: 1.3em;
 			}
 	}
 	@media (max-width: 320px)
