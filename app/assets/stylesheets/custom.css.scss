@@ -891,13 +891,13 @@ nav {
 }
 
 #home-section-2 {
-	margin-top: 100px;
+	margin-top: 60px;
 	background-image: image-url('blueenergy.png');
 	background-size: cover;
 	background-position: center;
 	img {
-		margin-top: 50px;
-		width: 100%;
+		width: 70%;
+		padding-right: 5%;
 	}
 	.container div {
 		h3 {
@@ -925,10 +925,20 @@ nav {
 	@media (max-width: 768px) { 
 		margin-top: 70px;
 	}
+	@media (max-width: 767px) {
+		h3 {
+			text-align: center;
+		}
+		img {
+			margin: auto;
+			padding: 0;
+
+		}
+	}
 }
 
 #home-section-3 {
-	margin-top: 100px;
+	margin-top: 40px;
 	position: relative;
 	.home-section-3-server {
 		width: 55%;
@@ -1077,21 +1087,28 @@ nav {
 	@media (max-width: 375px) { 
 		.tab-content {
 			.check-anchor-div {
-				left: 5%;
+				left: 0%;
 			}
 		}
 	}
 	@media (max-width: 325px) { 
 		.tab-content {
 			.check-anchor-div {
-				left: 0%;
+				left: -5%;
 			}
 		}
 	}
 	@media (max-width: 450px)
 		and (orientation: portrait) {
 			.nav-justified {
-				left: 1%;
+				left: 13%;
+				right: 1%;
+			}
+	}
+	@media (max-width: 375px)
+		and (orientation: portrait) {
+			.nav-justified {
+				left: 10%;
 				right: 1%;
 			}
 	}
@@ -1309,6 +1326,9 @@ nav {
 			h4 {
 	  		margin-top: -20px;
 	  		font-size: 0.9em;
+	  	}
+	  	.col-md-12 a {
+	  		margin-bottom: 50px;
 	  	}
 	  	.customMargin {
 	  		margin-top: -30px;
@@ -1578,11 +1598,10 @@ nav {
 	.col-xs-10 {
 		font-size: 1.3em;
 	}
-	@media (min-width: 1900px) {
-		/*font-size: 1.5em;*/
-	}
-	@media (min-width: 1650px) {
-		/*font-size: 1.3em;*/
+	@media (max-width: 450px) {
+		h2 {
+			font-size: 3em;
+		}
 	}
 }
 
@@ -1718,7 +1737,9 @@ nav {
 		hr {
 			margin-left: auto;
 		}
-		
+	}
+	@media (max-width: 450px) { 
+		margin-top: -150px;
 	}
 }
 
@@ -1759,6 +1780,9 @@ nav {
 		hr {
 			margin-left: auto;
 		}
+	}
+	@media (max-width: 450px) { 
+		margin-top: -200px;
 	}
 }
 
@@ -1967,6 +1991,62 @@ nav {
 	}
 }
 
+/*--- Videos ---*/
+#videos-section-1 {
+	background-image: image-url('career-job-opening-intro.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	.job-title {
+		margin-top: 200px;
+		border: 10px solid rgba(255, 255, 255, 0.5);
+		padding-top: 30px;
+		padding-bottom: 30px;
+		h3 {
+			font-size: 4em;
+		}
+	}
+}
+
+#videos-section-2 {
+	.video-thumb-anchor {
+		position: relative;
+		.video-thumb {
+			width: 400px;
+		}
+		.logo-play {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			width: 11%;
+			opacity: 0.5;
+		}
+	}
+	.video-thumb-anchor:hover {
+		.logo-play {
+			opacity: 1;
+		}
+	}
+	@media (max-width: 991px) {
+		.house-cards-div {
+			margin-bottom: 0px;
+		}
+		#videos .col-md-6 {
+			margin-bottom: 100px;
+		}
+	}
+	@media (max-width: 550px) {
+		.video-thumb-anchor {
+			.video-thumb {
+				width: 300px;
+			}
+		}
+	}
+}
+
 /*-------------------------  CaseStudies   -------------------------*/
 
 #case-studies-section-1 {
@@ -2093,7 +2173,7 @@ nav {
 		font-size: 1.5em;
 		padding-right: 30px;
 		.plus-icon {
-			top: -2px;
+			top: -6px;
 		}
 	}
 	.link-with-border:hover {
@@ -3062,7 +3142,7 @@ form {
 		}
 	}
 	color: #fff;
-	background-image: image-url('products-section-3-background.png');
+	background-image: image-url('products-section-3-background.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -3438,7 +3518,7 @@ form {
 		font-weight: 500;
 		letter-spacing: 2px;
 	}
-	.col-sm-4 {
+	.col-sm-6 {
 		padding: 0;
 	}
 	.resources-contact-div {
@@ -3468,12 +3548,12 @@ form {
 		.hide-until-1200 {
 			display: inline-block;
 		}
-		.col-sm-4 {
+		.col-sm-6 {
 			font-size: 0.9em;
 		}
 	}
 	@media (max-width: 991px) {
-		.col-sm-4 {
+		.col-sm-6 {
 			font-size: 0.8em;
 		}
 		p {
@@ -3481,7 +3561,7 @@ form {
 		}
 	}
 	@media (max-width: 700px) {
-		.col-sm-4 {
+		.col-sm-6 {
 			font-size: 0.7em;
 			height: 100px;
 		}
@@ -3687,7 +3767,6 @@ form {
 		background-color: #2977F2;
 	}
 	p {
-		/*font-family: Arial, Helvetica, sans-serif;*/
 		font-weight: 500;
 		font-size: 1.2em;
 	}
@@ -3698,34 +3777,8 @@ form {
 	.link-download:hover {
 		color: #2977F2;
 	}
-	.video-thumb-anchor {
-		position: relative;
-		.video-thumb {
-			width: 400px;
-		}
-		.logo-play {
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			margin: auto;
-			width: 11%;
-			opacity: 0.5;
-		}
-	}
-	.video-thumb-anchor:hover {
-		.logo-play {
-			opacity: 1;
-		}
-	}
+	
 	@media (max-width: 991px) {
-		.house-cards-div {
-			margin-bottom: 0px;
-		}
-		#videos .col-md-6 {
-			margin-bottom: 100px;
-		}
 		.panel-heading {
 			padding-top: 15px !important;
 			.panel-title {
@@ -3741,13 +3794,6 @@ form {
 			padding-top: 17px !important;
 			.panel-title {
 				font-size: 1em;
-			}
-		}
-	}
-	@media (max-width: 550px) {
-		.video-thumb-anchor {
-			.video-thumb {
-				width: 300px;
 			}
 		}
 	}
@@ -3922,7 +3968,7 @@ iframe {
 		}
 	}
 	@media (max-width: 600px) {
-		font-size: 1.3em;
+		font-size: 1.5em;
 		.phrase-5 {
 			hr {
 				width: 70px;
@@ -3932,7 +3978,7 @@ iframe {
 	@media (max-width: 450px)
 		and (orientation: portrait) {
 			.phrase-right {
-				font-size: 1.2em;
+				font-size: 1.3em;
 			}
 	}
 	@media (max-width: 320px)
@@ -4103,7 +4149,7 @@ iframe {
 		z-index: 15
 	}
 	.why-us-section-5-background-div {
-		background-image: image-url('why-us-section-5-background.png');
+		background-image: image-url('blueenergylight.png');
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
@@ -4120,6 +4166,32 @@ iframe {
 					position: relative;
 					width: 100%;
 					opacity: 0.5;
+				}
+				.employee-bio {
+					position: absolute;
+					color: #fff;
+					top: 20%;
+					left: -70px;
+					text-align: right;
+					h6, h5, p.lead {
+						font-variant: small-caps;
+						line-height: 10px;
+					}
+					h6 {
+						font-weight: 900; 
+					}
+					h5 {
+						font-size: 2em;
+						font-weight: 900;
+					}
+					p.lead {
+						font-weight: 700;
+					}
+					p {
+						width: 220px;
+						font-weight: 300;
+						font-size: 0.85em;
+					}
 				}
 			}
 			.carousel-arrow {
@@ -4191,6 +4263,27 @@ iframe {
 				.padding-top {
 					padding-top: 150px;
 					padding-bottom: 150px;
+					.employee-bio {
+						top: 20%;
+						left: -60px;
+						h6 {
+							font-weight: 900; 
+						}
+						h5 {
+							font-size: 1.7em;
+							font-weight: 900;
+						}
+						p.lead {
+							font-weight: 700;
+						}
+						p {
+							width: 180px;
+							font-size: 0.7em;
+						}
+					}
+					.marginTop100 {
+						margin-top: 80px;
+					}
 				}
 				.carousel-left-arrow {
 					left: -25px;
@@ -4205,6 +4298,29 @@ iframe {
 		.why-us-section-5-background-div {
 			margin-top: -65px;
 			.employee-carousel-anchor {
+				.padding-top {
+					.employee-bio {
+						top: 20%;
+						left: -60px;
+						h6 {
+							font-weight: 900; 
+						}
+						h5 {
+							font-size: 1.4em;
+							font-weight: 900;
+						}
+						p.lead {
+							font-weight: 700;
+						}
+						p {
+							width: 180px;
+							font-size: 0.6em;
+						}
+					}
+					.marginTop100 {
+						margin-top: 60px;
+					}
+				}
 				.carousel-arrow {
 					top: 250px;
 				}
@@ -4232,32 +4348,125 @@ iframe {
 			margin-top: -58px;
 			.col-md-12.hide-in-sm-desktop {
 				margin-top: 100px;
+				position: relative;
+				.employee-bio {
+					position: absolute;
+					color: #fff;
+					top: 20%;
+					left: 18%;
+					margin: auto;
+					width: 200px;
+					text-align: right;
+					h6, h5, p.lead {
+						font-variant: small-caps;
+						line-height: 10px;
+					}
+					h6 {
+						font-weight: 900; 
+					}
+					h5 {
+						font-size: 2em;
+						font-weight: 900;
+					}
+					p.lead {
+						font-weight: 700;
+					}
+					p {
+						font-weight: 300;
+						font-size: 0.85em;
+					}
+				}
 			}
 		}
 	}
 	@media (max-width: 650px) {
 		.why-us-section-5-background-div {
 			margin-top: -50px;
+			.col-md-12.hide-in-sm-desktop {
+				.employee-bio {
+					left: 15%;
+				}
+			}
+		}
+	}
+	@media (max-width: 610px) {
+		.why-us-section-5-background-div {
+			.col-md-12.hide-in-sm-desktop {
+				.employee-bio {
+					left: 16%;
+					font-size: 0.7em;
+					width: 150px;
+					p {
+						font-size: 1em
+					}
+				}
+			}
 		}
 	}
 	@media (max-width: 550px) {
 		.why-us-section-5-background-div {
 			margin-top: -40px;
+			.col-md-12.hide-in-sm-desktop {
+				.employee-bio {
+					top: 16%;
+				}
+			}
+		}
+	}
+	@media (max-width: 500px) {
+		.why-us-section-5-background-div {
+			margin-top: -40px;
+			.col-md-12.hide-in-sm-desktop {
+				.employee-bio {
+					top: 14%;
+					left: 13%;
+				}
+			}
 		}
 	}
 	@media (max-width: 450px) {
 		.why-us-section-5-background-div {
 			margin-top: -33px;
+			.col-md-12.hide-in-sm-desktop {
+				.employee-bio {
+					left: 17%;
+					font-size: 0.6em;
+					width: 120px;
+					p {
+						font-size: 0.9em
+					}
+				}
+			}
 		}
 	}
 	@media (max-width: 375px) {
 		.why-us-section-5-background-div {
 			margin-top: -30px;
+			.col-md-12.hide-in-sm-desktop {
+				.employee-bio {
+					left: 13%;
+					font-size: 0.5em;
+					width: 120px;
+					p {
+						font-size: 0.8em
+					}
+				}
+			}
 		}
 	}
 	@media (max-width: 320px) {
 		.why-us-section-5-background-div {
 			margin-top: -26px;
+			.col-md-12.hide-in-sm-desktop {
+				.employee-bio {
+					left: 14%;
+					font-size: 0.5em;
+					width: 100px;
+					p {
+						font-size: 0.8em
+					}
+				}
+			}
 		}
 	}
 }

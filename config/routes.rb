@@ -24,6 +24,8 @@ Rails.application.routes.draw do
 
   get 'case_interior/joke'
 
+  get 'case_interior/videos'
+
   # get 'careers/vp_engineering'
 
   # get 'careers/professional_services_engineer'

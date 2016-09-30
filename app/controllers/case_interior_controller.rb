@@ -4,4 +4,8 @@ class CaseInteriorController < ApplicationController
 
   def joke
   end
+
+  def videos
+  	
+  end
 end
